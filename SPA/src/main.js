@@ -10,7 +10,7 @@ import red from 'material-ui/colors/red';
 import 'react-redux-toastr/src/styles/index.scss';
 // Imports the global 'docReady'
 import './util/docReady';
-import Identitii from './pages/identitii/identitii';
+import Home from './pages/home/home';
 import store from './store/store';
 import './main.less';
 
@@ -25,15 +25,13 @@ const theme = createMuiTheme({
 });
 
 docReady(() => {
-
     const appTarget = document.getElementById('mount');
-
     if (appTarget) {
         ReactDOM.render(
             <Provider store={store}>
                 <MuiThemeProvider theme={theme}>
                     <div>
-                        <Identitii />
+                        <Home />
                         <ReduxToastr
                             timeOut={4000}
                             newestOnTop={false}
@@ -49,18 +47,3 @@ docReady(() => {
             appTarget);
     }
 });
-
-// Use constants for arbitrary strings
-const pinger = 'ping';
-const ponger = 'pong';
-
-let next = pinger;
-
-window.pinger = () => {
-    if (next === pinger) {
-        next = ponger;
-        return pinger;
-    }
-    next = pinger;
-    return ponger;
-};

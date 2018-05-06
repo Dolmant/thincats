@@ -3,7 +3,7 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import {reducer as toastrReducer} from 'react-redux-toastr';
-import CombinedIdentitiiReducer from './../pages/identitii/identitiiReducers';
+// import CombinedIdentitiiReducer from './../pages/identitii/identitiiReducers';
 
 const loggerMiddleware = createLogger();
 
@@ -29,7 +29,7 @@ function allReducers(
 ) {
     const toastr = toastReducer(state, action);
     return {
-        identitii: CombinedIdentitiiReducer(state.identitii, action),
+        // identitii: CombinedIdentitiiReducer(state.identitii, action),
         toastr: toastr.toastr,
     };
 }
