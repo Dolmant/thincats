@@ -277,7 +277,7 @@ export class News extends React.Component<Props> {
                         <section className="regular-page-content clearfix">
                             <p>ThinCats Acquired. ESF Takes Majority Stake as New CEO Appointed<br />
                 CrowdFund Insider – December 8, 2015 @ 6:24 am By JD Alois</p>
-                            <p>ThinCats, a UK based peer to peer lending platform focusing on SMEs, has been acquired by European Specialty Finance (ESF) Capital.             </p>
+                            <p>ThinCats, a UK based peer to peer lending platform focusing on SMEs, has been acquired by European Specialty Finance (ESF) Capital.</p>
                             <p>The purchaser has taken a 73.4% of the firm.  ESF’s CEO, John Mould, has been appointed as CEO of ThinCats with overall responsibility the direct lending platform. </p>
                             <p>Former CEO and founder Kevin Caley is said to remain “instrumental in the future of the business as Chairman with responsibility for innovation and Peter Brown retains his post as Finance Director”. ThinCats (the opposite of “Fat Cats” as in bankers) has originated over £140 million in P2P loans since its founding. </p>
                             <p>ESF  seeks to enhance the ThinCats’ “proposition” for both lenders and borrowers through technology and marketing resources, product development, and additional staff. ESF is also providing underwriting and lending capital to accelerate loan growth.</p>
@@ -495,8 +495,8 @@ export class News extends React.Component<Props> {
                             <h1>Alan Kohler interviews ThinCats CEO Sunil Ara... </h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p><strong style="font-size: 1em">21 July 2015</strong></p>
-                            <p><a href="http://link.brightcove.com/services/player/bcpid4244377199001?bckey=AQ~~,AAAAutyee_k~,PEYRpo7-g8jJKddIGUBH440gb-uI8R-n&amp;bctid=4356822446001" target="_blank">Please click here</a></p>
+                            <p><strong style={{fontSize: '1em'}}>21 July 2015</strong></p>
+                            <p><a href="http://link.brightcove.com/services/player/bcpid4244377199001?bckey=AQ~~,AAAAutyee_k~,PEYRpo7-g8jJKddIGUBH440gb-uI8R-n&amp;bctid=4356822446001" rel="noopener noreferrer" target="_blank">Please click here</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>If banks are disrupted, who will create money... </h1>
@@ -606,7 +606,7 @@ export class News extends React.Component<Props> {
                         </section>
                         <section className="regular-page-content clearfix">
 
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2015/05/Article-20150509-Economist-Peer-to-peer-lending.pdf" target="_blank">Click here to view article.</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2015/05/Article-20150509-Economist-Peer-to-peer-lending.pdf" rel="noopener noreferrer" target="_blank">Click here to view article.</a></p>
 
                         </section>
 
@@ -617,7 +617,7 @@ export class News extends React.Component<Props> {
                         <section className="regular-page-content clearfix">
 
                             <p>Tech innovators are making serious inroads into the Australian commercial lending and residential property markets.</p>
-                            <p><em>Original article: <a title="Mortgage Business website " href="http://www.mortgagebusiness.com.au/breaking-news/8435-digital-disruptors-already-impacting-australian-lending?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter30_04_2015&amp;utm_medium=email" target="_blank">Mortgage Business&nbsp;</a></em></p>
+                            <p><em>Original article: <a title="Mortgage Business website " href="http://www.mortgagebusiness.com.au/breaking-news/8435-digital-disruptors-already-impacting-australian-lending?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter30_04_2015&amp;utm_medium=email" rel="noopener noreferrer" target="_blank">Mortgage Business&nbsp;</a></em></p>
                             <p>Following its&nbsp;<a href="http://www.mortgagebusiness.com.au/breaking-news/7948-new-sme-lending-platform-threatens-majors">entry into the Australian credit space</a>&nbsp;in December, peer-to-peer lending platform ThinCats Australia has partnered with over 150 lenders, 80 finance brokers and has generated a strong pipeline of SME loans.</p>
                             <p>The online lending platform connects wholesale investors with small and medium sized business borrowers across Australia, capturing a customer segment not optimally serviced by bank and non-bank financial institutions. Lenders benefit through higher returns and diversification, and borrowers reduce their borrowing costs.</p>
                             <p>ThinCats Australia has delivered its first loans at interest rates ranging from 11.5 per cent to 14 per cent to diverse businesses including a stone importer for the building industry, commercial solar energy systems supplier and an industrial and commercial auctioneer.</p>
@@ -636,7 +636,7 @@ export class News extends React.Component<Props> {
                             <p>“Similar to the US market, in Australia we see a huge gap between small business financing needs and the availability of capital from traditional sources,” Mr Breslow said.</p>
                             <p>“There is significant unmet small business lending demand in Australia, and we believe our online platform is well suited to address the capital needs of Australian small businesses,” he said.</p>
                             <p>The lender’s proprietary small business credit scoring system, the OnDeck Score®, utilises more than 100 external data sources and 2,000 data points per loan application and leverages a database of more than 10 million small businesses.</p>
-                            <p><em>For original article please click <a title="Mortgage Business website" href="http://www.mortgagebusiness.com.au/breaking-news/8435-digital-disruptors-already-impacting-australian-lending?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter30_04_2015&amp;utm_medium=email" target="_blank">here</a>.</em></p>
+                            <p><em>For original article please click <a title="Mortgage Business website" href="http://www.mortgagebusiness.com.au/breaking-news/8435-digital-disruptors-already-impacting-australian-lending?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter30_04_2015&amp;utm_medium=email" rel="noopener noreferrer" target="_blank">here</a>.</em></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>Latest News from ThinCats UK</h1>
@@ -646,7 +646,7 @@ export class News extends React.Component<Props> {
                             <p>I am pleased to report that ThinCats has now passed the £100m of loans made mark and the accelerating pace and size of loans means that we are on-track to make another £100m within the next 12 months – less than a quarter of the 51 months it took us to make the first £100m.</p>
                             <p>I have pleasure in confirming we are&nbsp;now able to offer a simple&nbsp;<strong>ThinCats-only SIPP</strong>,&nbsp;through our partnership with SIPPclub. &nbsp;This is exclusive to ThinCats and strengthens our leading position in this market. We believe that there are more personal pensions being invested on ThinCats than all other peer to peer platforms combined and several of the 70 or so personal pensions have now been investing successfully on ThinCats for more than 4 years. The main constraint on the number of SIPPs being used for peer to peer lending has been the cost of operating a SIPP that made pensions of less than about £100,000 uneconomic.&nbsp;ThinCats has now solved that problem with its unique low-cost SIPP.</p>
                             <p>It&nbsp;allows you to make your own lending decisions and will cost just £350 plus VAT per year plus a one-off charge of £75 if you transfer an existing pension. Importantly, t<strong>here will not be a minimum investment&nbsp;</strong>amount and you&nbsp;<strong>WILL&nbsp;</strong>be able to make your own lending decisions. To qualify you will need to certify that you are an experienced investor and you will be expected to make your own investment decisions without any advice. Investments through the SIPP will be limited to ThinCats loans although for an extra cost you will be allowed to extend the types of investments you make.</p>
-                            <p>If you would like details of this SIPP, please&nbsp;visit our page on SIPPclub. &nbsp;When you complete the form on&nbsp;the page, you will be sent details of the&nbsp;<strong>ThinCats-only SIPP</strong>. &nbsp;Here’s the link you need –&nbsp;<a href="http://thincats.us5.list-manage.com/track/click?u=28ccf8e188569bfeace3a19c3&amp;id=08c15adc3a&amp;e=989dde3ac3" target="_blank">https://www.sippclub.com/thincats/</a><br />
+                            <p>If you would like details of this SIPP, please&nbsp;visit our page on SIPPclub. &nbsp;When you complete the form on&nbsp;the page, you will be sent details of the&nbsp;<strong>ThinCats-only SIPP</strong>. &nbsp;Here’s the link you need –&nbsp;<a href="http://thincats.us5.list-manage.com/track/click?u=28ccf8e188569bfeace3a19c3&amp;id=08c15adc3a&amp;e=989dde3ac3" rel="noopener noreferrer" target="_blank">https://www.sippclub.com/thincats/</a><br />
                 Regards<br />
                 Kevin Caley<br />
                 CEO &amp; Founder of ThinCats UK</p>
@@ -683,7 +683,7 @@ export class News extends React.Component<Props> {
                                 <p>“It usually takes one or two years of trading history before a bank will provide a facility to you,” he added.</p>
                                 <p>&nbsp;</p>
                                 <p><em>Tuesday, 10 March 2015 | James Mitchell</em></p>
-                                <p><img className="alignnone size-medium wp-image-2521" style="text-align: center" alt="headerLogo" src="https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo-300x35.png" width="300" height="35" srcSet="https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo-300x35.png 300w, https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo.png 460w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+                                <p><img className="alignnone size-medium wp-image-2521" style={{textAlign: 'center'}} alt="headerLogo" src="https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo-300x35.png" width="300" height="35" srcSet="https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo-300x35.png 300w, https://www.thincats.com.au/wp-content/uploads/2015/03/headerLogo.png 460w" sizes="(max-width: 300px) 100vw, 300px" /></p>
                                 <p>&nbsp;</p>
                             </div>
                         </section>
@@ -691,27 +691,27 @@ export class News extends React.Component<Props> {
                             <h1>ThinCats in Australian Broker Magazine</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2015/02/ThinCats-closing-market-gap.pdf" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2015/02/ThinCats-closing-market-gap.pdf" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>ThinCats UK news regarding underwriting</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://thincats.com/Apps/WebObjects/thincats-pfp.woa/ra/Website/14624/14696/underwriting-facility-for-large-loans.html" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://thincats.com/Apps/WebObjects/thincats-pfp.woa/ra/Website/14624/14696/underwriting-facility-for-large-loans.html" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>Brokers flock to new lender</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="http://www.mortgagebusiness.com.au/breaking-news/8149-brokers-flock-to-new-lender?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter10_02_2015&amp;utm_medium=email" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="http://www.mortgagebusiness.com.au/breaking-news/8149-brokers-flock-to-new-lender?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter10_02_2015&amp;utm_medium=email" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>ThinCats enters the SME lending market</h1>
                         </section>
                         <section className="regular-page-content clearfix">
                             <p>P2P lending is set to be a high-growth area over the next few years and the highly successful UK business ThinCats is busily blazing a trail through the Australian P2B – people to business – arena. The&nbsp;<a href="https://www.thincats.com.au/" target="_blank" rel="nofollow">ThinCats platform</a>&nbsp;– a first for SMEs in Australia – links wholesale investors to SME borrowers requiring a secured loan of between $50,000 and $2 million.</p>
-                            <p style="text-align: center"><img className="aligncenter" alt="thincats" src="http://www.canstar.com.au/wp-content/uploads/2015/02/thincats-450x153.png" width="230" height="78" /></p>
-                            <p>CANSTAR caught up with ThinCats Australia CEO and Director,&nbsp;<a href="http://www.linkedin.com/profile/view?id=25132343" target="_blank" rel="nofollow">Sunil Aranha</a>, to find out a little more about the recent Australian launch.</p>
+                            <p style={{textAlign: 'center'}}><img className="aligncenter" alt="thincats" src="http://www.canstar.com.au/wp-content/uploads/2015/02/thincats-450x153.png" width="230" height="78" /></p>
+                            <p>CANSTAR caught up with ThinCats Australia CEO and Director,&nbsp;<a href="http://www.linkedin.com/profile/view?id=25132343" rel="noopener noreferrer nofollow" target="_blank">Sunil Aranha</a>, to find out a little more about the recent Australian launch.</p>
                             <p><b>Q: &nbsp;ThinCats is a very successful UK business brand. What makes this the right time to enter the Australian market?</b></p>
                             <p><b>A:</b>&nbsp;The Big Four Australian Banks have a 91% market share in the SME lending space – a market of some $150 billion – with about $70 billion of lending each year. Banks are generally unwilling to increase lending even to growing businesses if the borrower does not have adequate real estate security to offer as collateral, and in most cases, start-up companies cannot access any debt finance without a track record of at least two years of operation. In this scenario, SME’s unable to access finance to match growth opportunities are limited, and in most instances either do not grow or eventually find themselves in a dire position seeking distress finance.</p>
                             <p>These are two significant areas of opportunity for the ThinCats lending platform – to assist borrowers to access growth and start up finance at competitive rates and investors to diversify risk across a number of borrowers, while earning attractive returns on a fixed income asset class, previously the domain of banks. We must clarify that the ThinCats platform is focussed on companies seeking growth finance only.</p>
@@ -721,7 +721,7 @@ export class News extends React.Component<Props> {
                             <p>Each business, depending on the industry, may require a different mix of long-term and working capital finance and will have a differing risk profile with variances in earnings and margins and economic/market conditions, however the fundamental needs are the same. In Australia there is a well-recognised gap between the finance needs of SME’s and what financing they can access from the banks.</p>
                             <p><b>Q: On the other side of the coin, lenders seem increasingly willing to invest through P2P and P2B platforms &nbsp;– what is the attraction?</b></p>
                             <p><b>A:</b>&nbsp;The unique proposition of P2B lending, such as with the ThinCats platform, is that lenders (currently sophisticated high net worth investors and their self-managed super funds) can access a fixed income asset class with attractive rates of return (currently upwards of 11% pa), while lending on a secured basis to a large number of SME’s.</p>
-                            <p>All loan applications are vetted and listed for auction on the platform by<a href="https://www.thincats.com.au/sponsors-introducers/about-sponsors-introducers/" target="_blank" rel="nofollow">“Sponsors”</a>&nbsp;(unique to the ThinCats model). Lenders can decide on individual deals they wish to lend to and can bid multiples of a minimum bid of $1,000 per loan. In the current market with low interest rates on fixed income assets, P2B lending can be attractive to lenders wishing to diversify and balance their portfolios – achieving rates of returns that are comparable with investments of a similar risk profile.</p>
+                            <p>All loan applications are vetted and listed for auction on the platform by<a href="https://www.thincats.com.au/sponsors-introducers/about-sponsors-introducers/" target="_blank" rel="nofollow noopener noreferrer">“Sponsors”</a>&nbsp;(unique to the ThinCats model). Lenders can decide on individual deals they wish to lend to and can bid multiples of a minimum bid of $1,000 per loan. In the current market with low interest rates on fixed income assets, P2B lending can be attractive to lenders wishing to diversify and balance their portfolios – achieving rates of returns that are comparable with investments of a similar risk profile.</p>
                             <p><b>Q: &nbsp;Finally, P</b><b>2P lending would seem to be a prime example of digital disruption. What makes personal and business lending a good target for disruption?</b></p>
                             <p><b>A:</b>&nbsp;P2P Platforms use advanced software, risk and communications technologies to reduce borrowing costs and deliver attractive returns to lenders, effectively cutting out the (banks) middleman.</p>
                             <p>In the US, Lending Club the most successful P2P player, recently valued at $US7.6 billion following their IPO late last year, have proven a capability to disrupt the traditional banking models in the unsecured lending space; reducing borrowing costs to low risk borrowers on unsecured personal loans by more than 300 basis points (with lower infrastructure costs than a bank), while delivering rates of returns to lenders exceeding 10%.</p>
@@ -734,25 +734,25 @@ export class News extends React.Component<Props> {
                             <h1>Will P2P lending threaten mortgages?</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="http://www.mortgagebusiness.com.au/breaking-news/8062-will-p2p-lending-threaten-mortgages?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter15_01_2015&amp;utm_medium=email" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="http://www.mortgagebusiness.com.au/breaking-news/8062-will-p2p-lending-threaten-mortgages?utm_source=Mortgage+Business&amp;utm_campaign=Mortgage_Business_Newsletter15_01_2015&amp;utm_medium=email" target="_blank" rel="noopener noreferrer">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>AltFi Down Under – ThinCats Australia Profile</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="http://www.altfi.com/globalnews/659" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="http://www.altfi.com/globalnews/659" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>P2P lending model article by Nick Bendel</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="http://www.theadviser.com.au/breaking-news/31301-new-lending-model-poses-threat-and-opportunity-for-brokers?utm_source=The+Adviser&amp;utm_campaign=The_Adviser_Bulletin05_01_2015&amp;utm_medium=email" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="http://www.theadviser.com.au/breaking-news/31301-new-lending-model-poses-threat-and-opportunity-for-brokers?utm_source=The+Adviser&amp;utm_campaign=The_Adviser_Bulletin05_01_2015&amp;utm_medium=email" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>ThinCats Australia on Sky News Business</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <div style="text-align: left">ThinCats Australia was recently on Sky News Business, <a href="https://vimeo.com/115410568" target="_blank">please click here to view.</a></div>
+                            <div style={{textAlign: 'left'}}>ThinCats Australia was recently on Sky News Business, <a href="https://vimeo.com/115410568" rel="noopener noreferrer" target="_blank">please click here to view.</a></div>
                         </section>
                         <section className="page-title clearfix">
                             <h1>Christmas closure days</h1>
@@ -768,54 +768,54 @@ export class News extends React.Component<Props> {
                             <h1>Our first loan on ThinCats Australia has fund... </h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: left">Our first loan on the ThinCats Australia&nbsp;Marketplace has been funded.</p>
-                            <p style="text-align: left">The Borrower was seeking a 5-year term loan of $100,000 for&nbsp;business expansion.</p>
-                            <p style="text-align: left">You can view the completed loan on the Marketplace after you are approved as a member of&nbsp;ThinCats Australia.</p>
-                            <p style="text-align: left">If you are not yet registered, <a href="https://www.thincats.com.au/register/">please click here to register</a> and complete the application process.&nbsp;If you have registered but not submitted your documentation for&nbsp;final KYC and AML/CTF verification, please do so now.</p>
-                            <p style="text-align: left">If you have any questions, please email admin@thincats.com.au&nbsp;and we shall respond promptly</p>
-                            <p style="text-align: left">Thank you for your interest and looking forward to welcoming you&nbsp;as a member.</p>
-                            <p style="text-align: left">The ThinCats Australia Team</p>
+                            <p style={{textAlign: 'left'}}>Our first loan on the ThinCats Australia&nbsp;Marketplace has been funded.</p>
+                            <p style={{textAlign: 'left'}}>The Borrower was seeking a 5-year term loan of $100,000 for&nbsp;business expansion.</p>
+                            <p style={{textAlign: 'left'}}>You can view the completed loan on the Marketplace after you are approved as a member of&nbsp;ThinCats Australia.</p>
+                            <p style={{textAlign: 'left'}}>If you are not yet registered, <a href="https://www.thincats.com.au/register/">please click here to register</a> and complete the application process.&nbsp;If you have registered but not submitted your documentation for&nbsp;final KYC and AML/CTF verification, please do so now.</p>
+                            <p style={{textAlign: 'left'}}>If you have any questions, please email admin@thincats.com.au&nbsp;and we shall respond promptly</p>
+                            <p style={{textAlign: 'left'}}>Thank you for your interest and looking forward to welcoming you&nbsp;as a member.</p>
+                            <p style={{textAlign: 'left'}}>The ThinCats Australia Team</p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>SMH – ThinCats 2Dec14</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/SMH-ThinCats-2dec141.pdf" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/SMH-ThinCats-2dec141.pdf" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>New SME Lending platform threatens majors</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a title="New SME Lending platform threatens majors" href="http://www.mortgagebusiness.com.au/breaking-news/7948-new-sme-lending-platform-threatens-majors" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a title="New SME Lending platform threatens majors" href="http://www.mortgagebusiness.com.au/breaking-news/7948-new-sme-lending-platform-threatens-majors" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>Smart Company – ThinCats Article 2Dec14</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/Meet-ThinCats-the-new-peer-to-peer-platform-that-wants-to-lend-your-SME-money.pdf" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/Meet-ThinCats-the-new-peer-to-peer-platform-that-wants-to-lend-your-SME-money.pdf" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>ThinCats prowls where banks fear to tread</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/ThinCats-prowls-where-banks-fear-to-tread.pdf" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/ThinCats-prowls-where-banks-fear-to-tread.pdf" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>ThinCats Australia – AFR article 2Dec14</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/UK-peer-to-peer-lender-targets-Australian-businesses-2Dec14.pdf" target="_blank">Click here to view article</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.thincats.com.au/wp-content/uploads/2014/12/UK-peer-to-peer-lender-targets-Australian-businesses-2Dec14.pdf" rel="noopener noreferrer" target="_blank">Click here to view article</a></p>
                         </section>
                         <section className="page-title clearfix">
                             <h1>P2P Finance | The Checkout | ABC1</h1>
                         </section>
                         <section className="regular-page-content clearfix">
-                            <p style="text-align: center"><a href="https://www.youtube.com/watch?v=qWYpj99tvZU" rel="noopener noreferrer" target="_blank">Click here to view&nbsp;video on Peer to Peer lending in Australia by ABC</a></p>
+                            <p style={{textAlign: 'center'}}><a href="https://www.youtube.com/watch?v=qWYpj99tvZU" rel="noopener noreferrer" target="_blank">Click here to view&nbsp;video on Peer to Peer lending in Australia by ABC</a></p>
                         </section>
                     </div>
                     <div className="col-md-4">
                         <div id="sidebar">
-                            <a href="/register/" className="join-now">Join Now. It's Free.</a>
+                            <a href="/register/" className="join-now">{'Join Now. It\'s Free.'}</a>
                             <div id="side-investor-banner">
                                 <a className="register-now btn orange" href="/register/"></a>
                             </div>
@@ -830,7 +830,7 @@ export class News extends React.Component<Props> {
                                         </div>
                                     </div>
                                 </form></li>
-                                <li id="recent-posts-2" className="widget widget_recent_entries">		<h2 className="widgettitle">Recent Posts</h2>
+                                <li id="recent-posts-2" className="widget widget_recent_entries"><h2 className="widgettitle">Recent Posts</h2>
                                     <ul>
                                         <li>
                                             <a href="https://www.thincats.com.au/blog/thincats-australia-connects-100-sophisticated-investors-secured-business-loans-worth-7m/">ThinCats Australia Connects over 100 Sophisticated Investors to Secured Business Loans Worth $7m</a>
@@ -888,10 +888,10 @@ export class News extends React.Component<Props> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
 });
 
 export default connect(

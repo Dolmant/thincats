@@ -14,7 +14,7 @@ export class HowItWorks extends React.Component<Props> {
                     <h1>How it works</h1>
                 </section>
                 <section className="regular-page-content clearfix">
-                    <h3 style="text-align: center"><strong>View our 2-minute explainer video <a title="here" href="https://thincatsaus.wistia.com/medias/2nc5twt1mz" target="_blank">here</a>.</strong></h3>
+                    <h3 style={{textAlign: 'center'}}><strong>View our 2-minute explainer video <a title="here" href="https://thincatsaus.wistia.com/medias/2nc5twt1mz" rel="noopener noreferrer" target="_blank">here</a>.</strong></h3>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-4 h-it-work">
@@ -57,10 +57,10 @@ export class HowItWorks extends React.Component<Props> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
 });
 
 export default connect(

@@ -26,8 +26,8 @@ export class Sponsors extends React.Component<Props> {
                     <p>ThinCats will pay a referral fee of 25 basis points (plus GST) on the successful completion of the loan.</p>
                     <p>If you have a potential transaction please email details to loans@thincats.com.au or call us on 1300 325 342.</p>
                     <h2>General guidelines on eligible loans</h2>
-                    <p>Please download the key <a href="https://www.thincats.com.au/wp-content/uploads/2018/04/Key-Guidelines-for-Borrowers-apr18.pdf" target="_blank">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
-                    <p style="text-align: left">
+                    <p>Please download the key <a href="https://www.thincats.com.au/wp-content/uploads/2018/04/Key-Guidelines-for-Borrowers-apr18.pdf" rel="noopener noreferrer" target="_blank">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
+                    <p style={{textAlign: 'left'}}>
                     </p><p><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
                 </section>
             </div>
@@ -35,10 +35,10 @@ export class Sponsors extends React.Component<Props> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
 });
 
 export default connect(

@@ -59,7 +59,7 @@ export class LendingFAQ extends React.Component<Props> {
                         (ii) the Company is in External Administration/Receiver Manager appointed;<br />
                         (iii) Director/Guarantor is declared bankrupt.</p>
                         <p>The nature and extent of the delay in repayment will determine aspects such as reporting, default amount, recovery prospects and further actions.</p>
-                        <p>Due to the small size of the ThinCats Australia loan portfolio, we currently do not publish loan default rates. For information on ThinCats UK loan default rates click <a href="https://www.thincats.com/investors/statistics/" target="_blank">here</a>.</p>
+                        <p>Due to the small size of the ThinCats Australia loan portfolio, we currently do not publish loan default rates. For information on ThinCats UK loan default rates click <a href="https://www.thincats.com/investors/statistics/" rel="noopener noreferrer" target="_blank">here</a>.</p>
                         <h3>What do you do to recover the funds?</h3>
                         <p>As all loans are secured by a charge over the borrower company’s assets and personal guarantees from directors, and assuming in a liquidation scenario the company’s assets have not significantly deteriorated in value, a loss of principal and or interest is not anticipated. However when allowing for recovery costs and diminished asset values, this may not always result in a positive outcome.</p>
                         <p>If the borrower defaults, typically specialised third party collection agents will be appointed to commence recovery action on behalf of the lenders and the first call is on the specific security given by the borrower. If enforcement of a security is not adequate, arrangements are made to call on the personal guarantees.</p>
@@ -102,7 +102,7 @@ export class LendingFAQ extends React.Component<Props> {
                         <h2 id="faq-overseas">Overseas Members</h2>
                         <p></p>
                         <h3>Can I be a Member if I reside outside Australia?</h3>
-                        <p><span style="color: #222222;">Generally yes, but it also depends on the jurisdiction where the proposed Member resides.&nbsp; We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the&nbsp;<a href="/wp-content/uploads/2018/04/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" target="_blank">Process for Non-resident Applicants</a></span><b></b><span style="color: #222222;">&nbsp;or contact us at&nbsp;</span><a href="mailto:admin@thincats.com.au" target="_blank">admin@thincats.com.au</a>.</p>
+                        <p><span style={{color: '#222222;'}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides.&nbsp; We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the&nbsp;<a href="/wp-content/uploads/2018/04/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><b></b><span style={{color: '#222222;'}}>&nbsp;or contact us at&nbsp;</span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
                     </div>
                     <div className="faq-section">
                         <h2 id="faq-sponsors">Sponsors and Introducers</h2>
@@ -164,10 +164,10 @@ export class LendingFAQ extends React.Component<Props> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = () => ({
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = () => ({
 });
 
 export default connect(
