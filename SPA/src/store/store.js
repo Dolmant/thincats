@@ -3,6 +3,7 @@ import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import {reducer as toastrReducer} from 'react-redux-toastr';
+import URLReducer from './URLReducers';
 // import CombinedIdentitiiReducer from './../pages/identitii/identitiiReducers';
 
 const loggerMiddleware = createLogger();
@@ -20,6 +21,7 @@ const initialState = {
 
 const toastReducer = combineReducers({
     toastr: toastrReducer,
+    URL: URLReducer,
 });
 
 // concatenate all the reducers
