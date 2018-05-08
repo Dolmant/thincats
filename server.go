@@ -1,42 +1,41 @@
 package main
 
 import (
-	"os"
+	"log"
+	"net/http"
+	"time"
 
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/contrib/static"
-	"github.com/gin-gonic/gin"
+	"github.com/gorilla/mux"
+
+	"github.com/rs/cors"
 )
+
+type HandlerFunc func(http.ResponseWriter, *http.Request)
+
+func (f HandlerFunc) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	f(w, r)
+}
 
 // Init constructs the server and routes. With a bigger project this might be separated into different files and accept config options
 func Init() {
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.Use(gin.Recovery())
-	config := cors.DefaultConfig()
-	config.AllowAllOrigins = true
-	config.AllowHeaders = []string{"Origin", "Authorization", "Content-Length", "Content-Type"}
-	router.Use(cors.New(config))
-	workingDir, err := os.Getwd()
-	if err != nil {
-		panic(err)
+	log.Printf("Server logging started at: %s", time.Now())
+
+	mux := mux.NewRouter()
+
+	fs := http.FileServer(http.Dir("./SPA/dist"))
+
+	mux.PathPrefix("/dist/").Handler(http.StripPrefix("/dist/", fs))
+
+	var genericHandle HandlerFunc
+	genericHandle = func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "./SPA/index.html")
 	}
-	router.Use(static.Serve("/", static.LocalFile(workingDir+"/SPA/dist/", true)))
+	mux.PathPrefix("/").Handler(genericHandle)
 
-	// v1 := router.Group("v1")
-	// {
-	// 	pingerGroup := v1.Group("pinger")
-	// 	{
-	// 		pingerHandler := new(PingerHandler)
-	// 		pingerGroup.GET("/", pingerHandler.Pinger)
-	// 	}
-	// 	dataGroup := v1.Group("data")
-	// 	{
-	// 		dataHandler := new(DataHandler)
-	// 		dataGroup.GET("/ui", dataHandler.GetUIData)
-	// 		dataGroup.POST("/ui", dataHandler.PostUIData)
-	// 	}
-	// }
+	handler := cors.Default().Handler(mux)
 
-	router.Run(":8079")
+	err := http.ListenAndServe(":8079", handler)
+	if err != nil {
+		log.Fatalf("Failed to serve, %s", err.Error())
+	}
 }

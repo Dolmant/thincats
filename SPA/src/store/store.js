@@ -1,5 +1,5 @@
 // @flow
-import {createStore, applyMiddleware, combineReducers} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 import {reducer as toastrReducer} from 'react-redux-toastr';
@@ -19,20 +19,14 @@ const initialState = {
     },
 };
 
-const toastReducer = combineReducers({
-    toastr: toastrReducer,
-    URL: URLReducer,
-});
-
 // concatenate all the reducers
 function allReducers(
     state: typeof initialState = initialState,
     action: action_type,
 ) {
-    const toastr = toastReducer(state, action);
     return {
-        // identitii: CombinedIdentitiiReducer(state.identitii, action),
-        toastr: toastr.toastr,
+        URL: URLReducer(state.URL, action),
+        toastr: toastrReducer(state.toastr, action),
     };
 }
 

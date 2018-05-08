@@ -4,22 +4,12 @@ import React from 'react';
 import './home.less';
 
 type Props = {
-    getUIData: () => void,
-    postUIData: () => void,
-    overrideUIData: (any) => void,
-    attributes: any,
-    formTypes: any,
-    loading: boolean,
 };
 
 export class Home extends React.Component<Props> {
-    componentDidMount() {
-        this.props.getUIData();
-        window.overrideData = this.props.overrideUIData;
-    }
     render() {
         return (
-            <div classNam="home">
+            <div className="home">
                 <div id="content">
                     <div className="container page-container">
                         <div className="row home-content">
@@ -30,14 +20,14 @@ export class Home extends React.Component<Props> {
                                         <p>
                                             <img className="alignnone wp-image-5034476 size-full" title="9 fat reasons to lend through ThinCats" src="https://www.thincats.com.au/wp-content/themes/thincats/images/roason-1.png" alt="9 fat reasons to lend through ThinCats" width="706" height="313" />
                                         </p>
-                                        <h2>to borrow or lend through <img className="alignnone wp-image-5034579 size-full" title="thincats" src="https://www.thincats.com.au/wp-content/themes/thincats/images/thincats.png" alt="" width="203" height="43" style={{height: '30px;', paddingBottom: '5px;'}} /> <img className="alignright size-full wp-image-5034479 right-img" title="right-img" src="https://www.thincats.com.au/wp-content/themes/thincats/images/right-img.png" alt="" width="75" height="74" /></h2>
+                                        <h2>to borrow or lend through <img className="alignnone wp-image-5034579 size-full" title="thincats" src="https://www.thincats.com.au/wp-content/themes/thincats/images/thincats.png" alt="" width="203" height="43" style={{height: '30px', paddingBottom: '5px'}} /> <img className="alignright size-full wp-image-5034479 right-img" title="right-img" src="https://www.thincats.com.au/wp-content/themes/thincats/images/right-img.png" alt="" width="75" height="74" /></h2>
                                     </div>
                                 </div>
                                 <hr className="border-bot" />
                                 <div className="col-lg-12 col-sm-12 front-page-widgets">
-                                    <div className="slidingDiv overlaydiv  common_box_text" id="box_text1" style={{display: 'none;'}}>
+                                    <div className="slidingDiv overlaydiv  common_box_text" id="box_text1" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" id="hid" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" id="hid" style={{display: 'block'}}>close</div>
                                         <p>An attractive yield to lenders, well above most equity investment opportunities and a competitive rate for borrowers when compared with the exorbitant interest rates on short term loans provided by most non-bank lenders.&nbsp;The weighted average interest rate on loans since inception (Feb 2015) is around 14% p.a.*</p>
                                         <p>Borrowers can apply for loans by filling out our&nbsp;<strong><a href="https://www.thincats.com.au/borrowing/apply-loan/" target="_blank" rel="noopener noreferrer">application form</a>.</strong></p>
                                         <p>Lending is open to wholesale investors and eligible SMSFs.&nbsp;<strong><a href="https://www.thincats.com.au/register/" target="_blank" rel="noopener noreferrer">Register</a></strong><em>&nbsp;</em>and review the current loans on the platform. There is no obligation to bid and membership is free.</p>
@@ -47,7 +37,7 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason1">
-                                            <div id="slidingDiv" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034614 size-full" title="reason-1" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-1.png" alt="" width="270" height="267" />
                                                 </p>
@@ -55,16 +45,16 @@ export class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline;'}}><strong><em>Competitive interest rates averaging 14.6</em><em>% p.a.</em><em>*…</em></strong></strong></p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline'}}><strong><em>Competitive interest rates averaging 14.6</em><em>% p.a.</em><em>*…</em></strong></strong></p><strong id="slidingDiv" className="show_hide1 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets1">
-                                    <div className="slidingDiv2 overlaydiv  common_box_text" id="box_text2" style={{display: 'none;'}}>
+                                    <div className="slidingDiv2 overlaydiv  common_box_text" id="box_text2" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>Although peer-to-peer lending is a new concept, we are old fashioned relationship bankers using new technology to deliver true cash flow lending secured against a business not against homes and other real estate. We get to know the businesses we lend to and tell lenders the whole story with primary focus on the ability of the borrower to repay the loan from its current and future business cash flows.</p>
                                         <p>At ThinCats, loans are primarily secured by a first charge over the assets of the borrower company and recorded on the Personal Property Securities Register. In addition a personal guarantee is obtained from each of the directors and in some cases a second mortgage may be required. However for our lenders security is truly the second way out.</p>
                                         <p>ThinCats monitors all loans and informs lenders on a periodic basis based on updated information provided by borrowers.</p>
@@ -72,7 +62,7 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason2">
-                                            <div id="slidingDiv2" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv2" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034616 size-full" title="reason-2" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-2.png" alt="" width="305" height="281" />
                                                 </p>
@@ -80,23 +70,23 @@ export class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline;'}}><strong><em>Secured loans…<br />
-                                                </em></strong></strong></p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline'}}><strong><em>Secured loans…<br />
+                                                </em></strong></strong></p><strong id="slidingDiv2" className="show_hide2 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets1">
-                                    <div className="slidingDiv3 overlaydiv  common_box_text" id="box_text3" style={{display: 'none;'}}>
+                                    <div className="slidingDiv3 overlaydiv  common_box_text" id="box_text3" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>Our loans are generally for terms of 2 to 5 years and all our loans are on a principal and interest basis. This enables borrowers to have certainty of the finance they need for a medium to long term and comfort for the lenders who are repaid principal and interest each month.</p>
                                         <p>Borrowers have the flexibility to repay loans in full at any time before maturity without any additional fees or charges.</p>
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason3">
-                                            <div id="slidingDiv3" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv3" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034618 size-full" title="reason-3" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-3.png" alt="" width="276" height="282" />
                                                 </p>
@@ -104,22 +94,22 @@ export class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline;'}}><strong><em>Flexible loan terms 24 to 60 months…</em></strong></strong></p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline'}}><strong><em>Flexible loan terms 24 to 60 months…</em></strong></strong></p><strong id="slidingDiv3" className="show_hide3 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets4">
-                                    <div className="slidingDiv4 overlaydiv  common_box_text" id="box_text4" style={{display: 'none;'}}>
+                                    <div className="slidingDiv4 overlaydiv  common_box_text" id="box_text4" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>ThinCats facilitates the provision of growth finance for businesses including working capital, equipment finance, infrastructure finance and business acquisition finance.</p>
                                         <p>We cater to SME corporates including professional services, general services, manufacturers, wholesalers and retailers excluding finance companies.</p>
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason4">
-                                            <div id="slidingDiv4" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv4" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034620 size-full" title="reason-4" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-4.png" alt="" width="287" height="262" />
                                                 </p>
@@ -127,7 +117,7 @@ export class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline;'}}><strong><em>Loans for genuine business growth…</em></strong></strong></p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline'}}><strong><em>Loans for genuine business growth…</em></strong></strong></p><strong id="slidingDiv4" className="show_hide4 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
@@ -135,9 +125,9 @@ export class Home extends React.Component<Props> {
                                 </div>
 
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets5">
-                                    <div className="slidingDiv5 overlaydiv  common_box_text" id="box_text5" style={{display: 'none;'}}>
+                                    <div className="slidingDiv5 overlaydiv  common_box_text" id="box_text5" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>All our <strong><a href="https://www.thincats.com.au/borrowing/about-borrowing/" target="_blank" rel="noreferrer noopener">fees and charges</a></strong>&nbsp;to borrowers are clearly detailed on our website.</p>
                                         <p>We charge an upfront fee which is usually deducted from the loan proceeds and a small trail on the reducing balance.</p>
                                         <p>We do not charge borrowers any fees or charges for early repayment.</p>
@@ -146,42 +136,42 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason5">
-                                            <div id="slidingDiv5" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv5" className="show_hide" style={{display: 'block'}}>
                                                 <p><img className="alignnone wp-image-5034621 size-full" title="reason-5" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-5.png" alt="" width="282" height="262" /></p>
                                             </div>
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline;'}}><em><b>No early repayment charges and no hidden fees…</b></em></strong></p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline'}}><em><b>No early repayment charges and no hidden fees…</b></em></strong></p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets6">
-                                    <div className="slidingDiv6 overlaydiv  common_box_text" id="box_text6" style={{display: 'none;'}}>
+                                    <div className="slidingDiv6 overlaydiv  common_box_text" id="box_text6" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>The ThinCats team has very strong credentials in lending particularly to small business and we make sure that you are talking to a decision maker who understands your business and will assist you to tell your story to potential lenders, so that a good result can be achieved by both lenders and borrowers. Check out our&nbsp;<strong><a href="https://www.thincats.com.au/about/our-team/" target="_blank" rel="noopener noreferrer">management team</a></strong>.</p>
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason6">
-                                            <div id="slidingDiv6" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv6" className="show_hide" style={{display: 'block'}}>
                                                 <p><img className="alignnone wp-image-5034622 size-full" title="reason-6" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-6.png" alt="" width="277" height="267" /></p>
                                             </div>
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline;'}}><em><b>Talk to a lending expert…</b></em></strong></p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline'}}><em><b>Talk to a lending expert…</b></em></strong></p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets7">
-                                    <div className="slidingDiv7 overlaydiv  common_box_text" id="box_text7" style={{display: 'none;'}}>
+                                    <div className="slidingDiv7 overlaydiv  common_box_text" id="box_text7" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>ThinCats vets all borrower loan applications for eligibility and once approved, we help the borrower to present their request to the lenders with all key information, including the business information memorandum, financial spreadsheet, directors’ asset and liability position and credit agency scores, along with the loan overview so lenders can make a direct and informed decision and borrowers are able to accurately present their proposition.</p>
                                         <p>This is very different from other lenders who simply “match” loans and risk profiles with lenders not aware of exactly where their loans are made and borrowers not sure if their information has been accurately represented.</p>
                                         <p>All members are able to log in and view the current loans listed on the platform (Primary Market tab).</p>
@@ -189,22 +179,22 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason7">
-                                            <div id="slidingDiv7" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv7" className="show_hide" style={{display: 'block'}}>
                                                 <p><img className="alignnone wp-image-5034624 size-full" title="reason-7" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-7.png" alt="" width="279" height="265" /></p>
                                             </div>
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline;'}}><em><b>Transparency with detailed information on each loan…</b></em></strong></p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline'}}><em><b>Transparency with detailed information on each loan…</b></em></strong></p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets8">
-                                    <div className="slidingDiv8 overlaydiv  common_box_text" id="box_text8" style={{display: 'none;'}}>
+                                    <div className="slidingDiv8 overlaydiv  common_box_text" id="box_text8" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>ThinCats offers peer-to-peer loans across a broad range of businesses.</p>
                                         <p>As a ThinCats lender you can research and build your own personal or SMSF portfolio from a range of secured business loans. To review loans on our platform you only have to <strong><a href="https://www.thincats.com.au/register/" target="_blank" rel="noopener noreferrer">register</a></strong>&nbsp;as a member. There is no obligation to bid.</p>
                                         <p>ThinCats members can select loans by the criteria that suits them: for example, by maturity, interest rate, business type, and location – indeed, using any of the factors covered in our detailed information packs. You can take out an individual loan, or build a diversified portfolio. The choice is yours.</p>
@@ -220,7 +210,7 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason8">
-                                            <div id="slidingDiv8" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv8" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034626 size-full" title="reason-8" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-8.png" alt="" width="290" height="259" />
                                                 </p>
@@ -228,16 +218,16 @@ export class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline;'}}></strong></p><p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline;'}}><em><b>Diversify your risk…</b></em></strong></p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline;'}}>
+                                                <p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline'}}></strong></p><p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline'}}><em><b>Diversify your risk…</b></em></strong></p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: 'inline'}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-12 col-sm-12 front-page-widgets front-page-widgets9">
-                                    <div className="slidingDiv9 overlaydiv common_box_text" id="box_text9" style={{display: 'none;'}}>
+                                    <div className="slidingDiv9 overlaydiv common_box_text" id="box_text9" style={{display: 'none'}}>
                                         <span className="arrow-top"></span>
-                                        <div className="close-btn show_hide" style={{display: 'block;'}}>close</div>
+                                        <div className="close-btn show_hide" style={{display: 'block'}}>close</div>
                                         <p>The SME sector is an underserviced area largely due to the reluctance of banks to lend to SMEs for a variety of reasons.</p>
                                         <p>One of the key issues SMEs face when borrowing from banks is the requirement of residential property as collateral resulting in loans being made to businesses with the best collateral, rather than those that are the best business prospects.</p>
                                         <p>At ThinCats, the assessment of the borrowers business and ability to pay is paramount and collateral requirements are not based on real estate.</p>
@@ -245,7 +235,7 @@ export class Home extends React.Component<Props> {
                                     </div>
                                     <div className="reason_column row">
                                         <div className="reason-img col-lg-4 col-sm-4 common_box" id="reason9">
-                                            <div id="slidingDiv9" className="show_hide" style={{display: 'block;'}}>
+                                            <div id="slidingDiv9" className="show_hide" style={{display: 'block'}}>
                                                 <p>
                                                     <img className="alignnone wp-image-5034627 size-full" title="reason-9" src="https://www.thincats.com.au/wp-content/themes/thincats/images/reason-9.png" alt="" width="292" height="249" />
                                                 </p>
@@ -254,11 +244,11 @@ export class Home extends React.Component<Props> {
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
                                                 <p>
-                                                    <strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline;'}}></strong>
+                                                    <strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline'}}></strong>
                                                 </p>
-                                                <p><strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline;'}}><em><strong>Support the Australian SME community…</strong></em></strong>
+                                                <p><strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline'}}><em><strong>Support the Australian SME community…</strong></em></strong>
                                                 </p>
-                                                <strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline;'}}>
+                                                <strong id="slidingDiv9" className="show_hide9 show_hide" style={{display: 'inline'}}>
                                                 </strong>
                                                 <p></p>
                                             </div>
@@ -271,20 +261,20 @@ export class Home extends React.Component<Props> {
                                     <section className="sidebar-slider-section">
                                         <a href="#" className="left-arrow"></a>
                                         <a href="#" className="right-arrow"></a>
-                                        <div className="sidebar-slide-container cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-prev=".sidebar-slider-section .left-arrow" data-cycle-next=".sidebar-slider-section .right-arrow" data-cycle-slides=" > .indv-slide" data-cycle-timeout="5000" style={{position: 'relative;', overflow: 'hidden;'}}><div className="indv-slide cycle-slide cycle-sentinel" style={{position: 'static;', top: '0px;', left: '0px;', zIndex: '100;', opacity: '1;', display: 'block;', visibility: 'hidden;'}}>
-                                            <figure style={{visibility: 'hidden;'}}>
-                                                <span className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline;', visibility: 'hidden;'}} id="wistia-psiamvfuq6-1"><div id="wistia_39.thumb_container" className="wistia_click_to_play" style={{position: 'relative;', display: 'inline;'}}>
-                                                    <a href="#" style={{visibility: 'hidden;'}}>
-                                                        <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/video1g.png" alt="" style={{visibility: 'hidden;'}} />
-                                                        <figcaption style={{visibility: 'hidden;'}}>ThinCats at Wholesale Investor</figcaption>
+                                        <div className="sidebar-slide-container cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-prev=".sidebar-slider-section .left-arrow" data-cycle-next=".sidebar-slider-section .right-arrow" data-cycle-slides=" > .indv-slide" data-cycle-timeout="5000" style={{position: 'relative', overflow: 'hidden'}}><div className="indv-slide cycle-slide cycle-sentinel" style={{position: 'static', top: '0px', left: '0px', zIndex: '100', opacity: '1', display: 'block', visibility: 'hidden'}}>
+                                            <figure style={{visibility: 'hidden'}}>
+                                                <span className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline', visibility: 'hidden'}} id="wistia-psiamvfuq6-1"><div id="wistia_39.thumb_container" className="wistia_click_to_play" style={{position: 'relative', display: 'inline'}}>
+                                                    <a href="#" style={{visibility: 'hidden'}}>
+                                                        <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/video1g.png" alt="" style={{visibility: 'hidden'}} />
+                                                        <figcaption style={{visibility: 'hidden'}}>ThinCats at Wholesale Investor</figcaption>
                                                     </a>
                                                 </div>
                                                 </span>
                                             </figure>
                                         </div>
-                                            <div className="indv-slide cycle-slide cycle-slide-active" style={{position: 'absolute;', top: '0px;', left: '0px;', zIndex: '99;', opacity: '1;', display: 'block;', visibility: 'visible;'}}>
+                                            <div className="indv-slide cycle-slide cycle-slide-active" style={{position: 'absolute', top: '0px', left: '0px', zIndex: '99', opacity: '1', display: 'block', visibility: 'visible'}}>
                                                 <figure>
-                                                    <span className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline;'}} id="wistia-psiamvfuq6-2"><div id="wistia_49.thumb_container" className="wistia_click_to_play" style={{position: 'relative;', display: 'inline;'}}>
+                                                    <span className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline'}} id="wistia-psiamvfuq6-2"><div id="wistia_49.thumb_container" className="wistia_click_to_play" style={{position: 'relative', display: 'inline'}}>
                                                         <a href="#">
                                                             <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/video1g.png" alt="" />
                                                             <figcaption>ThinCats at Wholesale Investor</figcaption>
@@ -293,9 +283,9 @@ export class Home extends React.Component<Props> {
                                                     </span>
                                                 </figure>
                                             </div>
-                                            <div className="indv-slide cycle-slide" style={{position: 'absolute;', top: '0px;', left: '0px;', zIndex: '97;', visibility: 'hidden;', opacity: '1;', display: 'block;'}}>
+                                            <div className="indv-slide cycle-slide" style={{position: 'absolute', top: '0px', left: '0px', zIndex: '97', visibility: 'hidden', opacity: '1', display: 'block'}}>
                                                 <figure>
-                                                    <span className="wistia_embed wistia_async_2nc5twt1mz popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline;'}} id="wistia-2nc5twt1mz-1"><div id="wistia_59.thumb_container" className="wistia_click_to_play" style={{position: 'relative;', display: 'inline;'}}>
+                                                    <span className="wistia_embed wistia_async_2nc5twt1mz popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline'}} id="wistia-2nc5twt1mz-1"><div id="wistia_59.thumb_container" className="wistia_click_to_play" style={{position: 'relative', display: 'inline'}}>
                                                         <a href="#">
                                                             <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/explainer-video-320x172_p.png" alt="" />
                                                             <figcaption>Peer-to-Business Lending explained</figcaption>
@@ -304,9 +294,9 @@ export class Home extends React.Component<Props> {
                                                     </span>
                                                 </figure>
                                             </div>
-                                            <div className="indv-slide cycle-slide" style={{position: 'absolute;', top: '0px;', left: '0px;', zIndex: '96;', visibility: 'hidden;', opacity: '1;', display: 'block;'}}>
+                                            <div className="indv-slide cycle-slide" style={{position: 'absolute', top: '0px', left: '0px', zIndex: '96', visibility: 'hidden', opacity: '1', display: 'block'}}>
                                                 <figure>
-                                                    <span className="wistia_embed wistia_async_w6o5m30ais popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline;'}} id="wistia-w6o5m30ais-1"><div id="wistia_72.thumb_container" className="wistia_click_to_play" style={{position: 'relative;', display: 'inline;'}}>
+                                                    <span className="wistia_embed wistia_async_w6o5m30ais popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline'}} id="wistia-w6o5m30ais-1"><div id="wistia_72.thumb_container" className="wistia_click_to_play" style={{position: 'relative', display: 'inline'}}>
                                                         <a href="#">
                                                             <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/AK-play-icon.png" alt="" />
                                                             <figcaption>ThinCats with Alan Kohler</figcaption>
@@ -315,9 +305,9 @@ export class Home extends React.Component<Props> {
                                                     </span>
                                                 </figure>
                                             </div>
-                                            <div className="indv-slide cycle-slide" style={{position: 'absolute;', top: '0px;', left: '0px;', zIndex: '98;', visibility: 'hidden;', opacity: '1;', display: 'block;'}}>
+                                            <div className="indv-slide cycle-slide" style={{position: 'absolute', top: '0px', left: '0px', zIndex: '98', visibility: 'hidden', opacity: '1', display: 'block'}}>
                                                 <figure>
-                                                    <span className="wistia_embed wistia_async_7yj84e44zs popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline;'}} id="wistia-7yj84e44zs-1"><div id="wistia_85.thumb_container" className="wistia_click_to_play" style={{position: 'relative;', display: 'inline;'}}>
+                                                    <span className="wistia_embed wistia_async_7yj84e44zs popover=true popoverContent=link wistia_embed_initialized" style={{display: 'inline'}} id="wistia-7yj84e44zs-1"><div id="wistia_85.thumb_container" className="wistia_click_to_play" style={{position: 'relative', display: 'inline'}}>
                                                         <a href="#">
                                                             <img src="https://www.thincats.com.au/wp-content/uploads/2016/05/Screen-Shot-2016-11-10-at-8.26.12-PM.png" alt="" />
                                                             <figcaption>{'ThinCats on Sky News "Business Success"'}</figcaption>
@@ -398,7 +388,7 @@ export class Home extends React.Component<Props> {
                                                         </table>
                                                     </div>
                                                 </form>
-                                                <form className="lwa-remember" action="https://www.thincats.com.au/wp-login.php?action=lostpassword" method="post" style={{display: 'none;'}}>
+                                                <form className="lwa-remember" action="https://www.thincats.com.au/wp-login.php?action=lostpassword" method="post" style={{display: 'none'}}>
                                                     <div>
                                                         <span className="lwa-status"></span>
                                                         <table>
@@ -410,7 +400,7 @@ export class Home extends React.Component<Props> {
                                                                 </tr>
                                                                 <tr>
                                                                     <td className="lwa-remember-email">
-                                                                        <input type="text" name="user_login" className="lwa-user-remember" value="Enter username or email" onFocus="if(this.value == 'Enter username or email'){this.value = '';}" onBlur="if(this.value == ''){this.value = 'Enter username or email'}" />
+                                                                        <input type="text" name="user_login" className="lwa-user-remember" value="Enter username or email" onFocus={() => {if (this.value === 'Enter username or email'){this.value = '';}}} onBlur={() => { if (this.value === ''){this.value = 'Enter username or email'}}} />
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -425,8 +415,8 @@ export class Home extends React.Component<Props> {
                                                     </div>
                                                 </form>
                                             </div>
-                                            <p style={{margin: '11px 0px;'}}><a href="https://www.thincats.com.au/resetpass-2/?action=lostpassword" title="Lost Password">Forgot/Change password?</a></p>
-                                            <p style={{marginBottom: '14px;', marginTop: '0px;'}}><strong>Helpline:</strong> 1300 325 342</p>
+                                            <p style={{margin: '11px 0px'}}><a href="https://www.thincats.com.au/resetpass-2/?action=lostpassword" title="Lost Password">Forgot/Change password?</a></p>
+                                            <p style={{marginBottom: '14px', marginTop: '0px'}}><strong>Helpline:</strong> 1300 325 342</p>
                                         </div>
                                     </div>
                                 </li>

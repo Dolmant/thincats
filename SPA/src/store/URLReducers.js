@@ -7,25 +7,8 @@ type actionType = {
 }
 
 const URLGenerator = () => {
-    if (window.location.pathname === '/intro' && window.localStorage.uniqueID) {
-        window.history.replaceState({}, 'Home', '/');
-        return '/';
-    }
-    if (window.location.pathname === '/' && !window.localStorage.uniqueID) {
-        window.history.replaceState({}, 'Intro', '/intro');
-        return '/intro';
-    }
-    if (window.location.pathname === '/intro' && !window.localStorage.uniqueID) {
-        window.history.replaceState({}, 'Intro', '/intro');
-        return '/intro';
-    }
-    if (window.location.pathname === '/' && window.localStorage.uniqueID) {
-        window.history.replaceState({}, 'Home', '/');
-        return '/';
-    }
-    console.log('Default route');
-    window.history.replaceState({}, 'Home', '/');
-    return '/';
+    // window.history.replaceState({}, 'Home', '/');
+    return window.location.pathname;
 };
 
 const initialState = URLGenerator();

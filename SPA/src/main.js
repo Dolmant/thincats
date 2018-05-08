@@ -10,8 +10,8 @@ import red from 'material-ui/colors/red';
 import 'react-redux-toastr/src/styles/index.scss';
 // Imports the global 'docReady'
 import './util/docReady';
-import Home from './pages/home/home';
-import store from './store/store';
+import PageRouter from './pages/pageRouter';
+import store from 'store';
 import './main.less';
 
 declare var docReady;
@@ -31,7 +31,7 @@ docReady(() => {
             <Provider store={store}>
                 <MuiThemeProvider theme={theme}>
                     <div>
-                        <Home />
+                        <PageRouter />
                         <ReduxToastr
                             timeOut={4000}
                             newestOnTop={false}

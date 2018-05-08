@@ -59,5 +59,11 @@ module.exports = {
     ],
     resolve: {
         extensions: ['.js', '.less', 'scss'],
+        alias: {
+            pages: path.resolve(__dirname, './src/pages'),
+            components: path.resolve(__dirname, './src/components'),
+            store: path.resolve(__dirname, './src/store/store.js'),
+            util: path.resolve(__dirname, './src/util'),
+        },
     },
 };

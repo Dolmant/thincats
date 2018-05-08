@@ -58,12 +58,11 @@ export class MemberRegistration extends React.Component<Props> {
         <a href="/wp-content/uploads/2014/10/TCA-Membership-Agreement-May16.pdf" rel="noopener noreferrer" target="_blank">terms and conditions</a>.</p>
                         </div>
                         <div className="um_field_container">
-                            <label id="um_field_44_register_label" className="um_hidden" htmlFor="um_field_44_register">Registration instructions</label><textarea name="registration_instructions" readOnly="readonly" id="um_field_44_register" className="um_field_44 um_input" style={{width: '0px;'}}>
+                            <label id="um_field_44_register_label" className="um_hidden" htmlFor="um_field_44_register">Registration instructions</label><textarea name="registration_instructions" readOnly="readonly" id="um_field_44_register" className="um_field_44 um_input" style={{width: '0px'}}>
                             </textarea><p id="um_field_44_register_description" className="um_description">
                             </p>
                             <p>After completing this form you will receive an email with a verification link to confirm your email address, following which you will be able view loans currently being auctioned on the platform.</p>
                             <br /><p>
-
                             </p>
                         </div>
                         <div className="um_field_container">
@@ -77,8 +76,8 @@ export class MemberRegistration extends React.Component<Props> {
                         <input type="hidden" name="CSRFtoken" value="9c152e858d" /><input type="hidden" name="pf_http_referer" value="https://www.thincats.com.au/news/" />
                         <div id="siwp_captcha_container_1">
                             <br />
-                            <div style={{float: 'left'}}><img id="siwp_captcha_image_1" src="https://www.thincats.com.au/wp-content/plugins/securimage-wp/lib/siwp_captcha.php?id=de1e43c59264d4065ac7c8bb5294afb3788f8508" alt="CAPTCHA Image" style={{verticalAlign: 'middle;'}} /></div>
-                            <div style={{float: 'left'}}><a tabIndex="-1" style={{borderStyle: 'none;'}} href="#" title="Refresh Image" onClick="siwp_refresh('1', null); this.blur(); return false"><img src="https://www.thincats.com.au/wp-content/plugins/securimage-wp/lib/images/refresh.png" alt="Reload Image" onClick="this.blur()" style={{verticalAlign: 'middle;', height: '32px;', width: '32px'}} align="bottom" /></a></div><div style={{clear: 'both;'}}></div>
+                            <div style={{float: 'left'}}><img id="siwp_captcha_image_1" src="https://www.thincats.com.au/wp-content/plugins/securimage-wp/lib/siwp_captcha.php?id=de1e43c59264d4065ac7c8bb5294afb3788f8508" alt="CAPTCHA Image" style={{verticalAlign: 'middle'}} /></div>
+                            <div style={{float: 'left'}}><a tabIndex="-1" style={{borderStyle: 'none'}} href="#" title="Refresh Image" onClick="siwp_refresh('1', null); this.blur(); return false"><img src="https://www.thincats.com.au/wp-content/plugins/securimage-wp/lib/images/refresh.png" alt="Reload Image" onClick="this.blur()" style={{verticalAlign: 'middle', height: '32px', width: '32px'}} align="bottom" /></a></div><div style={{clear: 'both'}}></div>
                             <label htmlFor="siwp_captcha_value_1">Enter Code <span className="required">*</span></label>
                             <input type="hidden" id="input_siwp_captcha_id_1" name="scid" value="de1e43c59264d4065ac7c8bb5294afb3788f8508" /><input id="siwp_captcha_value_1" name="siwp_captcha_value" size="10" maxLength="8" type="text" aria-required="true" />
                         </div>

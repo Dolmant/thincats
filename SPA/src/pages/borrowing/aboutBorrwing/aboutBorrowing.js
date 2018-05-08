@@ -36,7 +36,7 @@ export class AboutBorrowing extends React.Component<Props> {
                     <p>Borrowers will also be charged legal fees and disbursements incurred by our lawyers in relation to preparation of loan security documentation.</p>
                     <p>Where loans are originated by Sponsors or Introducers, we will based on our own arrangements, share some of our fees with individual Sponsors and Introducers.</p>
                     <h2><a href="https://www.thincats.com.au/borrowing/apply-loan/" target="_blank" rel="noreferrer noopener">Apply for a loan</a></h2>
-                    <p style={{textAlign: 'left;'}}><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
+                    <p style={{textAlign: 'left'}}><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
                 </section>
             </div>
         );
