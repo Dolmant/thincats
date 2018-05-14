@@ -1,11 +1,13 @@
 // @flow
-import {connect} from 'react-redux';
 import React from 'react';
 import './aboutLending.less';
+import {observer} from 'mobx-react';
+
 
 type Props = {
 };
 
+@observer
 export class AboutLending extends React.Component<Props> {
     render() {
         return (

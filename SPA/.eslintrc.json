@@ -30,6 +30,7 @@
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/jsx-indent": ["error", 4],
         "react/prop-types": ["off"],
+        "quotes": ["error", "double"],
         "jsx-a11y/href-no-hash": ["off"],
         "no-underscore-dangle": ["off"],
         "object-curly-spacing": ["error", "never"],
