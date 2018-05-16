@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "eUHVybchf4TDxNs0kMblPIJi96k=",
+			"path": "github.com/Dolmant/thincats",
+			"revision": "f34b376fe693957f84ad120d38736b9afafc5486",
+			"revisionTime": "2018-05-16T11:47:34Z"
+		},
+		{
+			"checksumSHA1": "u+yjS8ZLCVRmjsMh26jHaJ4itTc=",
+			"path": "github.com/gorilla/mux",
+			"revision": "ded0c29b24f96f46cf349e6701b099db601cf8ec",
+			"revisionTime": "2018-05-01T03:11:36Z"
+		},
+		{
+			"checksumSHA1": "a++hH5H53isY1CJ//kOr10H1Auk=",
+			"path": "github.com/rs/cors",
+			"revision": "eabcc6af4bbe5ad3a949d36450326a2b0b9894b8",
+			"revisionTime": "2017-08-01T07:32:01Z"
+		}
+	],
+	"rootPath": "github.com/Dolmant/thincats"
+}
