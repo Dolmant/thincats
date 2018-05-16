@@ -1,39 +1,45 @@
 // @flow
-import {connect} from 'react-redux';
-import React from 'react';
-import Home from 'pages/home/home';
-import AboutThinCats from 'pages/aboutUs/aboutThinCats/aboutThinCats';
-import ContactUs from 'pages/aboutUs/contactUs/contactUs';
-import OurTeam from 'pages/aboutUs/ourTeam/ourTeam';
-import Header from 'components/generic/header/header';
-import Footer from 'components/generic/footer/footer';
+import {observer, inject} from "mobx-react"
+import React from "react"
+import Home from "pages/home/home"
+import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
+import ContactUs from "pages/aboutUs/contactUs/contactUs"
+import OurTeam from "pages/aboutUs/ourTeam/ourTeam"
+import Header from "components/generic/header/header"
+import Footer from "components/generic/footer/footer"
+import type {StoreType} from "store"
 
 type Props = {
-    URL: string,
+    store: StoreType,
 };
 
-class PageRouter extends React.Component<Props> {
+@inject("store")
+@observer
+export default class PageRouter extends React.Component<Props> {
     route() {
         // Route based on URL
-        switch (this.props.URL) {
+        switch (this.props.store.URL) {
         default:
-        case '/home':
-        case '/':
+        case "/home":
+        case "/":
             return [
                 <Home />,
-            ];
-        case '/aboutthincats':
+            ]
+        case "/about":
+        case "/about/":
             return [
                 <AboutThinCats />,
-            ];
-        case '/contactus':
+            ]
+        case "/contactus":
+        case "/contactus/":
             return [
                 <ContactUs />,
-            ];
-        case '/ourteam':
+            ]
+        case "/ourteam":
+        case "/ourteam/":
             return (
                 <OurTeam />
-            );
+            )
         }
     }
     render() {
@@ -43,18 +49,6 @@ class PageRouter extends React.Component<Props> {
                 {this.route()}
                 <Footer />
             </section>
-        );
+        )
     }
 }
-
-const mapStateToProps = (state) => ({
-    URL: state.URL,
-});
-
-const mapDispatchToProps = () => ({
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(PageRouter);

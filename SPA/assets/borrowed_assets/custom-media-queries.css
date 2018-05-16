@@ -1,0 +1,1610 @@
+@media screen and (min-width: 1040px) {
+	nav.main-navigation h3 { display: none; }
+	nav.main-navigation span.menu { display: none; }
+	nav.main-navigation ul.sf-menu { display: block !important; }
+
+	nav.main-navigation h3 {
+		margin-bottom: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0;
+	}
+	nav.main-navigation{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 1200px) {
+	nav.main-navigation h3 {
+		margin-bottom: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0;
+	}
+	nav.main-navigation{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 1040px) {
+	/* === main navigation === */
+	nav.main-navigation { width: 100%; float: left; padding-top: 0px; padding-bottom: 25px;}
+	nav.main-navigation h3 { display: none; }
+	nav.main-navigation span.menu { display: none; }
+	nav.main-navigation .sf-menu > li { margin-left: 15px; }
+	nav.main-navigation .sf-menu > li:first-child { margin-left: 0px; }
+	nav.main-navigation .sf-menu > li > a:before { bottom: -25px;}
+	/* === end of main navigation === */
+
+	/* === half-col === */
+	.half-col { max-width: 48.5%; }
+	.half-col + .half-col { margin-left: 3%; }
+	/* === end of half-col === */
+
+	/* === signup now h4 === */
+	.sign-up-now h4 { font-size: 22px; }
+	/* === end of signup now h4 === */
+
+	/* === get investing h4 === */
+	.get-investing h4 { font-size: 22px; }
+	/* === end of get investing h4 === */
+
+	/* === start-investing h4 === */
+	.start-investing h4 { font-size: 22px; }
+	/* === end of start investing === */
+
+	/* === lc-main-content === */
+	.lc-main-content { float: none; width: 100%; }
+	.lc-main-content .information-module .info { margin-right: 20px; }
+	.lc-main-content .information-module .details { overflow: hidden; float: none; width: auto; }
+	/* === end of lc-main-content === */
+
+	/* === lc-sidebar === */
+	.lc-sidebar { float: none; width: 100%; margin-top: 20px; padding-top: 0px;}
+	/* === end of lc-sidebar === */
+
+	/* === overall earnings === */
+	.overall-earnings { width: 100%; float: none; margin-bottom: 20px; }
+	.overall-earnings .table .tab-row p:first-child { max-width: 60%; }
+	.overall-earnings .table .tab-row p:nth-child(2) { max-width: 20%; }
+	.overall-earnings .table .tab-row p:last-child { max-width: 20%; }
+	/* === end of overall earnings === */
+
+	/* === summary === */
+	.summary-section { width: 100% !important; float: none !important; }
+	/* === end of summary === */
+
+	/* === marketplace content === */
+	.marketplace-content .overflow-div { overflow-x: scroll; }
+	.marketplace-content table { min-width: 940px; }
+	.marketplace-content .tfoot { min-width: 940px; }
+	/* === end of marketplace content === */
+
+	/* === explaining div === */
+	.content-page { }
+	.content-page .third-box .step { width: 47%; }
+	.content-page .third-box .abs-arrow { width: 6%; }
+	.content-page .third-box .step-2 + .abs-arrow { display: none;  }
+	/* === explaning div === */
+
+	/* === news-content === */
+	.news-content .news-top { }
+	.news-content .news-top img { margin-right: 0px; }
+	/* === end of news content === */
+
+	/* === investor-how-it-works === */
+	.investor-how-it-works .step { width: 47%; }
+	.investor-how-it-works .abs-arrow { width: 6%; }
+	.investor-how-it-works .step-2 + .abs-arrow { display: none; }
+	.investor-how-it-works :nth-child(1n+6) { margin-top: 20px; }
+	/* === end of investor how it works css === */
+        .content-page .third-box .step {width: auto;}
+        .start-investing a,.summary-section{width: auto !important;}
+        .dashboard-accordion .dai-content{overflow-x:scroll !important; }
+        #_myLoanSegments{overflow-x: scroll !important;}
+}
+@media screen and (max-width: 1005px){
+
+	.regular-page-content .welcome{
+		padding-left: 16%;
+	}
+
+}
+
+@media screen and (max-width:998px){
+	body.logged-in  ul.sf-menu {
+		margin: 30px 5px 20px 5px;
+	}
+/*	body.logged-in.customize-support {
+		background-color: #f90;
+	}
+	body.home .sf-menu li{
+		background: #4add60;
+	}*/
+}
+@media screen and (max-width: 991px){
+	ul.sf-menu {
+		margin-left: 15px;
+	}
+
+	div#sidebar ul {
+		text-align: center;
+	}
+
+}
+@media screen and (max-width: 978px) {
+	body.logged-in .sf-menu > li > a{
+		padding: 0 10px;
+	}
+}
+@media screen and (max-width: 960px) {
+
+
+	nav.main-navigation span.menu{
+		right: 0px;
+		top: 10px;
+		width: 25px
+	}
+	nav.main-navigation span.menu:before,nav.main-navigation span.menu:after{
+		width: 25px;
+	}
+	.sub-menu > li > a {
+		margin-bottom: 5px !important;
+		display: block;
+		padding: 5px !important;
+		text-align: center !important;
+		color: #444444 !important;
+	}
+	.sub-menu > li{
+		border: none !important;
+	}
+	ul.sf-menu{
+		margin-top: 10px;
+	}
+	nav.main-navigation, nav.main-navigation li {
+		height: auto !important;
+	}
+	.sf-menu > li > a {
+		padding: 0 4px 0 0px;
+	}
+	/*nav.main-navigation .clearfix{
+		display: none;
+	}*/
+	nav.main-navigation span.menu, nav ul.sf-menu ul.sub-menu{
+		display: block;
+	}
+	nav.main-navigation span.menu {
+		display: block;
+	}
+	nav.main-navigation .sf-menu{
+		display: none;
+	}
+	header .sf-menu > li > a{
+		border-right: none;
+		margin-bottom: 5px;
+		background: #444444;
+		display: block;
+		padding: 5px !important;
+		color: #ffffff !important;
+	}
+	nav.main-navigation h3 {
+		display: block;
+		border-bottom: 1px solid rgb(0, 0, 0);
+		padding-bottom: 10px;
+	}
+
+	nav.main-navigation span.menu {
+		display: block;
+	}
+
+	nav.main-navigation ul.sf-menu {
+		height: auto;
+	}
+
+	nav.main-navigation ul.sf-menu > li {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+	}
+
+	nav.main-navigation ul.sf-menu > li > a:before {
+		height: 1px;
+		bottom: 0px;
+	}
+	nav.main-navigation span.menu, nav ul.sf-menu ul.sub-menu {
+		display: block !important;
+	}
+
+	.sf-menu ul {
+		position: relative;
+	}
+
+	.sub-menu > li > a {
+		margin-bottom: 5px !important;
+		display: block;
+		padding: 5px !important;
+		text-align: center !important;
+		color: #444444 !important;
+	}
+
+	nav ul.sf-menu li:hover > ul.sub-menu li {
+		padding: 0;
+	}
+
+	nav ul.sf-menu ul.sub-menu {
+		border-top: 0 !important;
+		border-bottom: 0 !important;
+	}
+
+	nav ul.sf-menu li:hover > ul.sub-menu li {
+		padding: 0 !important;
+	}
+	/*nav.main-navigation .sf-menu > li {
+		margin-left: 2px;
+		float: none;
+		display: inline-block;
+	}*/
+
+	.top_nav.navbar-fixed-top .col-md-4:first-child {
+		width: 25%;
+	}
+
+	.marketplace-content table {
+		min-width: 100%;
+	}
+
+	.marketplace-content table thead th {
+		font-size: 14px !important;
+	}
+
+	.dashboard-page .details-row .box:nth-child(5n) .popover {
+		right: 0 !important;
+		left: inherit !important;
+	}
+
+	/*.lc-main-content {
+		width: 68% !important;
+	}*/
+
+	body > div.in:not(.modal-backdrop) {
+		padding-top: 45% !important;
+	}
+}
+
+@media screen and (max-width: 910px){
+	.footer-links a{
+		margin: 0;
+	}
+	.socialmedia{
+		text-align: center;
+	}
+}
+@media screen and (max-width: 906px){
+	.regular-page-content .welcome{
+		padding-left: 23%;
+	}
+}
+@media screen and (max-width: 838px){
+	.socialmedia{
+		padding: 14px 0 ;
+	}
+}
+@media screen and (max-width: 826px){
+	.socialmedia{
+		text-align: left;
+		width: 120%;
+	}
+}
+@media screen and (max-width: 780px){
+	.top_nav span{
+		margin: 0;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	/* === === main navigation === === */
+	nav.main-navigation h3 {
+		display: block;
+		border-bottom: 1px solid rgb(0, 0, 0);
+	}
+	ul.sf-menu{
+		margin: 0 0 0 0 ;
+	}
+	.socialmedia{
+		width: 100%;
+	}
+
+	nav.main-navigation span.menu {
+		display: block;
+	}
+
+	nav.main-navigation ul.sf-menu {
+		height: auto;
+		margin-top: 5px;
+	}
+
+	nav.main-navigation ul.sf-menu > li {
+		width: 100%;
+		float: none;
+		margin-left: 0px;
+	}
+
+	nav.main-navigation ul.sf-menu > li > a:before {
+		height: 1px;
+		bottom: 0px;
+	}
+	.regular-page-content h2{
+		margin-bottom: 0;
+	}
+
+	/* === === end of main navigation === === */
+	/* === === welcome box css === === */
+	.welcome-box .text {
+		width: 100%;
+		max-width: none;
+		padding-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	.welcome-box .video {
+		width: 100%;
+		max-width: none;
+		padding-left: 0px;
+	}
+
+	/* === === end of welcome box css === === */
+	/* === half-col === */
+	.half-col {
+		max-width: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.half-col + .half-col {
+		margin-left: 0px;
+	}
+
+	/* === end of half-col === */
+	/* === signup now h4 === */
+	.sign-up-now {
+		background-repeat: repeat;
+		height: auto;
+	}
+
+	 #bottom-section-tabs #my-bids,
+	 #bottom-section-tabs #my-statements,
+	 #bottom-section-tabs #statements_table,
+	 #bottom-section-tabs #bids_table,
+	 #bottom-section-tabs #loans_table {
+		 width: 100%;
+		 overflow-x: scroll;
+	 }
+	#sell-loans {
+		width: 100%;
+		overflow-x: scroll;
+	}
+	.dashboard-page .bottom-section-tabs table{
+		width: 100%;
+		overflow-x: scroll;
+	}
+
+	.sign-up-now h4 {
+		font-size: 22px;
+		float: none;
+		text-align: center;
+		line-height: 1.3;
+	}
+
+	.sign-up-now a {
+		display: block;
+		float: none;
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 15px;
+	}
+
+	#modal-container {
+		width: 90% !important;
+		margin: 0 auto;
+	}
+
+	#modal-container .modal-content {
+		padding-bottom: 5px !important;
+		width: 100% !important;
+	}
+
+	.marketplace-content table th {
+		display: none;
+	}
+
+	.marketplace-content table td, .marketplace-content table tbody,
+	.marketplace-content table, .marketplace-content table tr {
+		display: block;
+	}
+
+	.marketplace-content table {
+		min-width: 100% !important;
+	}
+	.mob-title{display: block !important; font-size: 15px; font-weight: bold;margin-bottom: 5px;}
+	.rbs-popup-container{right: inherit !important; left: 10px; top: 42px !important;}
+	.popover{width: 235px !important;}
+	h3.popover-title{margin: 0 !important;}
+	#appTable > tbody > tr > td:nth-child(1), .marketplace-content table.tablesorter tr td:nth-child(2),
+	#appTable > tbody > tr > td:nth-child(3), #appTable > tbody > tr > td:nth-child(4),
+	#appTable > tbody > tr > td:nth-child(4), #appTable > tbody > tr > td:nth-child(5),
+	.marketplace-content table.tablesorter tbody tr td:nth-child(6), .marketplace-content table.tablesorter tbody tr td:nth-child(7),
+	.marketplace-content table.tablesorter tbody tr td:nth-child(8), .marketplace-content table.tablesorter tbody tr td:nth-child(9),
+	.marketplace-content #secondary_market_table td {
+		width: 50% !important;
+		float: left;
+		height: 95px;
+		font-size: 18px;
+		text-align: center !important;
+	}
+
+	.marketplace-content table.tablesorter tbody tr td:nth-child(9) {
+		width: 100% !important;
+	}
+
+	.marketplace-content table.tablesorter tbody tr {
+		clear: both !important;
+	}
+	.marketplace-content table tbody tr:hover td:nth-child(1) {
+		background-color: #3B79A3 !important;
+		color:#3B79A3 ;
+
+	}
+
+	.marketplace-content table#secondary_market_table tr td:nth-child(1) {
+		width: 100% !important;
+		background: #3B79A3;
+		color: #fff;
+		font-size: 24px !important;
+	}
+	/*.marketplace-content table#secondary_market_table tr td:nth-child(1):hover{
+		background: #fff ;
+	}*/
+	.marketplace-content table tbody tr:hover td {
+		background-color: #fff ;
+	}
+
+	 .marketplace-content table#secondary_market_table tbody td:nth-child(2) {
+		font-weight: normal;
+	}
+
+	.marketplace-content table#secondary_market_table td:nth-child(5) {
+		padding-top: 7px;
+	}
+
+	#appTable > tbody > tr > td:nth-child(1) {
+		width: 20% !important;
+		background: #3B79A3;
+		color: #fff;
+		border-right: none;
+	}
+
+	#appTable > tbody > tr > td:nth-child(2) span {
+		color: #fff !important;
+		font-size: 24px !important;
+	}
+
+	#appTable > tbody > tr > td:nth-child(2) {
+		width: 80% !important;
+		background: #3B79A3;
+		color: #fff;
+	}
+
+	#appTable > tbody > tr:hover > td:nth-child(1){
+		background: #3B79A3 !important;
+		color: #ffffff;
+	}
+
+	/* === end of signup now h4 === */
+	/* === start investing === */
+	.start-investing {
+		background-repeat: repeat;
+		height: auto;
+		padding: 18px;
+	}
+
+	.start-investing h4 {
+		font-size: 22px;
+		float: none;
+		text-align: center;
+		line-height: 1.3;
+		margin-bottom: 0px;
+	}
+
+	.start-investing a {
+		margin-top: 15px;
+		display: block;
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	/* === end of start investing === */
+	/* === get investing === */
+	.get-investing h4 {
+		float: none;
+		text-align: center;
+		line-height: 1.3;
+		margin: 0px;
+		margin-bottom: 20px;
+	}
+
+	.get-investing a {
+		width: 48%;
+		float: right;
+		margin: 0px;
+		margin-left: 4% !important;
+	}
+
+	.get-investing a + a {
+		margin-left: 0% !important;
+	}
+
+	/* === end of get investing === */
+	/* === footer links === */
+	.footer-links {
+		padding: 20px 0px;
+		line-height: 2;
+	}
+
+	/* === end of footer links === */
+	/* === page title === */
+	.page-title {
+		text-align: center;
+	}
+
+	.page-title img {
+		display: block;
+		float: none;
+		margin: 0px auto;
+	}
+
+	.page-title h1 {
+		margin: 0px;
+	}
+
+	.page-title h2 {
+		margin: 0px;
+	}
+
+	/* === end of page title === */
+	/* === dashboard page title === */
+	.dashboard-page .page-title {
+		padding-right: 20px;
+	}
+
+	.dashboard-page .page-title img {
+		float: none;
+		display: block;
+		margin: 0px auto 0px;
+	}
+
+	.dashboard-page .page-title h1 {
+		margin: 0px;
+		float: none;
+		line-height: 1.2;
+	}
+
+	/* === end of dashboard page title === */
+	/* === tab module fix === */
+	.lc-main-content .tab-module ul li {
+		padding: 0px;
+	}
+
+	.lc-main-content .tab-module ul li:last-child a {
+		border-radius: 0px;
+	}
+
+	.lc-main-content .tab-module ul li:nth-child(2) a {
+		border-radius: 0px 6px 0px 0px;
+	}
+
+	.lc-main-content .information-module .info {
+		float: none;
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	.lc-main-content .information-module .info img {
+		width: auto;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.lc-main-content .information-module .info > div {
+		overflow: hidden;
+	}
+
+	.lc-main-content .bids-module .tab-container > div {
+		overflow-x: scroll;
+	}
+
+	.lc-main-content .bids-module table {
+		min-width: 767px;
+	}
+
+	/* === end of tab-module fix === */
+	/* === breadcrumbs === */
+	.breadcrumbs .links {
+		float: none;
+	}
+
+	.breadcrumbs .social-link {
+		float: none;
+	}
+
+	/* === end of breadcrumbs === */
+	/* === overall earnings === */
+	.overall-earnings .table .tab-row p:first-child {
+		max-width: 50%;
+	}
+
+	.overall-earnings .table .tab-row p:nth-child(2) {
+		max-width: 25%;
+	}
+
+	.overall-earnings .table .tab-row p:last-child {
+		max-width: 25%;
+	}
+
+	/* === end of overall earnings === */
+	/* === marketplace-page-title === */
+	.marketplace-page-title a {
+		position: relative;
+		display: inline-block;
+		right: auto;
+		top: auto;
+		margin-top: 15px;
+	}
+
+	/* === end of marketplace-page-title === */
+	/* === first-box === */
+	.content-page .first-box {
+		padding-top: 0px;
+	}
+
+	.content-page .first-box .text {
+		float: none;
+		max-width: none;
+		margin-bottom: 20px;
+	}
+
+	.content-page .first-box .video-slot {
+		max-width: none;
+	}
+
+	/* === end of first box === */
+	/* === second-box === */
+	.content-page .second-box img {
+		float: none;
+		margin: 0px auto 20px;
+	}
+
+	.content-page .second-box h3 {
+		text-align: center;
+	}
+
+	/* === end of secoind-box === */
+	/* === benefits inner === */
+	.benefits {
+		height: auto;
+		padding-bottom: 30px;
+	}
+
+	.benefits .benefits-inner {
+		width: 100% !important;
+	}
+
+	.benefits .line {
+		display: none;
+	}
+
+	/* === end of benefits inner === */
+	/* === news content === */
+	.news-content .news-top img {
+		float: none;
+		margin: 0px auto;
+		display: block;
+	}
+
+	.news-content .news-top .nt-top {
+		padding: 0px;
+		margin: 0px auto;
+	}
+
+	/* === end of news content === */
+	/* === how borrowing works === */
+	.how-borrowing-works div.abs-arrow {
+		display: none;
+	}
+
+	.how-borrowing-works .step {
+		margin: 20px auto 0px;
+		float: none;
+	}
+
+	/* === end of borrowing works === */
+	/* === business benefits === */
+	.business-benefits .bb-col {
+		width: 50%;
+	}
+
+	.business-benefits .bb-col:nth-child(4), .business-benefits .bb-col:nth-child(5) {
+		margin-top: 20px;
+	}
+
+	/* === end of business benefits === */
+	/* === business content === */
+	.business-content .loan-calc {
+		width: 100%;
+		float: none;
+		margin-bottom: 20px;
+	}
+
+	.business-content .quote {
+		width: 100%;
+		float: none;
+	}
+
+	.business-content .quote a.i-btn {
+		width: 100%;
+		display: block;
+	}
+
+	/* === end of business content === */
+	/* === business-dashboard-page title === */
+	.business-dashboard-page .page-title {
+		text-align: center;
+	}
+
+	.business-dashboard-page .page-title img {
+		float: none;
+		display: block;
+		margin: 0px auto;
+	}
+
+	/* === end of business dashboard page title === */
+	/* === investor dashboard title === */
+	.investor-specific-pagetitle.page-title {
+		text-align: center;
+	}
+
+	.investor-specific-pagetitle.page-title img {
+		float: none;
+		display: block;
+		margin: 0px auto;
+	}
+
+	/* === end of investor dashboard title === */
+	nav.main-navigation, nav.main-navigation li {
+		height: auto !important;
+	}
+
+	header .sf-menu > li > a {
+		border-right: none;
+		margin-bottom: 5px;
+		background: #444444;
+		display: block;
+		padding: 5px !important;
+		color: #ffffff !important;
+	}
+
+	header .sf-menu > li > a:hover {
+		text-decoration: none;
+		color: #444444 !important;
+		background-color: #e7e7e7;
+	}
+
+	header .buttons a {
+		float: none !important;
+		display: inline-block;
+		/*margin-top: 15px;*/
+	}
+
+	header .buttons {
+		text-align: center;
+		margin-bottom: 10px;
+		float: none !important;
+		margin-top: 10px;
+	}
+
+	nav.main-navigation span.menu, nav ul.sf-menu ul.sub-menu {
+		display: block !important;
+        right: 50%;
+	}
+
+	.sf-menu ul {
+		position: relative;
+	}
+
+	.sub-menu > li > a {
+		margin-bottom: 5px !important;
+		display: block;
+		padding: 5px !important;
+		text-align: center !important;
+		color: #444444 !important;
+	}
+
+	nav ul.sf-menu li:hover > ul.sub-menu li {
+		padding: 0;
+	}
+
+	nav ul.sf-menu ul.sub-menu {
+		border-top: 0 !important;
+		border-bottom: 0 !important;
+	}
+
+	nav ul.sf-menu li:hover > ul.sub-menu li {
+		padding: 0 !important;
+	}
+
+	.sub-menu > li {
+		border: none !important;
+	}
+
+	.top_nav > div {
+		width: 100% !important;
+	}
+
+	.investor-benefits, .business-benefits, .content-page .third-box .step {
+		width: 100% !important;
+		float: none;
+	}
+
+	.content-page .third-box .abs-arrow {
+		display: none;
+	}
+
+	table.job-apply-table td input[type=file] {
+		width: 75%;
+	}
+
+	.regular-page-content {
+		padding: 0 !important;
+	}
+
+	#applyForm input[type="submit"], #um_form_registerinvestor #insert_user, #um_form_accountdetails #insert_user {
+		float: none !important;
+		margin: 0 auto;
+	}
+
+	.um_field_container select.um_input {
+		min-width: 0 !important;
+	}
+
+	.filterTable tr td:first-child, .um_field_container label {
+		width: 30% !important;
+	}
+
+	#modal-container {
+		width: 90% !important;
+		margin: 0 auto;
+	}
+	.dashboard-page .details-row .box {
+		width: 100% !important;
+		border: 0 !important;
+	}
+
+	.dashboard-page .details-row .box h5 {
+		font-size: 18px !important;
+	}
+
+	.dashboard-page .details-row .box h3 {
+		font-size: 24px !important;
+		margin: 15px 0;
+	}
+
+	.dashboard-page .box p a.sell, .dashboard-page .bottom-section-tabs table td a.sel {
+		font-size: 20px !important;
+		padding: 5px 10px !important;
+	}
+
+	.top_nav {
+		clear: both;
+		height: auto;
+		text-align: center;
+	}
+	.top_nav:after{
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	.top_nav span, .top_nav span a, .top_nav .pull-right {
+		float: none !important;
+	}
+	#loginBox {
+		left: 0 !important;
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
+	.top_nav #top_add_f {
+		margin: 0 auto;
+	}
+
+	#get_verified + span {
+		display: none;
+	}
+
+	.top_nav span {
+		display: block;
+		margin: 10px 0;
+	}
+
+	.live-statistics {
+		position: relative;
+		font-size: 18px;
+		/*margin: 10px 0;*/
+		text-align: center;
+	}
+
+	.live-statistics strong {
+		font-size: 18px;
+	}
+
+	.col-lg-2 {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	.footer-block > div > a {
+		width: auto;
+		float: none;
+	}
+
+	.hiw-col {
+		width: 100%;
+		float: none;
+	}
+
+	#bottom-section-tabs #my-loans {
+		width: 100%;
+		overflow-x: scroll;
+	}
+
+	#bbpress-forums li {
+		font-size: 12px;
+		word-wrap: break-word;
+	}
+
+	#um_form_register label {
+		display: block;
+		float: left;
+	}
+	#um_form_register span{
+		float: left;
+	}
+
+	#recaptcha_table td {
+		display: block;
+	}
+
+	.recaptchatable a {
+		display: inline-block;
+	}
+
+	/*.job-apply-table textarea, .form-control, input[type="text"], input[type="password"] {
+		width: 100% !important;
+	}*/
+
+	#recaptcha_table td {
+		width: 100%;
+	}
+
+	.recaptchatable td img, #recaptcha_image {
+		width: 100% !important;
+	}
+	.front-page-content .call_to_action a#percent_btn,
+	.front-page-content .call_to_action a#case_btn,
+	.call_to_action #percent_btn,
+	.call_to_action #currency_btn,
+	.call_to_action #case_btn{
+	display: block;
+	float: none;
+	text-align: center;
+	width: 100%;
+	}
+	.socialmedia{
+		text-align: center;
+	}
+
+	.wpcf7-form-control-wrap input[type=text], .wpcf7-form-control-wrap select, .wpcf7-form-control-wrap textarea{
+		width: 100%;
+	}
+	.dashboard-page ul.e-tabs li{
+		width: 50%;
+		white-space: nowrap;
+		max-height: 42px !important;
+	}
+	.regular-page-content h2{
+		height: auto;
+	}
+	form[name=filter_statement] input{
+		width: 40%;
+	}
+	form[name=filter_statement] select{
+		display: block;
+		margin: 10px 0;
+		width: 99%;
+	}
+
+
+
+
+}
+
+@media screen and (max-width: 745px){
+	/*.regular-page-content a img{
+		display: inline-block;
+		margin: auto;
+	}*/
+	.top_nav{
+		position: relative;
+		z-index: 99;
+	}
+	.top_nav #top_add_f{
+		position: relative;
+		/*z-index: 9999;*/
+
+	}
+}
+@media screen and (max-width: 652px){
+	.regular-page-content .welcome{
+		padding-left: 10%;
+	}
+}
+
+@media screen and (max-width: 566px){
+	.regular-page-content .welcome{
+		padding-left: 0%;
+	}
+	input[type="radio"] + label{
+		width: 30% !important;
+		text-align: left !important;
+	}
+}
+@media screen and (max-width: 540px) {
+	/* === === page header === === */
+	header[data-role="page-header"] {
+	}
+
+	header[data-role="page-header"] a.logo {
+		float: none;
+		margin: 0px auto;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	header[data-role="page-header"] .buttons {
+		float: none;
+		margin: 0px 0px 20px;
+		padding: 0px;
+		text-align: center;
+		/*position: relative;
+		z-index: 999;*/
+	}
+
+	header[data-role="page-header"] .buttons a {
+		margin-left: 10px;
+		text-transform: uppercase;
+	}
+
+	header[data-role="page-header"] .buttons a:first-child {
+		margin-left: 0px;
+	}
+	nav.main-navigation span.menu{
+		right: 50%;
+	}
+	.page-wrap{padding: 1px;}
+	/* === === end of page header === === */
+	/* === === welcome box === === */
+	.welcome-box .text a {
+		width: 100%;
+		display: block;
+		margin-top: 13px;
+		margin-left: 0px;
+	}
+
+	.welcome-box .text a:first-child {
+		margin-top: 0px;
+	}
+
+	/* === === end of welcome box === === */
+	/* === === sign up now === === */
+	.sign-up-now h4 {
+		text-align: center;
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.sign-up-now a {
+		display: block;
+		width: 100%;
+	}
+
+	/* === === end of sign up now === === */
+	/* === page title === */
+	.page-title h1 {
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+
+	.page-title h2 {
+		font-size: 20px;
+	}
+
+	/* === end of page title === */
+	/* === tab module fix === */
+	.lc-main-content .tab-module .info img {
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 10px;
+		float: none;
+		display: block;
+	}
+	.logged-in .qq-upload-button{
+		margin: auto;
+	}
+	#bottom-section-tabs.bottom-section-tabs td, #bottom-section-tabs.bottom-section-tabs th{
+		font-size: 12px;
+		padding: 5px;
+	}
+	.lc-main-content .tab-module ul li {
+		width: 100% !important;
+	}
+	.lc-main-content .tab-module ul li:first-child a {
+		border-radius: 6px 6px 0px 0px;
+	}
+	.lc-main-content .tab-module ul li:nth-child(2) a {
+		border-radius: 0px;
+	}
+	.lc-main-content .details .details-half-col {
+		float: none;
+		width: 100%;
+		margin: 0px;
+	}
+	.lc-main-content .details .details-half-col + .details-half-col {
+		margin-left: 0px;
+	}
+
+	/* === end of tab module fix === */
+	/* ===overall earnigns hex === */
+	.overall-earnings .hexes .hex:first-child {
+		margin-top: 0px;
+	}
+
+	.overall-earnings .hexes .hex {
+		float: none;
+		width: 100%;
+		margin-top: 20px;
+	}
+	#um_form_register{
+
+	}
+	input[type=checkbox]:after, input[type=radio]:after{
+		content: "";
+		clear: both;
+		display: block;
+	}
+
+	.overall-earnings .overflow-scroll {
+		overflow-x: scroll;
+	}
+	.overall-earnings .table {
+		min-width: 540px;
+	}
+	.overall-earnings .table .tab-row p:first-child {
+		max-width: 50%;
+	}
+	.overall-earnings .table .tab-row p:nth-child(2) {
+		max-width: 50%;
+		padding-right: 61px;
+	}
+	.overall-earnings .table .tab-row p:last-child {
+		max-width: 46px;
+		position: absolute;
+		right: 0px;
+	}
+	/* === end of overall earnigns hex === */
+	/* === thirdbox === */
+	.content-page .third-box .step:first-child {
+		margin-top: 0px;
+	}
+
+	.content-page .third-box .step {
+		width: 100%;
+		margin-top: 30px;
+	}
+	.content-page .third-box .abs-arrow {
+		display: none;
+	}
+	/* === end of thirdbox === */
+	/* === second box === */
+	.content-page .second-box img {
+		width: 100%;
+	}
+	/* === end of second box === */
+	/* === benefits === */
+	.benefits-inner .investor-benefits {
+		width: 100%;
+		text-align: center;
+	}
+	.benefits-inner .business-benefits {
+		margin-top: 20px;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* === end of benefits === */
+	/* === news content === */
+	.news-content .news-item .image {
+		float: none;
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+
+	.news-content .news-item .image img {
+		display: block;
+		width: 100%;
+	}
+
+	/* === business benefits === */
+	.business-benefits .bb-col {
+		width: 100%;
+		float: left;
+		margin-top: 25px;
+	}
+
+	.business-benefits .bb-col:nth-child(2) {
+		margin-top: 0px;
+	}
+
+	/* === investor how it works === */
+	.investor-how-it-works .step {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.investor-how-it-works h3 + .step {
+		margin-top: 0px;
+	}
+
+	.investor-how-it-works .abs-arrow {
+		display: none;
+	}
+
+	.investor-how-it-works .i-btn {
+		width: 100%;
+		display: block;
+	}
+
+	/* === benefits of investing === */
+	.benefits-of-investing .top-area .col-box {
+		margin: 0px;
+		width: 100%;
+	}
+
+	.benefits-of-investing .top-area .col-box + .col-box {
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+
+	.benefits-of-investing .middle-area {
+		padding-top: 30px;
+	}
+
+	.benefits-of-investing .bottom-area .col-box {
+		width: 100%;
+	}
+
+	.benefits-of-investing .bottom-area .col-box + .col-box {
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+
+	/* === end of benefits of investing === */
+	table.job-apply-table tr:first-child th {
+		padding-top: 10px;
+	}
+
+	table.job-apply-table th,
+	.filterTable tr td:first-child, .um_field_container label {
+		width: 100% !important;
+		display: block !important;
+		margin-bottom: 10px;
+		text-align: center !important;
+	}
+
+	table.job-apply-table td,
+	.um_field_container input[type=text], .um_field_container select {
+		width: 100% !important;
+		display: block !important;
+		padding: 0 20px;
+		margin: 0 0 10px;
+	}
+
+	table.job-apply-table td input[type=file] {
+		margin: 0 auto;
+		display: block;
+	}
+
+	.um_field_container input[type=password] {
+		width: 100% !important;
+	}
+
+	#um_form_registerinvestor, #um_form_accountdetails .um_group_segment, #filterContainer {
+		padding: 0 20px !important;
+	}
+
+	#loginBox {
+		left: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	#loginContent {
+		width: 100% !important;
+	}
+
+	.lwa-password input, .lwa-username input, .lwa-email input, .lwa-remember-email input {
+		width: 83% !important;
+	}
+	.front-page-content .call_to_action{
+		display: block; float: none; text-align: center; width: 100%;
+	}
+	.regular-page-content{
+		padding: 0 15px;
+	}
+	.regular-page-content p{
+		padding: 0 15px;
+	}
+	h2{
+		text-align: center;
+	}
+	.regular-page-content h3, #um_form_accountdetails .um_group_segment h4{
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 479px) {
+	.investor-header {
+		background-repeat: repeat;
+		text-align: center;
+	}
+
+	.investor-header-inner {
+		text-align: center;
+		line-height: 1.2;
+		padding: 15px 20px;
+	}
+
+	.secondary-header {
+		background-repeat: repeat;
+	}
+
+	.secondary-header .top-header-inner {
+		height: auto;
+		text-align: center;
+	}
+
+	.secondary-header .top-header-inner a {
+		display: inline-block;
+		float: none;
+	}
+
+	.secondary-header .top-header-inner a:first-child {
+		margin-left: 0px;
+	}
+
+	.secondary-header .top-header-inner p {
+		display: inline-block;
+		float: none;
+	}
+
+	/* === === half col === === */
+	.half-col h3 {
+		background-image: none;
+	}
+
+	.half-col .inner-col img {
+		float: none;
+		margin: 0px auto 20px;
+		display: block;
+	}
+
+	.half-col .inner-col a {
+		display: block;
+		width: 100%;
+	}
+
+	/* === === end of half col === === */
+	/* === === slide container === === */
+	.slider-section {
+		height: auto;
+	}
+
+	.slide-container .indv-slide p {
+		font-size: 24px;
+	}
+
+	.slider-section a.left-arrow {
+		top: 20px;
+		margin-top: 0px;
+	}
+
+	.slider-section a.right-arrow {
+		top: 20px;
+		margin-top: 0px;
+	}
+
+	/* === === end of slide container === === */
+	/* === === breadcrumbs === === */
+	.breadcrumbs .social-link {
+		text-align: center;
+	}
+
+	.breadcrumbs .social-link p {
+		display: block;
+		float: none;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid rgb(209, 209, 209);
+		text-align: center;
+	}
+
+	.breadcrumbs .social-link > a {
+		display: inline-block;
+		float: none;
+	}
+
+	.breadcrumbs .social-link p + a {
+		margin-left: 0px;
+	}
+
+	/* === === end of breadcrumbs === === */
+	/* === news-content news pagination === */
+	.news-pagination span {
+		float: left;
+		width: 100%;
+	}
+
+	/* === === end of news content news pagination === */
+	/* === get investing === */
+	.get-investing a {
+		width: 100%;
+		margin: 0px !important;
+		margin-top: 20px !important;
+	}
+
+	.get-investing h4 + a {
+		margin-top: 0px !important;
+	}
+
+	/* === end of get investing === */
+	header[data-role='page-header'] a.logo {
+		width: 100% !important;
+	}
+
+	.front-page-content h1 {
+		font-size: 25px;
+	}
+
+	.overall-earnings {
+		width: auto !important;
+		padding: 0 !important;
+		float: none !important;
+	}
+
+	.overall-earnings .hexes .hex {
+		float: none !important;
+		width: 100% !important;
+	}
+
+	.overall-earnings .table {
+		min-width: 100%;
+	}
+
+	.top_nav > div {
+		width: 100% !important;
+	}
+
+	.summary-section img, .summary-section {
+		width: 100% !important;
+	}
+
+	.top_nav span {
+		float: none !important;
+	}
+
+	.top_nav {
+		height: auto !important;
+		float: left;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.top_nav .pull-right {
+		float: none !important;
+		margin: 10px 0;
+	}
+
+	#top_add_f {
+		float: none !important;
+		margin: 10px auto !important;
+	}
+
+	#mc_embed_signup_footer form {
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	#mc_embed_signup_footer .mc-field-group {
+		float: none;
+	}
+
+	.benefits-of-investing .top-area, .benefits-of-investing {
+		padding: 0 !important;
+	}
+
+	.benefits-of-investing .bottom-area .col-box,
+	.business-benefits-dashboard .bb-col, .benefits-of-investing .top-area .col-box {
+		float: none !important;
+		width: 100% !important;
+	}
+
+	.benefits-of-investing .bottom-area .col-box:last-child {
+		margin-left: 0 !important;
+	}
+
+	.add-buttons > div {
+		margin: 0 !important;
+		text-align: center;
+	}
+
+	.dashboard-content .add-buttons .i-btn {
+		display: inline-block;
+		margin: 10px 0;
+	}
+
+	.dashboard-accordion .dai-content {
+		overflow-x: scroll !important;
+	}
+
+	#_myLoanSegments {
+		overflow-x: scroll !important;
+	}
+	form[name=filter_statement] input{
+		width: 35%;
+	}
+
+}
+@media screen and (max-width: 474px){
+	.logged-in .regular-page-content a img{
+		display: block;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 420px) {
+	.recaptchatable{
+		float: left;
+	}
+
+	header[data-role='page-header'] a.logo{
+		width: 80% !important;
+	}
+	h2{
+		text-align: center;
+	}
+	ul{ padding: 0 0 0 20px;}
+	.recaptchatable #recaptcha_response_field{
+		font-size: 11pt;
+		width: 97% !important;
+	}
+	.regular-page-content h2{
+		height: 100%;
+	}
+}

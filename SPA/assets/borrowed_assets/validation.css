@@ -1,0 +1,25 @@
+.error {
+	color: red;
+}
+span.hideValid {
+	display: none;
+}
+span.showValid {
+	display: block;
+	background: url(../img/validation/tick.png);
+	float: right; 
+	width: 30px; 
+	height: 32px;
+}
+span.hideErr {
+	display: none;
+}
+span.showErr {
+	display: block;
+	background: url(../img/validation/cross.png) no-repeat right;
+	width: 30px; 
+	height: 30px;
+	position: relative;
+	top: -70px;
+	left: 390px;
+}

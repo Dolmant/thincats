@@ -1,0 +1,95 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 999999999;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu > li:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+/* default delay for superifsh ios 800ms */
+.sf-menu { height: 40px; }
+.sf-menu > li { }
+.sf-menu > li > a { transition: all 200ms ease-in; -webkit-transition: all 200ms ease-in; /* normal animation on a normal link */}
+.sf-menu > li.sfHover > a { transition: all 160ms ease-in 800ms; -webkit-transition: all 160ms ease-in 800ms; /* transition OUT which is 160ms for the superfish out with delay of 800ms for the default delay */ }
+.sf-menu > li:hover > a { /* common hovered and unhovered properties */ }
+
+
+.sf-menu > li { margin-left: 7px; height: 42px !important;}
+.sf-menu > li:first-child { margin-left: 0px;}
+.sf-menu > li > a { line-height: 40px; font-size: 19px; color: #444444; border-right: 1px solid rgb(115, 122, 123); }
+.sf-menu > li:last-child > a{ border-right: none;}
+.sf-menu > li > a:before { display: none; position: absolute; bottom: -39px; left: 0px; right: 0px; height: 7px; }
+.sf-menu > li > a:hover { color: rgb(59, 121, 163) !important; }
+.sf-menu > li > a:hover:before { display: block; }
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(255,255,255,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
+
+/* Wordpress specific */
+.sf-menu li.current_page_item a { color: #155A91; }

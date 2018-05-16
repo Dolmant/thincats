@@ -1,0 +1,522 @@
+.nominationTable td {
+	border: none;
+}
+
+#userNominations table td {
+	border-top: 1px solid #e7ecdb;
+	text-align: center;
+}
+
+#userNominations table th {
+	text-align: center;
+}
+
+#userNominations table {
+	border: 1px solid #e7ecdb;
+}
+
+#userRNominations table td {
+	border-top: 1px solid #e7ecdb;
+	text-align: center;
+}
+
+#userRNominations table th {
+	text-align: center;
+}
+
+#userRNominations table {
+	border: 1px solid #e7ecdb;
+}
+
+.fundsContainer {
+	font-size: 20px;
+}
+
+.infoContainer {
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+
+#addFunds table {
+	width: 100%;
+}
+.fundsAdminTable td, .fundsAdminTable th {
+	padding: 0px 10px;
+}
+.fundsAdminTable input{
+	width: 50px;
+}
+table.fundsAdminTable tr:nth-child(odd) {
+	background-color: #eee;
+}
+.addFunds, .updateFunds {
+	display: none;
+	border: 1px solid #efefef;
+	padding: 10px;
+	width: 300px;
+}
+table.fundsAdminTable {
+	border-collapse: collapse;
+	background-color: #E7EAF3;
+	border: 1px solid #000;
+}
+.fundsAdminTable td, .fundsAdminTable th{
+	padding:5px;
+	font-size:10pt;
+	border-bottom:1px solid #ccc;
+}
+td.left-cell {
+	text-align: left !important;
+	margin-left: 10px;
+}
+td.center-cell {
+	text-align: center;
+}
+td.right-cell {
+	text-align: right;
+}
+#ui-datepicker-div {
+    padding: 5px 20px 40px 5px;
+	background: #fff;
+	border: 1px solid #d4d4d4;
+    clip: auto !important;
+    min-height: 200px;
+}
+li#text-6 {
+	display: none;
+}
+.register li#text-6 {
+	display: block;
+}
+
+#myBidsTable {
+	float: none !important;
+	margin-bottom: 10px;
+}
+
+h3.segment_ttl {
+	margin-top: 15px !important;
+}
+
+.sellLoan {
+	padding: 10px
+}
+
+.verify_btn {
+	cursor: pointer;
+	background: url(../img/verify.png) no-repeat center;
+	display: block;
+	width: 22px;
+	height: 22px;
+}
+
+table#addressLog {
+	border-collapse: collapse;
+	width: 90%;
+}
+
+table#addressLog td {
+	padding: 2px 0px;
+	border-bottom: 1px solid #efefef;
+	margin: 0px;
+}
+
+.loading_overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	-moz-opacity:.30; 
+	filter:alpha(opacity=30); 
+	opacity:.30;
+	z-index: 9999;
+	background: url(../img/ajax-loader.gif) no-repeat center center #000;
+}
+
+th.right, td.right {
+	text-align: right;
+}
+
+.table_container {
+	overflow: auto;
+	height: 230px;
+	width: 587px;
+	margin-left: 17px;
+}
+
+#cancelBtn {
+	margin: 15px 0px 0px 15px !important;
+}
+
+/* my returns */
+.returns-app {
+font-family: helvetica, arial;
+clear: both;
+box-shadow: inset 0px 0px 4px #444;
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+padding: 0;
+margin: 0 0 10px 0;
+width: 237px;
+}
+.help, .help h3, .help clr {
+box-shadow: none;
+padding: 0;
+margin: 0;
+clear: none;
+border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+}
+
+.returns-app h3 {
+color: #fff;
+font-family: helvetica, arial;
+font-size: 15px;
+margin: 0;
+padding: 0px 5px;
+border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+-moz-border-radius: 5px 5px 0 0;
+cursor: pointer;
+font-weight: bold;
+behavior: url(/PIE.htc);
+}
+
+
+.returns-app ul, .returns-app ul li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-right: 8px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.returns-app ul {
+margin-left: 10px;	
+}
+
+.my-returns {
+	display: block;
+	border-radius: 50px;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: -1px;
+	behavior: url(/PIE.htc);
+
+}
+
+	.my-returns sup {
+		font-size: 8px;
+		padding-left: 1px;
+	}
+	
+	.returns-app-text {
+		text-align: center;
+		font-size: 8px;
+		padding-top: 4px;
+		color: #666;
+		width: 45px;
+		text-transform: uppercase;
+	}
+	
+.blue-app-bg {
+	background: #0b5790;
+}
+.returns-app .blue-app-h3 {
+	background: url(../img/rhs/blue-h3.png) no-repeat 210px 7px #0b5790;
+}
+.help .blue-app-h3 {
+	background: url(../img/rhs/blue-h3.png) no-repeat 210px -23px #0b5790;
+}
+
+.green-app-bg {
+	background: #00ab50;
+}
+
+.returns-app .green-app-h3 {
+	background: url(../img/rhs/green-h3.png) no-repeat 210px 7px #00ab50;
+}
+.help .green-app-h3 {
+	background: url(../img/rhs/green-h3.png) no-repeat 210px -23px #00ab50;
+}
+
+.orange-app-bg {
+	background: #ff8400;
+}
+
+.returns-app .orange-app-h3 {
+	background: url(../img/rhs/orange-h3.png) no-repeat 210px 7px #ff8400;
+}
+.help .orange-app-h3 {
+	background: url(../img/rhs/orange-h3.png) no-repeat 210px -23px #ff8400;
+}
+
+.clr {
+	clear: both;
+}
+
+table#myBidsTable td, table#myBidsTable th {
+	text-align: center;
+}
+.transactionTbl {
+	border-collapse: collapse;
+}
+.transactionTbl td, .transactionTbl th {
+	border: 1px solid #e7ecdb;
+	padding: 3px 8px;
+}
+._transactionForm {
+	margin: 20px 0px 0px 0px;
+}
+#showFilter {
+	cursor: pointer;
+}
+.appDetailsTable th {
+	cursor: pointer;
+}
+.rbs-settings_page_rb_account_recovery .form-table th {
+    font-weight: bold;
+}
+.rbs-settings_page_rb_account_recovery #recoveryForm {
+    margin-bottom: 20px;
+}
+.rbs-settings_page_rb_account_recovery .loading,
+.rbs-settings_page_rb_funds_reconciliation .loading,
+.rbs-settings_page_rb_reconciliation_report .loading,
+.loading {
+    background:url(../img/loading.gif) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+.rbs-settings_page_rb_account_recovery #recovery-buttons {
+    margin: 20px 0 20px;
+}
+.rbs-settings_page_rb_account_recovery .recovery-table {
+    border: 1px solid #dbdbdb;
+    border-spacing: 0px;
+}
+.rbs-settings_page_rb_account_recovery .recovery-table td,
+.rbs-settings_page_rb_account_recovery .recovery-table th {
+    border-right: 1px solid #dbdbdb;
+    padding: 5px;
+    text-align: left;
+}
+.rbs-settings_page_rb_account_recovery .recovery-table th,
+.rbs-settings_page_rb_account_recovery .recovery-table td {
+    border-bottom: 1px solid #dbdbdb;
+}
+.rbs-settings_page_rb_account_recovery .recovery-table td:last-child,
+.rbs-settings_page_rb_account_recovery .recovery-table th:last-child {
+    border-right:none;
+}
+.rbs-settings_page_rb_account_recovery #search-result.recovery-table tr:last-child th,
+.rbs-settings_page_rb_account_recovery #search-result.recovery-table tr:last-child td{
+    border-bottom: none;
+}
+.rbs-settings_page_rb_account_recovery #lockdowns-wrap {
+    display: none;
+}
+.rbs-settings_page_rb_account_recovery #last-lockdowns.recovery-table tr:last-child td {
+    border-bottom: none;
+}
+.rbs-settings_page_rb_account_recovery h2 a,
+.rbs-settings_page_rb_reconciliation_report h2 a{
+    cursor: pointer;
+}
+.rbs-settings_page_rb_account_recovery #recoveryStatus.loading {
+    width: auto;
+    display: none;
+    padding-left:20px;
+}
+.rbs-settings_page_rb_account_recovery #recovery-log {
+    display: none;
+}
+/*task #3724*/
+.rbs-settings_page_rb_funds_reconciliation .confirmed-row {
+    background:#A9F16C;
+}
+.rbs-settings_page_rb_reconciliation_report #ui-datepicker-div {
+    height: 165px;
+}
+.rbs-settings_page_rb_reconciliation_report .ui-datepicker .ui-datepicker-next {
+    right: 11px;
+}
+
+#tab-container > .panel li.tab {
+    display: block;
+    padding:15px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+#tab-container > .panel li.tab+div {
+    display: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-top: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.rbs-settings_page_rb_admin_repayments .autobids-table {
+    background: #fff;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 98%;
+    margin-bottom: 10px;
+
+}
+
+.rbs-settings_page_rb_admin_repayments .autobids-table input[type=checkbox] {
+    margin-left: 5px;
+}
+
+.rbs-settings_page_rb_admin_repayments .autobids-table tr {
+    border: solid 1px #ccc
+}
+
+.rbs-settings_page_rb_admin_repayments .autobids-table th {
+    background: #ddd;
+    text-align: left;
+    padding: 5px;
+    font-size: 13px;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ccc), to(#f9f9f9));
+    background-image: -webkit-linear-gradient(bottom, #ccc, #f9f9f9);
+    background-image: -moz-linear-gradient(bottom, #ccc, #f9f9f9);
+    background-image: -o-linear-gradient(bottom, #ccc, #f9f9f9);
+    background-image: linear-gradient(to top, #ccc, #f9f9f9);
+
+}
+
+.rbs-settings_page_rb_admin_repayments .autobids-table td {
+    background: #f0f0f0;
+    text-align: left;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container .tab {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    background: #efefef;
+    border: solid 1px #ccc;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container .tab a {
+    padding: 5px 10px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container .tab a:hover {
+    color: #000;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container li.active {
+    background: #fff;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container .panel {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container h3 {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.rbs-settings_page_rb_admin_repayments #tab-container th {
+    text-align: left;
+    padding: 0px 5px;
+}
+.column-time {
+    position: relative;
+}
+.column-complete {
+    width: 40px;
+}
+.column-missing {
+    width:230px
+}
+ .widefat td.column-time {
+     overflow: visible;
+     cursor: pointer;
+
+ }
+.widget_last_msg {
+    display:none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+    position: absolute;
+    top:25px;
+    background: #FFFBCC;
+    border: 1px solid #E6DB55;
+}
+td:hover>.widget_last_msg {
+    display: inline-block;
+    z-index: 100;
+}
+#addressLog .role {
+    max-width: 100px;
+    min-width: 100px;
+    word-break: break-all;
+}
+.dashboard-modal {
+    border-radius:5px;
+    overflow: hidden;
+}
+.dashboard-modal .modal-content {
+    padding: 15px;
+}
+#modal-container h1 {
+    padding: 0;
+    text-align: center;
+}
+.dashboard-modal .modal-content .subtitle {
+    padding: 0;
+    display: block;
+    margin-bottom: 10px;
+}
+.dashboard-modal .modal-content .buttons{
+    margin-top:10px;
+}
+#modal-container label {
+    display: inline;
+    float: none;
+    font-weight: normal;
+}
+#modal-container a.modal-close.button-secondary {
+    background: #f2f2f2 url(../../../../wp-admin/images/white-grad.png) repeat-x scroll left top;
+    color: #464646;
+    font-size: 18px;
+    font-weight: normal;
+    position: relative;
+    display: inline;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    float: none;
+    right: 0px;
+    top: 0px;
+    z-index: 99999;
+}

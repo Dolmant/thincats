@@ -1,12 +1,11 @@
 // @flow
-import {connect} from 'react-redux';
-import React from 'react';
-import './footer.less';
+import React from "react"
+import "./footer.less"
 
 type Props = {
 };
 
-export class Footer extends React.Component<Props> {
+export default class Footer extends React.Component<Props> {
     render() {
         //        <body  class="page-template-default page page-id-1314 page-child parent-pageid-1312"  class="">
         return (
@@ -15,35 +14,35 @@ export class Footer extends React.Component<Props> {
                     <div className="footer-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="col-lg-2">
                             <h3>Lending</h3>
-                            <a href="https://www.thincats.com.au/lending/about-lending/">About Lending</a>
-                            <a href="https://www.thincats.com.au/statistics/">Key Statistics</a>
-                            <a href="https://www.thincats.com.au/lending/risks/">What are the risks?</a>
-                            <a href="https://www.thincats.com.au/lending/lending-faq/">Lending FAQ</a>
-                            <a href="https://www.thincats.com.au/wp-content/uploads/2018/04/TCA-Member-Application-Form-April-2018.docx">Membership Application Form</a>
-                            <a href="/wp-content/uploads/2014/10/TCA-Membership-Agreement-May16.pdf">Membership Agreement</a>
-                            <a href="https://www.thincats.com.au/register/">Register</a>
+                            <a href="/lending/about-lending/">About Lending</a>
+                            <a href="/statistics/">Key Statistics</a>
+                            <a href="/lending/risks/">What are the risks?</a>
+                            <a href="/lending/lending-faq/">Lending FAQ</a>
+                            <a href="/assets/borrowed_assets/TCA-Member-Application-Form-April-2018.docx">Membership Application Form</a>
+                            <a href="/assets/borrowed_assets/TCA-Membership-Agreement-May16.pdf">Membership Agreement</a>
+                            <a href="/register/">Register</a>
                         </div>
                         <div className="col-lg-2">
                             <h3>Borrowing</h3>
-                            <a href="https://www.thincats.com.au/borrowing/about-borrowing/">About Borrowing</a>
-                            <a href="https://www.thincats.com.au/statistics/">Key Statistics</a>
-                            <a href="https://www.thincats.com.au/borrowing/apply-loan/">Apply for a loan</a>
+                            <a href="/borrowing/about-borrowing/">About Borrowing</a>
+                            <a href="/statistics/">Key Statistics</a>
+                            <a href="/borrowing/apply-loan/">Apply for a loan</a>
                         </div>
                         <div className="col-lg-2">
                             <h3>Sponsors</h3>
-                            <a href="https://www.thincats.com.au/sponsors-introducers/about-sponsors-introducers/">About Sponsors and Introducers</a>
+                            <a href="/sponsors-introducers/about-sponsors-introducers/">About Sponsors and Introducers</a>
                         </div>
                         <div className="col-lg-2">
                             <h3>About us</h3>
-                            <a href="https://www.thincats.com.au/about/thincats-australia/">About ThinCats</a>
-                            <a href="https://www.thincats.com.au/about/our-team/">Our Team</a>
-                            <a href="https://www.thincats.com.au/about/contact-us/">Contact us</a>
-                            <a target="_blank" rel="noopener noreferrer" href="/wp-content/uploads/2014/10/TCA-Privacy-Policy-v1.1.pdf">Privacy Policy</a>
+                            <a href="/about/thincats-australia/">About ThinCats</a>
+                            <a href="/about/our-team/">Our Team</a>
+                            <a href="/about/contact-us/">Contact us</a>
+                            <a target="_blank" rel="noopener noreferrer" href="/assets/borrowed_assets/TCA-Privacy-Policy-v1.1.pdf">Privacy Policy</a>
                         </div>
-                        <div className="col-lg-2" style={{paddingTop: '45px'}}>
-                            <a href="https://www.thincats.com.au/how-thincats-works/">How it works</a>
-                            <a href="https://www.thincats.com.au/resources/">Resources</a>
-                            <a href="https://www.thincats.com.au/news/">news</a>
+                        <div className="col-lg-2" style={{paddingTop: "45px"}}>
+                            <a href="/how-thincats-works/">How it works</a>
+                            <a href="/resources/">Resources</a>
+                            <a href="/news/">news</a>
                         </div>
                         <div className="col-lg-2">
                             <ul className="socialmedia">
@@ -67,17 +66,6 @@ export class Footer extends React.Component<Props> {
                     </div>
                 </section>
             </div>
-        );
+        )
     }
 }
-
-const mapStateToProps = () => ({
-});
-
-const mapDispatchToProps = () => ({
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Footer);

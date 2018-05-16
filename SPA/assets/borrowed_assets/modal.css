@@ -1,0 +1,132 @@
+/* Overlay */
+#modal-overlay {background-color:#000; cursor:wait;}
+
+/* Container */
+#modal-container {font: 16px/22px Arial; text-align:left; width:450px; min-height: 350px; height:auto !important;  position: relative;}
+#modal-container .modal-content {background-color:#fff; color:#4f4f4f; height:auto;}
+#modal-container h1 {color:#4f4f4f; font-size:18px; line-height:28px; margin:0; padding:0 0 6px 20px; text-align:left;}
+#modal-container .modal-loading {background:url(../img/modal/loading.gif) no-repeat; height:55px; margin:-14px 0 0 190px; padding:0; position:absolute; width:54px; z-index:8000;}
+#modal-container .modal-message {text-align:center;}
+#modal-container .modal-error {background:#fff; font-size:14px; font-weight:bold; line-height:18px; margin:0 auto; padding:2px; width:92%; color: #ff0000;}
+#modal-container br {clear:both;}
+#modal-container form {margin:0; padding:0;}
+#modal-container label {clear:left; display:block; float:left; font-weight:bold; padding-right:4px; text-align:right; width:100px;}
+#modal-container .modal-input {background:#eee; border:1px solid #fff; font-family:Arial; float:left; padding:2px; margin:2px; width:300px;}
+#modal-container textarea {height:114px;}
+#modal-container .modal-cc {cursor:default; font-size:14px; vertical-align:top;}
+#modal-container .modal-top {background-color:#fff; height:13px; margin:0; padding:0; -webkit-border-top-left-radius:8px; -webkit-border-top-right-radius:8px; -moz-border-radius-topleft:8px; -moz-border-radius-topright:8px; border-radius:8px 8px 0 0;}
+#modal-container .modal-bottom {background-color:#fff; font-size:12px; height:13px; line-height:12px; text-align:center; -webkit-border-bottom-right-radius:8px; -webkit-border-bottom-left-radius:8px; -moz-border-radius-bottomright:8px; -moz-border-radius-bottomleft:8px; border-radius:0 0 8px 8px;}
+#modal-container .modal-bottom a,
+#modal-container .modal-bottom a:link,
+#modal-container .modal-bottom a:active,
+#modal-container .modal-bottom a:visited {color:#666; position:relative; top:-4px; text-decoration:none;}
+#modal-container .modal-bottom a:hover {color:#888;}
+#modal-container .modal-button {background:#1fb365; border:0; color:#fff; cursor:pointer; font-size:14px; font-weight:bold; height:26px; margin:4px 0 0 4px; text-align:center; vertical-align:middle; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px;}
+#modal-container .modal-button:hover {background:#0a9e4f;}
+#modal-container a.modal-close,
+#modal-container a.modal-close:link,
+#modal-container a.modal-close:active,
+#modal-container a.modal-close:visited { background:url(../img/x.png) no-repeat; color:#999; font-size:18px; font-weight:bold; position:absolute; display: inline; width: 20px; height: 20px; cursor: pointer; text-decoration:none; float:right; right:8px; top:0px; z-index: 99999;}
+#modal-container a.modal-close:hover {color:#ccc;}
+#modal-container .modal-content .modal {border: none; background: none;}
+
+/*  new */
+#modal-container h1.modal-title {	
+	background: #15386f;
+	color: #fff;
+	font-weight: bold;
+	padding: 6px 10px;
+	margin: 0px 10px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 13px;
+}
+a.closeBtn {
+	color: #fff;
+}
+#LoginWithAjax_Form label {
+	float: left;
+	width: 130px;
+	font-weight: bold;
+	padding: 10px 5px;
+	color: #15386f;
+	text-align: left;
+	font-size: 12px;
+}
+
+#LoginWithAjax_Form label.sq_label  {
+	padding-top: 5px;
+}
+
+#LoginWithAjax_Form input[type="text"], #LoginWithAjax_Form input[type="password"] {
+	padding: 10px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 215px !important;
+}
+#lwa_wp-submit {
+	display: block;
+	width: 87px;
+	height: 31px;
+	border: none;
+	float: right;
+	margin-right: 14px;
+	padding: 0px;
+	background: none;
+}
+
+#modal-buttons-footer a {
+	color: #16386F;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+	text-align: left;
+}
+#LoginWithAjax_Links {
+	font-size: 12px;
+}
+#modal-buttons-footer {
+	position: absolute;
+	bottom: 60px;
+	background: url('../img/footer-bg.jpg') top right no-repeat;
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+	width: 405px;
+	padding: 20px 0 20px 15px;
+	color: #ccc;
+}
+#LoginWithAjax_Username {
+	margin-top: 10px;
+}
+input#lwa_user_remember {
+	padding: 10px 5px 10px 10px !important;
+	margin: 0px 15px 15px 0px !important;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+a#LoginWithAjax_Links_Remember_Cancel {
+	color: #16386F;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+	text-align: left;
+}
+span.bold {
+	font-weight: bold;
+}
+p.font13 {
+	font-size: 13px;
+}
+/*  new */
+#cancelBidTable th,
+#cancelBidTable td {
+    font-size: 10pt;
+    padding-right: 5px;
+    text-align: left;
+}
+#cancelBidTable th:last-child,
+#cancelBidTable td:last-child{
+    padding-right: 0px;
+}

@@ -26,6 +26,10 @@ func Init() {
 
 	mux.PathPrefix("/dist/").Handler(http.StripPrefix("/dist/", fs))
 
+	fs = http.FileServer(http.Dir("./SPA/assets"))
+
+	mux.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", fs))
+
 	var genericHandle HandlerFunc
 	genericHandle = func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "./SPA/index.html")

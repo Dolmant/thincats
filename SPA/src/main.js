@@ -1,18 +1,15 @@
 // @flow
-// import './public-path';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import ReduxToastr from 'react-redux-toastr';
-import {MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
-import blue from 'material-ui/colors/blue';
-import red from 'material-ui/colors/red';
-import 'react-redux-toastr/src/styles/index.scss';
+import React from "react"
+import ReactDOM from "react-dom"
+import {MuiThemeProvider, createMuiTheme} from "material-ui/styles"
+import blue from "material-ui/colors/blue"
+import red from "material-ui/colors/red"
+import {Provider} from "mobx-react"
 // Imports the global 'docReady'
-import './util/docReady';
-import PageRouter from './pages/pageRouter';
-import store from 'store';
-import './main.less';
+import "./util/docReady"
+import PageRouter from "./pages/pageRouter"
+import Store from "store"
+import "./main.less"
 
 declare var docReady;
 
@@ -22,17 +19,17 @@ const theme = createMuiTheme({
         secondary: blue,
         error: red,
     },
-});
+})
 
 docReady(() => {
-    const appTarget = document.getElementById('mount');
+    const appTarget = document.getElementById("mount")
     if (appTarget) {
         ReactDOM.render(
-            <Provider store={store}>
+            <Provider store={Store}>
                 <MuiThemeProvider theme={theme}>
                     <div>
                         <PageRouter />
-                        <ReduxToastr
+                        {/* <ReduxToastr
                             timeOut={4000}
                             newestOnTop={false}
                             preventDuplicates
@@ -40,10 +37,10 @@ docReady(() => {
                             transitionIn="fadeIn"
                             transitionOut="fadeOut"
                             progressBar
-                        />
+                        /> */}
                     </div>
                 </MuiThemeProvider>
             </Provider>,
-            appTarget);
+            appTarget)
     }
-});
+})

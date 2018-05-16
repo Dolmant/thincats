@@ -1,0 +1,103 @@
+#creditsList, #donatoinsList {
+	width: 800px;
+}
+
+#creditswrapper{
+	border: 1px solid #EEEEEE;
+	height: 160px;
+	overflow: auto;
+}
+
+#donationswrapper{
+	border: 1px solid #EEEEEE;
+	height: 160px;
+	overflow: auto;
+}
+		
+span.trHUser {
+	display: block;
+	float: left;
+	width: 75px;
+	text-align: center;
+}
+
+span.trHDT {
+	display: block;
+	float: left;
+	width: 135px;
+	text-align: center;
+}
+
+span.trHMsg {
+	display: block;
+	float: left;
+	width: 220px;
+	text-align: center;
+}
+
+span.trHMethod {
+	display: block;
+	float: left;
+	width: 95px;
+	text-align: center;
+}
+
+span.trHAmount {
+	display: block;
+	float: left;
+	width: 95px;
+	text-align: center;
+}
+
+span.trHBalance {
+	display: block;
+	float: left;
+	width: 135px;
+	text-align: center;
+}
+
+span.trHNUser {
+	display: block;
+	float: left;
+	width: 75px;
+	text-align: center;
+}
+
+span.groupDate {
+	cursor: pointer;
+}
+
+.bld {
+	font-weight: bold;
+}
+
+.donatoinsList span {
+	text-align: center;
+}
+
+#userBalances th, #userBalances td {
+	padding: 0px 5px;
+}
+
+#userBalances th.left {
+	text-align: left;
+}
+
+#userBalances td.right {
+	text-align: right;
+}
+
+#overlay_transation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/ajax-loader.gif) no-repeat center center #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+	display: none;
+}

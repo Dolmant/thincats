@@ -1,12 +1,11 @@
 // @flow
-import {connect} from 'react-redux';
-import React from 'react';
-import './whatAreTheRisks.less';
+import React from "react"
+import "./whatAreTheRisks.less"
 
 type Props = {
 };
 
-export class WhatAreTheRisks extends React.Component<Props> {
+export default class WhatAreTheRisks extends React.Component<Props> {
     render() {
         return (
             <div className="whatAreTheRisks">
@@ -45,17 +44,6 @@ export class WhatAreTheRisks extends React.Component<Props> {
                     <p>&nbsp;</p>
                 </section>
             </div>
-        );
+        )
     }
 }
-
-const mapStateToProps = () => ({
-});
-
-const mapDispatchToProps = () => ({
-});
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(WhatAreTheRisks);

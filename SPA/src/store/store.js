@@ -1,70 +1,53 @@
 // @flow
-import {configure} from 'mobx';
-import URLReducer from './URLReducers';
+import {configure, observable, action} from "mobx"
 
-configure({enforceActions: true});
+configure({enforceActions: true})
+
+const URLGenerator = () =>
+    // window.history.replaceState({}, 'Home', '/');
+    window.location.pathname
+
+export type StoreType = {
+    URL: string,
+}
 
 class Store {
-    @observable githubProjects = []
-    @observable state = "pending"
+    @observable URL = URLGenerator()
 
-    fetchProjects = flow(function * () { // <- note the star, this a generator function!
-        this.githubProjects = []
-        this.state = "pending"
-        try {
-            const projects = yield fetchGithubProjectsSomehow() // yield instead of await
-            const filteredProjects = somePreprocessing(projects)
-            // the asynchronous blocks will automatically be wrapped actions and can modify state
-            this.state = "done"
-            this.githubProjects = filteredProjects
-        } catch (error) {
-            this.state = "error"
-        }
-    })
+    @action
+    replaceURL = (URL: string) => {
+        window.history.replaceState({}, "", URL)
+        this.URL = URL
+    }
+
+    @action
+    pushURL = (URL: string) => {
+        window.history.pushState({}, "", URL)
+        this.URL = URL
+    }
+
+    @action
+    navHome = () => {
+        window.history.pushState({}, "Home", "/")
+        this.URL = "/"
+    }
+
+    // @observable githubProjects = []
+    // @observable state = "pending"
+
+    // fetchProjects = flow(function* fetcher() { // <- note the star, this a generator function!
+    //     this.githubProjects = []
+    //     this.state = "pending"
+    //     try {
+    //         const projects = yield fetchGithubProjectsSomehow() // yield instead of await
+    //         const filteredProjects = somePreprocessing(projects)
+    //         // the asynchronous blocks will automatically be wrapped actions and can modify state
+    //         this.state = "done"
+    //         this.githubProjects = filteredProjects
+    //     } catch (error) {
+    //         this.state = "error"
+    //     }
+    // })
 }
 
-const loggerMiddleware = createLogger();
-
-export type action_type = {
-    payload: any,
-    type: any,
-};
-
-const initialState = {
-    toastr: {
-        toastrs: [],
-    },
-};
-
-// concatenate all the reducers
-function allReducers(
-    state: typeof initialState = initialState,
-    action: action_type,
-) {
-    return {
-        URL: URLReducer(state.URL, action),
-        toastr: toastrReducer(state.toastr, action),
-    };
-}
-
-
-// create store
-let store;
-if (process.env.NODE_ENV === 'production') {
-    store = createStore(
-        allReducers,
-        applyMiddleware(
-            thunkMiddleware, // lets us dispatch() functions
-        ),
-    );
-} else {
-    store = createStore(
-        allReducers,
-        applyMiddleware(
-            thunkMiddleware, // lets us dispatch() functions
-            loggerMiddleware, // neat middleware that logs actions
-        ),
-    );
-}
-
-export default store;
+export default new Store()
