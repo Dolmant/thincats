@@ -2,6 +2,7 @@
 import {observer, inject} from "mobx-react"
 import React from "react"
 import Home from "pages/home/home"
+import HomeNew from "pages/home/homeNew"
 import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
 import ContactUs from "pages/aboutUs/contactUs/contactUs"
 import OurTeam from "pages/aboutUs/ourTeam/ourTeam"
@@ -20,6 +21,11 @@ export default class PageRouter extends React.Component<Props> {
         // Route based on URL
         switch (this.props.store.URL) {
         default:
+        case "/homenew":
+        case "/new":
+            return [
+                <HomeNew />,
+            ]
         case "/home":
         case "/":
             return [
