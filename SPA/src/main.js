@@ -1,9 +1,9 @@
 // @flow
 import React from "react"
 import ReactDOM from "react-dom"
-import {MuiThemeProvider, createMuiTheme} from "material-ui/styles"
-import blue from "material-ui/colors/blue"
-import red from "material-ui/colors/red"
+import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles"
+import blue from "@material-ui/core/colors/blue"
+import red from "@material-ui/core/colors/red"
 import {Provider} from "mobx-react"
 // Imports the global 'docReady'
 import "./util/docReady"

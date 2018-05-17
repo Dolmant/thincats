@@ -29,29 +29,32 @@ export default class PageRouter extends React.Component<Props> {
         case "/home":
         case "/":
             return [
+                <Header />,
                 <Home />,
             ]
         case "/about":
         case "/about/":
             return [
+                <Header />,
                 <AboutThinCats />,
             ]
         case "/contactus":
         case "/contactus/":
             return [
+                <Header />,
                 <ContactUs />,
             ]
         case "/ourteam":
         case "/ourteam/":
-            return (
-                <OurTeam />
-            )
+            return [
+                <Header />,
+                <OurTeam />,
+            ]
         }
     }
     render() {
         return (
             <section className="page-wrap">
-                <Header />
                 {this.route()}
                 <Footer />
             </section>

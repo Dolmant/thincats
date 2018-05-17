@@ -9,7 +9,7 @@ export default class Footer extends React.Component<Props> {
     render() {
         //        <body  class="page-template-default page page-id-1314 page-child parent-pageid-1312"  class="">
         return (
-            <div className="fotter">
+            <div className="footer">
                 <section className="footer-links clearfix">
                     <div className="footer-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="col-lg-2">
