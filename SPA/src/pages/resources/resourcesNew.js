@@ -2,6 +2,7 @@
 import React from "react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
+import ListSubheader from "@material-ui/core/ListSubheader"
 import Menu from "components/menu/menu"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
@@ -30,20 +31,20 @@ export default class Resources extends React.Component<Props, State> {
 
     renderResourceMenu = () => {
         // build these components
-        const MainHeader = (name, index, children) => (
-            <List open>
-                <ListItem>
+        const MainHeader = (name, index, children) => {
+            return ([
+                <ListSubheader>
                     <div disabled>
                         {`${name}`}
                     </div>
-                </ListItem>
-                {children}
-            </List>
-        )
-        const SubHeader = (name, index) => (
-            <ListItem>
+                </ListSubheader>,
+                children,
+            ])
+        }
+        const SubHeader = (name, mainName, index) => (
+            <ListItem button onClick={() => { this.setState({subHeader: name, mainHeader: mainName}) }}>
                 <div>
-                    {`${index}. ${name}`}
+                    {`${index + 1}. ${name}`}
                 </div>
             </ListItem>
         )
@@ -52,7 +53,7 @@ export default class Resources extends React.Component<Props, State> {
             index,
             Object.entries(mainHeaderValue).map(([subHeaderKey, content], index) => {
                 return (
-                    SubHeader(subHeaderKey, index)
+                    SubHeader(subHeaderKey, mainHeaderKey, index)
                 )
             })))
     }
@@ -72,10 +73,12 @@ export default class Resources extends React.Component<Props, State> {
             <div className="resources">
                 <Menu />
                 <Grid container spacing="12">
-                    <Grid item xs={4}>
-                        {this.renderResourceMenu()}
+                    <Grid item xs={4} md={2}>
+                        <List>
+                            {this.renderResourceMenu()}
+                        </List>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={8} md={10}>
                         <div className="resourceContent">
                             {this.renderResourceContent()}
                         </div>

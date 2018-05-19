@@ -38,7 +38,9 @@
 .menu {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
 }
 .menu .navRoot {
   border-bottom-right-radius: 10px;

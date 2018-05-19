@@ -30,8 +30,8 @@ export default class Menu extends React.Component<Props, State> {
         const {value} = this.state
         return (
             <div className="menu">
-                <Grid container justify="center" spacing={12}>
-                    <Grid item xs={12} md={4}>
+                <Grid container justify="center">
+                    <Grid item xs={12}>
                         <BottomNavigation
                             value={value}
                             onChange={this.handleChange}

@@ -4,7 +4,7 @@ todo:
 cache resource rendering/processing
 router should separate out anchors and queries with ? for page routes
 add compact=false to babelrc for dev build to help readability
-
+todo make menu a popover that can be hidden to help with mobile view
 
 home similar to:
 https://www.gitbook.com/
