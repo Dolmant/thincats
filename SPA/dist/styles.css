@@ -47,6 +47,9 @@
 .menu .navRoot .navAction {
   max-width: 100vh !important;
 }
+.resources .resourceContent {
+  padding: 10rem 1rem 1rem 1rem;
+}
 h2 {
   font-weight: normal;
 }

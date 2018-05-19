@@ -23,7 +23,7 @@ export default class PageRouter extends React.Component<Props> {
         switch (true) {
         default:
         case this.props.store.URL.startsWith("/homenew"):
-        case "/new":
+        case this.props.store.URL.startsWith("/new"):
             return [
                 <HomeNew />,
                 <Footer />,
@@ -37,7 +37,7 @@ export default class PageRouter extends React.Component<Props> {
                     <Footer />
                 </section>
             )
-        case "/resources":
+        case this.props.store.URL.startsWith("/resources"):
             return [
                 <Resources />,
                 <Footer />,
