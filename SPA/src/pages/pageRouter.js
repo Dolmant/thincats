@@ -3,6 +3,7 @@ import {observer, inject} from "mobx-react"
 import React from "react"
 import Home from "pages/home/home"
 import HomeNew from "pages/home/homeNew"
+import Resources from "pages/resources/resourcesNew"
 import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
 import ContactUs from "pages/aboutUs/contactUs/contactUs"
 import OurTeam from "pages/aboutUs/ourTeam/ourTeam"
@@ -19,45 +20,57 @@ type Props = {
 export default class PageRouter extends React.Component<Props> {
     route() {
         // Route based on URL
-        switch (this.props.store.URL) {
+        switch (true) {
         default:
-        case "/homenew":
+        case this.props.store.URL.startsWith("/homenew"):
         case "/new":
             return [
                 <HomeNew />,
+                <Footer />,
             ]
-        case "/home":
-        case "/":
+        case this.props.store.URL.startsWith("/home"):
+        case this.props.store.URL === "/":
+            return (
+                <section className="page-wrap">
+                    <Header />
+                    <Home />
+                    <Footer />
+                </section>
+            )
+        case "/resources":
             return [
-                <Header />,
-                <Home />,
+                <Resources />,
+                <Footer />,
             ]
-        case "/about":
-        case "/about/":
-            return [
-                <Header />,
-                <AboutThinCats />,
-            ]
-        case "/contactus":
-        case "/contactus/":
-            return [
-                <Header />,
-                <ContactUs />,
-            ]
-        case "/ourteam":
-        case "/ourteam/":
-            return [
-                <Header />,
-                <OurTeam />,
-            ]
+        case this.props.store.URL.startsWith("/about"):
+            return (
+                <section className="page-wrap">
+                    <Header />
+                    <AboutThinCats />
+                    <Footer />
+                </section>
+            )
+        case this.props.store.URL.startsWith("/contactus"):
+            return (
+                <section className="page-wrap">
+                    <Header />
+                    <ContactUs />
+                    <Footer />
+                </section>
+            )
+        case this.props.store.URL.startsWith("/ourteam"):
+            return (
+                <section className="page-wrap">
+                    <Header />
+                    <OurTeam />
+                    <Footer />
+                </section>
+            )
         }
     }
     render() {
         return (
-            <section className="page-wrap">
-                {this.route()}
-                <Footer />
-            </section>
+            this.route()
         )
     }
 }

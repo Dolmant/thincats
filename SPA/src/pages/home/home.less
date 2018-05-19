@@ -1,1 +1,43 @@
 @import './../../css/constants.less';
+
+.homeNew {
+    .homeContent {
+        height: 100vh;
+        width: 100vw;
+
+        .logo {
+            background-image: url("/assets/borrowed_assets/thincats-450x153.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 30vh;
+            width: 30vw;
+            float: right;
+            margin-right: 1rem;
+        }
+        .buttons {
+            margin: 1rem;
+            button {
+                font-size: 2rem;
+            }
+        }
+        .seller {
+            color: black;
+        }
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url("/assets/stock-photo-alert-leopard-watching-for-prey-1091157545.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        // backdrop-filter: ;
+        filter: grayscale(0.75);
+        opacity: 0.5;
+    }
+}
