@@ -1,7 +1,10 @@
 # ThinCats rebuild
 
 todo:
-staging/prod variable for golang
+staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
+
+build a little dev cmd tool to run all the build stuff like before
+
 cache resource rendering/processing
 router should separate out anchors and queries with ? for page routes
 add compact=false to babelrc for dev build to help readability

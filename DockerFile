@@ -16,6 +16,7 @@ COPY --from=build-env /go/src/github.com/Dolmant/thincats/thincats /root/thincat
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/SPA/index.html /root/thincats/SPA
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/SPA/dist /root/thincats/SPA/dist
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/SPA/assets /root/thincats/SPA/assets
+ENV GOOGLE_APPLICATION_CREDENTIALS=/root/thincats/thincats.json
 ENTRYPOINT /root/thincats/thincats
 
 # Document that the service listens on port 808.
