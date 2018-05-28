@@ -59,14 +59,31 @@ export default class Resources extends React.Component<Props, State> {
     }
     renderResourceContent = () => {
         const {mainHeader, subHeader} = this.state
+
+        const headerWrap = (mainHeader, subHeader, children) => {
+            return (
+                <div>
+                    <h1>{mainHeader}</h1>
+                    <h1>{subHeader}</h1>
+                    {children}
+                </div>
+            )
+        }
+
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
-            // todo markdown render
-            return resourcesContent[mainHeader][subHeader]
+            return (
+                <headerWrap mainHeader={mainHeader} subHeader={subHeader}>
+                    {resourcesContent[mainHeader][subHeader]}
+                </headerWrap>
+            )
         }
         const mainHeaderValue = resourcesContent[Object.entries(resourcesContent)[0][0]]
         const subHeaderValue = mainHeaderValue[Object.entries(mainHeaderValue)[0][0]]
-        // todo markdown render
-        return subHeaderValue
+        return (
+            <headerWrap mainHeader={Object.entries(resourcesContent)[0][0]} subHeader={Object.entries(mainHeaderValue)[0][0]}>
+                {subHeaderValue}
+            </headerWrap>
+        )
     }
     render() {
         return (

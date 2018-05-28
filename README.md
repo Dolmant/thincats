@@ -1,6 +1,7 @@
 # ThinCats rebuild
 
 todo:
+staging/prod variable for golang
 cache resource rendering/processing
 router should separate out anchors and queries with ? for page routes
 add compact=false to babelrc for dev build to help readability

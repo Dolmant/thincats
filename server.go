@@ -12,6 +12,7 @@ import (
 	"github.com/rs/cors"
 )
 
+// HandlerFunc is a generic function that satisfies the Handler interface
 type HandlerFunc func(http.ResponseWriter, *http.Request)
 
 func (f HandlerFunc) ServeHTTP(w http.ResponseWriter, r *http.Request) {
