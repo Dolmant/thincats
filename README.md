@@ -9,6 +9,8 @@ cache resource rendering/processing
 router should separate out anchors and queries with ? for page routes
 add compact=false to babelrc for dev build to help readability
 todo make menu a popover that can be hidden to help with mobile view
+ping insightly when you request a borrower application
+offer to manage site uptime for half of otheras price
 
 home similar to:
 https://www.gitbook.com/
