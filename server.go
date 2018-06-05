@@ -19,6 +19,11 @@ import (
 	"gopkg.in/mgo.v2"
 )
 
+// Post holds the dynamic content
+type Post struct {
+	Content string
+}
+
 // HandlerFunc is a generic function that satisfies the Handler interface
 type HandlerFunc func(http.ResponseWriter, *http.Request)
 
@@ -62,7 +67,11 @@ func postsHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getSession() *mgo.Session {
-	session, err := mgo.Dial("127.0.0.1:2007")
+	dbAddress := "127.0.0.1:8080"
+	if os.Getenv("db") != "" {
+		dbAddress = os.Getenv("db")
+	}
+	session, err := mgo.Dial(dbAddress)
 	if err != nil {
 		panic(err)
 	}
@@ -81,6 +90,9 @@ func Init() {
 
 	// Set your Google Cloud Platform project ID.
 	projectID := "firm-champion-204312"
+	if os.Getenv("projectID") != "" {
+		projectID = os.Getenv("projectID")
+	}
 
 	// Creates a client.
 	client, err := datastore.NewClient(ctx, projectID)

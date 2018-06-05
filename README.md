@@ -1,7 +1,12 @@
 # ThinCats rebuild
+thincats.json needs to be in this dir.
+env needs to be set to:
+db: address of google db
+projectID: override hardcoded projectID
 
 todo:
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
+todo put all golang stuff in a cloud function?
 
 build a little dev cmd tool to run all the build stuff like before
 
