@@ -1,29 +1,3 @@
-h2 {
-  font-weight: normal;
-}
-.italics {
-  font-style: italic;
-}
-body {
-  font-family: 'Nunito', sans-serif;
-}
-.menu {
-  position: absolute;
-  z-index: 1;
-  left: 35vw;
-  width: 30vw;
-  text-align: center;
-}
-.menu .navRoot {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.menu .navRoot .navAction {
-  max-width: 100vh !important;
-}
-.resources .resourceContent {
-  padding: 10rem 1rem 1rem 1rem;
-}
 .homeNew .homeContent {
   height: 100vh;
   width: 100vw;
@@ -60,6 +34,32 @@ body {
   width: 100vw;
   filter: grayscale(0.75);
   opacity: 0.5;
+}
+.menu {
+  position: absolute;
+  z-index: 1;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
+}
+.menu .navRoot {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.menu .navRoot .navAction {
+  max-width: 100vh !important;
+}
+.resources .resourceContent {
+  padding: 10rem 1rem 1rem 1rem;
+}
+h2 {
+  font-weight: normal;
+}
+.italics {
+  font-style: italic;
+}
+body {
+  font-family: 'Nunito', sans-serif;
 }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

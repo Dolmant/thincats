@@ -41,6 +41,7 @@ export default class Resources extends React.Component<Props, State> {
                 children,
             ])
         }
+        // Todo click should trigger navigation to the anchor
         const SubHeader = (name, mainName, index) => (
             <ListItem button onClick={() => { this.setState({subHeader: name, mainHeader: mainName}) }}>
                 <div>
@@ -73,7 +74,7 @@ export default class Resources extends React.Component<Props, State> {
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
                 <headerWrap mainHeader={mainHeader} subHeader={subHeader}>
-                    {resourcesContent[mainHeader][subHeader]}
+                    {Object.keys(resourcesContent[mainHeader]).map((key) => resourcesContent[mainHeader][key])}
                 </headerWrap>
             )
         }

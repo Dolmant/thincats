@@ -151,7 +151,7 @@ func Init() {
 	mux.PathPrefix("/").Handler(genericHandle)
 
 	handler := cors.Default().Handler(mux)
-
+	fmt.Println("serving")
 	err = http.ListenAndServe(":8079", handler)
 	if err != nil {
 		log.Fatalf("Failed to serve, %s", err.Error())

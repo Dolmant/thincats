@@ -7,7 +7,8 @@ import "./home.less"
 
 type Props = {
 };
-
+// todo - fade in thincats with a little shimmer or animated scratch
+// mostly white? Get leonie to extract the pdfs I have into html
 export default class Home extends React.Component<Props> {
     render() {
         return (

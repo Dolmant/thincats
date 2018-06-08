@@ -6,32 +6,32 @@ import React from "react"
 
 export default {
     "How it works": {
-        "1.LOAN APPLICATION": (
-            <div>
+        "LOAN APPLICATION": (
+            <div anchor="#LOAN_APPLICATION">
                 <p>SMEs apply for loans up to $2m either directly via the TCA platform or through Sponsors/Introducers.</p>
             </div>
         ),
-        "2. AUCTION LISTING": (
+        "AUCTION LISTING": (
             <div>
                 <p>The TCA Credit Team reviews loan applications and lists eligible loan opportunities for auction on the platform, with credit submissions and supporting documentation.</p>
             </div>
         ),
-        "3. FUND TRANSFERS": (
+        "FUND TRANSFERS": (
             <div>
                 <p>Wholesale investors assess loan opportunities, transfer funds to TCAN trust account and bid for parts of each loan opportunity (min. bid $1k) on the platform.</p>
             </div>
         ),
-        "4. AUCTION COMPLETION": (
+        "AUCTION COMPLETION": (
             <div>
                 <p>After auction completion, borrower executes security documentation in favour of TCAN as Trustee for lenders, and funds are transferred to the borrower.</p>
             </div>
         ),
-        "5. MONTHLY PAYMENTS": (
+        "MONTHLY PAYMENTS": (
             <div>
                 <p>Fixed monthly repayments of principal and interest from borrowers are credited to the lenders accounts on the platform.</p>
             </div>
         ),
-        "6. LOAN PERIOD": (
+        "LOAN PERIOD": (
             <div>
                 <p>The loan is repaid over the fixed term.</p>
             </div>
