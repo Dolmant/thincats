@@ -40,6 +40,7 @@ func postsHandler(ctx context.Context, client *datastore.Client) func(http.Respo
 	return func(w http.ResponseWriter, r *http.Request) {
 		var err error
 		if r.Method == http.MethodGet {
+			// todo move this up to init and just cache this. invalidate cache with a post
 			postsCollection := []Post{}
 			query := datastore.NewQuery("Post")
 

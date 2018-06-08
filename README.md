@@ -1,7 +1,6 @@
 # ThinCats rebuild
-thincats.json needs to be in this dir.
-env needs to be set to:
-db: address of google db
+thincats-c1f1e998f5d9.json needs to be in this dir.
+
 projectID: override hardcoded projectID
 
 todo:
