@@ -1,10 +1,97 @@
 @import './../../css/constants.less';
 
+@-webkit-keyframes sdb {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; }
+    60% {
+      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+      opacity: 0; }
+    100% {
+      opacity: 0; }
+}
+  
+@keyframes sdb {
+    0% {
+      opacity: 0; }
+    30% {
+      opacity: 1; }
+    60% {
+      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+      opacity: 0; }
+    100% {
+      opacity: 0; }
+}
+
+@-webkit-keyframes bouncer {
+    0% {
+        margin-bottom: 0; }
+    50% {
+        margin-bottom: 1rem; }
+    100% {
+        margin-bottom: 0; }
+}
+  
+@keyframes bouncer {
+    0% {
+      margin-bottom: 0; }
+    50% {
+      margin-bottom: 1rem; }
+    100% {
+      margin-bottom: 0; }
+}
+
 .homeNew {
-    .homeContent {
+    .page1 {
         height: 100vh;
         width: 100vw;
-
+        
+        #black {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+        }
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 200;
+            text-align: right;
+        }
+        .slogan {
+            font-size: 40px;
+            color: #000;
+        }
+        .findOutMore {
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            // button {
+            //     // bottom: 0;
+            // }
+            .bounce-container {
+                margin-left: 10px;
+                display: inline-block;
+                -webkit-animation: bouncer 3s infinite;
+                animation: bouncer 3s infinite;
+                border-radius: 100%;
+                color: black;
+        
+                i {
+                    font-size: 3rem;
+                    margin-bottom: 5px;
+                }
+            }
+        }
         .logo {
             background-image: url("/assets/borrowed_assets/thincats-450x153.png");
             background-repeat: no-repeat;
@@ -30,7 +117,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        background-image: url("/assets/stock-photo-alert-leopard-watching-for-prey-1091157545.jpg");
+        // background-image: url("/assets/stock-photo-alert-leopard-watching-for-prey-1091157545.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -39,5 +126,74 @@
         // backdrop-filter: ;
         filter: grayscale(0.75);
         opacity: 0.5;
+    }
+
+    .page2 {
+        height: 50vh;
+        width: 100vw;
+        color: white;
+        background-color: black;
+
+        .page2-SubContainer {
+            height: 100%;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .page2TextContainer {
+            max-height: 50%;
+            border-top: solid white 1px;
+            .page2Text {
+                padding: 1rem;
+            }
+        }
+        .blueText {
+            color: blue;
+        }
+        .page2IconContainer {
+            max-height: 50%;
+        }
+        .fancyBorder {
+            border-left: solid white 1px;
+        }
+        i {
+            color: white;
+            font-size: 3rem;
+        }
+    }
+    .page3 {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        .page3-SubContainer {
+            height: 100%;
+        }
+        .maxWidth {
+            width: 100%;
+        }
+        .patternBackground {
+            background-color: black;
+        }
+        .page3Block {
+            .page3Heading {
+                font-weight: bold;
+                padding-bottom: 1rem;
+            }
+            .page3Content {
+                padding-bottom: 1rem;
+            }
+            .topIcon {
+                text-align: left;
+            }
+        }
+        .white {
+            color: white;
+        }
+        i {
+        }
     }
 }

@@ -1,8 +1,101 @@
-.homeNew .homeContent {
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes bouncer {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1rem;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+@keyframes bouncer {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1rem;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+.homeNew .page1 {
   height: 100vh;
   width: 100vw;
 }
-.homeNew .homeContent .logo {
+.homeNew .page1 #black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+.homeNew .page1 #text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 200;
+  text-align: right;
+}
+.homeNew .page1 .slogan {
+  font-size: 40px;
+  color: #000;
+}
+.homeNew .page1 .findOutMore {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.homeNew .page1 .findOutMore .bounce-container {
+  margin-left: 10px;
+  display: inline-block;
+  -webkit-animation: bouncer 3s infinite;
+  animation: bouncer 3s infinite;
+  border-radius: 100%;
+  color: black;
+}
+.homeNew .page1 .findOutMore .bounce-container i {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+.homeNew .page1 .logo {
   background-image: url("/assets/borrowed_assets/thincats-450x153.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -12,13 +105,13 @@
   float: right;
   margin-right: 1rem;
 }
-.homeNew .homeContent .buttons {
+.homeNew .page1 .buttons {
   margin: 1rem;
 }
-.homeNew .homeContent .buttons button {
+.homeNew .page1 .buttons button {
   font-size: 2rem;
 }
-.homeNew .homeContent .seller {
+.homeNew .page1 .seller {
   color: black;
 }
 .homeNew .background {
@@ -26,7 +119,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url("/assets/stock-photo-alert-leopard-watching-for-prey-1091157545.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,6 +126,69 @@
   width: 100vw;
   filter: grayscale(0.75);
   opacity: 0.5;
+}
+.homeNew .page2 {
+  height: 50vh;
+  width: 100vw;
+  color: white;
+  background-color: black;
+}
+.homeNew .page2 .page2-SubContainer {
+  height: 100%;
+}
+.homeNew .page2 .centered {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.homeNew .page2 .page2TextContainer {
+  max-height: 50%;
+  border-top: solid white 1px;
+}
+.homeNew .page2 .page2TextContainer .page2Text {
+  padding: 1rem;
+}
+.homeNew .page2 .blueText {
+  color: blue;
+}
+.homeNew .page2 .page2IconContainer {
+  max-height: 50%;
+}
+.homeNew .page2 .fancyBorder {
+  border-left: solid white 1px;
+}
+.homeNew .page2 i {
+  color: white;
+  font-size: 3rem;
+}
+.homeNew .page3 {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+.homeNew .page3 .page3-SubContainer {
+  height: 100%;
+}
+.homeNew .page3 .maxWidth {
+  width: 100%;
+}
+.homeNew .page3 .patternBackground {
+  background-color: black;
+}
+.homeNew .page3 .page3Block .page3Heading {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.homeNew .page3 .page3Block .page3Content {
+  padding-bottom: 1rem;
+}
+.homeNew .page3 .page3Block .topIcon {
+  text-align: left;
+}
+.homeNew .page3 .white {
+  color: white;
 }
 .menu {
   position: absolute;
@@ -59,7 +214,7 @@ h2 {
   font-style: italic;
 }
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
