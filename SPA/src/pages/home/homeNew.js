@@ -50,7 +50,21 @@ export default class Home extends React.Component<Props> {
                 <div className="background" />
                 <Menu />
                 <Grid container className="page1" justify="center" alignItems="flex-end" spacing="12">
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
+                        <Grid container alignItems="flex-start" direction="column" alignContent="center" spacing="12" className="buttons">
+                            <Grid container spacing="12" className="buttons">
+                                <Button variant="raised" color="primary">
+                                    Register
+                                </Button>
+                            </Grid>
+                            <Grid container spacing="12" className="buttons">
+                                <Button variant="raised" color="primary">
+                                    Login
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={12}>
                         {/* <div className="logo" /> */}
                         <div id="black" />
                         <div id="text">
@@ -59,20 +73,6 @@ export default class Home extends React.Component<Props> {
                                 {"Smart Business"}
                             </div>
                         </div>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Grid container direction="column" alignContent="center" spacing="12" className="buttons">
-                            <Grid container justify="center" spacing="12" className="buttons">
-                                <Button variant="raised" color="primary">
-                                    Register
-                                </Button>
-                            </Grid>
-                            <Grid container justify="center" spacing="12" className="buttons">
-                                <Button variant="raised" color="primary">
-                                    Login
-                                </Button>
-                            </Grid>
-                        </Grid>
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container justify="center" alignContent="center" spacing="12" className="seller">

@@ -204,6 +204,15 @@
 .menu .navRoot .navAction {
   max-width: 100vh !important;
 }
+.resources .noMargin {
+  margin: 0;
+}
+.resources .heading {
+  font-weight: bold;
+}
+.resources .subItem {
+  margin-left: 1rem;
+}
 .resources .resourceContent {
   padding: 10rem 1rem 1rem 1rem;
 }

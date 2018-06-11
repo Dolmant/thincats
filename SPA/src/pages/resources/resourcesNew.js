@@ -1,15 +1,21 @@
 // @flow
 import React from "react"
+import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
 import ListSubheader from "@material-ui/core/ListSubheader"
+import ExpansionPanel from "@material-ui/core/ExpansionPanel"
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import Menu from "components/menu/menu"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
 import resourcesContent from "./resourcesContent"
+import type {StoreType} from "store"
 
 type Props = {
-    URL: string
+    URL: string,
+    store: StoreType,
 };
 
 // Here state is going to be a new store
@@ -21,6 +27,11 @@ type State = {
     subHeaderViewed: Array<string>,
 };
 
+// todo
+// sudheaders UNDER main header in a dropdown
+// anchors on the different levels. Should do dispatch nav, dispatch anchor
+@inject("store")
+@observer
 export default class Resources extends React.Component<Props, State> {
     state = {
         mainHeader: "",
@@ -31,50 +42,58 @@ export default class Resources extends React.Component<Props, State> {
 
     renderResourceMenu = () => {
         // build these components
-        const MainHeader = (name, index, children) => {
-            return ([
-                <ListSubheader>
-                    <div disabled>
-                        {`${name}`}
+        const MainHeader = (name, index, children) => (
+            <ExpansionPanel className="noMargin">
+                <ExpansionPanelSummary>
+                    <ListItem className="heading">
+                        <div>
+                            {`${name}`}
+                        </div>
+                    </ListItem>
+                </ExpansionPanelSummary >
+                <ExpansionPanelDetails>
+                    <div>
+                        {children}
                     </div>
-                </ListSubheader>,
-                children,
-            ])
-        }
+                </ExpansionPanelDetails>
+            </ExpansionPanel>
+        )
         // Todo click should trigger navigation to the anchor
         const SubHeader = (name, mainName, index) => (
-            <ListItem button onClick={() => { this.setState({subHeader: name, mainHeader: mainName}) }}>
+            <ListItem
+                className="subItem"
+                button
+                onClick={() => {
+                    this.setState({subHeader: name, mainHeader: mainName}, () => { this.props.store.pushAnchor(name.replace(new RegExp(" ", "g"), "_").toLowerCase()) })
+                }}
+            >
                 <div>
-                    {`${index + 1}. ${name}`}
+                    {`${name}` /*{`${index + 1}. ${name}`}*/}
                 </div>
             </ListItem>
         )
         return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], index) => MainHeader(
             mainHeaderKey,
             index,
-            Object.entries(mainHeaderValue).map(([subHeaderKey, content], index) => {
-                return (
-                    SubHeader(subHeaderKey, mainHeaderKey, index)
-                )
-            })))
+            Object.entries(mainHeaderValue).map(([subHeaderKey, content], index) => (
+                SubHeader(subHeaderKey, mainHeaderKey, index)
+            ))))
     }
     renderResourceContent = () => {
         const {mainHeader, subHeader} = this.state
 
-        const headerWrap = (mainHeader, subHeader, children) => {
-            return (
-                <div>
-                    <h1>{mainHeader}</h1>
-                    <h1>{subHeader}</h1>
-                    {children}
-                </div>
-            )
-        }
+        const headerWrap = (mainHeader, subHeader, children) => (
+            <div>
+                <h1>{mainHeader}</h1>
+                <h1>{subHeader}</h1>
+                {children}
+            </div>
+        )
 
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
                 <headerWrap mainHeader={mainHeader} subHeader={subHeader}>
-                    {Object.keys(resourcesContent[mainHeader]).map((key) => resourcesContent[mainHeader][key])}
+                    {Object.keys(resourcesContent[mainHeader]).map(key => resourcesContent[mainHeader][key])}
                 </headerWrap>
             )
         }

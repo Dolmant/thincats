@@ -9,6 +9,10 @@ const URLGenerator = () =>
 
 export type StoreType = {
     URL: string,
+    replaceURL: (string) => {},
+    pushURL: (string) => {},
+    navHome: (string) => {},
+    pushAnchor: (string) => {},
 }
 
 class Store {
@@ -24,6 +28,20 @@ class Store {
     pushURL = (URL: string) => {
         window.history.pushState({}, "", URL)
         this.URL = URL
+    }
+
+    @action
+    pushAnchor = (anchor: string) => {
+        const hash = this.URL.split("#")
+        if (hash.length === 2) {
+            window.location.hash = `#${anchor}`
+            this.URL = `${hash[0]}#${anchor}`
+            window.history.pushState({}, "", this.URL)
+        } else if (hash.length === 1) {
+            window.location.hash = `#${anchor}`
+            this.URL = `${hash[0]}#${anchor}`
+            window.history.pushState({}, "", this.URL)
+        }
     }
 
     @action
