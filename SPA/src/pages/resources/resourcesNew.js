@@ -106,9 +106,10 @@ export default class Resources extends React.Component<Props, State> {
     render() {
         return (
             <div className="resources">
+                <div className="thincatsCorner" />
                 <Menu />
                 <Grid container spacing="12">
-                    <Grid item xs={4} md={2}>
+                    <Grid className="resourceNav" item xs={4} md={2}>
                         <List>
                             {this.renderResourceMenu()}
                         </List>

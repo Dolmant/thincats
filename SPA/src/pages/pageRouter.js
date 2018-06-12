@@ -1,7 +1,6 @@
 // @flow
 import {observer, inject} from "mobx-react"
 import React from "react"
-import Home from "pages/home/home"
 import HomeNew from "pages/home/homeNew"
 import Resources from "pages/resources/resourcesNew"
 import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
@@ -22,21 +21,12 @@ export default class PageRouter extends React.Component<Props> {
         // Route based on URL
         switch (true) {
         default:
-        case this.props.store.URL.startsWith("/homenew"):
-        case this.props.store.URL.startsWith("/new"):
+        case this.props.store.URL.startsWith("/home"):
+        case this.props.store.URL === "/":
             return [
                 <HomeNew />,
                 <Footer />,
             ]
-        case this.props.store.URL.startsWith("/home"):
-        case this.props.store.URL === "/":
-            return (
-                <section className="page-wrap">
-                    <Header />
-                    <Home />
-                    <Footer />
-                </section>
-            )
         case this.props.store.URL.startsWith("/resources"):
             return [
                 <Resources />,

@@ -50,14 +50,15 @@ export default class Home extends React.Component<Props> {
                 <div className="background" />
                 <Menu />
                 <Grid container className="page1" justify="center" alignItems="flex-end" spacing="12">
-                    <Grid item xs={12}>
-                        <Grid container alignItems="flex-start" direction="column" alignContent="center" spacing="12" className="buttons">
-                            <Grid container spacing="12" className="buttons">
+                    <div className="thincatsCorner" />
+                    <Grid item className="buttonsContainer" xs={12}>
+                        <Grid container direction="row" justify="flex-end" spacing="12" className="buttons">
+                            <Grid item justify="flex-end" className="buttons">
                                 <Button variant="raised" color="primary">
                                     Register
                                 </Button>
                             </Grid>
-                            <Grid container spacing="12" className="buttons">
+                            <Grid item justify="flex-end" className="buttons">
                                 <Button variant="raised" color="primary">
                                     Login
                                 </Button>
@@ -67,8 +68,9 @@ export default class Home extends React.Component<Props> {
                     <Grid item xs={12}>
                         {/*  */}
                         <div id="black" />
+                        <div className="logo" />
                         <div id="text">
-                            <div className="logo" />{"Thin"}<b>{"Cats"}</b>
+                            {"Thin"}<b>{"Cats"}</b>
                             <div className="slogan">
                                 {"Smart Business"}
                             </div>
