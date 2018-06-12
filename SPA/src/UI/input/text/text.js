@@ -1,6 +1,6 @@
 // @flow
-import React from 'react';
-import TextField from 'material-ui/TextField';
+import React from "react"
+import TextField from "@material-ui/core/TextField"
 
 type Props = {
     label?: string,
@@ -11,25 +11,25 @@ type Props = {
 
 export default class Text extends React.Component<Props> {
     render() {
-        let error;
-        let label;
+        let error
+        let label
         switch (this.props.type) {
-        case 'email':
-            error = !/^.+@.+\..+$/.test(this.props.value);
+        case "email":
+            error = !/^.+@.+\..+$/.test(this.props.value)
             if (error && this.props.value) {
-                label = 'Warning: invalid email address';
+                label = "Warning: invalid email address"
             }
-            break;
+            break
         default:
-            break;
+            break
         }
         return (
             <TextField
                 {...this.props}
                 label={label}
                 error={error}
-                onChange={(event) => this.props.onChange(event.target.value)}
+                onChange={event => this.props.onChange(event.target.value)}
             />
-        );
+        )
     }
 }

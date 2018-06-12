@@ -16,6 +16,7 @@
         "import/first": ["off"],
         "import/no-unresolved": ["off"],
         "import/extensions": ["off"],
+        "import/no-extraneous-dependencies": ["off"],
         "no-undef": ["off"],
 		"react/jsx-indent-props": ["error", 4],
         "linebreak-style": [0, 0],

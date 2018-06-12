@@ -1,7 +1,7 @@
 // @flow
-import React from 'react';
-import SelectMUI from 'material-ui/Select';
-import {MenuItem} from 'material-ui/Menu';
+import React from "react"
+import SelectMUI from "@material-ui/core/Select"
+import {MenuItem} from "@material-ui/core/Menu"
 
 type Props = {
     label?: string,
@@ -12,18 +12,18 @@ type Props = {
 
 export default class Select extends React.Component<Props> {
     static defaultProps = {
-        value: '',
+        value: "",
     }
     generateItems() {
-        return this.props.items.map((item) => (
+        return this.props.items.map(item => (
             <MenuItem key={item.value} value={item.value}>{item.name}</MenuItem>
-        ));
+        ))
     }
     render() {
         return (
             <SelectMUI
                 {...this.props}
-                onChange={(event) => this.props.onChange(event.target.value)}
+                onChange={event => this.props.onChange(event.target.value)}
                 name={this.props.label}
             >
                 <MenuItem value="">
@@ -31,6 +31,6 @@ export default class Select extends React.Component<Props> {
                 </MenuItem>
                 {this.generateItems()}
             </SelectMUI>
-        );
+        )
     }
 }

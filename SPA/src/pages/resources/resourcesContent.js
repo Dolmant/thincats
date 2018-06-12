@@ -40,9 +40,9 @@ export default {
     "About Borrowing": {
         "What people are saying about us": (
             <div id="what_people_are_saying_about_us">
-                <p><em>I love the straight forward approach of ThinCats and the fact that we are dealing with the actual decision makers about the application for the loan and facilitation of the loan process through their online platform. (David)</em></p>
+                <p>I love the straight forward approach of ThinCats and the fact that we are dealing with the actual decision makers about the application for the loan and facilitation of the loan process through their online platform. (David)</p>
                 <p>We recently acquired funding from ThinCats to expand our business interests. Personally I found the process very professional by ThinCats and was delighted by the result. Our successful raising allowed us to enter into more competitive buying contracts and increase our profit margin. (Ben)</p>
-                <p><strong><i>View key statistics including details of our last 10 loans&nbsp;<a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a></i></strong></p>
+                <p><strong><i>View key statistics including details of our last 10 loans:<a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a></i></strong></p>
             </div>
         ),
         "Overview": (
@@ -70,7 +70,7 @@ export default {
                 <p>Borrowers will also be charged legal fees and disbursements incurred by our lawyers in relation to preparation of loan security documentation.</p>
                 <p>Where loans are originated by Sponsors or Introducers, we will based on our own arrangements, share some of our fees with individual Sponsors and Introducers.</p>
                 <h2><a href="/borrowing/apply-loan/" target="_blank" rel="noreferrer noopener">Apply for a loan</a></h2>
-                <p style={{textAlign: "left"}}><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
+                <p style={{textAlign: "left"}}><strong>If you have any questions, please call 1300 325 342</strong></p>
             </div>
         ),
     },
@@ -78,9 +78,9 @@ export default {
         "What people are saying about us": (
             <div id="what_people_are_saying_about_us">
                 <h2>What people are saying about us</h2>
-                <p><em>ThinCats is the engine that takes the banks out of banking and shares the spoils with lenders and borrowers alike. Small companies attract competitive financial support. Lenders share the risk of individual loans to build an attractively yielding fixed income portfolio. It’s win-win. It’s transparent. It’s simple. (Slater)</em></p>
-                <p><em><br />
-The platform is simple to use, loan information is well displayed and returns are excellent. I have recommended ThinCats to my friends as my particular endorsement of your product. (Michael)</em></p>
+                <p>ThinCats is the engine that takes the banks out of banking and shares the spoils with lenders and borrowers alike. Small companies attract competitive financial support. Lenders share the risk of individual loans to build an attractively yielding fixed income portfolio. It’s win-win. It’s transparent. It’s simple. (Slater)</p>
+                <p><br />
+The platform is simple to use, loan information is well displayed and returns are excellent. I have recommended ThinCats to my friends as my particular endorsement of your product. (Michael)</p>
                 <p><strong>View <span style={{textDecoration: "underline"}}>key statistics</span> including details of our last 10 loans&nbsp;<a title="here" href="/statistics/" rel="noopener noreferrer" target="_blank">here</a></strong></p>
             </div>
         ),
@@ -123,7 +123,7 @@ The platform is simple to use, loan information is well displayed and returns ar
         "What is the Secondary Market?": (
             <div id="what_is_the_secondary_market">
                 <p>We are building towards having a secondary market to allow lenders to buy and sell their loans to each other or to qualifying third parties. This means that if lenders wish, and the loan is deemed suitable for sale (in the reasonable opinion of ThinCats Australia), they can sell their loans to others. It allows new lenders to build a portfolio of loans much more quickly than they would if they were waiting for new auctions and loans to be drawn down. It also provides a means for members to access their invested money early by selling some or all of their loans. Details of fees regarding this secondary market will be provided on this website when this facility is introduced. Not all loans will be deemed suitable for sale on the secondary market for a range of reasons.</p>
-                <p><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
+                <p><strong>If you have any questions, please call 1300 325 342</strong></p>
             </div>
         ),
         "Lending FAQ": (
@@ -273,8 +273,8 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Risks": (
-            <section id="risks" className="regular-page-content clearfix">
-                <p><strong><em>Please read this section carefully. It discloses the key risks to which you may be exposed when undertaking peer-to-peer business lending. There may be other general risks or risks specifically relevant to individual business lenders or borrowers to which you are exposed and which will be in addition to this general risk warning.</em></strong></p>
+            <div id="risks" className="regular-page-content clearfix">
+                <p><strong>Please read this section carefully. It discloses the key risks to which you may be exposed when undertaking peer-to-peer business lending. There may be other general risks or risks specifically relevant to individual business lenders or borrowers to which you are exposed and which will be in addition to this general risk warning.</strong></p>
                 <h2>Peer-to-Peer business lending</h2>
                 <p>Peer-to-peer business lending through ThinCats Australia involves you lending your capital to one or more businesses in return for a fixed rate of interest, which you have agreed at the time of the lending commitment. Remember, you are lending to a business and therefore your capital is at risk and ongoing interest payments are not assured.&nbsp; If the business defaults on capital or interest payments, you might not recover all or some of your capital and costs from the borrower or any guarantor.</p>
                 <p>There is no pooling with other lenders. There is no escrow fund to help reduce losses.&nbsp; A lender will not be able to recover a loss from ThinCats Australia, Sponsors or from other lenders.</p>
@@ -303,13 +303,13 @@ The platform is simple to use, loan information is well displayed and returns ar
                 <h2>ThinCats Australia insolvency</h2>
                 <p>If ThinCats Australia ceases trading due to it going insolvent it would present some risk to you in that it would no longer be administering borrower repayments back to a lender’s account. In case of such an event, TCAN, a separate nominee company, will arrange an orderly winding down of all outstanding loans.</p>
                 <p>&nbsp;</p>
-            </section>
+            </div>
         ),
     },
     "Key Statistics": {
         "": (
             <div id="key_statistics">
-                <section className="regular-page-content clearfix">
+                <div className="regular-page-content clearfix">
                     <p>ThinCats Australia facilitated its first loan in February 2015.</p>
                     <p><span style={{textDecoration: "underline"}}>Loans to date:</span> <strong><span style={{color: "#0000ff"}}>$11.2 million</span>*</strong></p>
                     <p><span style={{textDecoration: "underline"}}>Average lenders per loan:</span> <span style={{color: "#0000ff"}}><strong>24</strong></span></p>
@@ -607,8 +607,8 @@ The platform is simple to use, loan information is well displayed and returns ar
                     </table>
                     <p>*: &nbsp;All loans to date (except for 2 loans) are monthly principal &amp; interest repayment loans<br />
                     **: Gross returns before fees, taxes and potential losses on loans</p>
-                    <p><span style={{color: "#0000ff"}}><em>Data as at 30 April 2018</em></span></p>
-                </section>
+                    <p><span style={{color: "#0000ff"}}>Data as at 30 April 2018</span></p>
+                </div>
             </div>
         ),
     },
@@ -634,7 +634,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                 <h2>General guidelines on eligible loans</h2>
                 <p>Please download the key <a href="/assets/borrowed_assets/2018/04/Key-Guidelines-for-Borrowers-apr18.pdf" rel="noopener noreferrer" target="_blank">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
                 <p style={{textAlign: "left"}}>
-                </p><p><em><strong>If you have any questions, please call 1300 325 342</strong></em></p>
+                </p><p><strong>If you have any questions, please call 1300 325 342</strong></p>
             </div>
         ),
     },
@@ -670,7 +670,7 @@ The platform is simple to use, loan information is well displayed and returns ar
         ),
         "Our Team": (
             <div id="our_team">
-                <section className="regular-page-content clearfix">
+                <div className="regular-page-content clearfix">
                     <p>The ThinCats Australia team comprise professionals with significant local and international experience in a wide range of disciplines including:</p>
                     <table style={{width: "100%"}}>
                         <tbody>
@@ -720,7 +720,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <p><strong>Tim Allerton</strong> (Advisor – Public Relations), Managing Director of City Public Relations, is ThinCats Australia’s public relations strategist. He has 35 years’ experience in public&nbsp;relations and the media – covering the fields of print, television and video communications. City Public Relations provides ThinCats Australia with communications solutions for the ongoing promotion of the company in Australia.</p>
                     <p><strong>Aditya Ghose</strong> (Advisor – IT), a computer scientist with over 25 years experience in delivering R&amp;D outcomes to industry. He is Professor of Computer Science at the University of Wollongong and Director of the Decision Systems Lab.</p>
                     <p>&nbsp;</p>
-                </section>
+                </div>
             </div>
         ),
     },

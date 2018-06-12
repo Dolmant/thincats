@@ -65,10 +65,10 @@ export default class Home extends React.Component<Props> {
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                        {/* <div className="logo" /> */}
+                        {/*  */}
                         <div id="black" />
                         <div id="text">
-                            {"Thin"}<b>{"Cats"}</b>
+                            <div className="logo" />{"Thin"}<b>{"Cats"}</b>
                             <div className="slogan">
                                 {"Smart Business"}
                             </div>

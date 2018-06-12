@@ -1,3 +1,38 @@
+h2 {
+  font-weight: normal;
+}
+.italics {
+  font-style: italic;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.menu {
+  position: absolute;
+  z-index: 1;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
+}
+.menu .navRoot {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.menu .navRoot .navAction {
+  max-width: 100vh !important;
+}
+.resources .noMargin {
+  margin: 0;
+}
+.resources .heading {
+  font-weight: bold;
+}
+.resources .subItem {
+  margin-left: 1rem;
+}
+.resources .resourceContent {
+  padding: 10rem 1rem 1rem 1rem;
+}
 @-webkit-keyframes sdb {
   0% {
     opacity: 0;
@@ -189,41 +224,6 @@
 }
 .homeNew .page3 .white {
   color: white;
-}
-.menu {
-  position: absolute;
-  z-index: 1;
-  left: 35vw;
-  width: 30vw;
-  text-align: center;
-}
-.menu .navRoot {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.menu .navRoot .navAction {
-  max-width: 100vh !important;
-}
-.resources .noMargin {
-  margin: 0;
-}
-.resources .heading {
-  font-weight: bold;
-}
-.resources .subItem {
-  margin-left: 1rem;
-}
-.resources .resourceContent {
-  padding: 10rem 1rem 1rem 1rem;
-}
-h2 {
-  font-weight: normal;
-}
-.italics {
-  font-style: italic;
-}
-body {
-  font-family: 'Roboto', sans-serif;
 }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

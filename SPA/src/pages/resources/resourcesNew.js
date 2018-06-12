@@ -3,7 +3,6 @@ import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
-import ListSubheader from "@material-ui/core/ListSubheader"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
@@ -14,7 +13,6 @@ import resourcesContent from "./resourcesContent"
 import type {StoreType} from "store"
 
 type Props = {
-    URL: string,
     store: StoreType,
 };
 
@@ -72,20 +70,20 @@ export default class Resources extends React.Component<Props, State> {
                 </div>
             </ListItem>
         )
-        return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], index) => MainHeader(
+        return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], mainIndex) => MainHeader(
             mainHeaderKey,
-            index,
-            Object.entries(mainHeaderValue).map(([subHeaderKey, content], index) => (
-                SubHeader(subHeaderKey, mainHeaderKey, index)
+            mainIndex,
+            Object.entries(mainHeaderValue).map(([subHeaderKey, content], subIndex) => (
+                SubHeader(subHeaderKey, mainHeaderKey, subIndex)
             ))))
     }
     renderResourceContent = () => {
         const {mainHeader, subHeader} = this.state
 
-        const headerWrap = (mainHeader, subHeader, children) => (
+        const headerWrap = (mainHead, subHead, children) => (
             <div>
-                <h1>{mainHeader}</h1>
-                <h1>{subHeader}</h1>
+                <h1>{mainHead}</h1>
+                <h2>{subHead}</h2>
                 {children}
             </div>
         )
