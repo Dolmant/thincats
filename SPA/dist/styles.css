@@ -1,9 +1,5 @@
 .menu {
-  position: absolute;
   z-index: 1;
-  left: 35vw;
-  width: 30vw;
-  text-align: center;
 }
 .menu .navRoot {
   border-bottom-right-radius: 10px;
@@ -11,6 +7,15 @@
 }
 .menu .navRoot .navAction {
   max-width: 100vh !important;
+}
+.menuOverlay {
+  position: absolute;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
+}
+.menuBar .loginButtons button {
+  margin-right: 1rem;
 }
 @-webkit-keyframes sdb {
   0% {
@@ -103,6 +108,9 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+}
+.homeNew .page1 .homeMenu {
+  align-self: flex-start;
 }
 .homeNew .page1 #black {
   position: absolute;

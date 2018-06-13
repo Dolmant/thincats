@@ -3,7 +3,7 @@ import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
-import Menu from "components/menu/menu"
+import MenuBar from "components/menuBar/menuBar"
 import "./home.less"
 import classNames from "util/classNames"
 import type {StoreType} from "store"
@@ -88,10 +88,10 @@ export default class Home extends React.Component<Props, State> {
         return (
             <div className="homeNew">
                 <div className="background" />
-                <Menu />
                 <Grid container className="page1" justify="center" alignItems="flex-end" spacing="12">
                     <div className="thincatsCorner" />
-                    <Grid item className="buttonsContainer" xs={12}>
+                    
+                    {/* <Grid item className="buttonsContainer" xs={12}>
                         <Grid container direction="row" justify="flex-end" spacing="12" className="buttons">
                             <Grid item justify="flex-end" className="buttons">
                                 <Button variant="raised" color="primary">
@@ -104,6 +104,9 @@ export default class Home extends React.Component<Props, State> {
                                 </Button>
                             </Grid>
                         </Grid>
+                    </Grid> */}
+                    <Grid className="homeMenu" item xs={12}>
+                        <MenuBar />
                     </Grid>
                     <Grid item xs={12}>
                         {/*  */}

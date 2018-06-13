@@ -6,7 +6,7 @@ this evening:
 build homepage content (all pages need work)
 
 tomorrow:
-build a menu bar that sits in a top bar and pushes content down (for resources, login, register, logo etc) fade in top menu and register/login buttons on load
+menu bar center align the menu part and put logo in
 build more cool lines - criss cross at bottom of page all CSS
 -every X pixels, spawn an alternating 45 degree randomized length div with a grow animation
 use criss cross to separate homepage content
