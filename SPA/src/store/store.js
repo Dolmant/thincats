@@ -1,5 +1,5 @@
 // @flow
-import {configure, observable, action} from "mobx"
+import {configure, observable, action, computed} from "mobx"
 
 configure({enforceActions: true})
 
@@ -11,43 +11,101 @@ export type StoreType = {
     URL: string,
     replaceURL: (string) => {},
     pushURL: (string) => {},
-    navHome: (string) => {},
+    navHome: () => {},
+    navResources: () => {},
+    navNews: () => {},
+    navFAQ: () => {},
+    isHome: boolean,
+    isResources: boolean,
+    isNews: boolean,
+    isFAQ: boolean,
+    isAbout: boolean,
+    isContactUs: boolean,
+    isOurTeam: boolean,
     pushAnchor: (string) => {},
 }
 
 class Store {
     @observable URL = URLGenerator()
 
+    @computed get isHome(): boolean {
+        return this.URL.startsWith("/home") || this.URL === "/"
+    }
+    @computed get isResources(): boolean {
+        return this.URL.startsWith("/resources")
+    }
+    @computed get isNews(): boolean {
+        return this.URL.startsWith("/news")
+    }
+    @computed get isFAQ(): boolean {
+        return this.URL.startsWith("/faq")
+    }
+    @computed get isAbout(): boolean {
+        return this.URL.startsWith("/about")
+    }
+    @computed get isContactUs(): boolean {
+        return this.URL.startsWith("/contactus")
+    }
+    @computed get isOurTeam(): boolean {
+        return this.URL.startsWith("/ourteam")
+    }
+
     @action
     replaceURL = (URL: string) => {
-        window.history.replaceState({}, "", URL)
-        this.URL = URL
+        if (URL.startsWith("/")) {
+            this.URL = URL
+            window.history.replaceState({}, "", this.URL)
+        } else {
+            console.log(`URL error, give URL without origin e.g. /resources: ${URL}`)
+            return null
+        }
     }
 
     @action
     pushURL = (URL: string) => {
-        window.history.pushState({}, "", URL)
-        this.URL = URL
+        if (URL.startsWith("/")) {
+            this.URL = URL
+            window.history.pushState({}, "", this.URL)
+        } else {
+            console.log(`URL error, give URL without origin e.g. /resources: ${URL}`)
+            return null
+        }
     }
 
     @action
     pushAnchor = (anchor: string) => {
         const hash = this.URL.split("#")
-        if (hash.length === 2) {
-            window.location.hash = `#${anchor}`
-            this.URL = `${hash[0]}#${anchor}`
-            window.history.pushState({}, "", this.URL)
-        } else if (hash.length === 1) {
-            window.location.hash = `#${anchor}`
-            this.URL = `${hash[0]}#${anchor}`
-            window.history.pushState({}, "", this.URL)
+        if (hash.length > 2 || hash.length === 0) {
+            console.log(`Hash error, tried to split: ${this.URL}`)
+            return null
         }
+        window.location.hash = `#${anchor}`
+        this.URL = `${hash[0]}#${anchor}`
+        window.history.pushState({}, "", this.URL)
     }
 
     @action
     navHome = () => {
-        window.history.pushState({}, "Home", "/")
         this.URL = "/"
+        window.history.pushState({}, "Home", this.URL)
+    }
+
+    @action
+    navResources = () => {
+        this.URL = "/resources"
+        window.history.pushState({}, "Resources", this.URL)
+    }
+
+    @action
+    navNews = () => {
+        this.URL = "/news"
+        window.history.pushState({}, "News", this.URL)
+    }
+
+    @action
+    navFAQ = () => {
+        this.URL = "/faq"
+        window.history.pushState({}, "FAQ", this.URL)
     }
 
     // @observable githubProjects = []

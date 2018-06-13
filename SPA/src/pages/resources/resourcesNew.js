@@ -25,9 +25,6 @@ type State = {
     subHeaderViewed: Array<string>,
 };
 
-// todo
-// sudheaders UNDER main header in a dropdown
-// anchors on the different levels. Should do dispatch nav, dispatch anchor
 @inject("store")
 @observer
 export default class Resources extends React.Component<Props, State> {
@@ -95,11 +92,10 @@ export default class Resources extends React.Component<Props, State> {
                 </headerWrap>
             )
         }
-        const mainHeaderValue = resourcesContent[Object.entries(resourcesContent)[0][0]]
-        const subHeaderValue = mainHeaderValue[Object.entries(mainHeaderValue)[0][0]]
+        const mainHeaderTemp = Object.keys(resourcesContent)[0]
         return (
-            <headerWrap mainHeader={Object.entries(resourcesContent)[0][0]} subHeader={Object.entries(mainHeaderValue)[0][0]}>
-                {subHeaderValue}
+            <headerWrap mainHeader={mainHeaderTemp} subHeader={Object.keys(resourcesContent[mainHeaderTemp])[0]}>
+                {Object.keys(resourcesContent[mainHeaderTemp]).map(key => resourcesContent[mainHeaderTemp][key])}
             </headerWrap>
         )
     }

@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
 import Menu from "components/menu/menu"
 import "./home.less"
+import classNames from "util/classNames"
 
 declare var $;
 declare var TweenLite;
@@ -12,39 +13,57 @@ declare var Elastic;
 
 type Props = {
 };
+
+type State = {
+    scrolled: boolean,
+};
 // find out more
-export default class Home extends React.Component<Props> {
+export default class Home extends React.Component<Props, State> {
+    state = {
+        scrolled: false,
+    }
     componentDidMount() {
-        $(window).on("load resize", function introAnimation() {
-            const $black = $("#black").css("clip", "")
-            const w = $(this).width()
-            const h = $(this).height()
+        // $(window).on("load resize", function introAnimation() {
+        // Intro boxing animation
+        const $black = $("#black").css("clip", "")
+        const w = $(window).width()
+        const h = $(window).height()
 
-            const $text = $("#text")
-            const textWidth = $text.width()
-            const textHeight = $text.height()
+        const $text = $("#text")
+        const textWidth = $text.width()
+        const textHeight = $text.height()
 
-            const offset = 10
+        const offset = 10
 
-            let t = 0
-            let r = w
-            let b = h
-            let l = 0
-            TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
-            if (this.tl) this.tl.stop()
-            this.tl = new TimelineLite()
-            l = (w / 2) - (textWidth / 2) - offset
-            this.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
-            b = (h / 2) + offset
-            this.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-            r = (w / 2) + (textWidth / 2) + offset
-            this.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-            t = (h / 2) - (textHeight / 2) - offset
-            this.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
-        })
+        let t = 0
+        let r = w
+        let b = h
+        let l = 0
+        TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
+        if (window.tl) window.tl.stop()
+        window.tl = new TimelineLite()
+        l = (w / 2) - (textWidth / 2) - offset
+        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
+        b = (h / 2) + offset
+        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
+        r = (w / 2) + (textWidth / 2) + offset
+        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
+        t = (h / 2) - (textHeight / 2) - offset
+        window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
+        // })
+        window.addEventListener("scroll", this.onScroll)
+    }
+
+    onScroll = () => {
+        this.setState({scrolled: true})
+        window.removeEventListener("scroll", this.onScroll)
     }
 
     render() {
+        const findOutMoreClasses = classNames({
+            findOutMore: true,
+            hideIt: this.state.scrolled,
+        })
         return (
             <div className="homeNew">
                 <div className="background" />
@@ -83,12 +102,12 @@ export default class Home extends React.Component<Props> {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <div className="findOutMore">
-                        <Button variant="raised" color="primary">
+                    <div className={findOutMoreClasses}>
+                        {/* <Button variant="raised" color="primary">
                             {"Find out more"}
-                        </Button>
+                        </Button> */}
                         <div className="bounce-container">
-                            <i className="fa fa-arrow-circle-down"></i>
+                            <i className="fa fa-long-arrow-down"></i>
                         </div>
                     </div>
                 </Grid>

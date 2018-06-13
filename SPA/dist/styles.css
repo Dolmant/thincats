@@ -64,6 +64,9 @@
     margin-bottom: 0;
   }
 }
+.homeNew .hideIt {
+  visibility: hidden;
+}
 .homeNew .page1 {
   position: relative;
   height: 100vh;
@@ -101,7 +104,7 @@
   background-size: contain;
   height: 10vh;
   width: 10vh;
-  transform: translate(-250%, -50%);
+  transform: translateX(-100%) translateX(-200px) translateY(-50%);
 }
 .homeNew .page1 .buttonsContainer {
   align-self: flex-start;
@@ -125,7 +128,7 @@
   color: black;
 }
 .homeNew .page1 .findOutMore .bounce-container i {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 5px;
 }
 .homeNew .page1 .buttons {
@@ -249,6 +252,8 @@
 }
 .resources .resourceContent {
   padding: 10rem 1rem 1rem 1rem;
+  max-width: 980px;
+  margin: 0px auto;
 }
 h2 {
   font-weight: normal;

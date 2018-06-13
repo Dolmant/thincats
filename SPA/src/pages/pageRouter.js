@@ -21,18 +21,17 @@ export default class PageRouter extends React.Component<Props> {
         // Route based on URL
         switch (true) {
         default:
-        case this.props.store.URL.startsWith("/home"):
-        case this.props.store.URL === "/":
+        case this.props.store.isHome:
             return [
                 <HomeNew />,
                 <Footer />,
             ]
-        case this.props.store.URL.startsWith("/resources"):
+        case this.props.store.isResources:
             return [
                 <Resources />,
                 <Footer />,
             ]
-        case this.props.store.URL.startsWith("/about"):
+        case this.props.store.isAbout:
             return (
                 <section className="page-wrap">
                     <Header />
@@ -40,7 +39,7 @@ export default class PageRouter extends React.Component<Props> {
                     <Footer />
                 </section>
             )
-        case this.props.store.URL.startsWith("/contactus"):
+        case this.props.store.isContactUs:
             return (
                 <section className="page-wrap">
                     <Header />
@@ -48,7 +47,7 @@ export default class PageRouter extends React.Component<Props> {
                     <Footer />
                 </section>
             )
-        case this.props.store.URL.startsWith("/ourteam"):
+        case this.props.store.isOurTeam:
             return (
                 <section className="page-wrap">
                     <Header />

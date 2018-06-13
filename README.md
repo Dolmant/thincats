@@ -4,18 +4,18 @@ thincats-c1f1e998f5d9.json needs to be in this dir.
 
 
 todo:
-
 theme buttons (yellow/grey?)
-fix arrow animation
-find out more + arrow disappears on scroll
-fade in top menu and register/login buttons
-Get routing working for menu
-load all the how it works for resources up front.
+build a menu bar that sits in a top bar and pushes content down (for resources, login, register, logo etc)
+build homepage content (all pages need work)
+
+tomorrow:
+unscrew mobile view
 fix formatting of resources
-logo in top corner
 
 bonus:
+build more cool lines
 page transition animation, side wipe with bounce - great is diagonal from bottom right, OK is slide from right
+fade in top menu and register/login buttons
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
 todo put all golang stuff in a cloud function?
