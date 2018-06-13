@@ -42,7 +42,6 @@ export default class Menu extends React.Component<Props> {
                     <Grid item xs={12}>
                         <BottomNavigation
                             value={value}
-                            onChange={this.handleChange}
                             showLabels
                             className="navRoot"
                         >

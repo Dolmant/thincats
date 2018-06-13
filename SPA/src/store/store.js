@@ -15,6 +15,8 @@ export type StoreType = {
     navResources: () => {},
     navNews: () => {},
     navFAQ: () => {},
+    playOnce: () => {},
+    loaded: boolean,
     isHome: boolean,
     isResources: boolean,
     isNews: boolean,
@@ -27,6 +29,7 @@ export type StoreType = {
 
 class Store {
     @observable URL = URLGenerator()
+    @observable loaded = false
 
     @computed get isHome(): boolean {
         return this.URL.startsWith("/home") || this.URL === "/"
@@ -48,6 +51,11 @@ class Store {
     }
     @computed get isOurTeam(): boolean {
         return this.URL.startsWith("/ourteam")
+    }
+
+    @action
+    playOnce = () => {
+        this.loaded = true
     }
 
     @action

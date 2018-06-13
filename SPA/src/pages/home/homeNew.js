@@ -1,10 +1,12 @@
 // @flow
 import React from "react"
+import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
 import Menu from "components/menu/menu"
 import "./home.less"
 import classNames from "util/classNames"
+import type {StoreType} from "store"
 
 declare var $;
 declare var TweenLite;
@@ -12,18 +14,21 @@ declare var TimelineLite;
 declare var Elastic;
 
 type Props = {
+    store: StoreType,
 };
 
 type State = {
     scrolled: boolean,
 };
-// find out more
+
+@inject("store")
+@observer
 export default class Home extends React.Component<Props, State> {
     state = {
         scrolled: false,
     }
     componentDidMount() {
-        // $(window).on("load resize", function introAnimation() {
+        // $(window).on("load", () => {
         // Intro boxing animation
         const $black = $("#black").css("clip", "")
         const w = $(window).width()
@@ -39,18 +44,29 @@ export default class Home extends React.Component<Props, State> {
         let r = w
         let b = h
         let l = 0
-        TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
-        if (window.tl) window.tl.stop()
-        window.tl = new TimelineLite()
-        l = (w / 2) - (textWidth / 2) - offset
-        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
-        b = (h / 2) + offset
-        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-        r = (w / 2) + (textWidth / 2) + offset
-        window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-        t = (h / 2) - (textHeight / 2) - offset
-        window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
+        if (!this.props.store.loaded) {
+            TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
+            if (window.tl) window.tl.stop()
+            window.tl = new TimelineLite()
+            l = (w / 2) - (textWidth / 2) - offset
+            window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
+            b = (h / 2) + offset
+            window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
+            r = (w / 2) + (textWidth / 2) + offset
+            window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
+            t = (h / 2) - (textHeight / 2) - offset
+            window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
+            this.props.store.playOnce()
+        } else {
+            // clip if not first time playing the animation
+            l = (w / 2) - (textWidth / 2) - offset
+            b = (h / 2) + offset
+            r = (w / 2) + (textWidth / 2) + offset
+            t = (h / 2) - (textHeight / 2) - offset
+            $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
+        }
         // })
+
         window.addEventListener("scroll", this.onScroll)
     }
 
