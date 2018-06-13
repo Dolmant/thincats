@@ -42,6 +42,55 @@
       margin-bottom: 0; }
 }
 
+// @-webkit-keyframes pageflipEnter {
+//     0% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+// }
+// @keyframes pageflipEnter {
+//     0% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+// }
+// @-webkit-keyframes pageflipLeave {
+//     0% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+// }
+// @keyframes pageflipLeave {
+//     0% {
+//         clip-path: polygon(100% -100%, -100% 100%, 100% 100%); }
+//     100% {
+//         clip-path: polygon(100% 100%, 100% 100%, 100% 100%); }
+// }
+@-webkit-keyframes pageflipEnter {
+    0% {
+        clip-path: inset(0% 100% 0% 0%); }
+    100% {
+        clip-path: inset(0% 0% 0% 0%); }
+}
+@keyframes pageflipEnter {
+    0% {
+        clip-path: inset(0% 100% 0% 0%); }
+    100% {
+        clip-path: inset(0% 0% 0% 0%); }
+}
+@-webkit-keyframes pageflipLeave {
+    0% {
+        clip-path: inset(0% 0% 0% 0%); }
+    100% {
+        clip-path: inset(0% 100% 0% 0%); }
+}
+@keyframes pageflipLeave {
+    0% {
+        clip-path: inset(0% 0% 0% 0%); }
+    100% {
+        clip-path: inset(0% 100% 0% 0%); }
+}
+
 .homeNew {
     .hideIt {
         visibility: hidden;
@@ -205,9 +254,20 @@
         .white {
             color: white;
         }
-        i {
-        }
     }
+}
+
+.pageFlipper-enter {
+    display: none;
+}
+
+.pageFlipper-enter-done {
+    -webkit-animation: pageflipEnter 1s;
+    animation: pageflipEnter 1s;
+}
+.pageFlipper-exit {
+    -webkit-animation: pageflipLeave 0.5s forwards;
+    animation: pageflipLeave 0.5s forwards;
 }
 
 .thincatsCorner {

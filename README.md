@@ -4,20 +4,15 @@ thincats-c1f1e998f5d9.json needs to be in this dir.
 
 
 todo:
-today:
+this evening:
 theme buttons (yellow/grey?)
 build a menu bar that sits in a top bar and pushes content down (for resources, login, register, logo etc) fade in top menu and register/login buttons on load
-
-this evening:
 build homepage content (all pages need work)
 
 tomorrow:
 unscrew mobile view
 fix formatting of resources
-
-bonus:
-build more cool lines
-page transition animation, side wipe with bounce - great is diagonal from bottom right, OK is slide from right
+build more cool lines?
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
 todo put all golang stuff in a cloud function?
