@@ -1,18 +1,21 @@
 # ThinCats rebuild
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
-
-
 todo:
 this evening:
-theme buttons (yellow/grey?)
-build a menu bar that sits in a top bar and pushes content down (for resources, login, register, logo etc) fade in top menu and register/login buttons on load
 build homepage content (all pages need work)
 
 tomorrow:
-unscrew mobile view
+build a menu bar that sits in a top bar and pushes content down (for resources, login, register, logo etc) fade in top menu and register/login buttons on load
+build more cool lines - criss cross at bottom of page all CSS
+-every X pixels, spawn an alternating 45 degree randomized length div with a grow animation
+use criss cross to separate homepage content
+style disclaimers
+insert new svgs
+style homepage
+theme buttons (yellow/grey?)
 fix formatting of resources
-build more cool lines?
+unscrew mobile view
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
 todo put all golang stuff in a cloud function?

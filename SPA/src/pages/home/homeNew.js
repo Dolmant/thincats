@@ -7,6 +7,11 @@ import Menu from "components/menu/menu"
 import "./home.less"
 import classNames from "util/classNames"
 import type {StoreType} from "store"
+import Light from "assets/LightSymbol.svg"
+import Arrow from "assets/ArrowSymbol.svg"
+import PeopleCash from "assets/PeopleSymbol.svg"
+import PeopleAlert from "assets/PeopleSymbol.svg"
+import SVGInline from "react-svg-inline"
 
 declare var $;
 declare var TweenLite;
@@ -128,7 +133,7 @@ export default class Home extends React.Component<Props, State> {
                     </div>
                 </Grid>
                 <Grid container direction="row" wrap="nowrap" className="page2">
-                    <Grid item xs={2}>
+                    <Grid className="flow" item>
                         <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
                             <Grid item xs={2}>
                                 {/* Border*/}
@@ -138,7 +143,7 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <i className="fa fa-lightbulb-o"></i>
+                                            <SVGInline className="light" svg={Light}></SVGInline>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
@@ -151,9 +156,9 @@ export default class Home extends React.Component<Props, State> {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid className="flow" item>
                         <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item xs={2}>
+                            <Grid item className="fancyBorder" xs={2}>
                                 {/* Border*/}
                             </Grid>
                             <Grid item xs={8}>
@@ -161,9 +166,96 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <i className="fa fa-lightbulb-o"></i>
-                                            <i className="fa fa-long-arrow-down"></i>
-                                            <div className="blueText">{"ThinCats"}</div>
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                        </div>
+                                    </Grid>
+                                    <Grid item className="page2TextContainer" xs={12}>
+                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid className="flow" item>
+                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+                            <Grid item className="fancyBorder" xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                            <Grid item xs={8}>
+                                {/* Content*/}
+                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+                                    <Grid item className="page2IconContainer" xs={12}>
+                                        <div className="centered">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
+                                        </div>
+                                    </Grid>
+                                    <Grid item className="page2TextContainer" xs={12}>
+                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid className="flow" item>
+                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+                            <Grid item className="fancyBorder" xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                            <Grid item xs={8}>
+                                {/* Content*/}
+                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+                                    <Grid item className="page2IconContainer" xs={12}>
+                                        <div className="centered">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
+                                        </div>
+                                    </Grid>
+                                    <Grid item className="page2TextContainer" xs={12}>
+                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid className="flow" item>
+                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+                            <Grid item className="fancyBorder" xs={2}>
+                                {/* Border*/}
+                            </Grid>
+                            <Grid item xs={8}>
+                                {/* Content*/}
+                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+                                    <Grid item className="page2IconContainer" xs={12}>
+                                        <div className="centered">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <div className="dualArrow">
+                                                <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                                <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            </div>
+                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <div className="dualArrow">
+                                                <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                                <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            </div>
+                                            <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
@@ -179,22 +271,28 @@ export default class Home extends React.Component<Props, State> {
                 </Grid>
                 <Grid container direction="row" className="page3">
                     <Grid item xs={6} className="patternBackground">
-                        <Grid container className="" direction="column">
-                            <Grid item xs={12} className="maxWidth">
-                                <i className="fa fa-lightbulb-o"></i>
-                                <div className="white" >Why ThinCats is right for growing businesses</div>
+                        <Grid container className="" alignItems="center" direction="column">
+                            <Grid item xs={12}>
+                                <div className="light topIcon">
+                                    <SVGInline className="light" svg={Light}></SVGInline>
+                                </div>
+                                <div className="" >Why ThinCats is right for growing businesses</div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
-                                    <Grid className="page3Block white" item xs={6}>
+                                    <Grid className="page3Block " item xs={6}>
                                         {/* Block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block " xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
@@ -202,39 +300,53 @@ export default class Home extends React.Component<Props, State> {
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block " xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block " xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
                                 </Grid>
+                            </Grid>
+                            <Grid item className="endText" xs={12}>
+                                <div className="" >If you are ready to fuel your growth, apply for a loan at</div>
+                                <a href="www.thincats.com.au">www.thincats.com.au</a>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={6}>
-                        <Grid container className="" direction="column">
-                            <Grid item xs={12} className="maxWidth">
-                                <i className="fa fa-lightbulb-o"></i>
-                                <div className="white" >Why ThinCats is right for growing businesses</div>
+                    <Grid item xs={6} className="whiteBackground">
+                        <Grid container className="" alignItems="center" direction="column">
+                            <Grid item xs={12}>
+                                <div className="light topIcon">
+                                    <SVGInline className="light" svg={Light}></SVGInline>
+                                </div>
+                                <div className="" >Why ThinCats is right for growing businesses</div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
-                                    <Grid className="page3Block white" item xs={6}>
+                                    <Grid className="page3Block" item xs={6}>
                                         {/* Block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block" xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
@@ -242,19 +354,27 @@ export default class Home extends React.Component<Props, State> {
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block" xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
-                                    <Grid item className="page3Block white" xs={6}>
+                                    <Grid item className="page3Block" xs={6}>
                                         {/* block */}
-                                        <i className="topIcon fa fa-lightbulb-o"></i>
+                                        <div className="light">
+                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
                                 </Grid>
+                            </Grid>
+                            <Grid item className="endText" xs={12}>
+                                <div className="" >If you are ready to start making smart investments in good companies, register as an investor at</div>
+                                <a href="thincats.com.au/register">thincats.com.au/registeru</a>
                             </Grid>
                         </Grid>
                     </Grid>

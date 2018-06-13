@@ -17,8 +17,12 @@ module.exports = {
                 use: 'url-loader?limit=10000&mimetype=application/font-woff',
             },
             {
-                test: /\.(ttf|eot|svg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.(ttf|eot|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 use: 'file-loader',
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader',
             },
             {
                 test: /\.js$/,
@@ -58,8 +62,9 @@ module.exports = {
         new CopyWebpackPlugin([{from: 'index.html', to: 'index.html'}]),
     ],
     resolve: {
-        extensions: ['.js', '.less', 'scss'],
+        extensions: ['.js', '.less', 'scss', '.svg'],
         alias: {
+            assets: path.resolve(__dirname, './assets'),
             pages: path.resolve(__dirname, './src/pages'),
             components: path.resolve(__dirname, './src/components'),
             store: path.resolve(__dirname, './src/store/store.js'),

@@ -193,8 +193,15 @@
         height: 50vh;
         width: 100vw;
         color: white;
-        background-color: black;
+        // background-color: black;
+        background-image: url("/assets/CrissCrossPattern.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        background-size: 300px 300px;
 
+        .flow {
+            width: 20vw;
+        }
         .page2-SubContainer {
             height: 100%;
         }
@@ -204,6 +211,23 @@
             height: 100%;
             justify-content: center;
             align-items: center;
+
+            .light {
+                width: 8rem;
+                height: 8rem;
+            }
+            .arrow {
+                width: 8rem;
+                height: 8rem;
+            }
+            i {
+                color: white;
+                font-size: 3rem;
+            }
+            .blueText {
+                color: #5783a9;
+                font-size: 2rem;
+        }
         }
         .page2TextContainer {
             max-height: 50%;
@@ -212,34 +236,41 @@
                 padding: 1rem;
             }
         }
-        .blueText {
-            color: blue;
-        }
+
         .page2IconContainer {
             max-height: 50%;
         }
         .fancyBorder {
             border-left: solid white 1px;
         }
-        i {
-            color: white;
-            font-size: 3rem;
-        }
     }
     .page3 {
-        height: 100vh;
+        // height: 100vh; Removing so we can fill as desired
         width: 100vw;
-        background-color: black;
-        .page3-SubContainer {
-            height: 100%;
+        background-color: white;
+        color: black;
+
+        .light {
+            width: 8rem;
+            height: 8rem;
         }
-        .maxWidth {
-            width: 100%;
+        .topIcon {
+            margin: auto;
         }
         .patternBackground {
-            background-color: black;
+            padding: 1rem;
+            background-image: url("/assets/CrissCrossPattern.jpg");
+            background-position: center;
+            background-repeat: repeat;
+            background-size: 300px 300px;
+            color: white;
+        }
+        .whiteBackground {
+            padding: 1rem;
         }
         .page3Block {
+            padding: 1rem;
+
             .page3Heading {
                 font-weight: bold;
                 padding-bottom: 1rem;
@@ -247,12 +278,9 @@
             .page3Content {
                 padding-bottom: 1rem;
             }
-            .topIcon {
-                text-align: left;
-            }
         }
-        .white {
-            color: white;
+        .endText {
+            text-align: center;
         }
     }
 }

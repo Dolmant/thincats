@@ -189,7 +189,13 @@
   height: 50vh;
   width: 100vw;
   color: white;
-  background-color: black;
+  background-image: url("/assets/CrissCrossPattern.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 300px 300px;
+}
+.homeNew .page2 .flow {
+  width: 20vw;
 }
 .homeNew .page2 .page2-SubContainer {
   height: 100%;
@@ -201,6 +207,22 @@
   justify-content: center;
   align-items: center;
 }
+.homeNew .page2 .centered .light {
+  width: 8rem;
+  height: 8rem;
+}
+.homeNew .page2 .centered .arrow {
+  width: 8rem;
+  height: 8rem;
+}
+.homeNew .page2 .centered i {
+  color: white;
+  font-size: 3rem;
+}
+.homeNew .page2 .centered .blueText {
+  color: #5783a9;
+  font-size: 2rem;
+}
 .homeNew .page2 .page2TextContainer {
   max-height: 50%;
   border-top: solid white 1px;
@@ -208,32 +230,37 @@
 .homeNew .page2 .page2TextContainer .page2Text {
   padding: 1rem;
 }
-.homeNew .page2 .blueText {
-  color: blue;
-}
 .homeNew .page2 .page2IconContainer {
   max-height: 50%;
 }
 .homeNew .page2 .fancyBorder {
   border-left: solid white 1px;
 }
-.homeNew .page2 i {
-  color: white;
-  font-size: 3rem;
-}
 .homeNew .page3 {
-  height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: white;
+  color: black;
 }
-.homeNew .page3 .page3-SubContainer {
-  height: 100%;
+.homeNew .page3 .light {
+  width: 8rem;
+  height: 8rem;
 }
-.homeNew .page3 .maxWidth {
-  width: 100%;
+.homeNew .page3 .topIcon {
+  margin: auto;
 }
 .homeNew .page3 .patternBackground {
-  background-color: black;
+  padding: 1rem;
+  background-image: url("/assets/CrissCrossPattern.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  color: white;
+}
+.homeNew .page3 .whiteBackground {
+  padding: 1rem;
+}
+.homeNew .page3 .page3Block {
+  padding: 1rem;
 }
 .homeNew .page3 .page3Block .page3Heading {
   font-weight: bold;
@@ -242,11 +269,8 @@
 .homeNew .page3 .page3Block .page3Content {
   padding-bottom: 1rem;
 }
-.homeNew .page3 .page3Block .topIcon {
-  text-align: left;
-}
-.homeNew .page3 .white {
-  color: white;
+.homeNew .page3 .endText {
+  text-align: center;
 }
 .pageFlipper-enter {
   display: none;
