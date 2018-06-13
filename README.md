@@ -6,6 +6,7 @@ this evening:
 build homepage content (all pages need work)
 
 tomorrow:
+thincats in homepage should be slightly higher than center (golden ratio?)
 menu bar center align the menu part and put logo in
 build more cool lines - criss cross at bottom of page all CSS
 -every X pixels, spawn an alternating 45 degree randomized length div with a grow animation
