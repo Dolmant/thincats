@@ -171,6 +171,10 @@ export default class Home extends React.Component<Props, State> {
                                 Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.
                                 <br />
                                 Diversify and reduce your risk, bypass banks and get a better deal.
+                                <br />
+                                <br />
+                                <br />
+                                <span className="fancyBig">Grow.</span>
                             </p>
                         </Grid>
                     </Grid>
@@ -178,9 +182,9 @@ export default class Home extends React.Component<Props, State> {
                         {/* <Button variant="raised" color="primary">
                             {"Find out more"}
                         </Button> */}
-                        {/* <div className="bounce-container">
+                        <div className="bounce-container">
                             <i className="fa fa-long-arrow-down"></i>
-                        </div> */}
+                        </div>
                     </div>
                 </Grid>
                 <Grid container direction="row" wrap="nowrap" className="page2">
@@ -327,7 +331,7 @@ export default class Home extends React.Component<Props, State> {
                                 <div className="light topIcon">
                                     <SVGInline className="fillWhite light" svg={Light}></SVGInline>
                                 </div>
-                                <div className="" >Why ThinCats is right for growing businesses</div>
+                                <div className="page3Title" >Why <b>ThinCats</b> is right for <b>growing businesses</b></div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
@@ -337,15 +341,15 @@ export default class Home extends React.Component<Props, State> {
                                             <SVGInline className="light" svg={Shoot}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Content">{"Get funding for stock, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
                                         <div className="light">
                                             <SVGInline className="light" svg={Man}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Real lenders, not institutions"}</div>
+                                        <div className="page3Content">{"Loan applications are assessed by our community of hundred of investors based on business potential and cash flow performance."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -356,16 +360,16 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="time">
                                             <SVGInline className="time" svg={Time}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Apply fast"}</div>
+                                        <div className="page3Content">{"Completely online process where you'll know your eligibility within 48 hours."}</div>
                                     </Grid>
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
                                         <div className="lock">
                                             <SVGInline className="lock" svg={Lock}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Unrestricted usage"}</div>
+                                        <div className="page3Content">{"Our loans are general purpose and finance for the long term so that you can spend on anything that will grow your business."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -376,16 +380,16 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="light">
                                             <SVGInline className="light" svg={Chart}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Build your business case"}</div>
+                                        <div className="page3Content">{"Shortcut having to learn the nuances of cash flow finance by leaning on our dedicated support team to help you prepare your loan application."}</div>
                                     </Grid>
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
                                         <div className="medal">
                                             <SVGInline className="medal" svg={Medal}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Fair funding, guaranteed"}</div>
+                                        <div className="page3Content">{"Our loans are 100% transparent with interest rates and borrowing fees that are fair and lower than any other alternative non-bank financier."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -398,10 +402,10 @@ export default class Home extends React.Component<Props, State> {
                     <Grid item xs={6} className="whiteBackground">
                         <Grid container className="" alignItems="center" direction="column">
                             <Grid item xs={12}>
-                                <div className="light topIcon">
-                                    <SVGInline className="light" svg={Light}></SVGInline>
+                                <div className="light fillBlack topIcon">
+                                    <SVGInline className="light fillBlack" svg={PeopleCash}></SVGInline>
                                 </div>
-                                <div className="" >Why ThinCats is right for growing businesses</div>
+                                <div className="page3Title" >{"Why "}<b>{"ThinCats"}</b>{" is right for "}<b>{"smart investors"}</b></div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
@@ -410,16 +414,16 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="plant">
                                             <SVGInline className="plant" svg={Plant}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Better than cash"}</div>
+                                        <div className="page3Content">{"Your cash should be working hard for you. That's why we offer an average gross annual interest rate of 14%, with monthly repayments."}</div>
                                     </Grid>
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="wallet">
                                             <SVGInline className="wallet" svg={Wallet}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Low maintenance"}</div>
+                                        <div className="page3Content">{"Our loan terms range from 2-5 years so you can maximise your returns while minimising the time spend watching your investments."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -430,16 +434,16 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="magGlass">
                                             <SVGInline className="magGlass" svg={MagGlass}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Due diligence, done for you"}</div>
+                                        <div className="page3Content">{"Our dedicated team of lending specialists assess each loan application using leading-edge technology matched with human intelligence, rather than algorithms that don't understand context."}</div>
                                     </Grid>
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="light">
                                             <SVGInline className="light" svg={Shield}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Downside defended"}</div>
+                                        <div className="page3Content">{"Every investment opportunity is backed by a registered charge over business assets and in most instances second mortgages over real property. We use a separate nominee company to make loans and hold client monies, so your funds are safe."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -450,16 +454,16 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="light">
                                             <SVGInline className="light" svg={Bag}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Experience where it matters"}</div>
+                                        <div className="page3Content">{"We're a passionate team of ex-bankers and lending specialists."}</div>
                                     </Grid>
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="light">
                                             <SVGInline className="light" svg={Book}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
-                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                        <div className="page3Heading">{"Know your investments"}</div>
+                                        <div className="page3Content">{"We let you know who and what you're investing in. And with a single market view of all available loans you can choose where your money goes."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>

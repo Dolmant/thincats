@@ -8,6 +8,10 @@ theme buttons (yellow/grey?)
 fix formatting of resources
 use gradient border to separate homepage content?
 
+asia.gcr.io/firm-champion-204312/thincats
+docker tag thincats asia.gcr.io/firm-champion-204312/thincats
+docker push asia.gcr.io/firm-champion-204312/thincats
+
 Friday:
 unscrew mobile view
 
