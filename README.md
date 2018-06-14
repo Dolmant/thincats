@@ -2,17 +2,13 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 todo:
-style homepage
-get new background for page 2 of homepage
 theme buttons (yellow/grey?)
 fix formatting of resources
-use gradient border to separate homepage content?
 
 asia.gcr.io/firm-champion-204312/thincats
 docker tag thincats asia.gcr.io/firm-champion-204312/thincats
 docker push asia.gcr.io/firm-champion-204312/thincats
 
-Friday:
 unscrew mobile view
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
