@@ -7,10 +7,22 @@ import MenuBar from "components/menuBar/menuBar"
 import "./home.less"
 import classNames from "util/classNames"
 import type {StoreType} from "store"
-import Light from "assets/LightSymbol.svg"
-import Arrow from "assets/ArrowSymbol.svg"
-import PeopleCash from "assets/PeopleSymbol.svg"
-import PeopleAlert from "assets/PeopleSymbol.svg"
+import Light from "assets/icons/LightSymbol.svg"
+import Arrow from "assets/icons/ArrowSymbol.svg"
+import PeopleCash from "assets/icons/SymbolPeopleCash.svg"
+import PeopleAlert from "assets/icons/SymbolPeopleAlert.svg"
+import Wallet from "assets/icons/SymbolWallet.svg"
+import Plant from "assets/icons/SymbolPlant.svg"
+import Time from "assets/icons/SymbolTime.svg"
+import Bag from "assets/icons/SymbolBag.svg"
+import Book from "assets/icons/SymbolBook.svg"
+import Chart from "assets/icons/SymbolChart.svg"
+import Lock from "assets/icons/SymbolLock.svg"
+import MagGlass from "assets/icons/SymbolMagGlass.svg"
+import Man from "assets/icons/SymbolMan.svg"
+import Medal from "assets/icons/SymbolMedal.svg"
+import Shield from "assets/icons/SymbolShield.svg"
+import Shoot from "assets/icons/SymbolShoot.svg"
 import SVGInline from "react-svg-inline"
 
 declare var $;
@@ -55,11 +67,11 @@ export default class Home extends React.Component<Props, State> {
             window.tl = new TimelineLite()
             l = (w / 2) - (textWidth / 2) - offset
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
-            b = (h / 2) + offset
+            b = (h / 2.5) + offset // + (textHeight / 2) not required as bottom already offset by second line of text
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
             r = (w / 2) + (textWidth / 2) + offset
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-            t = (h / 2) - (textHeight / 2) - offset
+            t = (h / 2.5) - (textHeight / 2) - offset
             window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
             this.props.store.playOnce()
         } else {
@@ -85,11 +97,56 @@ export default class Home extends React.Component<Props, State> {
             findOutMore: true,
             hideIt: this.state.scrolled,
         })
+        const w = $(window).width()
+
+        const arrows = []
+        for (let i = 0; i < w / 50; i += 1) {
+            const rand = Math.random()
+            const rand30 = rand * 30
+            const rand25 = rand * 2.5
+            // arrows.push(
+            //     <div
+            //         style={{
+            //             left: `${(i * 50 - 25) - (rand30)}px`,
+            //             bottom: `${-rand30}px`,
+            //             animationDuration: `${2.5 + (rand25)}s`,
+            //         }}
+            //         className="leftArrow expandPointArrow"
+            //     />)
+            // arrows.push(
+            //     <div
+            //         style={{
+            //             left: `${(i * 50) - (rand30)}px`,
+            //             bottom: `${-rand30}px`,
+            //             animationDuration: `${2.5 + (rand25)}s`,
+            //         }}
+            //         className="rightArrow expandPointArrow"
+            //     />)
+            arrows.push(
+                <div
+                    style={{
+                        left: `${(i * 50) - 25}px`,
+                        maxHeight: `${50 + (50 * rand)}px`,
+                        animationDuration: `${2.5 + (2.5 * rand)}s`,
+                    }}
+                    className="leftArrow expandThickArrow"
+                />)
+            arrows.push(
+                <div
+                    style={{
+                        left: `${i * 50}px`,
+                        maxHeight: `${50 + (50 * rand)}px`,
+                        animationDuration: `${2.5 + (2.5 * rand)}s`,
+                    }}
+                    className="rightArrow expandThickArrow"
+                />)
+        }
+
         return (
             <div className="homeNew">
                 <div className="background" />
                 <Grid container className="page1" justify="center" alignItems="flex-end" spacing="12">
-                    <div className="thincatsCorner" />
+                    {/* <div className="thincatsCorner" /> */}
                     
                     {/* <Grid item className="buttonsContainer" xs={12}>
                         <Grid container direction="row" justify="flex-end" spacing="12" className="buttons">
@@ -110,6 +167,7 @@ export default class Home extends React.Component<Props, State> {
                     </Grid>
                     <Grid item xs={12}>
                         {/*  */}
+                        {arrows}
                         <div id="black" />
                         <div className="logo" />
                         <div id="text">

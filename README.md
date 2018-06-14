@@ -2,15 +2,8 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 todo:
-this evening:
-build homepage content (all pages need work)
-
-tomorrow:
-thincats in homepage should be slightly higher than center (golden ratio?)
 menu bar center align the menu part and put logo in
-build more cool lines - criss cross at bottom of page all CSS
--every X pixels, spawn an alternating 45 degree randomized length div with a grow animation
-use criss cross to separate homepage content
+use gradient border to separate homepage content
 style disclaimers
 insert new svgs
 style homepage

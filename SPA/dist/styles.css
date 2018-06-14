@@ -101,6 +101,38 @@
     clip-path: inset(0% 100% 0% 0%);
   }
 }
+@-webkit-keyframes grow {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes grow {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@-webkit-keyframes growBorder {
+  0% {
+    border-bottom-width: 0px;
+  }
+  100% {
+    border-bottom-width: 80px;
+  }
+}
+@keyframes growBorder {
+  0% {
+    border-bottom-width: 0px;
+  }
+  100% {
+    border-bottom-width: 80px;
+  }
+}
 .homeNew .hideIt {
   visibility: hidden;
 }
@@ -123,7 +155,7 @@
 }
 .homeNew .page1 #text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -136,7 +168,7 @@
 .homeNew .page1 .logo {
   position: absolute;
   z-index: 0;
-  top: 50%;
+  top: 40%;
   left: 50%;
   background-image: url("/assets/borrowed_assets/thincats-450x153cheetah.png");
   background-repeat: no-repeat;
@@ -290,6 +322,37 @@
 .pageFlipper-exit {
   -webkit-animation: pageflipLeave 0.5s forwards;
   animation: pageflipLeave 0.5s forwards;
+}
+.expandPointArrow {
+  position: absolute;
+  width: 0px;
+  -webkit-animation: growBorder forwards;
+  animation: growBorder forwards;
+  z-index: -1;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 80px solid black;
+}
+.expandPointArrow.leftArrow {
+  transform: skewX(45deg);
+}
+.expandPointArrow.rightArrow {
+  transform: skewX(-45deg);
+}
+.expandThickArrow {
+  position: absolute;
+  width: 0px;
+  bottom: 0;
+  -webkit-animation: grow forwards;
+  animation: grow forwards;
+  border-left: 5px solid black;
+  z-index: -1;
+}
+.expandThickArrow.leftArrow {
+  transform: skewX(45deg);
+}
+.expandThickArrow.rightArrow {
+  transform: skewX(-45deg);
 }
 .thincatsCorner {
   bottom: 0;
