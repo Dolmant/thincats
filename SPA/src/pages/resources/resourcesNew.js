@@ -6,7 +6,7 @@ import List from "@material-ui/core/List"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
-import Menu from "components/menu/menu"
+import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
 import resourcesContent from "./resourcesContent"
@@ -103,7 +103,7 @@ export default class Resources extends React.Component<Props, State> {
         return (
             <div className="resources">
                 <div className="thincatsCorner" />
-                <Menu />
+                <MenuBar />
                 <Grid container spacing="12">
                     <Grid className="resourceNav" item xs={4} md={2}>
                         <List>

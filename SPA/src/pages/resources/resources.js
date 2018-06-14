@@ -13,7 +13,7 @@ export default class Resources extends React.Component<Props> {
                     <h1>Resources</h1>
                 </section>
                 <section className="regular-page-content clearfix">
-                    <p><b>Lenders</b></p>
+                    <p><p className="bold">Lenders</p></p>
                     <ul>
                         <li><a href="/assets/borrowed_assets/TCA-Lender-Fact-Sheet-31March2018.pdf" target="_blank" rel="noopener noreferrer">Lender Fact Sheet</a></li>
                         <li><a href="/assets/borrowed_assets/TCA-Membership-Agreement-May16.pdf" target="_blank" rel="noopener noreferrer">Membership Agreement</a></li>
@@ -23,7 +23,7 @@ export default class Resources extends React.Component<Props> {
                         <li><a href="/assets/borrowed_assets/ThinCats-Lender-Guide-Dec16.pdf" target="_blank" rel="noopener noreferrer">Platform User Guide for Lenders</a></li>
                         <li><a href="/assets/borrowed_assets/TCA-Loan-Repayment-Calculator-July-2016.xlsx">Lender Loan Repayment Calculator (Principal and Interest Loan)</a></li>
                     </ul>
-                    <p><b>Borrowers</b></p>
+                    <p><p className="bold">Borrowers</p></p>
                     <ul>
                         <li><a href="/assets/borrowed_assets/TCA-Borrower-Important-Information-April-2018.pdf" target="_blank" rel="noopener noreferrer">Borrower Important Information</a></li>
                         <li><a href="/assets/borrowed_assets/Key-Guidelines-for-Borrowers-apr18.pdf" target="_blank" rel="noopener noreferrer">Key Guidelines for Borrowers</a></li>

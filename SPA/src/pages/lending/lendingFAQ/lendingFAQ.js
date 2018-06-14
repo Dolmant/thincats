@@ -99,7 +99,7 @@ export default class LendingFAQ extends React.Component<Props> {
                         <h2 id="faq-overseas">Overseas Members</h2>
                         <p></p>
                         <h3>Can I be a Member if I reside outside Australia?</h3>
-                        <p><span style={{color: "#222222"}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides.&nbsp; We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the&nbsp;<a href="/assets/borrowed_assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><b></b><span style={{color: "#222222"}}>&nbsp;or contact us at&nbsp;</span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
+                        <p><span style={{color: "#222222"}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides.&nbsp; We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the&nbsp;<a href="/assets/borrowed_assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><p className="bold"></p><span style={{color: "#222222"}}>&nbsp;or contact us at&nbsp;</span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
                     </div>
                     <div className="faq-section">
                         <h2 id="faq-sponsors">Sponsors and Introducers</h2>

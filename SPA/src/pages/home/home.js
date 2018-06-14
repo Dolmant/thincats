@@ -141,7 +141,7 @@ export default class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}><em><b>No early repayment charges and no hidden fees…</b></em></strong></p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}>
+                                                <p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}><em><p className="bold">No early repayment charges and no hidden fees…</p></em></strong></p><strong id="slidingDiv5" className="show_hide5 show_hide" style={{display: "inline"}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
@@ -161,7 +161,7 @@ export default class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}><em><b>Talk to a lending expert…</b></em></strong></p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}>
+                                                <p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}><em><p className="bold">Talk to a lending expert…</p></em></strong></p><strong id="slidingDiv6" className="show_hide6 show_hide" style={{display: "inline"}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
@@ -184,7 +184,7 @@ export default class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}><em><b>Transparency with detailed information on each loan…</b></em></strong></p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}>
+                                                <p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}><em><p className="bold">Transparency with detailed information on each loan…</p></em></strong></p><strong id="slidingDiv7" className="show_hide7 show_hide" style={{display: "inline"}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>
@@ -199,9 +199,9 @@ export default class Home extends React.Component<Props> {
                                         <p>ThinCats members can select loans by the criteria that suits them: for example, by maturity, interest rate, business type, and location – indeed, using any of the factors covered in our detailed information packs. You can take out an individual loan, or build a diversified portfolio. The choice is yours.</p>
                                         <p><em><strong>For more information on loans to date, click <a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a>.</strong></em></p>
                                         <p>Diversification is an important way in which investors control risk. The wider the range of loans you hold, across a breadth of business types, the less will be the impact of a particular loss. A broadly-invested ThinCats loan portfolio brings the benefits of diversification on two levels:</p>
-                                        <p><b>Diversification within your ThinCats loans</b></p>
+                                        <p><p className="bold">Diversification within your ThinCats loans</p></p>
                                         <p>Holding a range of different loans means that your loan portfolio will be less vulnerable to specific economic conditions than one where loans are concentrated in one business. So, for example, a coffee distributor will be subject to different market forces than a building material supplier, which in turn behaves very differently than a solar energy systems supplier.</p>
-                                        <p><b>Diversification within your overall portfolio</b></p>
+                                        <p><p className="bold">Diversification within your overall portfolio</p></p>
                                         <p>P2P loans are a distinct “asset className” and behave differently to other asset classNamees: for example, equities, bonds or property. Peer to peer loans produce a fixed predictable return. Having a meaningful P2P loan allocation in a portfolio should, therefore, lower its overall volatility.</p>
                                         <p>You can view your portfolio along with detailed performance information at any time on your personal dashboard.</p>
                                         <p>Lenders can ask questions or seek clarification from the borrower on any loan, through the Q&amp;A function available for each loan on the platform and you can also see all the other lender bids.</p>
@@ -217,7 +217,7 @@ export default class Home extends React.Component<Props> {
                                         </div>
                                         <div className="reason-content col-lg-8 col-sm-8">
                                             <div className="reason-inner">
-                                                <p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}><em><b>Diversify your risk…</b></em></strong></p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}>
+                                                <p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}></strong></p><p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}><em><p className="bold">Diversify your risk…</p></em></strong></p><strong id="slidingDiv8" className="show_hide8 show_hide" style={{display: "inline"}}>
                                                 </strong><p></p>
                                             </div>
                                         </div>

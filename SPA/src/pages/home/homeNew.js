@@ -76,9 +76,9 @@ export default class Home extends React.Component<Props, State> {
         } else {
             // clip if not first time playing the animation
             l = (w / 2) - (textWidth / 2) - offset
-            b = (h / 2) + offset
+            b = (h / 2.5) + offset
             r = (w / 2) + (textWidth / 2) + offset
-            t = (h / 2) - (textHeight / 2) - offset
+            t = (h / 2.5) - (textHeight / 2) - offset
             $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
         }
         // })
@@ -94,7 +94,7 @@ export default class Home extends React.Component<Props, State> {
     render() {
         const findOutMoreClasses = classNames({
             findOutMore: true,
-            hideIt: this.state.scrolled,
+            hideIt: true, // this.state.scrolled,
         })
         const w = $(window).width()
 
@@ -159,7 +159,7 @@ export default class Home extends React.Component<Props, State> {
                         <div id="black" />
                         <div className="logo" />
                         <div id="text">
-                            {"Thin"}<b>{"Cats"}</b>
+                            {"Thin"}<p className="bold">{"Cats"}</p>
                             <div className="slogan">
                                 {"Smart Business"}
                             </div>
@@ -223,11 +223,11 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="centered">
                                             <SVGInline className="light fillWhite" svg={Light}></SVGInline>
                                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                        <div className="page2Text">{"...they partner with ThinCats to submit their business case for funding."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -248,13 +248,13 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="centered">
                                             <SVGInline className="light fillWhite" svg={Light}></SVGInline>
                                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
                                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                             <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                        <div className="page2Text">{"Our credit team assesses each loan application thoroughly before sharing it with the ThinCats investor community."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -275,13 +275,13 @@ export default class Home extends React.Component<Props, State> {
                                         <div className="centered">
                                             <SVGInline className="light fillWhite" svg={Light}></SVGInline>
                                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
                                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                        <div className="page2Text">{"Investors choose the loans that interest them and then act collectively to finance loans of up to $2million..."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -305,7 +305,7 @@ export default class Home extends React.Component<Props, State> {
                                                 <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                                 <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             </div>
-                                            <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
+                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
                                             <div className="dualArrow">
                                                 <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                                 <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
@@ -314,7 +314,7 @@ export default class Home extends React.Component<Props, State> {
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+                                        <div className="page2Text">{"...helping Australian business grow and providing fair returns to investors."}<br />{"That's how we're connecting growing businesses with smart investors."}</div>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -331,7 +331,7 @@ export default class Home extends React.Component<Props, State> {
                                 <div className="light topIcon">
                                     <SVGInline className="fillWhite light" svg={Light}></SVGInline>
                                 </div>
-                                <div className="page3Title" >Why <b>ThinCats</b> is right for <b>growing businesses</b></div>
+                                <div className="page3Title" >Why <p className="bold">ThinCats</p> is right for <p className="bold">growing businesses</p></div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
@@ -405,7 +405,7 @@ export default class Home extends React.Component<Props, State> {
                                 <div className="light fillBlack topIcon">
                                     <SVGInline className="light fillBlack" svg={PeopleCash}></SVGInline>
                                 </div>
-                                <div className="page3Title" >{"Why "}<b>{"ThinCats"}</b>{" is right for "}<b>{"smart investors"}</b></div>
+                                <div className="page3Title" >{"Why "}<p className="bold">{"ThinCats"}</p>{" is right for "}<p className="bold">{"smart investors"}</p></div>
                             </Grid>
                             <Grid item xs={12} className="">
                                 <Grid container className="" direction="row">
