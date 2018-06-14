@@ -104,6 +104,23 @@
         height: 100px; }
 }
 
+@-webkit-keyframes growOngoing {
+    0% {
+        height: 0px; }
+    50% {
+        height: 100px; }
+    100% {
+        height: 0px; }
+}
+@keyframes growOngoing {
+    0% {
+        height: 0px; }
+    50% {
+        height: 100px; }
+    100% {
+        height: 0px; }
+}
+
 @-webkit-keyframes growBorder {
     0% {
         border-bottom-width: 0px; }
@@ -201,6 +218,7 @@
         }
         .seller {
             color: black;
+            text-align: center;
         }
     }
     .background {
@@ -243,12 +261,17 @@
             align-items: center;
 
             .light {
-                width: 8rem;
-                height: 8rem;
+                width: 3rem;
+                height: 3rem;
             }
             .arrow {
-                width: 8rem;
-                height: 8rem;
+                width: 3rem;
+                height: 3rem;
+            }
+            .reverseArrow {
+                transform: rotate(180deg);
+                width: 3rem;
+                height: 3rem;
             }
             i {
                 color: white;
@@ -281,8 +304,27 @@
         color: black;
 
         .light {
-            width: 8rem;
-            height: 8rem;
+            width: 4rem;
+            height: 4rem;
+        }
+        .plant {
+            width: 3rem;
+            // height: 2.5rem;
+        }
+        .wallet {
+            width: 4rem;
+        }
+        .lock {
+            width: 3.7rem;
+        }
+        .medal {
+            width: 3.5rem;
+        }
+        .magGlass {
+            width: 3.5rem;
+        }
+        .time {
+            width: 5rem;
         }
         .topIcon {
             margin: auto;
@@ -335,6 +377,8 @@
     animation: growBorder forwards;
     z-index: -1;
 
+    animation-delay: 2s;
+
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 80px solid black;
@@ -347,12 +391,19 @@
     }
 }
 
+.fillWhite {
+    fill:white;
+}
+
 .expandThickArrow {
     position: absolute;
+    animation-delay: 2s;
     width: 0px;
     bottom: 0;
-    -webkit-animation: grow forwards;
-    animation: grow forwards;
+    -webkit-animation: growOngoing;
+    animation: growOngoing;
+    // -webkit-animation: grow forwards;
+    // animation: grow forwards;
     border-left: 5px solid black;
     z-index: -1;
 

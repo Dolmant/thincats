@@ -17,6 +17,19 @@
 .menuBar .loginButtons button {
   margin-right: 1rem;
 }
+.menuBar .justifyBetween {
+  justify-content: space-between;
+}
+.menuBar .noBasis {
+  flex-basis: 0;
+}
+.menuBar .logoLeft {
+  background-image: url("/assets/borrowed_assets/thincats-450x153.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+  max-width: 25vw;
+}
 @-webkit-keyframes sdb {
   0% {
     opacity: 0;
@@ -117,6 +130,28 @@
     height: 100px;
   }
 }
+@-webkit-keyframes growOngoing {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+@keyframes growOngoing {
+  0% {
+    height: 0px;
+  }
+  50% {
+    height: 100px;
+  }
+  100% {
+    height: 0px;
+  }
+}
 @-webkit-keyframes growBorder {
   0% {
     border-bottom-width: 0px;
@@ -211,6 +246,7 @@
 }
 .homeNew .page1 .seller {
   color: black;
+  text-align: center;
 }
 .homeNew .background {
   position: absolute;
@@ -248,12 +284,17 @@
   align-items: center;
 }
 .homeNew .page2 .centered .light {
-  width: 8rem;
-  height: 8rem;
+  width: 3rem;
+  height: 3rem;
 }
 .homeNew .page2 .centered .arrow {
-  width: 8rem;
-  height: 8rem;
+  width: 3rem;
+  height: 3rem;
+}
+.homeNew .page2 .centered .reverseArrow {
+  transform: rotate(180deg);
+  width: 3rem;
+  height: 3rem;
 }
 .homeNew .page2 .centered i {
   color: white;
@@ -282,8 +323,26 @@
   color: black;
 }
 .homeNew .page3 .light {
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+.homeNew .page3 .plant {
+  width: 3rem;
+}
+.homeNew .page3 .wallet {
+  width: 4rem;
+}
+.homeNew .page3 .lock {
+  width: 3.7rem;
+}
+.homeNew .page3 .medal {
+  width: 3.5rem;
+}
+.homeNew .page3 .magGlass {
+  width: 3.5rem;
+}
+.homeNew .page3 .time {
+  width: 5rem;
 }
 .homeNew .page3 .topIcon {
   margin: auto;
@@ -329,6 +388,7 @@
   -webkit-animation: growBorder forwards;
   animation: growBorder forwards;
   z-index: -1;
+  animation-delay: 2s;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 80px solid black;
@@ -339,12 +399,16 @@
 .expandPointArrow.rightArrow {
   transform: skewX(-45deg);
 }
+.fillWhite {
+  fill: white;
+}
 .expandThickArrow {
   position: absolute;
+  animation-delay: 2s;
   width: 0px;
   bottom: 0;
-  -webkit-animation: grow forwards;
-  animation: grow forwards;
+  -webkit-animation: growOngoing;
+  animation: growOngoing;
   border-left: 5px solid black;
   z-index: -1;
 }
@@ -392,6 +456,20 @@
   padding: 10rem 1rem 1rem 1rem;
   max-width: 980px;
   margin: 0px auto;
+}
+.footer {
+  margin: 0px auto;
+  text-align: center;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: white;
+  height: auto;
+  overflow: hidden;
+  background: #686E6F;
+  clear: both;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #7C8283;
 }
 h2 {
   font-weight: normal;

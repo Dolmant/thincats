@@ -2,13 +2,13 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 todo:
-menu bar center align the menu part and put logo in
-use gradient border to separate homepage content
-style disclaimers
-insert new svgs
 style homepage
+get new background for page 2 of homepage
 theme buttons (yellow/grey?)
 fix formatting of resources
+use gradient border to separate homepage content?
+
+Friday:
 unscrew mobile view
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.

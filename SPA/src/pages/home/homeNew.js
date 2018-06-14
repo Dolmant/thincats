@@ -2,7 +2,6 @@
 import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
-import Button from "@material-ui/core/Button"
 import MenuBar from "components/menuBar/menuBar"
 import "./home.less"
 import classNames from "util/classNames"
@@ -101,9 +100,9 @@ export default class Home extends React.Component<Props, State> {
 
         const arrows = []
         for (let i = 0; i < w / 50; i += 1) {
-            const rand = Math.random()
-            const rand30 = rand * 30
-            const rand25 = rand * 2.5
+            let rand = Math.random()
+            let rand30 = rand * 30
+            let rand25 = rand * 2.5
             // arrows.push(
             //     <div
             //         style={{
@@ -127,16 +126,21 @@ export default class Home extends React.Component<Props, State> {
                     style={{
                         left: `${(i * 50) - 25}px`,
                         maxHeight: `${50 + (50 * rand)}px`,
-                        animationDuration: `${2.5 + (2.5 * rand)}s`,
+                        animationDuration: `${7.5 + (2.5 * rand)}s`,
+                        animationIterationCount: "infinite",
                     }}
                     className="leftArrow expandThickArrow"
                 />)
+            rand = Math.random()
+            rand30 = rand * 30
+            rand25 = rand * 2.5
             arrows.push(
                 <div
                     style={{
                         left: `${i * 50}px`,
                         maxHeight: `${50 + (50 * rand)}px`,
-                        animationDuration: `${2.5 + (2.5 * rand)}s`,
+                        animationDuration: `${7.5 + (2.5 * rand)}s`,
+                        animationIterationCount: "infinite",
                     }}
                     className="rightArrow expandThickArrow"
                 />)
@@ -145,23 +149,7 @@ export default class Home extends React.Component<Props, State> {
         return (
             <div className="homeNew">
                 <div className="background" />
-                <Grid container className="page1" justify="center" alignItems="flex-end" spacing="12">
-                    {/* <div className="thincatsCorner" /> */}
-                    
-                    {/* <Grid item className="buttonsContainer" xs={12}>
-                        <Grid container direction="row" justify="flex-end" spacing="12" className="buttons">
-                            <Grid item justify="flex-end" className="buttons">
-                                <Button variant="raised" color="primary">
-                                    Register
-                                </Button>
-                            </Grid>
-                            <Grid item justify="flex-end" className="buttons">
-                                <Button variant="raised" color="primary">
-                                    Login
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    </Grid> */}
+                <Grid container className="page1" justify="center" alignItems="flex-end">
                     <Grid className="homeMenu" item xs={12}>
                         <MenuBar />
                     </Grid>
@@ -178,19 +166,21 @@ export default class Home extends React.Component<Props, State> {
                         </div>
                     </Grid>
                     <Grid item xs={12}>
-                        <Grid container justify="center" alignContent="center" spacing="12" className="seller">
-                            <Grid item xs="10">
-                                <p>Experience awesome returns etcExperience awesome returns etcExperience awesome returns etcExperience awesome returns etcExperience awesome returns etcExperience awesome returns etcExperience awesome returns etcExperience awesome returns etc</p>
-                            </Grid>
+                        <Grid container justify="center" alignContent="center" className="seller">
+                            <p>
+                                Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.
+                                <br />
+                                Diversify and reduce your risk, bypass banks and get a better deal.
+                            </p>
                         </Grid>
                     </Grid>
                     <div className={findOutMoreClasses}>
                         {/* <Button variant="raised" color="primary">
                             {"Find out more"}
                         </Button> */}
-                        <div className="bounce-container">
+                        {/* <div className="bounce-container">
                             <i className="fa fa-long-arrow-down"></i>
-                        </div>
+                        </div> */}
                     </div>
                 </Grid>
                 <Grid container direction="row" wrap="nowrap" className="page2">
@@ -204,7 +194,7 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
                                         </div>
                                     </Grid>
                                     <Grid item className="page2TextContainer" xs={12}>
@@ -227,8 +217,8 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
-                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                             <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
                                         </div>
                                     </Grid>
@@ -252,10 +242,10 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
-                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                             <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
-                                            <SVGInline className="arrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
                                             <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
                                         </div>
                                     </Grid>
@@ -279,10 +269,10 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
-                                            <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+                                            <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
-                                            <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                            <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
                                         </div>
                                     </Grid>
@@ -306,15 +296,15 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
                                     <Grid item className="page2IconContainer" xs={12}>
                                         <div className="centered">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
                                             <div className="dualArrow">
-                                                <SVGInline className="arrow" svg={Arrow}></SVGInline>
-                                                <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                                <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+                                                <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             </div>
                                             <div className="blueText">{"Thin"}<b>{"Cats"}</b></div>
                                             <div className="dualArrow">
-                                                <SVGInline className="arrow" svg={Arrow}></SVGInline>
-                                                <SVGInline className="reverseArrow" svg={Arrow}></SVGInline>
+                                                <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+                                                <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
                                             </div>
                                             <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
                                         </div>
@@ -335,7 +325,7 @@ export default class Home extends React.Component<Props, State> {
                         <Grid container className="" alignItems="center" direction="column">
                             <Grid item xs={12}>
                                 <div className="light topIcon">
-                                    <SVGInline className="light" svg={Light}></SVGInline>
+                                    <SVGInline className="fillWhite light" svg={Light}></SVGInline>
                                 </div>
                                 <div className="" >Why ThinCats is right for growing businesses</div>
                             </Grid>
@@ -344,7 +334,7 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid className="page3Block " item xs={6}>
                                         {/* Block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Shoot}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -352,7 +342,27 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Man}></SVGInline>
+                                        </div>
+                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
+                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} className="">
+                                <Grid container className="" direction="row">
+                                    <Grid item className="page3Block " xs={6}>
+                                        {/* block */}
+                                        <div className="time">
+                                            <SVGInline className="time" svg={Time}></SVGInline>
+                                        </div>
+                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
+                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                    </Grid>
+                                    <Grid item className="page3Block " xs={6}>
+                                        {/* block */}
+                                        <div className="lock">
+                                            <SVGInline className="lock" svg={Lock}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -364,15 +374,15 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Chart}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
                                     </Grid>
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        <div className="medal">
+                                            <SVGInline className="medal" svg={Medal}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -397,8 +407,28 @@ export default class Home extends React.Component<Props, State> {
                                 <Grid container className="" direction="row">
                                     <Grid className="page3Block" item xs={6}>
                                         {/* Block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                        <div className="plant">
+                                            <SVGInline className="plant" svg={Plant}></SVGInline>
+                                        </div>
+                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
+                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                    </Grid>
+                                    <Grid item className="page3Block" xs={6}>
+                                        {/* block */}
+                                        <div className="wallet">
+                                            <SVGInline className="wallet" svg={Wallet}></SVGInline>
+                                        </div>
+                                        <div className="page3Heading">{"Never miss an opportunity"}</div>
+                                        <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} className="">
+                                <Grid container className="" direction="row">
+                                    <Grid item className="page3Block" xs={6}>
+                                        {/* block */}
+                                        <div className="magGlass">
+                                            <SVGInline className="magGlass" svg={MagGlass}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -406,7 +436,7 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Shield}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -418,7 +448,7 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Bag}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>
@@ -426,7 +456,7 @@ export default class Home extends React.Component<Props, State> {
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
                                         <div className="light">
-                                            <SVGInline className="light" svg={Light}></SVGInline>
+                                            <SVGInline className="light" svg={Book}></SVGInline>
                                         </div>
                                         <div className="page3Heading">{"Never miss an opportunity"}</div>
                                         <div className="page3Content">{"Get funding for sotck, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}</div>

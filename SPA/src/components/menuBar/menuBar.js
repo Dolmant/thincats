@@ -14,14 +14,16 @@ export default class MenuBar extends React.Component<Props> {
     render() {
         return (
             <div className="menuBar">
-                <Grid container justify="space-around">
-                    <Grid item>
-                        <div className="logo" />
+                <Grid container className="justifyBetween">
+                    <Grid item xs={3}>
+                        <div className="logoLeft" />
                     </Grid>
-                    <Grid item>
-                        <Menu />
+                    <Grid item xs={6}>
+                        <Grid container justify="center">
+                            <Menu />
+                        </Grid>
                     </Grid>
-                    <Grid item className="loginButtons">
+                    <Grid item xs={3} className="loginButtons">
                         <Button variant="raised" color="primary">
                             Login
                         </Button>
