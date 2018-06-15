@@ -5,6 +5,7 @@ deployment:
 asia.gcr.io/firm-champion-204312/thincats
 docker tag thincats asia.gcr.io/firm-champion-204312/thincats
 docker push asia.gcr.io/firm-champion-204312/thincats
+gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:v0.1
 
 todo:
 bring back page transitions with transform will-change and backface for own rendering layer
