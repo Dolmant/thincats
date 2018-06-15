@@ -8,6 +8,12 @@
 .menu .navRoot .navAction {
   max-width: 100vh !important;
 }
+.menu .navRoot .navActionLabel {
+  font-size: 1rem;
+}
+.menu .navRoot .selectedLabel {
+  font-size: 1.4rem;
+}
 .menuOverlay {
   position: absolute;
   left: 35vw;
@@ -32,6 +38,7 @@
   background-size: contain;
   height: 10vh;
   max-width: 25vw;
+  cursor: pointer;
 }
 @-webkit-keyframes sdb {
   0% {
@@ -344,7 +351,6 @@
 }
 .homeNew .page3 .light {
   width: 4rem;
-  height: 4rem;
 }
 .homeNew .page3 .plant {
   width: 3rem;
@@ -473,9 +479,18 @@
   min-height: 100vh;
   width: 100vw;
 }
+.resources .subHeading {
+  padding-bottom: 1rem;
+}
+.resources .subHeading p {
+  margin-bottom: 0.5rem;
+}
 .resources .resourceNav {
   min-height: 100vh;
   background: lightgrey;
+}
+.resources .resourceNav .paddingTop1 {
+  padding-top: 1px;
 }
 .resources .noMargin {
   margin: 0;
@@ -512,6 +527,9 @@
 }
 h2 {
   font-weight: normal;
+}
+h1 {
+  font-weight: bold !important;
 }
 .italics {
   font-style: italic;

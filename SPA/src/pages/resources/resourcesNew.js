@@ -63,7 +63,7 @@ export default class Resources extends React.Component<Props, State> {
                 }}
             >
                 <div>
-                    {`${name}` /*{`${index + 1}. ${name}`}*/}
+                    {`> ${name}` /*{`${index + 1}. ${name}`}*/}
                 </div>
             </ListItem>
         )
@@ -77,36 +77,34 @@ export default class Resources extends React.Component<Props, State> {
     renderResourceContent = () => {
         const {mainHeader, subHeader} = this.state
 
-        const headerWrap = (mainHead, subHead, children) => (
+        const HeaderWrap = ({mainHead, subHead, children}) => (
             <div>
                 <h1>{mainHead}</h1>
-                <h2>{subHead}</h2>
                 {children}
             </div>
         )
 
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
-                <headerWrap mainHeader={mainHeader} subHeader={subHeader}>
+                <HeaderWrap mainHead={mainHeader} subHead={subHeader}>
                     {Object.keys(resourcesContent[mainHeader]).map(key => resourcesContent[mainHeader][key])}
-                </headerWrap>
+                </HeaderWrap>
             )
         }
         const mainHeaderTemp = Object.keys(resourcesContent)[0]
         return (
-            <headerWrap mainHeader={mainHeaderTemp} subHeader={Object.keys(resourcesContent[mainHeaderTemp])[0]}>
+            <HeaderWrap mainHead={mainHeaderTemp} subHead={Object.keys(resourcesContent[mainHeaderTemp])[0]}>
                 {Object.keys(resourcesContent[mainHeaderTemp]).map(key => resourcesContent[mainHeaderTemp][key])}
-            </headerWrap>
+            </HeaderWrap>
         )
     }
     render() {
         return (
             <div className="resources">
-                <div className="thincatsCorner" />
                 <MenuBar />
                 <Grid container spacing="12">
                     <Grid className="resourceNav" item xs={4} md={2}>
-                        <List>
+                        <List className="paddingTop1">
                             {this.renderResourceMenu()}
                         </List>
                     </Grid>

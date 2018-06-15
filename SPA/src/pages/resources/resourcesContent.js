@@ -7,37 +7,37 @@ import React from "react"
 export default {
     "How it works": {
         "Loan Application": (
-            <div id="loan_application">
+            <div id="loan_application" className="subHeading">
                 <h2>Loan Application</h2>
                 <p>SMEs apply for loans up to $2m either directly via the TCA platform or through Sponsors/Introducers.</p>
             </div>
         ),
         "Auction Listing": (
-            <div id="auction_listing">
+            <div id="auction_listing" className="subHeading">
                 <h2>Auction Listing</h2>
                 <p>The TCA Credit Team reviews loan applications and lists eligible loan opportunities for auction on the platform, with credit submissions and supporting documentation.</p>
             </div>
         ),
         "Fund Transfers": (
-            <div id="fund_transfers">
+            <div id="fund_transfers" className="subHeading">
                 <h2>Fund Transfers</h2>
                 <p>Wholesale investors assess loan opportunities, transfer funds to TCAN trust account and bid for parts of each loan opportunity (min. bid $1k) on the platform.</p>
             </div>
         ),
         "Auction Completion": (
-            <div id="auction_completion">
+            <div id="auction_completion" className="subHeading">
                 <h2>Auction Completion</h2>
                 <p>After auction completion, borrower executes security documentation in favour of TCAN as Trustee for lenders, and funds are transferred to the borrower.</p>
             </div>
         ),
         "Monthly Payments": (
-            <div id="monthly_payments">
+            <div id="monthly_payments" className="subHeading">
                 <h2>Monthly Payments</h2>
                 <p>Fixed monthly repayments of principal and interest from borrowers are credited to the lenders accounts on the platform.</p>
             </div>
         ),
         "Loan Period": (
-            <div id="loan_period">
+            <div id="loan_period" className="subHeading">
                 <h2>Loan Period</h2>
                 <p>The loan is repaid over the fixed term.</p>
             </div>
@@ -45,25 +45,25 @@ export default {
     },
     "About Borrowing": {
         "What people are saying about us": (
-            <div id="what_people_are_saying_about_us">
+            <div id="what_people_are_saying_about_us" className="subHeading">
                 <h2>What people are saying about us</h2>
                 <p>I love the straight forward approach of ThinCats and the fact that we are dealing with the actual decision makers about the application for the loan and facilitation of the loan process through their online platform. (David)</p>
                 <p>We recently acquired funding from ThinCats to expand our business interests. Personally I found the process very professional by ThinCats and was delighted by the result. Our successful raising allowed us to enter into more competitive buying contracts and increase our profit margin. (Ben)</p>
-                <p><strong><i>View key statistics including details of our last 10 loans:<a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a></i></strong></p>
+                <p><i>View key statistics including details of our last 10 loans:<a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a></i></p>
             </div>
         ),
         "Overview": (
-            <div id="overview">
+            <div id="overview" className="subHeading">
                 <h2>Overview</h2>
-                <p>ThinCats Australia helps companies raise loans ranging from <strong>$50k to $300k</strong>. Borrowers can apply for loans directly through ThinCats Australia or through our network of <a href="/sponsors-introducers/" target="_blank" rel="noopener noreferrer">Sponsors and Introducers</a>.</p>
+                <p>ThinCats Australia helps companies raise loans ranging from <strong>$50k</strong> to <strong>$300k</strong>. Borrowers can apply for loans directly through ThinCats Australia or through our network of <a href="#sponsors-introducers" target="_blank" rel="noopener noreferrer">Sponsors and Introducers</a>.</p>
                 <p>Our Credit team reviews loan applications and supporting documentation, assesses the security on offer and helps the borrower to prepare an information pack to be presented to lenders on the platform. We answer questions from lenders during the loan auction and monitor the loan after it has been completed.</p>
                 <h2>What does the platform offer?</h2>
-                <p>The Platform allows business loans ranging from <strong>$50k to $300k</strong> repayable in fixed monthly instalments over periods ranging from 2 to 5 years at competitive rates. The amount of the fixed monthly repayments depends upon the amount borrowed, the rate of interest and the loan period.</p>
+                <p>The Platform allows business loans ranging from <strong>$50k</strong> to <strong>$300k</strong> repayable in fixed monthly instalments over periods ranging from 2 to 5 years at competitive rates. The amount of the fixed monthly repayments depends upon the amount borrowed, the rate of interest and the loan period.</p>
                 <p>All our loans are flexible with full early repayment accepted at any time without any additional costs or interest, and the longer terms allow the borrower to use the funds for a range of working capital and longer term purposes.</p>
             </div>
         ),
         "Who do we want to work with": (
-            <div id="who_do_we_want_to_work_with">
+            <div id="who_do_we_want_to_work_with" className="subHeading">
                 <h2>Who do we want to work with?</h2>
                 <ul>
                     <li><strong>Small and medium sized companies that require loans for growth</strong> including working capital, equipment finance, infrastructure finance and business acquisition finance.</li>
@@ -73,7 +73,7 @@ export default {
             </div>
         ),
         "What are your fees": (
-            <div id="what_are_your_fees">
+            <div id="what_are_your_fees" className="subHeading">
                 <h2>What are your fees?</h2>
                 <p>Borrowers are charged a one-off fee of around 6% of the loan amount, payable on arrangement of the finance and usually deducted from the loan on disbursement, and a monthly loan administration fee* calculated on the outstanding loan balance, and paid in equal instalments over the term of the loan. All these fees are subject to GST.</p>
                 <p>*Monthly loan administration fees start from 3% p.a. and may vary depending on the loan size, risk and other factors, however, always clarified before the loan is listed on the platform.</p>
@@ -86,7 +86,7 @@ export default {
     },
     "About Lending": {
         "What people are saying about us": (
-            <div id="what_people_are_saying_about_us">
+            <div id="what_people_are_saying_about_us" className="subHeading">
                 <h2>What people are saying about us</h2>
                 <p>ThinCats is the engine that takes the banks out of banking and shares the spoils with lenders and borrowers alike. Small companies attract competitive financial support. Lenders share the risk of individual loans to build an attractively yielding fixed income portfolio. It’s win-win. It’s transparent. It’s simple. (Slater)</p>
                 <p><br />
@@ -95,7 +95,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Overview": (
-            <div id="overview">
+            <div id="overview" className="subHeading">
                 <h2>Overview</h2>
                 <p>ThinCats Australia is regulated by the Australian Securities and Investments Commission (ASIC) and is the holder of an Australian financial services licence (No. 488196).</p>
                 <p>ThinCats Australia provides a means for wholesale investors (including qualifying sophisticated investors, professional investors, high-net-worth investors and trustees of self-managed superannuation funds) to earn attractive returns by lending fractional amounts on secured loans to growing Australian small and medium sized companies.</p>
@@ -117,7 +117,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Who can be a Member": (
-            <div id="who_can_be_a_member">
+            <div id="who_can_be_a_member" className="subHeading">
                 <h2>Who can be a member?</h2>
                 <p>Wholesale investors, including qualifying sophisticated investors, professional investors, high-net-worth investors and trustees of self-managed superannuation funds, can be members of the ThinCats Australia platform.</p>
                 <p>To be considered a ‘wholesale investor’ the Australian Corporations Act and Regulations requires an investor to have:<br />
@@ -127,21 +127,21 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "How does it work": (
-            <div id="how_does_it_work">
+            <div id="how_does_it_work" className="subHeading">
                 <h2>How does it work?</h2>
                 <p>In order to be a Lender individuals and entities need to be registered and approved as members on the ThinCats Australia platform. Lenders need to transfer funds to the ThinCats Australia Client Monies account if they choose to bid on loans.  The minimum bid is $1,000. The maximum bid is the total loan amount. For fixed rate loans, lenders bid fixed amounts on the loan. For variable rate loans (which has not yet been introduced), lenders choose the amount they wish to bid as well as the interest rate. They can make multiple bids at different rates of interest and for different amounts. If more than one bid is successful they will have multiple loans at different rates of interest.</p>
                 <p>More detailed information is available in the <a href="/lending/lending-faq/" rel="noopener noreferrer" target="_blank">lending FAQs</a>.</p>
             </div>
         ),
         "What is the Secondary Market": (
-            <div id="what_is_the_secondary_market">
+            <div id="what_is_the_secondary_market" className="subHeading">
                 <h2>What is the Secondary Market?</h2>
                 <p>We are building towards having a secondary market to allow lenders to buy and sell their loans to each other or to qualifying third parties. This means that if lenders wish, and the loan is deemed suitable for sale (in the reasonable opinion of ThinCats Australia), they can sell their loans to others. It allows new lenders to build a portfolio of loans much more quickly than they would if they were waiting for new auctions and loans to be drawn down. It also provides a means for members to access their invested money early by selling some or all of their loans. Details of fees regarding this secondary market will be provided on this website when this facility is introduced. Not all loans will be deemed suitable for sale on the secondary market for a range of reasons.</p>
                 <p><strong>If you have any questions, please call 1300 325 342</strong></p>
             </div>
         ),
         "Lending FAQ": (
-            <div id="lending_faq">
+            <div id="lending_faq" className="subHeading">
                 <h2>Lending FAQ</h2>
                 <p>Use the list below to navigate to the different sections:</p>
                 <nav className="faq-nav">
@@ -162,19 +162,19 @@ The platform is simple to use, loan information is well displayed and returns ar
                         <li><a href="#faq-DR">Dispute Resolution</a></li>
                     </ul>
                 </nav>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-regulation">Regulation</h2>
                     <p></p>
                     <h3>How is ThinCats Australia regulated?</h3>
                     <p>ThinCats Australia is regulated by the Australian Securities and Investments Commission (ASIC) and is the holder of an Australian financial services licence (AFSL 488196).</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-loan-security">Loan Security</h2>
                     <p></p>
                     <h3>How are loans secured?</h3>
                     <p>All loans are generally secured by a first charge over the assets of the borrower company and recorded on the Personal Property Securities Register. In some cases, a subsequent charge (not first) may be necessary if the first charge is with the borrowers main trading bankers. In addition a personal guarantee is obtained from each of the directors. In certain circumstances a further security by way of a subsequent mortgage over the directors and/or guarantors real property may also be required.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-default-rates">Default rate and recovery on default</h2>
                     <p></p>
                     <h3>What do you count as a default?</h3>
@@ -191,7 +191,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <p>As all loans are secured by a charge over the borrower company’s assets and personal guarantees from directors, and assuming in a liquidation scenario the company’s assets have not significantly deteriorated in value, a loss of principal and or interest is not anticipated. However when allowing for recovery costs and diminished asset values, this may not always result in a positive outcome.</p>
                     <p>If the borrower defaults, typically specialised third party collection agents will be appointed to commence recovery action on behalf of the lenders and the first call is on the specific security given by the borrower. If enforcement of a security is not adequate, arrangements are made to call on the personal guarantees.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-interest-rates">Interest rates</h2>
                     <p></p>
                     <h3>How is the rate of interest decided?</h3>
@@ -199,7 +199,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <h3>How is it calculated?</h3>
                     <p>The interest rates quoted are per annum and is calculated each month on the outstanding capital e.g. if the annual interest rate is 12%, the monthly interest rate is 1% (12% divided by 12 months) on the outstanding capital. As the loan is repaid in equal monthly instalments you will be receiving part of your capital back each month and so the size of the loan will reduce each month and you will have received slightly less than half of your money back at the half way point of your loan term. This means that although the interest rate stays the same it will apply to a progressively smaller capital amount. It works just like a mortgage (but in reverse).</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-my-account">Funding, repayments and withdrawals</h2>
                     <p></p>
                     <h3>How are my funds held by ThinCats Australia?</h3>
@@ -225,13 +225,13 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <h3>How can I get back money lent, if my circumstances change?</h3>
                     <p>We are working towards having a secondary market in place in the future which will allow lenders to sell their loans. It must be noted that when there is a known problem or uncertainty over a loan we will not allow it to be sold on the secondary market. An example of this is if a borrower has missed a repayment or we are aware of facts that reliably indicate the borrower might be about to repay the loan early.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-overseas">Overseas Members</h2>
                     <p></p>
                     <h3>Can I be a Member if I reside outside Australia?</h3>
                     <p><span style={{color: "#222222"}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides. We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the <a href="/assets/borrowed_assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><p className="bold"></p><span style={{color: "#222222"}}> or contact us at </span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-sponsors">Sponsors and Introducers</h2>
                     <p></p>
                     <h3>What do the sponsors and introducers do?</h3>
@@ -239,37 +239,37 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <p>Introducers refer potential SME borrowers to ThinCats Australia.</p>
                     <p>More details about Sponsors and Introducers are available <a title="Sponsors &amp; Introducers" href="/sponsors-introducers/">here</a>.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-borrowers">Borrowers</h2>
                     <p></p>
                     <h3>How do you assess the borrowers?</h3>
                     <p>ThinCats Australia will undertake a detailed assessment of the borrower’s affairs (including a review of the borrower’s financial position, business plans, key personnel and key clients, security to be offered and the borrower’s ability to repay a loan). They then prepare a report (which is confirmed and signed by the borrower). The report is similar to the type that a bank might produce internally in addition to a detailed credit application on the borrower’s behalf. An information pack is published on the platform for lenders to review and download.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-memberfees">Member Fees</h2>
                     <p></p>
                     <h3>Do you charge any fees for Membership?</h3>
                     <p>We currently do not charge any fees. Membership is free and there are no loan management fees.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-tax">Tax</h2>
                     <p></p>
                     <h3>Does ThinCats Australia calculate and deduct income tax on behalf of lenders?</h3>
                     <p>We do not deduct any tax on interest received by lenders. It is each Lender’s responsibility to declare any money earned through loans made on the ThinCats Australia Platform to their respective tax authority. You can see an indication of how much interest you have earned in the tax year from your dashboard by setting the correct date ranges and looking at your repayment summary. This information is indicative only.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-risk">Risk</h2>
                     <p></p>
                     <h3>How risky are these loans compared to banks deposits and equity investments?</h3>
                     <p>There is no doubt that there is significantly more risk in lending directly to SMEs (compared with a Member depositing funds with a bank) because a bank is intensely regulated, subject to many laws and typically benefits from a large and diverse revenue and collateral base. An equity investment depends on many different economic and legal differences. Members who make a loan are not investing in ThinCats Australia nor are they pooling their investments with other Lenders. Therefore it might not be reasonable to compare loans made through the Platform with bank deposits or equity investments. Instead, you should consider comparing against other comparable lending. Depending upon the type of deal you select and the way in which your money is spread across a number of loans the overall risk should be reduced.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-Selfm">Self-Managed Super Funds</h2>
                     <p></p>
                     <h3>Can my Self-Managed Super Fund make loans?</h3>
                     <p>Trustees of Self-Managed Super Funds may be members if they satisfy the wholesale investor requirement.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-nominees">ThinCats Australia Nominees Pty Ltd (TCAN)</h2>
                     <p></p>
                     <h3>Who executes and manages the loans and who holds the borrower security?</h3>
@@ -278,7 +278,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <h3>If some form of action needs to be taken on a loan, how is this decided?</h3>
                     <p>If a decision is needed to be taken about varying a loan or taking legal action, lenders will be contacted by TCAN by email, asking for lenders to vote on a specific course of action in respect of a loan. The votes of each lender will be tallied based on a lender’s investment amount in a loan. The majority votes will be acted upon by TCAN. TCAN has some minimal discretion, such as to act in emergencies or to deal with administrative issues for greater efficiency.</p>
                 </div>
-                <div>
+                <div className="subHeading">
                     <h2 id="faq-DR">Dispute Resolution</h2>
                     <p></p>
                     <h3>How do you resolve customer complaints?</h3>
@@ -288,7 +288,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Risks": (
-            <div id="risks">
+            <div id="risks" className="subHeading">
                 <h2>Risks</h2>
                 <p><strong>Please read this section carefully. It discloses the key risks to which you may be exposed when undertaking peer-to-peer business lending. There may be other general risks or risks specifically relevant to individual business lenders or borrowers to which you are exposed and which will be in addition to this general risk warning.</strong></p>
                 <h2>Peer-to-Peer business lending</h2>
@@ -324,7 +324,7 @@ The platform is simple to use, loan information is well displayed and returns ar
     },
     "Key Statistics": {
         "All": (
-            <div id="key_statistics">
+            <div id="key_statistics" className="subHeading">
                 <div className="regular-page-content clearfix">
                     <h2>Key Statistics</h2>
                     <p>ThinCats Australia facilitated its first loan in February 2015.</p>
@@ -631,14 +631,14 @@ The platform is simple to use, loan information is well displayed and returns ar
     },
     "Sponsors": {
         "Who are Sponsors and what do they do": (
-            <div id="who_are_sponsors_and_what_do_they_do">
+            <div id="who_are_sponsors_and_what_do_they_do" className="subHeading">
                 <h2>Who are sponsors and what do they do?</h2>
                 <p>Sponsors are experienced and licensed finance broking entities selected by ThinCats Australia to assist in the origination of business loans on the platform.</p>
                 <p>They assess business proposals, review loan applications and help the borrower to prepare the information pack to be presented to lenders on the platform. This includes meeting with the borrower and getting to know their business as well as assessing the security on offer.</p>
             </div>
         ),
         "What are the benefits of being a Sponsor": (
-            <div id="what_are_the_benefits_of_being_a_sponsor">
+            <div id="what_are_the_benefits_of_being_a_sponsor" className="subHeading">
                 <h2>What are the benefits of being a Sponsor?</h2>
                 <p>Sponsors are part of the ThinCats Australia network and play an important role in helping SMEs to grow and achieve their business goals.</p>
                 <p>ThinCats will pay a commission of up to 60 basis points (plus GST) upfront on loan disbursement.</p>
@@ -646,7 +646,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Who are Introducers": (
-            <div id="who_are_introducers">
+            <div id="who_are_introducers" className="subHeading">
                 <h2>Who are introducers</h2>
                 <p>The role of an Introducer is to refer SME businesses who wish to seek funding through the ThinCats Australia platform.</p>
                 <p>ThinCats will pay a referral fee of 25 basis points (plus GST) on the successful completion of the loan.</p>
@@ -660,7 +660,7 @@ The platform is simple to use, loan information is well displayed and returns ar
     },
     "About us": {
         "ThinCats": (
-            <div id="thincats">
+            <div id="thincats" className="subHeading">
                 <h2>ThinCats</h2>
                 <p>ThinCats Australia provides an online market for secured business loans to Australian companies. It is regulated by the Australian Securities and Investments Commission (ASIC) and is the holder of an Australian financial services licence (AFSL 488196).</p>
                 <p>ThinCats Australia links wholesale investors (which includes qualifying sophisticated investors, professional investors, high-net-worth investors and trustees of self-managed superannuation funds) with established SME corporate borrowers to provide a serious alternative to bank lending.</p>
@@ -672,7 +672,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Contact Us": (
-            <div id="contact_us">
+            <div id="contact_us" className="subHeading">
                 <h2>Contact Us</h2>
                 <h4>Seeking a Loan?</h4>
                 <p>If you are interested in applying for a loan, please contact us by emailing <a href="mailto:loans@thincats.com.au">loans@thincats.com.au</a> with the name, address and ABN of your company, a brief description of its activities, the amount you wish to borrow, and the reason for borrowing.</p>
@@ -683,7 +683,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "General questions": (
-            <div id="general_questions">
+            <div id="general_questions" className="subHeading">
                 <h2>General Questions</h2>
                 <p>If you have a general question please send an email to <a href="mailto:info@thincats.com.au">info@thincats.com.au</a>.</p>
                 <p>
@@ -692,7 +692,7 @@ The platform is simple to use, loan information is well displayed and returns ar
             </div>
         ),
         "Our Team": (
-            <div id="our_team">
+            <div id="our_team" className="subHeading">
                 <h2>Our Team</h2>
                 <p>The ThinCats Australia team comprise professionals with significant local and international experience in a wide range of disciplines including:</p>
                 <table style={{width: "100%"}}>

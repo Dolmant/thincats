@@ -2,13 +2,15 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 todo:
-theme buttons (yellow/grey?)
 fix formatting of resources
 
 asia.gcr.io/firm-champion-204312/thincats
 docker tag thincats asia.gcr.io/firm-champion-204312/thincats
 docker push asia.gcr.io/firm-champion-204312/thincats
 
+todo:
+bring back page transitions with will change and backface for own rendering layer
+fix homepage page 3 alignment - maybe use one column many rows rather than two columns
 unscrew mobile view
 
 staging/prod variable for golang. should include the json key and env var for running it. Include the path export in go generate as well as the docker builds.
