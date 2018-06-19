@@ -1,5 +1,6 @@
 // @flow
 import {configure, observable, action, computed} from "mobx"
+import React from "react"
 
 configure({enforceActions: true})
 
@@ -7,24 +8,9 @@ const URLGenerator = () =>
     // window.history.replaceState({}, 'Home', '/');
     window.location.pathname
 
-export type StoreType = {
-    URL: string,
-    replaceURL: (string) => {},
-    pushURL: (string) => {},
-    navHome: () => {},
-    navResources: () => {},
-    navNews: () => {},
-    navFAQ: () => {},
-    playOnce: () => {},
-    loaded: boolean,
-    isHome: boolean,
-    isResources: boolean,
-    isNews: boolean,
-    isFAQ: boolean,
-    isAbout: boolean,
-    isContactUs: boolean,
-    isOurTeam: boolean,
-    pushAnchor: (string) => {},
+export class InjectedComponent<Props, InjectedProps, State = void> extends React.Component<Props, State> {
+    state: State;
+    props: Props & InjectedProps;
 }
 
 class Store {
@@ -65,7 +51,6 @@ class Store {
             window.history.replaceState({}, "", this.URL)
         } else {
             console.log(`URL error, give URL without origin e.g. /resources: ${URL}`)
-            return null
         }
     }
 
@@ -76,7 +61,6 @@ class Store {
             window.history.pushState({}, "", this.URL)
         } else {
             console.log(`URL error, give URL without origin e.g. /resources: ${URL}`)
-            return null
         }
     }
 
@@ -90,6 +74,7 @@ class Store {
         window.location.hash = `#${anchor}`
         this.URL = `${hash[0]}#${anchor}`
         window.history.pushState({}, "", this.URL)
+        return null
     }
 
     @action

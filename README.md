@@ -21,6 +21,13 @@ staging/prod variable for golang. should include the json key and env var for ru
 todo put all golang stuff in a cloud function?
 projectID: override hardcoded projectID
 
+Description:structure of content posts:
+Release will only support blog posts
+Will have a read only html content viewer and a html source code editor
+Also static list of existing posts with delete buttons on them
+can add new post or delete posts
+posts use mounted mongo container served by golang endpoint
+
 build a little dev cmd tool to run all the build stuff like before
 
 cache resource rendering/processing

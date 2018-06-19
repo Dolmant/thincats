@@ -9,15 +9,18 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
 // import SvgIcon from "@material-ui/core/SvgIcon"
 import Grid from "@material-ui/core/Grid"
 import "./menu.less"
-import type {StoreType} from "store"
+import type {StoreType} from "types"
+import {InjectedComponent} from "store"
 
 type Props = {
+};
+type InjectedProps = {
     store: StoreType,
 };
 
 @inject("store")
 @observer
-export default class Menu extends React.Component<Props> {
+export default class Menu extends InjectedComponent<Props, InjectedProps> {
     render() {
         let value
         switch (true) {

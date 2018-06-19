@@ -10,9 +10,12 @@ import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
 import resourcesContent from "./resourcesContent"
-import type {StoreType} from "store"
+import type {StoreType} from "types"
+import {InjectedComponent} from "store"
 
 type Props = {
+};
+type InjectedProps = {
     store: StoreType,
 };
 
@@ -27,7 +30,7 @@ type State = {
 
 @inject("store")
 @observer
-export default class Resources extends React.Component<Props, State> {
+export default class Resources extends InjectedComponent<Props, InjectedProps, State> {
     state = {
         mainHeader: "",
         subHeader: "",

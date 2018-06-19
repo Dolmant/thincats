@@ -5,15 +5,18 @@ import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 // import Button from "@material-ui/core/Button"
 import "./menuBar.less"
-import type {StoreType} from "store"
+import type {StoreType} from "types"
+import {InjectedComponent} from "store"
 
 type Props = {
+};
+type InjectedProps = {
     store: StoreType,
 };
 
 @inject("store")
 @observer
-export default class MenuBar extends React.Component<Props> {
+export default class MenuBar extends InjectedComponent<Props, InjectedProps> {
     render() {
         return (
             <div className="menuBar">

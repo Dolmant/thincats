@@ -313,9 +313,14 @@
     }
     .page3 {
         // height: 100vh; Removing so we can fill as desired
-        width: 100vw;
+        width: 200vw;
         background-color: white;
         color: black;
+        transition: transform 1s ease-in-out;
+
+        &.translateLeft {
+            transform: translateX(-50vw);
+        }
 
         .light {
             width: 4rem;
@@ -343,7 +348,10 @@
             margin: auto;
         }
         .patternBackground {
-            padding: 1rem;
+            -webkit-transition: flex-basis 1s ease-in-out;
+            -moz-transition: flex-basis 1s ease-in-out;
+            -o-transition: flex-basis 1s ease-in-out;
+            transition: flex-basis 1s ease-in-out;
             background-image: url("/assets/CrissCrossPattern.jpg");
             background-position: center;
             background-repeat: repeat;
@@ -351,7 +359,10 @@
             color: white;
         }
         .whiteBackground {
-            padding: 1rem;
+            -webkit-transition: flex-basis 1s ease-in-out;
+            -moz-transition: flex-basis 1s ease-in-out;
+            -o-transition: flex-basis 1s ease-in-out;
+            transition: flex-basis 1s ease-in-out;
         }
         .page3Title {
             font-size: 1.4rem;
@@ -458,4 +469,8 @@
         border-width: 0 0 50px 50px;
         border-color: black white;
     }
+}
+
+.padding1rem {
+    padding: 1rem;
 }

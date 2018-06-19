@@ -8,17 +8,19 @@ import Resources from "pages/resources/resourcesNew"
 import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
 import ContactUs from "pages/aboutUs/contactUs/contactUs"
 import OurTeam from "pages/aboutUs/ourTeam/ourTeam"
-import Header from "components/generic/header/header"
 import Footer from "components/generic/footer/footer"
-import type {StoreType} from "store"
+import type {StoreType} from "types"
+import {InjectedComponent} from "store"
 
 type Props = {
+};
+type InjectedProps = {
     store: StoreType,
 };
 
 @inject("store")
 @observer
-export default class PageRouter extends React.Component<Props> {
+export default class PageRouter extends InjectedComponent<Props, InjectedProps> {
     route() {
         // Route based on URL
         switch (true) {
@@ -54,7 +56,6 @@ export default class PageRouter extends React.Component<Props> {
         case this.props.store.isAbout:
             return (
                 <section key={2} className="page-wrap">
-                    <Header />
                     <AboutThinCats />
                     <Footer />
                 </section>
@@ -62,7 +63,6 @@ export default class PageRouter extends React.Component<Props> {
         case this.props.store.isContactUs:
             return (
                 <section key={3} className="page-wrap">
-                    <Header />
                     <ContactUs />
                     <Footer />
                 </section>
@@ -70,7 +70,6 @@ export default class PageRouter extends React.Component<Props> {
         case this.props.store.isOurTeam:
             return (
                 <section key={4} className="page-wrap">
-                    <Header />
                     <OurTeam />
                     <Footer />
                 </section>
