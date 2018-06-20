@@ -255,15 +255,16 @@
   font-size: 2rem;
   margin-bottom: 5px;
 }
-.homeNew .page1 .buttons {
-  padding-right: 4rem;
-}
-.homeNew .page1 .buttons button {
-  font-size: 0.8rem;
-}
 .homeNew .page1 .seller {
   color: black;
   text-align: center;
+  margin-top: 1rem;
+}
+.homeNew .page1 .seller button {
+  font-size: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-weight: 500;
 }
 .homeNew .background {
   position: absolute;
@@ -414,6 +415,12 @@
 .homeNew .page3 .endText {
   font-weight: 500;
   text-align: center;
+}
+.homeNew .page3 .endText button {
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .pageFlipper-enter {
   display: none;

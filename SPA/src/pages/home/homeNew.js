@@ -195,27 +195,44 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container justify="center" alignContent="center" className="seller">
-                            <p>I am a:</p>
-                            <Grid item xs={6}>
-                                <p>
-                                    <Button variant="raised" color="primary" onClick={() => this.setState({user: 1})}>
-                                        {"INVESTOR"}
-                                    </Button>
-                                    Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.
-                                    <br />
-                                </p>
+                            <Grid item xs={12}>
+                                <p>Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.</p>
                             </Grid>
                             <Grid item xs={6}>
-                                <p>
-                                    <Button variant="raised" color="primary" onClick={() => this.setState({user: 2})}>
-                                        {"BORROWER"}
-                                    </Button>
-                                    Diversify and reduce your risk, bypass banks and get a better deal.
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <span className="fancyBig">Grow.</span>
-                                </p>
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                    onClick={() => {
+                                        this.setState({user: 1})
+                                        if (document.documentElement) {
+                                            window.scrollTo({
+                                                left: 0,
+                                                top: document.documentElement.clientHeight,
+                                                behavior: "smooth",
+                                            })
+                                        }
+                                    }}
+                                >
+                                    {"I am an INVESTOR"}
+                                </Button>
+                            </Grid>
+                            <Grid item xs={6}>
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                    onClick={() => {
+                                        this.setState({user: 2})
+                                        if (document.documentElement) {
+                                            window.scrollTo({
+                                                left: 0,
+                                                top: document.documentElement.clientHeight,
+                                                behavior: "smooth",
+                                            })
+                                        }
+                                    }}
+                                >
+                                    {"I am a BORROWER"}
+                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -297,6 +314,13 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             <Grid item className="endText" xs={12}>
                                 <div className="" >If you are ready to fuel your growth, apply for a loan at</div>
                                 <a href="www.thincats.com.au">www.thincats.com.au</a>
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                    onClick={() => {}}
+                                >
+                                    {"FAQ"}
+                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -371,6 +395,13 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             <Grid item className="endText" xs={12}>
                                 <div className="" >If you are ready to start making smart investments in good companies, register as an investor at</div>
                                 <a href="thincats.com.au/register">thincats.com.au/registeru</a>
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                    onClick={() => {}}
+                                >
+                                    {"FAQ"}
+                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>

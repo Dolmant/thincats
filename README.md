@@ -8,8 +8,8 @@ docker push asia.gcr.io/firm-champion-204312/thincats
 gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:v0.1
 
 todo:
+faq links need to be working
 bring back page transitions with transform will-change and backface for own rendering layer
-borrower and investor content with big buttons to pick between the two
 top menu needs some jazzing up
 FAQ needs to be its own section
 Resources needs to be borrower info and investor info
