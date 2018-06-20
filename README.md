@@ -2,10 +2,12 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 deployment:
+docker build . --tag asia.gcr.io/firm-champion-204312/thincats:v0.2
+docker push asia.gcr.io/firm-champion-204312/thincats:v0.2
+gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:v0.2
+
 asia.gcr.io/firm-champion-204312/thincats
-docker tag thincats asia.gcr.io/firm-champion-204312/thincats
-docker push asia.gcr.io/firm-champion-204312/thincats
-gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:v0.1
+docker tag 5f19d9e179e2 asia.gcr.io/firm-champion-204312/thincats:v0.2
 
 todo:
 faq links need to be working
