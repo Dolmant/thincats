@@ -499,6 +499,24 @@
   min-height: 100vh;
   width: 100vw;
 }
+.resources .borrower {
+  margin-right: 1px solid black;
+}
+.resources .borrower,
+.resources .investor {
+  padding: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+.resources .switchercontainer {
+  position: relative;
+}
+.resources .switcher {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 .resources .subHeading {
   padding-bottom: 1rem;
 }

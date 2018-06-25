@@ -3,10 +3,13 @@ import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
+import FormGroup from "@material-ui/core/FormGroup"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
+import Switch from "@material-ui/core/Switch"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
 import resourcesContent from "./resourcesContent"
@@ -22,6 +25,7 @@ type InjectedProps = {
 // Here state is going to be a new store
 // the main store is going to update this store whenever the URL changes to help mark a sub/main header
 type State = {
+    investor: boolean,
     mainHeader: string,
     subHeader: string,
     mainHeaderViewed: Array<string>,
@@ -32,12 +36,14 @@ type State = {
 @observer
 export default class Resources extends InjectedComponent<Props, InjectedProps, State> {
     state = {
+        investor: false,
         mainHeader: "",
         subHeader: "",
         mainHeaderViewed: [""],
         subHeaderViewed: [""],
     }
-
+    // todo separate out borrower/investor content
+    // todo customize switch to theme colours and put label on both sides
     renderResourceMenu = () => {
         // build these components
         const MainHeader = (name, index, children) => (
@@ -66,7 +72,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 }}
             >
                 <div>
-                    {`> ${name}` /*{`${index + 1}. ${name}`}*/}
+                    {`> ${name}` /* {`${index + 1}. ${name}`}*/}
                 </div>
             </ListItem>
         )
@@ -107,7 +113,21 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 <MenuBar />
                 <Grid container spacing="12">
                     <Grid className="resourceNav" item xs={4} md={2}>
-                        <List className="paddingTop1">
+                        <List className="paddingTop1 switchercontainer">
+                            <Switch
+                                checked={this.state.investor}
+                                className="switcher"
+                                onChange={() => this.setState({investor: !this.state.investor})}
+                                value="checkedA"
+                            />
+                            <Grid container>
+                                <Grid className="borrower" item xs={6}>
+                                    <div>{"Borrower"}</div>
+                                </Grid>
+                                <Grid item className="investor" xs={6}>
+                                    <div>{"Investor"}</div>
+                                </Grid>
+                            </Grid>
                             {this.renderResourceMenu()}
                         </List>
                     </Grid>
