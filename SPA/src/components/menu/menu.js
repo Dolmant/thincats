@@ -39,9 +39,10 @@ export default class Menu extends InjectedComponent<Props, InjectedProps> {
         default:
             value = 0
         }
+
         return (
             <div className="menu">
-                <div className="thincatsCorner" />
+                <div className="thincatsCorner1" />
                 <Grid container justify="center">
                     <Grid item xs={12}>
                         <BottomNavigation

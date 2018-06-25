@@ -4,6 +4,8 @@
 .menu .navRoot {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  background-color: #ffcc00;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .menu .navRoot .navAction {
   max-width: 100vh !important;
@@ -13,6 +15,7 @@
 }
 .menu .navRoot .selectedLabel {
   font-size: 1.4rem;
+  color: black;
 }
 .menuOverlay {
   position: absolute;
@@ -39,6 +42,28 @@
   height: 10vh;
   max-width: 25vw;
   cursor: pointer;
+}
+.menuBar .borrower {
+  border-right: 1px solid black;
+}
+.menuBar .borrower,
+.menuBar .investor {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.menuBar .borrower.selected,
+.menuBar .investor.selected {
+  background-color: #ffcc00;
+}
+.menuBar .switcherContainer {
+  position: relative;
+}
+.menuBar .switcher {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 @-webkit-keyframes sdb {
   0% {
@@ -499,24 +524,6 @@
   min-height: 100vh;
   width: 100vw;
 }
-.resources .borrower {
-  margin-right: 1px solid black;
-}
-.resources .borrower,
-.resources .investor {
-  padding: 1rem;
-  padding-top: 2rem;
-  text-align: center;
-}
-.resources .switchercontainer {
-  position: relative;
-}
-.resources .switcher {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
 .resources .subHeading {
   padding-bottom: 1rem;
 }
@@ -526,6 +533,7 @@
 .resources .resourceNav {
   min-height: 100vh;
   background: lightgrey;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 .resources .resourceNav .paddingTop1 {
   padding-top: 1px;

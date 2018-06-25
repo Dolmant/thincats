@@ -20,4 +20,28 @@
         max-width: 25vw;
         cursor: pointer;
     }
+
+    .borrower {
+        border-right: 1px solid black;
+    }
+    .borrower, .investor {
+        padding: 1rem;
+        text-align: center;
+        font-weight: 500;
+
+        &.selected {
+            background-color: #ffcc00;
+        }
+    }
+
+    .switcherContainer {
+        position: relative;
+    }
+
+    .switcher {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }

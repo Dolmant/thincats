@@ -179,7 +179,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                 <div className="background" />
                 <Grid container className="page1" justify="center" alignItems="flex-end">
                     <Grid className="homeMenu" item xs={12}>
-                        <MenuBar />
+                        <MenuBar investorSelector={false} />
                     </Grid>
                     <Grid item xs={12}>
                         {/*  */}

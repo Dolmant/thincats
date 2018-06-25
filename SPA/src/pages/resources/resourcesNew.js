@@ -3,13 +3,10 @@ import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
-import FormGroup from "@material-ui/core/FormGroup"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
-import Switch from "@material-ui/core/Switch"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
 import resourcesContent from "./resourcesContent"
@@ -68,7 +65,16 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 className="subItem"
                 button
                 onClick={() => {
-                    this.setState({subHeader: name, mainHeader: mainName}, () => { this.props.store.pushAnchor(name.replace(new RegExp(" ", "g"), "_").toLowerCase()) })
+                    this.setState({subHeader: name, mainHeader: mainName}, () => {
+                        // this.props.store.pushAnchor(name.replace(new RegExp(" ", "g"), "_").toLowerCase())
+                        const ele = document.querySelector(`#${name.replace(new RegExp(" ", "g"), "_").toLowerCase()}`)
+                        if (ele) {
+                            ele.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                            })
+                        }
+                    })
                 }}
             >
                 <div>
@@ -107,27 +113,14 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </HeaderWrap>
         )
     }
+
     render() {
         return (
             <div className="resources">
-                <MenuBar />
+                <MenuBar investorSelector />
                 <Grid container spacing="12">
                     <Grid className="resourceNav" item xs={4} md={2}>
-                        <List className="paddingTop1 switchercontainer">
-                            <Switch
-                                checked={this.state.investor}
-                                className="switcher"
-                                onChange={() => this.setState({investor: !this.state.investor})}
-                                value="checkedA"
-                            />
-                            <Grid container>
-                                <Grid className="borrower" item xs={6}>
-                                    <div>{"Borrower"}</div>
-                                </Grid>
-                                <Grid item className="investor" xs={6}>
-                                    <div>{"Investor"}</div>
-                                </Grid>
-                            </Grid>
+                        <List className="paddingTop1">
                             {this.renderResourceMenu()}
                         </List>
                     </Grid>
