@@ -203,6 +203,9 @@
     border-bottom-width: 80px;
   }
 }
+.homeNew {
+  box-shadow: inset 0 51px 140px 3px rgba(0, 0, 0, 0.5);
+}
 .homeNew .hideIt {
   visibility: hidden;
 }
