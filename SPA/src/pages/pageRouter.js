@@ -44,7 +44,7 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 <CSSTransition
                     key={1}
                     timeout={500}
-                    classNames="pageFlipper"
+                    classNames="pageFlipperDisabled"
                     unmountOnExit
                 >
                     <div>

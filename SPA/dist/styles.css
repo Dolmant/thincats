@@ -501,6 +501,7 @@
   -webkit-animation: growBorder forwards;
   animation: growBorder forwards;
   z-index: -1;
+  will-change: border-bottom-width;
   animation-delay: 2s;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
@@ -526,6 +527,7 @@
   animation-delay: 2s;
   width: 0px;
   bottom: 0;
+  will-change: height;
   -webkit-animation: growOngoing;
   animation: growOngoing;
   border-left: 5px solid black;
