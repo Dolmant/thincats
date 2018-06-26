@@ -198,9 +198,9 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             <Grid item xs={12}>
                                 <p>Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.</p>
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item className="buttonContainer" xs={6}>
                                 <Button
-                                    variant="raised"
+                                    variant="outlined"
                                     color="primary"
                                     onClick={() => {
                                         this.setState({user: 1})
@@ -216,9 +216,9 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                     {"I am an INVESTOR"}
                                 </Button>
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item className="buttonContainer" xs={6}>
                                 <Button
-                                    variant="raised"
+                                    variant="outlined"
                                     color="primary"
                                     onClick={() => {
                                         this.setState({user: 2})

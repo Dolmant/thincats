@@ -22,7 +22,6 @@ type InjectedProps = {
 // Here state is going to be a new store
 // the main store is going to update this store whenever the URL changes to help mark a sub/main header
 type State = {
-    investor: boolean,
     mainHeader: string,
     subHeader: string,
     mainHeaderViewed: Array<string>,
@@ -33,7 +32,6 @@ type State = {
 @observer
 export default class Resources extends InjectedComponent<Props, InjectedProps, State> {
     state = {
-        investor: false,
         mainHeader: "",
         subHeader: "",
         mainHeaderViewed: [""],
@@ -120,6 +118,11 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 <MenuBar investorSelector />
                 <Grid container spacing="12">
                     <Grid className="resourceNav" item xs={4} md={2}>
+                        {this.props.store.investor ?
+                            <h2 className="resourceTitle">{"About Lending"}</h2>
+                            :
+                            <h2 className="resourceTitle">{"About Borrowing"}</h2>
+                        }
                         <List className="paddingTop1">
                             {this.renderResourceMenu()}
                         </List>

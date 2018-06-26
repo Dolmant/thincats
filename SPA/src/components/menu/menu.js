@@ -83,14 +83,14 @@ export default class Menu extends InjectedComponent<Props, InjectedProps> {
                                 label="Login"
                                 classes={{label: "navActionLabel", selected: "selectedLabel"}}
                                 // icon={<InfoIcon />}
-                                onClick={() => { window.location = "http://13.76.173.109/" }}
+                                onClick={() => { window.location = "https://thincat.blockbond.co" }}
                             />
                             <BottomNavigationAction
                                 className="navAction"
                                 label="Register"
                                 classes={{label: "navActionLabel", selected: "selectedLabel"}}
                                 // icon={<QuestionAnswerIcon />}
-                                onClick={() => { window.location = "http://13.76.173.109/" }}
+                                onClick={() => { window.location = "https://thincat.blockbond.co" }}
                             />
                         </BottomNavigation>
                     </Grid>

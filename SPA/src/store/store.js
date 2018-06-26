@@ -16,6 +16,7 @@ export class InjectedComponent<Props, InjectedProps, State = void> extends React
 class Store {
     @observable URL = URLGenerator()
     @observable loaded = false
+    @observable investor = false
 
     @computed get isHome(): boolean {
         return this.URL.startsWith("/home") || this.URL === "/"
@@ -42,6 +43,11 @@ class Store {
     @action
     playOnce = () => {
         this.loaded = true
+    }
+
+    @action
+    toggleInvestor = () => {
+        this.investor = !this.investor
     }
 
     @action

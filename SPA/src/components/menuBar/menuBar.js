@@ -14,7 +14,6 @@ type Props = {
     investorSelector: boolean,
 };
 type State = {
-    investor: boolean,
 };
 type InjectedProps = {
     store: StoreType,
@@ -23,19 +22,15 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class MenuBar extends InjectedComponent<Props, InjectedProps, State> {
-    state = {
-        investor: false,
-    }
-
     render() {
         const borrowerClasses = classNames({
             borrower: true,
-            selected: !this.state.investor,
+            selected: !this.props.store.investor,
         })
 
         const investorClasses = classNames({
             investor: true,
-            selected: this.state.investor,
+            selected: this.props.store.investor,
         })
 
         return (
@@ -52,9 +47,9 @@ export default class MenuBar extends InjectedComponent<Props, InjectedProps, Sta
                     {this.props.investorSelector ?
                         <Grid item xs={3} className="switcherContainer">
                             <Switch
-                                checked={this.state.investor}
+                                checked={this.props.store.investor}
                                 className="switcher"
-                                onChange={() => this.setState({investor: !this.state.investor})}
+                                onChange={() => this.props.store.toggleInvestor()}
                                 value="checkedA"
                                 // color="primary"
                             />
