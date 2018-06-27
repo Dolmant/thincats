@@ -4,6 +4,7 @@ import {observer, inject} from "mobx-react"
 import type {StoreType} from "types"
 import {InjectedComponent} from "store"
 import Grid from "@material-ui/core/Grid"
+import Hidden from "@material-ui/core/Hidden"
 import Button from "@material-ui/core/Button"
 import MenuBar from "components/menuBar/menuBar"
 import "./home.less"
@@ -52,47 +53,55 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
         user: 0, // investor = 2 and borrower = 1
         random: [],
     }
-    componentDidMount() {
-        // $(window).on("load", () => {
-        // Intro boxing animation
+    clipRect = () => {
+        // clip if not first time playing the animation
         const $black = $("#black").css("clip", "")
         const w = $(window).width()
         const h = $(window).height()
+
+        const offset = 10
+
+        const offsetWidth = 60
 
         const $text = $("#text")
         const textWidth = $text.width()
         const textHeight = $text.height()
 
-        const offset = 10
-
         let t = 0
         let r = w
         let b = h
         let l = 0
+
         if (!this.props.store.loaded) {
             TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
             if (window.tl) window.tl.stop()
             window.tl = new TimelineLite()
-            l = (w / 2) - (textWidth / 2) - offset
+            l = (w / 2) - (textWidth / 2) - (offset - offsetWidth)
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
             b = (h / 2.5) + offset // + (textHeight / 2) not required as bottom already offset by second line of text
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-            r = (w / 2) + (textWidth / 2) + offset
+            r = (w / 2) + (textWidth / 2) + (offset + offsetWidth)
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
             t = (h / 2.5) - (textHeight / 2) - offset
             window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
             this.props.store.playOnce()
         } else {
-            // clip if not first time playing the animation
-            l = (w / 2) - (textWidth / 2) - offset
+            l = (w / 2) - (textWidth / 2) - (offset - offsetWidth)
             b = (h / 2.5) + offset
-            r = (w / 2) + (textWidth / 2) + offset
+            r = (w / 2) + (textWidth / 2) + offset + offsetWidth
             t = (h / 2.5) - (textHeight / 2) - offset
             $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
         }
-        // })
-
+    }
+    componentDidMount() {
+        this.clipRect()
+        window.addEventListener("resize", this.clipRect)
         window.addEventListener("scroll", this.onScroll)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.clipRect)
+        window.removeEventListener("scroll", this.onScroll)
     }
 
     onScroll = () => {
@@ -179,7 +188,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                 <div className="background" />
                 <Grid container className="page1" justify="center" alignItems="flex-end">
                     <Grid className="homeMenu" item xs={12}>
-                        <MenuBar investorSelector={false} />
+                        <MenuBar investorSelector={false} selectionChild={() => null} />
                     </Grid>
                     <Grid item xs={12}>
                         {/*  */}
@@ -195,9 +204,11 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container justify="center" alignContent="center" className="seller">
-                            <Grid item xs={12}>
-                                <p>Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.</p>
-                            </Grid>
+                            <Hidden mdDown>
+                                <Grid className="sellerText" item xs={12}>
+                                    <p>Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.</p>
+                                </Grid>
+                            </Hidden>
                             <Grid item className="buttonContainer" xs={6}>
                                 <Button
                                     variant="outlined"

@@ -3,14 +3,22 @@ import React from "react"
 import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
+import Hidden from "@material-ui/core/Hidden"
+import Switch from "@material-ui/core/Switch"
+import Drawer from "@material-ui/core/Drawer"
+import Button from "@material-ui/core/Button"
+import Toc from "@material-ui/icons/Toc"
+import Paper from "@material-ui/core/Paper"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
-import resourcesContent from "./resourcesContent"
+import borrowerContent from "./borrowerContent"
+import lenderContent from "./lenderContent"
 import type {StoreType} from "types"
+import classNames from "util/classNames"
 import {InjectedComponent} from "store"
 
 type Props = {
@@ -22,6 +30,7 @@ type InjectedProps = {
 // Here state is going to be a new store
 // the main store is going to update this store whenever the URL changes to help mark a sub/main header
 type State = {
+    mobileOpen: boolean,
     mainHeader: string,
     subHeader: string,
     mainHeaderViewed: Array<string>,
@@ -32,6 +41,7 @@ type State = {
 @observer
 export default class Resources extends InjectedComponent<Props, InjectedProps, State> {
     state = {
+        mobileOpen: false,
         mainHeader: "",
         subHeader: "",
         mainHeaderViewed: [""],
@@ -80,6 +90,12 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 </div>
             </ListItem>
         )
+        let resourcesContent
+        if (this.props.store.investor) {
+            resourcesContent = lenderContent
+        } else {
+            resourcesContent = borrowerContent
+        }
         return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], mainIndex) => MainHeader(
             mainHeaderKey,
             mainIndex,
@@ -97,6 +113,13 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </div>
         )
 
+        let resourcesContent
+        if (this.props.store.investor) {
+            resourcesContent = lenderContent
+        } else {
+            resourcesContent = borrowerContent
+        }
+
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
                 <HeaderWrap mainHead={mainHeader} subHead={subHeader}>
@@ -113,21 +136,98 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
     }
 
     render() {
+        const borrowerClasses = classNames({
+            borrower: true,
+            selected: !this.props.store.investor,
+        })
+
+        const investorClasses = classNames({
+            investor: true,
+            selected: this.props.store.investor,
+        })
+
+        const baseDrawer = () => ([
+            <Hidden mdUp>
+                <div className="switcherContainer">
+                    <Switch
+                        checked={this.props.store.investor}
+                        className="switcher"
+                        onChange={() => this.props.store.toggleInvestor()}
+                        value="checkedA"
+                        // color="primary"
+                    />
+                    <Grid container>
+                        <Grid item xs={6}>
+                            <Paper className={borrowerClasses}>{"Borrower"}</Paper>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Paper className={investorClasses}>{"Investor"}</Paper>
+                        </Grid>
+                    </Grid>
+                </div>
+            </Hidden>,
+            <div>{this.props.store.investor ?
+                <h2 className="resourceTitle">{"About Lending"}</h2>
+                :
+                <h2 className="resourceTitle">{"About Borrowing"}</h2>
+            }</div>,
+            <List className="paddingTop1">
+                {this.renderResourceMenu()}
+            </List>
+        ])
+
+        const responsiveDrawers = () =>
+            ([
+                <Hidden mdUp>
+                    <Drawer
+                        variant="temporary"
+                        anchor="left"
+                        open={this.state.mobileOpen}
+                        onClose={() => this.setState({mobileOpen: false})}
+                        classes={{
+                            paper: "tempPaper",
+                        }}
+                        className="tempDrawer resourceNav"
+                        ModalProps={{
+                            keepMounted: true, // Better open performance on mobile.
+                        }}
+                    >
+                        {baseDrawer()}
+                    </Drawer>
+                </Hidden>,
+                <Hidden smDown implementation="css">
+                    <Drawer
+                        variant="permanent"
+                        open
+                        anchor="left"
+                        className="permDrawer resourceNav"
+                        classes={{
+                            paper: "permPaper",
+                        }}
+                    >
+                        {baseDrawer()}
+                    </Drawer>
+                </Hidden>
+            ])
+
+        const mobileButton = () => {
+            return (
+                <Button onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})} variant="fab" color="primary" aria-label="add">
+                    <Toc />
+                </Button>
+            )
+        }
         return (
             <div className="resources">
-                <MenuBar investorSelector />
+                <MenuBar
+                    investorSelector
+                    selectionChild={mobileButton}
+                />
                 <Grid container spacing="12">
-                    <Grid className="resourceNav" item xs={4} md={2}>
-                        {this.props.store.investor ?
-                            <h2 className="resourceTitle">{"About Lending"}</h2>
-                            :
-                            <h2 className="resourceTitle">{"About Borrowing"}</h2>
-                        }
-                        <List className="paddingTop1">
-                            {this.renderResourceMenu()}
-                        </List>
+                    <Grid item xs={12} md={2}>
+                        {responsiveDrawers()}
                     </Grid>
-                    <Grid item xs={8} md={10}>
+                    <Grid item xs={12} md={10}>
                         <div className="resourceContent">
                             {this.renderResourceContent()}
                         </div>
