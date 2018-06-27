@@ -1,4 +1,8 @@
 #!bin/sh
 #run sh dockerBuild cat /thincats123123.json
 # docker build --{arg[0]} .
-docker build .
+
+read -p "Version:" buildVersion
+docker build . --tag asia.gcr.io/firm-champion-204312/thincats:$buildVersion
+docker push asia.gcr.io/firm-champion-204312/thincats:$buildVersion
+gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:$buildVersion
