@@ -1,7 +1,7 @@
 const merge = require("webpack-merge")
-const webpack = require("webpack") // eslint-disable-line import/no-extraneous-dependencies
 const baseConfig = require("./webpack.base.config")
 const path = require("path")
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 
 module.exports = merge(baseConfig, {
     output: {
@@ -9,9 +9,7 @@ module.exports = merge(baseConfig, {
         path: path.resolve(__dirname, "dist"),
     },
     mode: "production",
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false, // flip this to true and use source-map-explorer to investigate minified bundle size
-        }),
-    ],
+    optimization: {
+        minimizer: [new UglifyJsPlugin({sourceMap: false})],
+    },
 })
