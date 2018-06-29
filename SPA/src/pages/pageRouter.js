@@ -30,10 +30,11 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 <CSSTransition
                     key={0}
                     timeout={500}
-                    classNames="pageFlipperDisabled"
+                    classNames="pageFlipper"
                     unmountOnExit
                 >
                     <div>
+                        <div className="clipper" />
                         <HomeNew />
                         <Footer />
                     </div>
@@ -44,10 +45,11 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 <CSSTransition
                     key={1}
                     timeout={500}
-                    classNames="pageFlipperDisabled"
+                    classNames="pageFlipper"
                     unmountOnExit
                 >
                     <div>
+                        <div className="clipper" />
                         <Resources />
                         <Footer />
                     </div>

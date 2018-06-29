@@ -10,6 +10,7 @@ asia.gcr.io/firm-champion-204312/thincats
 docker tag 5f19d9e179e2 asia.gcr.io/firm-champion-204312/thincats:v0.2
 
 todo:
+back button should trigger the back of the app as well
 faq links need to be working
 bring back page transitions with transform will-change and backface for own rendering layer
 top menu needs some jazzing up

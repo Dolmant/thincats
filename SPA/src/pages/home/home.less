@@ -1,29 +1,5 @@
 @import './../../css/constants.less';
 
-@-webkit-keyframes sdb {
-    0% {
-      opacity: 0; }
-    30% {
-      opacity: 1; }
-    60% {
-      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
-      opacity: 0; }
-    100% {
-      opacity: 0; }
-}
-  
-@keyframes sdb {
-    0% {
-      opacity: 0; }
-    30% {
-      opacity: 1; }
-    60% {
-      box-shadow: 0 0 0 60px rgba(255, 255, 255, 0.1);
-      opacity: 0; }
-    100% {
-      opacity: 0; }
-}
-
 @-webkit-keyframes bouncer {
     0% {
         margin-bottom: 0; }
@@ -68,27 +44,27 @@
 // }
 @-webkit-keyframes pageflipEnter {
     0% {
-        clip-path: inset(0% 100% 0% 0%); }
+        transform: translateX(0); }
     100% {
-        clip-path: inset(0% 0% 0% 0%); }
+        transform: translateX(100vw); }
 }
 @keyframes pageflipEnter {
     0% {
-        clip-path: inset(0% 100% 0% 0%); }
+        transform: translateX(0); }
     100% {
-        clip-path: inset(0% 0% 0% 0%); }
+        transform: translateX(100vw); }
 }
 @-webkit-keyframes pageflipLeave {
     0% {
-        clip-path: inset(0% 0% 0% 0%); }
+        transform: translateX(-100vw); }
     100% {
-        clip-path: inset(0% 100% 0% 0%); }
+        transform: translateX(0vw); }
 }
 @keyframes pageflipLeave {
     0% {
-        clip-path: inset(0% 0% 0% 0%); }
+        transform: translateX(-100vw); }
     100% {
-        clip-path: inset(0% 100% 0% 0%); }
+        transform: translateX(0vw); }
 }
 
 @-webkit-keyframes growOngoingLeft {
@@ -441,18 +417,31 @@
     display: none;
 }
 
-.pageFlipper-enter-done {
-    -webkit-animation: pageflipEnter 1s;
-    animation: pageflipEnter 1s;
+.pageFlipper-enter-done .clipper {
+    display: block;
+    -webkit-animation: pageflipEnter 1s forwards;
+    animation: pageflipEnter 1s forwards;
 }
-.pageFlipper-exit {
+
+.pageFlipper-exit .clipper {
+    display: block;
     -webkit-animation: pageflipLeave 0.5s forwards;
     animation: pageflipLeave 0.5s forwards;
+}
+
+.clipper {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 10000;
 }
 
 .fillWhite {
     fill:white;
 }
+
 .fillBlack {
     fill:black;
     g {
