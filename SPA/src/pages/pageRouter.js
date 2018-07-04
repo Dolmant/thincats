@@ -3,7 +3,7 @@ import {observer, inject} from "mobx-react"
 import CSSTransition from "react-transition-group/CSSTransition"
 import TransitionGroup from "react-transition-group/TransitionGroup"
 import React from "react"
-import HomeNew from "pages/home/homeNew"
+import Home from "pages/home/home"
 import Resources from "pages/resources/resourcesNew"
 import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
 import ContactUs from "pages/aboutUs/contactUs/contactUs"
@@ -35,7 +35,7 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 >
                     <div>
                         <div className="clipper" />
-                        <HomeNew />
+                        <Home />
                         <Footer />
                     </div>
                 </CSSTransition>

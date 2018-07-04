@@ -1,6 +1,6 @@
 // @flow
 import React from "react"
-import ReactDOM from "react-dom"
+import {render, hydrate} from "react-dom"
 import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles"
 // import blue from "@material-ui/core/colors/blue"
 // import red from "@material-ui/core/colors/red"
@@ -35,7 +35,7 @@ const theme = createMuiTheme({
 docReady(() => {
     const appTarget = document.getElementById("mount")
     if (appTarget) {
-        ReactDOM.render(
+        const appElement = (
             <Provider store={Store}>
                 <MuiThemeProvider theme={theme}>
                     <div>
@@ -51,7 +51,16 @@ docReady(() => {
                         /> */}
                     </div>
                 </MuiThemeProvider>
-            </Provider>,
-            appTarget)
+            </Provider>
+        )
+        if (appTarget.hasChildNodes()) {
+            hydrate(
+                appElement,
+                appTarget)
+        } else {
+            render(
+                appElement,
+                appTarget)
+        }
     }
 })

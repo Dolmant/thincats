@@ -42,7 +42,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <p>To be considered a ‘wholesale investor’ the Australian Corporations Act and Regulations requires an investor to have:<br />
 1) aggregate net assets of at least $2.5 million; OR 2) aggregate gross income for each of the last two financial years of at least $250,000 a year.</p>
                     <p>Overseas residents who meet the above criteria can also be members of the platform.</p>
-                    <p><a title="Register" href="/register/" rel="noopener noreferrer" target="_blank">Register</a>&nbsp;and review the current loans on our platform.</p>
+                    <p><a title="Register" href="/" rel="noopener noreferrer" target="_blank">Register</a>&nbsp;and review the current loans on our platform.</p>
                     <h2>How does it work?</h2>
                     <p>In order to be a Lender individuals and entities need to be registered and approved as members on the ThinCats Australia platform. Lenders need to transfer funds to the ThinCats Australia Client Monies account if they choose to bid on loans. &nbsp;The minimum bid is $1,000. The maximum bid is the total loan amount. For fixed rate loans, lenders bid fixed amounts on the loan. For variable rate loans (which has not yet been introduced), lenders choose the amount they wish to bid as well as the interest rate. They can make multiple bids at different rates of interest and for different amounts. If more than one bid is successful they will have multiple loans at different rates of interest.</p>
                     <p>More detailed information is available in the <a href="/lending/lending-faq/" rel="noopener noreferrer" target="_blank">lending FAQs</a>.</p>

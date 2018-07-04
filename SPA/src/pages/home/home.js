@@ -125,6 +125,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
             this.setState({random: temp})
             randomNumbers = temp
         }
+        // TODO seed the random numbers so hydration works
 
         const arrows = []
         for (let i = 0; i < w / 50; i += 1) {
@@ -157,6 +158,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         animationDuration: `${7.5 + (2.5 * rand)}s`,
                         animationIterationCount: "infinite",
                     }}
+                    key={rand}
                     className="leftArrow expandThickArrow"
                 />)
             rand = randomNumbers[i][1]
@@ -170,6 +172,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         animationDuration: `${7.5 + (2.5 * rand)}s`,
                         animationIterationCount: "infinite",
                     }}
+                    key={rand}
                     className="rightArrow expandThickArrow"
                 />)
         }
@@ -405,7 +408,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             </Grid>
                             <Grid item className="endText" xs={12}>
                                 <div className="" >If you are ready to start making smart investments in good companies, register as an investor at</div>
-                                <a href="thincats.com.au/register">thincats.com.au/registeru</a>
+                                <a href="/">thincats.com.au/register</a>
                                 <Button
                                     variant="raised"
                                     color="primary"

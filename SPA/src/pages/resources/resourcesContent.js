@@ -123,7 +123,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                 <p>To be considered a ‘wholesale investor’ the Australian Corporations Act and Regulations requires an investor to have:<br />
 1) aggregate net assets of at least $2.5 million; OR 2) aggregate gross income for each of the last two financial years of at least $250,000 a year.</p>
                 <p>Overseas residents who meet the above criteria can also be members of the platform.</p>
-                <p><a title="Register" href="/register/" rel="noopener noreferrer" target="_blank">Register</a> and review the current loans on our platform.</p>
+                <p><a title="Register" href="/" rel="noopener noreferrer" target="_blank">Register</a> and review the current loans on our platform.</p>
             </div>
         ),
         "How does it work": (

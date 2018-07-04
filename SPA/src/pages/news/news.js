@@ -770,7 +770,7 @@ export default class News extends React.Component<Props> {
                             <p style={{textAlign: "left"}}>Our first loan on the ThinCats Australia&nbsp;Marketplace has been funded.</p>
                             <p style={{textAlign: "left"}}>The Borrower was seeking a 5-year term loan of $100,000 for&nbsp;business expansion.</p>
                             <p style={{textAlign: "left"}}>You can view the completed loan on the Marketplace after you are approved as a member of&nbsp;ThinCats Australia.</p>
-                            <p style={{textAlign: "left"}}>If you are not yet registered, <a href="/register/">please click here to register</a> and complete the application process.&nbsp;If you have registered but not submitted your documentation for&nbsp;final KYC and AML/CTF verification, please do so now.</p>
+                            <p style={{textAlign: "left"}}>If you are not yet registered, <a href="/">please click here to register</a> and complete the application process.&nbsp;If you have registered but not submitted your documentation for&nbsp;final KYC and AML/CTF verification, please do so now.</p>
                             <p style={{textAlign: "left"}}>If you have any questions, please email admin@thincats.com.au&nbsp;and we shall respond promptly</p>
                             <p style={{textAlign: "left"}}>Thank you for your interest and looking forward to welcoming you&nbsp;as a member.</p>
                             <p style={{textAlign: "left"}}>The ThinCats Australia Team</p>
@@ -814,9 +814,9 @@ export default class News extends React.Component<Props> {
                     </div>
                     <div className="col-md-4">
                         <div id="sidebar">
-                            <a href="/register/" className="join-now">{"Join Now. It's Free."}</a>
+                            <a href="/" className="join-now">{"Join Now. It's Free."}</a>
                             <div id="side-investor-banner">
-                                <a className="register-now btn orange" href="/register/"></a>
+                                <a className="register-now btn orange" href="/"></a>
                             </div>
                             <ul>
                                 <li id="search-2" className="widget widget_search"><form name="search-form" className="clearfix" id="search" action=" https://www.thincats.com.au " method="get">

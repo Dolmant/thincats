@@ -146,7 +146,7 @@ func Init() {
 
 	var genericHandle HandlerFunc
 	genericHandle = func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"/index.html")
+		http.ServeFile(w, r, exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
 	}
 	mux.PathPrefix("/").Handler(genericHandle)
 
