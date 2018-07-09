@@ -196,6 +196,7 @@
 
             .sellerText {
                 margin-top: 10em;
+                font-size: 1.2em;
             }
 
             .buttonContainer {
@@ -336,7 +337,7 @@
         transition: transform 1s ease-in-out;
 
         &.translateLeft {
-            transform: translateX(-50vw);
+            transform: translateX(-100vw);
         }
 
         .light {
@@ -363,6 +364,9 @@
         .topIcon {
             margin: auto;
         }
+        .page3Row {
+            width: 100%;
+        }
         .patternBackground {
             -webkit-transition: flex-basis 1s ease-in-out;
             -moz-transition: flex-basis 1s ease-in-out;
@@ -375,6 +379,7 @@
             color: white;
         }
         .whiteBackground {
+            border-top: 1px solid #7C8283;
             -webkit-transition: flex-basis 1s ease-in-out;
             -moz-transition: flex-basis 1s ease-in-out;
             -o-transition: flex-basis 1s ease-in-out;
@@ -402,12 +407,15 @@
         .endText {
             font-weight: 500;
             text-align: center;
+            padding-bottom: 1em;
 
             button {
                 display: block;
                 margin-top: 1em;
                 margin-left: auto;
                 margin-right: auto;
+                font-size: 1.4em;
+                padding: 1em 3em;
             }
         }
     }
@@ -419,14 +427,14 @@
 
 .pageFlipper-enter-done .clipper {
     display: block;
-    -webkit-animation: pageflipEnter 1s forwards;
-    animation: pageflipEnter 1s forwards;
+    -webkit-animation: pageflipEnter 0.3s forwards;
+    animation: pageflipEnter 0.3s forwards;
 }
 
 .pageFlipper-exit .clipper {
     display: block;
-    -webkit-animation: pageflipLeave 0.5s forwards;
-    animation: pageflipLeave 0.5s forwards;
+    -webkit-animation: pageflipLeave 0.2s forwards;
+    animation: pageflipLeave 0.2s forwards;
 }
 
 .clipper {
@@ -485,6 +493,6 @@
     }
 }
 
-.padding1em {
-    padding: 1em;
+.padding2em {
+    padding: 2em;
 }

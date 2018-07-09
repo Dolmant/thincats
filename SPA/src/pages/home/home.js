@@ -180,11 +180,11 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
         const translateLeft = this.state.user === 2
 
         const defaultContent = "25%"
-        const investorContent = this.state.user === 2 ? "50%" : defaultContent
-        const borrowerContent = this.state.user === 1 ? "50%" : defaultContent
+        const investorContent = this.state.user === 2 || this.state.user === 1 ? "50%" : defaultContent
+        const borrowerContent = this.state.user === 1 || this.state.user === 2 ? "50%" : defaultContent
         const defaultXS = this.state.user === 0 ? 6 : 0
-        const investorXS = this.state.user === 2 ? 12 : defaultXS
-        const borrowerXS = this.state.user === 1 ? 12 : defaultXS
+        const investorXS = this.state.user === 1 || this.state.user === 2 ? 12 : defaultXS
+        const borrowerXS = this.state.user === 1 || this.state.user === 2 ? 12 : defaultXS
 
         return (
             <div className="homeNew">
@@ -209,7 +209,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         <Grid container justify="center" alignContent="center" className="seller">
                             <Hidden mdDown>
                                 <Grid className="sellerText" item xs={12}>
-                                    <p>Investors fund a portion of the total loan and borrowers fund their loan requirements through multiple lenders.</p>
+                                    <p>Investors fund a portion of the total loan and borrowers fulfil their loan requirements through multiple lenders.</p>
                                 </Grid>
                             </Hidden>
                             <Grid item className="buttonContainer" xs={6}>
@@ -258,14 +258,14 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                 </Grid>
                 <Grid container direction="row" className={translateLeft ? "page3 translateLeft" : "page3"}>
                     <Grid item xs={borrowerXS} style={{flexBasis: borrowerContent}} className="patternBackground">
-                        <Grid container className="padding1rem" alignItems="center" direction="column">
+                        <Grid container className="padding2em" alignItems="center" direction="column">
                             <Grid item xs={12}>
                                 <div className="light topIcon">
                                     <SVGInline className="fillWhite light" svg={Light}></SVGInline>
                                 </div>
                                 <div className="page3Title" >Why <p className="bold">ThinCats</p> is right for <p className="bold">growing businesses</p></div>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid className="page3Block " item xs={6}>
                                         {/* Block */}
@@ -285,7 +285,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
@@ -305,7 +305,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid item className="page3Block " xs={6}>
                                         {/* block */}
@@ -331,7 +331,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                 <Button
                                     variant="raised"
                                     color="primary"
-                                    onClick={() => {}}
+                                    onClick={() => { this.props.store.navResources() }}
                                 >
                                     {"FAQ"}
                                 </Button>
@@ -339,14 +339,14 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         </Grid>
                     </Grid>
                     <Grid item xs={investorXS} style={{flexBasis: investorContent}} className="whiteBackground">
-                        <Grid container className="padding1rem" alignItems="center" direction="column">
+                        <Grid container className="padding2em" alignItems="center" direction="column">
                             <Grid item xs={12}>
                                 <div className="light fillBlack topIcon">
                                     <SVGInline className="light fillBlack" svg={PeopleCash}></SVGInline>
                                 </div>
                                 <div className="page3Title" >{"Why "}<p className="bold">{"ThinCats"}</p>{" is right for "}<p className="bold">{"smart investors"}</p></div>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid className="page3Block" item xs={6}>
                                         {/* Block */}
@@ -366,7 +366,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
@@ -386,7 +386,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                     </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={12} className="">
+                            <Grid item xs={12} className="page3Row">
                                 <Grid container className="" direction="row">
                                     <Grid item className="page3Block" xs={6}>
                                         {/* block */}
@@ -412,147 +412,10 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                 <Button
                                     variant="raised"
                                     color="primary"
-                                    onClick={() => {}}
+                                    onClick={() => { this.props.store.navResources() }}
                                 >
                                     {"FAQ"}
                                 </Button>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid container direction="row" wrap="nowrap" className="page2">
-                    <Grid className="flow" item>
-                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                            <Grid item xs={8}>
-                                {/* Content*/}
-                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-                                    <Grid item className="page2IconContainer" xs={12}>
-                                        <div className="centered">
-                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid className="flow" item>
-                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item className="fancyBorder" xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                            <Grid item xs={8}>
-                                {/* Content*/}
-                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-                                    <Grid item className="page2IconContainer" xs={12}>
-                                        <div className="centered">
-                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"...they partner with ThinCats to submit their business case for funding."}</div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid className="flow" item>
-                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item className="fancyBorder" xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                            <Grid item xs={8}>
-                                {/* Content*/}
-                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-                                    <Grid item className="page2IconContainer" xs={12}>
-                                        <div className="centered">
-                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-                                            <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                            <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"Our credit team assesses each loan application thoroughly before sharing it with the ThinCats investor community."}</div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid className="flow" item>
-                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item className="fancyBorder" xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                            <Grid item xs={8}>
-                                {/* Content*/}
-                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-                                    <Grid item className="page2IconContainer" xs={12}>
-                                        <div className="centered">
-                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-                                            <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-                                            <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-                                            <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"Investors choose the loans that interest them and then act collectively to finance loans of up to $2million..."}</div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid className="flow" item>
-                        <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-                            <Grid item className="fancyBorder" xs={2}>
-                                {/* Border*/}
-                            </Grid>
-                            <Grid item xs={8}>
-                                {/* Content*/}
-                                <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-                                    <Grid item className="page2IconContainer" xs={12}>
-                                        <div className="centered">
-                                            <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-                                            <div className="dualArrow">
-                                                <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                                <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-                                            </div>
-                                            <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-                                            <div className="dualArrow">
-                                                <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-                                                <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-                                            </div>
-                                            <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page2TextContainer" xs={12}>
-                                        <div className="page2Text">{"...helping Australian business grow and providing fair returns to investors."}<br />{"That's how we're connecting growing businesses with smart investors."}</div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={2}>
-                                {/* Border*/}
                             </Grid>
                         </Grid>
                     </Grid>
@@ -561,3 +424,141 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
         )
     }
 }
+
+// <Grid container direction="row" wrap="nowrap" className="page2">
+// <Grid className="flow" item>
+//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//         <Grid item xs={8}>
+//             {/* Content*/}
+//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+//                 <Grid item className="page2IconContainer" xs={12}>
+//                     <div className="centered">
+//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+//                     </div>
+//                 </Grid>
+//                 <Grid item className="page2TextContainer" xs={12}>
+//                     <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
+//                 </Grid>
+//             </Grid>
+//         </Grid>
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//     </Grid>
+// </Grid>
+// <Grid className="flow" item>
+//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+//         <Grid item className="fancyBorder" xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//         <Grid item xs={8}>
+//             {/* Content*/}
+//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+//                 <Grid item className="page2IconContainer" xs={12}>
+//                     <div className="centered">
+//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
+//                     </div>
+//                 </Grid>
+//                 <Grid item className="page2TextContainer" xs={12}>
+//                     <div className="page2Text">{"...they partner with ThinCats to submit their business case for funding."}</div>
+//                 </Grid>
+//             </Grid>
+//         </Grid>
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//     </Grid>
+// </Grid>
+// <Grid className="flow" item>
+//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+//         <Grid item className="fancyBorder" xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//         <Grid item xs={8}>
+//             {/* Content*/}
+//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+//                 <Grid item className="page2IconContainer" xs={12}>
+//                     <div className="centered">
+//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
+//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+//                         <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
+//                     </div>
+//                 </Grid>
+//                 <Grid item className="page2TextContainer" xs={12}>
+//                     <div className="page2Text">{"Our credit team assesses each loan application thoroughly before sharing it with the ThinCats investor community."}</div>
+//                 </Grid>
+//             </Grid>
+//         </Grid>
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//     </Grid>
+// </Grid>
+// <Grid className="flow" item>
+//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+//         <Grid item className="fancyBorder" xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//         <Grid item xs={8}>
+//             {/* Content*/}
+//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+//                 <Grid item className="page2IconContainer" xs={12}>
+//                     <div className="centered">
+//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+//                         <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
+//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
+//                         <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
+//                         <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
+//                     </div>
+//                 </Grid>
+//                 <Grid item className="page2TextContainer" xs={12}>
+//                     <div className="page2Text">{"Investors choose the loans that interest them and then act collectively to finance loans of up to $2million..."}</div>
+//                 </Grid>
+//             </Grid>
+//         </Grid>
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//     </Grid>
+// </Grid>
+// <Grid className="flow" item>
+//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
+//         <Grid item className="fancyBorder" xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//         <Grid item xs={8}>
+//             {/* Content*/}
+//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
+//                 <Grid item className="page2IconContainer" xs={12}>
+//                     <div className="centered">
+//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
+//                         <div className="dualArrow">
+//                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+//                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
+//                         </div>
+//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
+//                         <div className="dualArrow">
+//                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
+//                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
+//                         </div>
+//                         <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
+//                     </div>
+//                 </Grid>
+//                 <Grid item className="page2TextContainer" xs={12}>
+//                     <div className="page2Text">{"...helping Australian business grow and providing fair returns to investors."}<br />{"That's how we're connecting growing businesses with smart investors."}</div>
+//                 </Grid>
+//             </Grid>
+//         </Grid>
+//         <Grid item xs={2}>
+//             {/* Border*/}
+//         </Grid>
+//     </Grid>
+// </Grid>
+// </Grid>

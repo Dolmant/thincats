@@ -15,7 +15,7 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
-import borrowerContent from "./borrowerContent"
+// import borrowerContent from "./borrowerContent" // not separating out content, didnt look good
 import lenderContent from "./lenderContent"
 import type {StoreType} from "types"
 import classNames from "util/classNames"
@@ -27,8 +27,6 @@ type InjectedProps = {
     store: StoreType,
 };
 
-// Here state is going to be a new store
-// the main store is going to update this store whenever the URL changes to help mark a sub/main header
 type State = {
     mobileOpen: boolean,
     mainHeader: string,
@@ -47,8 +45,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
         mainHeaderViewed: [""],
         subHeaderViewed: [""],
     }
-    // todo separate out borrower/investor content
-    // todo customize switch to theme colours and put label on both sides
+
     renderResourceMenu = () => {
         // build these components
         const MainHeader = (name, index, children) => (
@@ -90,12 +87,11 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 </div>
             </ListItem>
         )
-        let resourcesContent
-        if (this.props.store.investor) {
-            resourcesContent = lenderContent
-        } else {
-            resourcesContent = borrowerContent
-        }
+        const resourcesContent = lenderContent
+        // if (this.props.store.investor) {
+        // } else {
+        //     resourcesContent = borrowerContent
+        // }
         return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], mainIndex) => MainHeader(
             mainHeaderKey,
             mainIndex,
@@ -113,12 +109,12 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </div>
         )
 
-        let resourcesContent
-        if (this.props.store.investor) {
-            resourcesContent = lenderContent
-        } else {
-            resourcesContent = borrowerContent
-        }
+        const resourcesContent = lenderContent
+        // if (this.props.store.investor) {
+        //     resourcesContent = lenderContent
+        // } else {
+        //     resourcesContent = borrowerContent
+        // }
 
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
@@ -136,40 +132,40 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
     }
 
     render() {
-        const borrowerClasses = classNames({
-            borrower: true,
-            selected: !this.props.store.investor,
-        })
+        // const borrowerClasses = classNames({
+        //     borrower: true,
+        //     selected: !this.props.store.investor,
+        // })
 
-        const investorClasses = classNames({
-            investor: true,
-            selected: this.props.store.investor,
-        })
+        // const investorClasses = classNames({
+        //     investor: true,
+        //     selected: this.props.store.investor,
+        // })
 
+        // <Hidden mdUp>
+        //     <div className="switcherContainer">
+        //         <Switch
+        //             checked={this.props.store.investor}
+        //             className="switcher"
+        //             onChange={() => this.props.store.toggleInvestor()}
+        //             value="checkedA"
+        //             // color="primary"
+        //         />
+        //         <Grid container>
+        //             <Grid item xs={6}>
+        //                 <Paper className={borrowerClasses}>{"Borrower"}</Paper>
+        //             </Grid>
+        //             <Grid item xs={6}>
+        //                 <Paper className={investorClasses}>{"Investor"}</Paper>
+        //             </Grid>
+        //         </Grid>
+        //     </div>
+        // </Hidden>,
         const baseDrawer = () => ([
-            <Hidden mdUp>
-                <div className="switcherContainer">
-                    <Switch
-                        checked={this.props.store.investor}
-                        className="switcher"
-                        onChange={() => this.props.store.toggleInvestor()}
-                        value="checkedA"
-                        // color="primary"
-                    />
-                    <Grid container>
-                        <Grid item xs={6}>
-                            <Paper className={borrowerClasses}>{"Borrower"}</Paper>
-                        </Grid>
-                        <Grid item xs={6}>
-                            <Paper className={investorClasses}>{"Investor"}</Paper>
-                        </Grid>
-                    </Grid>
-                </div>
-            </Hidden>,
             <div>{this.props.store.investor ?
-                <h2 className="resourceTitle">{"About Lending"}</h2>
+                <h2 className="resourceTitle">{"Thincats Resources"}</h2>
                 :
-                <h2 className="resourceTitle">{"About Borrowing"}</h2>
+                <h2 className="resourceTitle">{"Thincats Resources"}</h2>
             }</div>,
             <List className="paddingTop1">
                 {this.renderResourceMenu()}

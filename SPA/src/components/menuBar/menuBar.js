@@ -25,15 +25,15 @@ type InjectedProps = {
 @observer
 export default class MenuBar extends InjectedComponent<Props, InjectedProps, State> {
     render() {
-        const borrowerClasses = classNames({
-            borrower: true,
-            selected: !this.props.store.investor,
-        })
+        // const borrowerClasses = classNames({
+        //     borrower: true,
+        //     selected: !this.props.store.investor,
+        // })
 
-        const investorClasses = classNames({
-            investor: true,
-            selected: this.props.store.investor,
-        })
+        // const investorClasses = classNames({
+        //     investor: true,
+        //     selected: this.props.store.investor,
+        // })
 
         return (
             <div className="menuBar">
@@ -52,32 +52,33 @@ export default class MenuBar extends InjectedComponent<Props, InjectedProps, Sta
                         </Grid>
                     </Grid>
                     <Grid item xs={3} className="switcherContainer">
-                        <Hidden smDown>
-                            {this.props.investorSelector ?
-                                [
-                                    <Switch
-                                        checked={this.props.store.investor}
-                                        className="switcher"
-                                        onChange={() => this.props.store.toggleInvestor()}
-                                        value="checkedA"
-                                        // color="primary"
-                                    />,
-                                    <Grid container>
-                                        <Grid item xs={6}>
-                                            <Paper className={borrowerClasses}>{"Borrower"}</Paper>
-                                        </Grid>
-                                        <Grid item xs={6}>
-                                            <Paper className={investorClasses}>{"Investor"}</Paper>
-                                        </Grid>
-                                    </Grid>
-                                ]
-                                :
-                                null
-                            }
-                        </Hidden>
                     </Grid>
                 </Grid>
             </div>
         )
     }
 }
+
+// {/* <Hidden smDown>
+// {this.props.investorSelector ?
+//     [
+//         <Switch
+//             checked={this.props.store.investor}
+//             className="switcher"
+//             onChange={() => this.props.store.toggleInvestor()}
+//             value="checkedA"
+//             // color="primary"
+//         />,
+//         <Grid container>
+//             <Grid item xs={6}>
+//                 <Paper className={borrowerClasses}>{"Borrower"}</Paper>
+//             </Grid>
+//             <Grid item xs={6}>
+//                 <Paper className={investorClasses}>{"Investor"}</Paper>
+//             </Grid>
+//         </Grid>
+//     ]
+//     :
+//     null
+// }
+// </Hidden> */}

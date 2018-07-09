@@ -80,17 +80,17 @@ export default class Menu extends InjectedComponent<Props, InjectedProps> {
                             /> */}
                             <BottomNavigationAction
                                 className="navAction"
-                                label="Login"
+                                label="Investor Portal"
                                 classes={{label: "navActionLabel", selected: "selectedLabel"}}
                                 // icon={<InfoIcon />}
                                 onClick={() => { window.location = "https://thincat.blockbond.co" }}
                             />
                             <BottomNavigationAction
                                 className="navAction"
-                                label="Register"
+                                label="Borrower Portal"
                                 classes={{label: "navActionLabel", selected: "selectedLabel"}}
                                 // icon={<QuestionAnswerIcon />}
-                                onClick={() => { window.location = "https://thincat.blockbond.co" }}
+                                onClick={() => { window.location = "https://thin-cats.azurewebsites.net/" }}
                             />
                         </BottomNavigation>
                     </Grid>
