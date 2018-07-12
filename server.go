@@ -110,6 +110,7 @@ func postsHandler(ctx context.Context, client *datastore.Client) func(http.Respo
 
 // Init constructs the server and routes. With a bigger project this might be separated into different files and accept config options
 func Init() {
+	// todo add in http2 server push?
 	log.Printf("Server logging started at: %s", time.Now())
 	ex, err := os.Executable()
 	check(err)
