@@ -3,6 +3,7 @@ const webpack = require('webpack'); // eslint-disable-line
 const ExtractTextPlugin = require("extract-text-webpack-plugin") // eslint-disable-line import/no-extraneous-dependencies
 const WebpackBundleSizeAnalyzerPlugin = require('webpack-bundle-size-analyzer').WebpackBundleSizeAnalyzerPlugin; // eslint-disable-line
 const CopyWebpackPlugin = require("copy-webpack-plugin") // eslint-disable-line import/no-extraneous-dependencies
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 const extractLess = new ExtractTextPlugin({
     filename: "styles.css",
@@ -59,7 +60,8 @@ module.exports = {
     plugins: [
         extractLess,
         new WebpackBundleSizeAnalyzerPlugin("./plain-report.txt"),
-        new CopyWebpackPlugin([{from: "index.html", to: "index.html"}]),
+        new CopyWebpackPlugin([{from: "index.html", to: path.resolve(__dirname, "./dist")}]),
+        new CleanWebpackPlugin(["dist"]),
     ],
     resolve: {
         extensions: [".js", ".less", "scss", ".svg"],

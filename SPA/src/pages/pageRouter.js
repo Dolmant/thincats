@@ -21,6 +21,13 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class PageRouter extends InjectedComponent<Props, InjectedProps> {
+    // Remove the server-side injected CSS.
+    componentDidMount() {
+        const jssStyles = document.getElementById("jss-server-side")
+        if (jssStyles && jssStyles.parentNode) {
+            jssStyles.parentNode.removeChild(jssStyles)
+        }
+    }
     route() {
         // Route based on URL
         switch (true) {

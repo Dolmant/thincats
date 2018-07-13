@@ -6,7 +6,7 @@ module.exports = merge(baseConfig, {
     devtool: "inline-source-map",
     output: {
         filename: "bundled.js",
-        path: path.resolve(__dirname, "dist/bundled"),
+        path: path.resolve(__dirname, "dist/bundles"),
     },
     devServer: {
         inline: true,

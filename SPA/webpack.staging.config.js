@@ -6,7 +6,7 @@ const path = require("path")
 module.exports = merge(baseConfig, {
     output: {
         filename: "bundled.js",
-        path: path.resolve(__dirname, "dist/bundled"),
+        path: path.resolve(__dirname, "dist/bundles"),
     },
     mode: "staging",
     plugins: [

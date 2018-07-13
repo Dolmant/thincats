@@ -1,7 +1,7 @@
 // @flow
 import React from "react"
 import {render, hydrate} from "react-dom"
-import {MuiThemeProvider, createMuiTheme} from "@material-ui/core/styles"
+import {MuiThemeProvider, createMuiTheme, createGenerateClassName} from "@material-ui/core/styles"
 // import blue from "@material-ui/core/colors/blue"
 // import red from "@material-ui/core/colors/red"
 // import yellow from "@material-ui/core/colors/yellow"
@@ -11,6 +11,8 @@ import "./util/docReady"
 import PageRouter from "./pages/pageRouter"
 import Store from "store"
 import "./main.less"
+import {SheetsRegistry} from "react-jss/lib/jss"
+import JssProvider from "react-jss/lib/JssProvider"
 
 declare var docReady;
 
@@ -32,26 +34,20 @@ const theme = createMuiTheme({
     },
 })
 
+const sheetsRegistry = new SheetsRegistry()
+const generateClassName = createGenerateClassName()
+
 docReady(() => {
     const appTarget = document.getElementById("mount")
     if (appTarget) {
         const appElement = (
-            <Provider store={Store}>
-                <MuiThemeProvider theme={theme}>
-                    <div>
+            <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
+                <Provider store={Store}>
+                    <MuiThemeProvider theme={theme}>
                         <PageRouter />
-                        {/* <ReduxToastr
-                            timeOut={4000}
-                            newestOnTop={false}
-                            preventDuplicates
-                            position="top-left"
-                            transitionIn="fadeIn"
-                            transitionOut="fadeOut"
-                            progressBar
-                        /> */}
-                    </div>
-                </MuiThemeProvider>
-            </Provider>
+                    </MuiThemeProvider>
+                </Provider>
+            </JssProvider>
         )
         if (appTarget.hasChildNodes()) {
             hydrate(
