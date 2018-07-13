@@ -137,9 +137,9 @@ func Init() {
 
 	mux.HandleFunc("/posts/", postsHandler(ctx, client))
 
-	fs := http.FileServer(http.Dir(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "dist"))
+	fs := http.FileServer(http.Dir(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "dist" + string(os.PathSeparator) + "bundles"))
 
-	mux.PathPrefix("/dist/").Handler(http.StripPrefix("/dist/", fs))
+	mux.PathPrefix("/bundles/").Handler(http.StripPrefix("/bundles/", fs))
 
 	fs = http.FileServer(http.Dir(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "assets"))
 
@@ -149,6 +149,7 @@ func Init() {
 	genericHandle = func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
 	}
+	mux.PathPrefix("/index.html").Handler(genericHandle)
 	mux.PathPrefix("/").Handler(genericHandle)
 
 	handler := cors.Default().Handler(mux)
