@@ -4,21 +4,17 @@ import {observer, inject} from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import List from "@material-ui/core/List"
 import Hidden from "@material-ui/core/Hidden"
-import Switch from "@material-ui/core/Switch"
 import Drawer from "@material-ui/core/Drawer"
 import Button from "@material-ui/core/Button"
 import Toc from "@material-ui/icons/Toc"
-import Paper from "@material-ui/core/Paper"
 import ExpansionPanel from "@material-ui/core/ExpansionPanel"
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
 import "./resources.less"
-// import borrowerContent from "./borrowerContent" // not separating out content, didnt look good
-import lenderContent from "./lenderContent"
+import resourcesContent from "./resourcesContent"
 import type {StoreType} from "types"
-import classNames from "util/classNames"
 import {InjectedComponent} from "store"
 
 type Props = {
@@ -87,11 +83,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 </div>
             </ListItem>
         )
-        const resourcesContent = lenderContent
-        // if (this.props.store.investor) {
-        // } else {
-        //     resourcesContent = borrowerContent
-        // }
+
         return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], mainIndex) => MainHeader(
             mainHeaderKey,
             mainIndex,
@@ -108,13 +100,6 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 {children}
             </div>
         )
-
-        const resourcesContent = lenderContent
-        // if (this.props.store.investor) {
-        //     resourcesContent = lenderContent
-        // } else {
-        //     resourcesContent = borrowerContent
-        // }
 
         if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
             return (
@@ -206,13 +191,11 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 </Hidden>
             ])
 
-        const mobileButton = () => {
-            return (
-                <Button onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})} variant="fab" color="primary" aria-label="add">
-                    <Toc />
-                </Button>
-            )
-        }
+        const mobileButton = () => (
+            <Button onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})} variant="fab" color="primary" aria-label="add">
+                <Toc />
+            </Button>
+        )
         return (
             <div className="resources">
                 <MenuBar

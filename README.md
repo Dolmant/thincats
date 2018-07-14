@@ -17,7 +17,23 @@ use http2
 no fetched manifest and no meta theme colour
 use https
 
+james:
+
+The hint of yellow and blue (within the summary page) looks good. Wouldn’t mind seeing these colour combos – in the same proportion - in the other tabs ‘resources’, ‘investor portal’ etc. i.e. outlines, heading etc.
+My understanding is that we no longer will use the ThinCats (animal) logo.
+The two ThinCats logos in the home page are clearly different. For congruency I would suggest the normal white background ‘ThinCats Australia’ and for the purpose of keeping the same entry effect (which I like), instead of it being ‘black’ have it start off as all white.
+Subheading: “Smart business”  - first time I’ve heard of this though I don’t mind it. But ‘Australia’ should be the default.
+
+Perhaps banner is the wrong word…currently where is says ‘smart business’. We could a have all the aforementioned words roll after on another. Not horizontally like a stock market banner, but vertically flicking between each word. So it would read:
+ThinCats – Australia
+ThinCats – Smart Business
+ThinCats – Marketplace
+ThinCats – Borrowing
+ThinCats – Investing
+
 todo:
+resources page - download links!
+cloudfront caching?
 back button should trigger the back of the app as well
 parse hashlinks to go to the correct place
 faq links need to be working

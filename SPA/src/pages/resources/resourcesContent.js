@@ -44,14 +44,6 @@ export default {
         ),
     },
     "About Borrowing": {
-        "What people are saying about us": (
-            <div id="what_people_are_saying_about_us" className="subHeading">
-                <h2>What people are saying about us</h2>
-                <p>I love the straight forward approach of ThinCats and the fact that we are dealing with the actual decision makers about the application for the loan and facilitation of the loan process through their online platform. (David)</p>
-                <p>We recently acquired funding from ThinCats to expand our business interests. Personally I found the process very professional by ThinCats and was delighted by the result. Our successful raising allowed us to enter into more competitive buying contracts and increase our profit margin. (Ben)</p>
-                <p><i>View key statistics including details of our last 10 loans:<a title="here" href="/statistics/" target="_blank" rel="noopener noreferrer">here</a></i></p>
-            </div>
-        ),
         "Overview": (
             <div id="overview" className="subHeading">
                 <h2>Overview</h2>
@@ -69,7 +61,7 @@ export default {
                     <li><strong>Small and medium sized companies that require loans for growth</strong> including working capital, equipment finance, infrastructure finance and business acquisition finance.</li>
                     <li><strong>Experienced business operators</strong> who can demonstrate the ability to service the debt.</li>
                 </ul>
-                <p>Please download the key <a href="/assets/borrowed_assets/Key-Guidelines-for-Borrowers-apr18.pdf" target="_blank" rel="noopener noreferrer">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
+                <p>Please download the key <a href="/assets/Key-Guidelines-for-Borrowers-apr18.pdf" target="_blank" rel="noopener noreferrer">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
             </div>
         ),
         "What are your fees": (
@@ -85,15 +77,6 @@ export default {
         ),
     },
     "About Lending": {
-        "What people are saying about us": (
-            <div id="what_people_are_saying_about_us" className="subHeading">
-                <h2>What people are saying about us</h2>
-                <p>ThinCats is the engine that takes the banks out of banking and shares the spoils with lenders and borrowers alike. Small companies attract competitive financial support. Lenders share the risk of individual loans to build an attractively yielding fixed income portfolio. It’s win-win. It’s transparent. It’s simple. (Slater)</p>
-                <p><br />
-The platform is simple to use, loan information is well displayed and returns are excellent. I have recommended ThinCats to my friends as my particular endorsement of your product. (Michael)</p>
-                <p><strong>View <span style={{textDecoration: "underline"}}>key statistics</span> including details of our last 10 loans <a title="here" href="/statistics/" rel="noopener noreferrer" target="_blank">here</a></strong></p>
-            </div>
-        ),
         "Overview": (
             <div id="overview" className="subHeading">
                 <h2>Overview</h2>
@@ -130,7 +113,6 @@ The platform is simple to use, loan information is well displayed and returns ar
             <div id="how_does_it_work" className="subHeading">
                 <h2>How does it work?</h2>
                 <p>In order to be a Lender individuals and entities need to be registered and approved as members on the ThinCats Australia platform. Lenders need to transfer funds to the ThinCats Australia Client Monies account if they choose to bid on loans.  The minimum bid is $1,000. The maximum bid is the total loan amount. For fixed rate loans, lenders bid fixed amounts on the loan. For variable rate loans (which has not yet been introduced), lenders choose the amount they wish to bid as well as the interest rate. They can make multiple bids at different rates of interest and for different amounts. If more than one bid is successful they will have multiple loans at different rates of interest.</p>
-                <p>More detailed information is available in the <a href="/lending/lending-faq/" rel="noopener noreferrer" target="_blank">lending FAQs</a>.</p>
             </div>
         ),
         "What is the Secondary Market": (
@@ -229,7 +211,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     <h2 id="faq-overseas">Overseas Members</h2>
                     <p></p>
                     <h3>Can I be a Member if I reside outside Australia?</h3>
-                    <p><span style={{color: "#222222"}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides. We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the <a href="/assets/borrowed_assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><p className="bold"></p><span style={{color: "#222222"}}> or contact us at </span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
+                    <p><span style={{color: "#222222"}}>Generally yes, but it also depends on the jurisdiction where the proposed Member resides. We will assess each overseas applicant on their individual merits and decide if they qualify to be a member. Find out more about the <a href="/assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" rel="noopener noreferrer" target="_blank">Process for Non-resident Applicants</a></span><p className="bold"></p><span style={{color: "#222222"}}> or contact us at </span><a href="mailto:admin@thincats.com.au" rel="noopener noreferrer" target="_blank">admin@thincats.com.au</a>.</p>
                 </div>
                 <div className="subHeading">
                     <h2 id="faq-sponsors">Sponsors and Introducers</h2>
@@ -326,14 +308,13 @@ The platform is simple to use, loan information is well displayed and returns ar
         "All": (
             <div id="key_statistics" className="subHeading">
                 <div className="regular-page-content clearfix">
-                    <h2>Key Statistics</h2>
                     <p>ThinCats Australia facilitated its first loan in February 2015.</p>
-                    <p><span style={{textDecoration: "underline"}}>Loans to date:</span> <strong><span style={{color: "#0000ff"}}>$11.2 million</span>*</strong></p>
-                    <p><span style={{textDecoration: "underline"}}>Average lenders per loan:</span> <span style={{color: "#0000ff"}}><strong>24</strong></span></p>
-                    <p><span style={{textDecoration: "underline"}}>Average investment per loan:</span> <span style={{color: "#0000ff"}}><strong>$5,166</strong></span></p>
-                    <p><span style={{textDecoration: "underline"}}><span style={{color: "#000000", textDecoration: "underline"}}>Average interest rate on loans since inception:</span></span> <strong><span style={{color: "#0000ff"}}>14.8% p.a.</span>**</strong></p>
-                    <p><span style={{textDecoration: "underline"}}><span style={{color: "#000000", textDecoration: "underline"}}>Average interest rate on loans FY18 to date:</span></span> <strong><span style={{color: "#0000ff"}}>15.6% p.a.</span>**</strong></p>
-                    <p><span style={{color: "#0000ff"}}><strong><span style={{textDecoration: "underline"}}>Last 10 loans</span></strong></span></p>
+                    <p><span style={{textDecoration: "underline"}}>Loans to date:</span> <strong><span>$11.2 million</span>*</strong></p>
+                    <p><span style={{textDecoration: "underline"}}>Average lenders per loan:</span> <span><strong>24</strong></span></p>
+                    <p><span style={{textDecoration: "underline"}}>Average investment per loan:</span> <span><strong>$5,166</strong></span></p>
+                    <p><span style={{textDecoration: "underline"}}><span style={{color: "#000000", textDecoration: "underline"}}>Average interest rate on loans since inception:</span></span> <strong><span>14.8% p.a.</span>**</strong></p>
+                    <p><span style={{textDecoration: "underline"}}><span style={{color: "#000000", textDecoration: "underline"}}>Average interest rate on loans FY18 to date:</span></span> <strong><span>15.6% p.a.</span>**</strong></p>
+                    <h2>Last 10 loans</h2>
                     <table border="0" width="558" cellSpacing="0" cellPadding="0">
                         <colgroup>
                             <col width="236" />
@@ -432,7 +413,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                                             <tr>
                                                 <td className="xl537" width="236" height="17"></td>
                                                 <td className="xl543" width="70"></td>
-                                                <td className="xl538"> <span style={{color: "#0000ff"}}>1,845,000</span></td>
+                                                <td className="xl538"> <span>1,845,000</span></td>
                                                 <td className="xl539"></td>
                                                 <td className="xl540"></td>
                                             </tr>
@@ -453,7 +434,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                             </tr>
                         </tbody>
                     </table>
-                    <p><span style={{color: "#0000ff"}}><strong><span style={{textDecoration: "underline"}}>Loans by Industry and Location</span></strong></span></p>
+                    <h2>Loans by Industry and Location</h2>
                     <table border="0" width="594" cellSpacing="0" cellPadding="0">
                         <colgroup>
                             <col width="156" />
@@ -560,10 +541,10 @@ The platform is simple to use, loan information is well displayed and returns ar
                                 <td className="xl543"></td>
                                 <td className="xl544" style={{textAlign: "center"}}>10%</td>
                                 <td className="xl534" style={{textAlign: "center"}}></td>
-                                <td className="xl542" style={{textAlign: "center"}}><span style={{color: "#0000ff"}}>Total</span></td>
-                                <td className="xl546" style={{textAlign: "right"}} align="right"><span style={{color: "#0000ff"}}> 11,153</span></td>
-                                <td className="xl546" style={{textAlign: "center"}}><span style={{color: "#0000ff"}}> </span></td>
-                                <td className="xl544" style={{textAlign: "center"}}><span style={{color: "#0000ff"}}>100%</span></td>
+                                <td className="xl542" style={{textAlign: "center"}}><span>Total</span></td>
+                                <td className="xl546" style={{textAlign: "right"}} align="right"><span> 11,153</span></td>
+                                <td className="xl546" style={{textAlign: "center"}}><span> </span></td>
+                                <td className="xl544" style={{textAlign: "center"}}><span>100%</span></td>
                             </tr>
                             <tr>
                                 <td className="xl545" height="16">Retail</td>
@@ -610,10 +591,10 @@ The platform is simple to use, loan information is well displayed and returns ar
                                 <td className="xl534"></td>
                             </tr>
                             <tr>
-                                <td className="xl545" height="16"><span style={{color: "#0000ff"}}>Total</span></td>
-                                <td className="xl543" align="right"><span style={{color: "#0000ff"}}> 11,153</span></td>
-                                <td className="xl543"><span style={{color: "#0000ff"}}> </span></td>
-                                <td className="xl544" style={{textAlign: "center"}}><span style={{color: "#0000ff"}}>100%</span></td>
+                                <td className="xl545" height="16"><span>Total</span></td>
+                                <td className="xl543" align="right"><span> 11,153</span></td>
+                                <td className="xl543"><span> </span></td>
+                                <td className="xl544" style={{textAlign: "center"}}><span>100%</span></td>
                                 <td className="xl534"></td>
                                 <td className="xl534"></td>
                                 <td className="xl534"></td>
@@ -624,7 +605,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                     </table>
                     <p>*:  All loans to date (except for 2 loans) are monthly principal &amp; interest repayment loans<br />
                     **: Gross returns before fees, taxes and potential losses on loans</p>
-                    <p><span style={{color: "#0000ff"}}>Data as at 30 April 2018</span></p>
+                    <p><span>Data as at 30 April 2018</span></p>
                 </div>
             </div>
         ),
@@ -642,7 +623,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                 <h2>What are the benefits of being a Sponsor?</h2>
                 <p>Sponsors are part of the ThinCats Australia network and play an important role in helping SMEs to grow and achieve their business goals.</p>
                 <p>ThinCats will pay a commission of up to 60 basis points (plus GST) upfront on loan disbursement.</p>
-                <p>If you are interested in becoming a Sponsor please complete the <a href="/assets/borrowed_assets/Sponsor-Application-Form-May16.docx">Application Form</a> and email it to <a title="sponsors@thincats.com.au" href="mailto:sponsors@thincats.com.au">sponsors@thincats.com.au</a>.</p>
+                <p>If you are interested in becoming a Sponsor please complete the <a href="/assets/Sponsor-Application-Form-May16.docx">Application Form</a> and email it to <a title="sponsors@thincats.com.au" href="mailto:sponsors@thincats.com.au">sponsors@thincats.com.au</a>.</p>
             </div>
         ),
         "Who are Introducers": (
@@ -652,7 +633,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                 <p>ThinCats will pay a referral fee of 25 basis points (plus GST) on the successful completion of the loan.</p>
                 <p>If you have a potential transaction please email details to loans@thincats.com.au or call us on 1300 325 342.</p>
                 <h2>General guidelines on eligible loans</h2>
-                <p>Please download the key <a href="/assets/borrowed_assets/2018/04/Key-Guidelines-for-Borrowers-apr18.pdf" rel="noopener noreferrer" target="_blank">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
+                <p>Please download the key <a href="/assets/Key-Guidelines-for-Borrowers-apr18.pdf" rel="noopener noreferrer" target="_blank">borrowing criteria </a>to get a broad understanding of eligibility criteria that we evaluate before listing a loan on the ThinCats Australia platform.</p>
                 <p style={{textAlign: "left"}}>
                 </p><p><strong>If you have any questions, please call 1300 325 342</strong></p>
             </div>
@@ -719,6 +700,7 @@ The platform is simple to use, loan information is well displayed and returns ar
                         </tr>
                     </tbody>
                 </table>
+                <br />
                 <p><span style={{textDecoration: "underline"}}><span style={{color: "#000000"}}><strong>MANAGEMENT TEAM</strong></span></span></p>
                 <p><strong>Sunil Aranha</strong> (Chief Executive Officer and Director), with over 25 years of international and local SME sector banking experience in general management roles within Citibank, Efic and Commonwealth Bank. Also established a successful technology start-up in the entertainment technology sector in early 2000.</p>
                 <p><strong>Harsha Nair</strong> (Chief Financial &amp; Operating Officer), with over 25 years of financial control, regulatory compliance and product development experience with banks and brokers including Commonwealth Bank, JPMorgan Chase and Morgan Stanley.</p>

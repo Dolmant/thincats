@@ -11,7 +11,6 @@ RUN mkdir /root/thincats
 RUN mkdir /root/thincats/SPA
 RUN mkdir /root/thincats/SPA/dist
 RUN mkdir /root/thincats/SPA/assets
-RUN mkdir /root/thincats/SPA/assets/borrowed_assets
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/thincats /root/thincats
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/SPA/index.html /root/thincats/SPA
 COPY --from=build-env /go/src/github.com/Dolmant/thincats/SPA/dist /root/thincats/SPA/dist

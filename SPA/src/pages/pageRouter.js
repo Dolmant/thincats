@@ -5,9 +5,6 @@ import TransitionGroup from "react-transition-group/TransitionGroup"
 import React from "react"
 import Home from "pages/home/home"
 import Resources from "pages/resources/resourcesNew"
-import AboutThinCats from "pages/aboutUs/aboutThinCats/aboutThinCats"
-import ContactUs from "pages/aboutUs/contactUs/contactUs"
-import OurTeam from "pages/aboutUs/ourTeam/ourTeam"
 import Footer from "components/generic/footer/footer"
 import type {StoreType} from "types"
 import {InjectedComponent} from "store"
@@ -61,27 +58,6 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                         <Footer />
                     </div>
                 </CSSTransition>
-            )
-        case this.props.store.isAbout:
-            return (
-                <section key={2} className="page-wrap">
-                    <AboutThinCats />
-                    <Footer />
-                </section>
-            )
-        case this.props.store.isContactUs:
-            return (
-                <section key={3} className="page-wrap">
-                    <ContactUs />
-                    <Footer />
-                </section>
-            )
-        case this.props.store.isOurTeam:
-            return (
-                <section key={4} className="page-wrap">
-                    <OurTeam />
-                    <Footer />
-                </section>
             )
         }
     }

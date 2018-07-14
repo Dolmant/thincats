@@ -10,9 +10,7 @@ import MenuBar from "components/menuBar/menuBar"
 import "./home.less"
 import classNames from "util/classNames"
 import Light from "assets/icons/LightSymbol.svg"
-import Arrow from "assets/icons/ArrowSymbol.svg"
 import PeopleCash from "assets/icons/SymbolPeopleCash.svg"
-import PeopleAlert from "assets/icons/SymbolPeopleAlert.svg"
 import Wallet from "assets/icons/SymbolWallet.svg"
 import Plant from "assets/icons/SymbolPlant.svg"
 import Time from "assets/icons/SymbolTime.svg"
@@ -44,7 +42,7 @@ type State = {
     user: number,
 };
 
-const randomNumbers = [[43,5],[0,5],[61,15],[31,55],[28,18],[78,100],[75,6],[6,49],[19,9],[81,48],[41,24],[21,53],[19,16],[91,28],[55,2],[75,95],[62,48],[21,94],[39,10],[4,75]];
+const randomNumbers = [[43, 5], [0, 5], [61, 15], [31, 55], [28, 18], [78, 100], [75, 6], [6, 49], [19, 9], [81, 48], [41, 24], [21, 53], [19, 16], [91, 28], [55, 2], [75, 95], [62, 48], [21, 94], [39, 10], [4, 75]]
 
 @inject("store")
 @observer
@@ -112,7 +110,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
     render() {
         const findOutMoreClasses = classNames({
             findOutMore: true,
-            hideIt: true, // this.state.scrolled,
+            hideIt: true,
         })
 
         const arrows = []
@@ -175,7 +173,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         <Grid container justify="center" alignContent="center" className="seller">
                             <Hidden mdDown>
                                 <Grid className="sellerText" item xs={12}>
-                                    <p>Investors fund a portion of the total loan and borrowers fulfil their loan requirements through multiple lenders.</p>
+                                    <p>Business lending by good people.</p>
                                 </Grid>
                             </Hidden>
                             <Grid item className="buttonContainer" xs={6}>
@@ -193,7 +191,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         }
                                     }}
                                 >
-                                    {"I am an INVESTOR"}
+                                    {"I am a BORROWER"}
                                 </Button>
                             </Grid>
                             <Grid item className="buttonContainer" xs={6}>
@@ -211,7 +209,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         }
                                     }}
                                 >
-                                    {"I am a BORROWER"}
+                                    {"I am an INVESTOR"}
                                 </Button>
                             </Grid>
                         </Grid>
