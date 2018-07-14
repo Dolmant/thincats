@@ -1,10 +1,8 @@
 // @flow
 import React from "react"
-import {render, hydrate} from "react-dom"
+import {hydrate} from "react-dom"
+import {render as RenderSnapShot} from "react-snapshot"
 import {MuiThemeProvider, createMuiTheme, createGenerateClassName} from "@material-ui/core/styles"
-// import blue from "@material-ui/core/colors/blue"
-// import red from "@material-ui/core/colors/red"
-// import yellow from "@material-ui/core/colors/yellow"
 import {Provider} from "mobx-react"
 // Imports the global 'docReady'
 import "./util/docReady"
@@ -45,6 +43,7 @@ docReady(() => {
                 <Provider store={Store}>
                     <MuiThemeProvider theme={theme}>
                         <PageRouter />
+                        <a className="prerenderer" href="/resources.html">Invisible link for prerenderer</a>
                     </MuiThemeProvider>
                 </Provider>
             </JssProvider>
@@ -54,7 +53,7 @@ docReady(() => {
                 appElement,
                 appTarget)
         } else {
-            render(
+            RenderSnapShot(
                 appElement,
                 appTarget)
         }

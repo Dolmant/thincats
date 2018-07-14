@@ -28,6 +28,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 use: "babel-loader",
+                exclude: /node_modules/,
             },
             {
                 test: /\.css$/,
@@ -61,6 +62,7 @@ module.exports = {
         extractLess,
         new WebpackBundleSizeAnalyzerPlugin("./plain-report.txt"),
         new CopyWebpackPlugin([{from: "index.html", to: path.resolve(__dirname, "./dist")}]),
+        new CopyWebpackPlugin([{from: "index.html", toType: "file", to: path.resolve(__dirname, "./dist/resources.html")}]),
         new CleanWebpackPlugin(["dist"]),
     ],
     resolve: {

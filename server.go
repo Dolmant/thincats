@@ -12,10 +12,11 @@ import (
 	"time"
 
 	"cloud.google.com/go/datastore"
-	"github.com/gorilla/mux"
 	"google.golang.org/api/iterator"
 
-	"github.com/rs/cors"
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/contrib/gzip"
+	"github.com/gin-gonic/gin"
 )
 
 func check(err error) {
@@ -36,10 +37,10 @@ func (f HandlerFunc) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	f(w, r)
 }
 
-func postsHandler(ctx context.Context, client *datastore.Client) func(http.ResponseWriter, *http.Request) {
-	return func(w http.ResponseWriter, r *http.Request) {
+func postsHandler(ctx context.Context, client *datastore.Client) func(c *gin.Context) {
+	return func(c *gin.Context) {
 		var err error
-		if r.Method == http.MethodGet {
+		if c.Request.Method == http.MethodGet {
 			// todo move this up to init and just cache this. invalidate cache with a post
 			postsCollection := []Post{}
 			query := datastore.NewQuery("Post")
@@ -59,18 +60,18 @@ func postsHandler(ctx context.Context, client *datastore.Client) func(http.Respo
 				postsCollection = append(postsCollection, post)
 			}
 			if err != nil {
-				w.WriteHeader(http.StatusInternalServerError)
-				w.Write([]byte("error"))
+				c.Writer.WriteHeader(http.StatusInternalServerError)
+				c.Writer.Write([]byte("error"))
 			} else {
 				encoded, err := json.Marshal(postsCollection)
 				if err != nil {
-					w.WriteHeader(http.StatusInternalServerError)
-					w.Write([]byte("error"))
+					c.Writer.WriteHeader(http.StatusInternalServerError)
+					c.Writer.Write([]byte("error"))
 				} else {
-					w.Write(encoded)
+					c.Writer.Write(encoded)
 				}
 			}
-		} else if r.Method == http.MethodPost {
+		} else if c.Request.Method == http.MethodPost {
 			// Sets the kind for the new entity.
 			kind := "Post"
 			// Sets the name/ID for the new entity.
@@ -85,24 +86,24 @@ func postsHandler(ctx context.Context, client *datastore.Client) func(http.Respo
 				log.Fatalf("Failed to save task: %v", err)
 			}
 
-			content, err := ioutil.ReadAll(r.Body)
+			content, err := ioutil.ReadAll(c.Request.Body)
 			if err != nil {
-				w.WriteHeader(http.StatusBadRequest)
-				w.Write([]byte("error"))
+				c.Writer.WriteHeader(http.StatusBadRequest)
+				c.Writer.Write([]byte("error"))
 			}
 			err = json.Unmarshal(content, &post)
 			if err != nil {
-				w.WriteHeader(http.StatusInternalServerError)
-				w.Write([]byte("error"))
+				c.Writer.WriteHeader(http.StatusInternalServerError)
+				c.Writer.Write([]byte("error"))
 			} else {
-				w.Write([]byte("success"))
+				c.Writer.Write([]byte("success"))
 			}
 			_, err = client.Put(ctx, &datastore.Key{}, post)
 			if err != nil {
-				w.WriteHeader(http.StatusInternalServerError)
-				w.Write([]byte("error"))
+				c.Writer.WriteHeader(http.StatusInternalServerError)
+				c.Writer.Write([]byte("error"))
 			} else {
-				w.Write([]byte("success"))
+				c.Writer.Write([]byte("success"))
 			}
 		}
 	}
@@ -133,29 +134,27 @@ func Init() {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 
-	mux := mux.NewRouter()
+	router := gin.New()
+	router.Use(gzip.Gzip(gzip.DefaultCompression))
+	router.Use(gin.Logger())
+	router.Use(gin.Recovery())
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	config.AllowMethods = []string{"GET", "POST", "PUT", "PATCH", "HEAD"}
+	config.AllowHeaders = []string{"Origin", "Authorization", "Content-Length", "Content-Type"}
+	router.Use(cors.New(config))
 
-	mux.HandleFunc("/posts/", postsHandler(ctx, client))
+	router.GET("/health", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "success",
+		})
+	})
+	router.GET("/posts", postsHandler(ctx, client))
+	router.StaticFS("/bundles", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"bundles"))
+	router.StaticFS("/assets", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"assets"))
+	router.StaticFile("/resources", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"resources.html")
+	router.StaticFile("/", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
 
-	fs := http.FileServer(http.Dir(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "dist" + string(os.PathSeparator) + "bundles"))
-
-	mux.PathPrefix("/bundles/").Handler(http.StripPrefix("/bundles/", fs))
-
-	fs = http.FileServer(http.Dir(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "assets"))
-
-	mux.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", fs))
-
-	var genericHandle HandlerFunc
-	genericHandle = func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
-	}
-	mux.PathPrefix("/index.html").Handler(genericHandle)
-	mux.PathPrefix("/").Handler(genericHandle)
-
-	handler := cors.Default().Handler(mux)
+	router.Run("127.0.0.1:8079")
 	fmt.Println("serving")
-	err = http.ListenAndServe(":8079", handler)
-	if err != nil {
-		log.Fatalf("Failed to serve, %s", err.Error())
-	}
 }

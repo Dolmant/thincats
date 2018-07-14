@@ -42,8 +42,9 @@ type InjectedProps = {
 type State = {
     scrolled: boolean,
     user: number,
-    random: Array<Array<number>>,
 };
+
+const randomNumbers = [[43,5],[0,5],[61,15],[31,55],[28,18],[78,100],[75,6],[6,49],[19,9],[81,48],[41,24],[21,53],[19,16],[91,28],[55,2],[75,95],[62,48],[21,94],[39,10],[4,75]];
 
 @inject("store")
 @observer
@@ -51,7 +52,6 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
     state = {
         scrolled: false,
         user: 0, // investor = 2 and borrower = 1
-        random: [],
     }
     clipRect = () => {
         // clip if not first time playing the animation
@@ -114,66 +114,32 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
             findOutMore: true,
             hideIt: true, // this.state.scrolled,
         })
-        const w = $(window).width()
-
-        let randomNumbers = this.state.random
-        if (this.state.random.length < (w / 50)) {
-            const temp = this.state.random
-            for (let i = 0; i < w / 50; i += 1) {
-                temp.push([Math.random(), Math.random()])
-            }
-            this.setState({random: temp})
-            randomNumbers = temp
-        }
-        // TODO seed the random numbers so hydration works
 
         const arrows = []
-        for (let i = 0; i < w / 50; i += 1) {
+        for (let i = 0; i < 20; i += 1) {
             let rand = randomNumbers[i][0]
-            // let rand30 = rand * 30
-            // let rand25 = rand * 2.5
-            // arrows.push(
-            //     <div
-            //         style={{
-            //             left: `${(i * 50 - 25) - (rand30)}px`,
-            //             bottom: `${-rand30}px`,
-            //             animationDuration: `${2.5 + (rand25)}s`,
-            //         }}
-            //         className="leftArrow expandPointArrow"
-            //     />)
-            // arrows.push(
-            //     <div
-            //         style={{
-            //             left: `${(i * 50) - (rand30)}px`,
-            //             bottom: `${-rand30}px`,
-            //             animationDuration: `${2.5 + (rand25)}s`,
-            //         }}
-            //         className="rightArrow expandPointArrow"
-            //     />)
             arrows.push(
                 <div
                     style={{
-                        left: `${(i * 50) - 25}px`,
-                        maxHeight: `${50 + (50 * rand)}px`,
-                        animationDuration: `${7.5 + (2.5 * rand)}s`,
+                        left: `${(i * 5) - 2.5}vw`,
+                        maxHeight: `${50 + (0.5 * rand)}px`,
+                        animationDuration: `${7.5 + (0.025 * rand)}s`,
                         animationIterationCount: "infinite",
                     }}
-                    key={rand}
-                    className="leftArrow expandThickArrow"
+                    key={i}
+                    className="expandThickArrow leftArrow"
                 />)
             rand = randomNumbers[i][1]
-            // rand30 = rand * 30
-            // rand25 = rand * 2.5
             arrows.push(
                 <div
                     style={{
-                        left: `${i * 50}px`,
-                        maxHeight: `${50 + (50 * rand)}px`,
-                        animationDuration: `${7.5 + (2.5 * rand)}s`,
+                        left: `${i * 5}vw`,
+                        maxHeight: `${50 + (0.5 * rand)}px`,
+                        animationDuration: `${7.5 + (0.025 * rand)}s`,
                         animationIterationCount: "infinite",
                     }}
-                    key={rand}
-                    className="rightArrow expandThickArrow"
+                    key={i + 20}
+                    className="expandThickArrow rightArrow"
                 />)
         }
 
