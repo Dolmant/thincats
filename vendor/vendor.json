@@ -45,6 +45,48 @@
 			"revisionTime": "2018-05-25T15:31:36Z"
 		},
 		{
+			"checksumSHA1": "oHK/TK/PnGBR6NmsWDcxgiY6JnU=",
+			"path": "github.com/gin-contrib/cors",
+			"revision": "df6cfb7ff4a38d694dfebd0868ecb3e956171366",
+			"revisionTime": "2018-02-25T15:46:31Z"
+		},
+		{
+			"checksumSHA1": "BhMowD2DIKSd9qq8Pzh7Y3mh2/w=",
+			"path": "github.com/gin-contrib/sse",
+			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
+			"revisionTime": "2017-01-09T09:34:21Z"
+		},
+		{
+			"checksumSHA1": "/wcFZhyaLCRNmxUXdsxL8G8tozA=",
+			"path": "github.com/gin-gonic/contrib/gzip",
+			"revision": "9b830a15f6abcf9e160f47ee01fc00691cc1981a",
+			"revisionTime": "2018-03-20T08:42:56Z"
+		},
+		{
+			"checksumSHA1": "AgBc9b9j2YsZHss3T7jhqPUsW90=",
+			"path": "github.com/gin-gonic/gin",
+			"revision": "5d3f30cfc81f9109850fa9043a19783cbbde68a5",
+			"revisionTime": "2018-02-23T01:09:33Z"
+		},
+		{
+			"checksumSHA1": "jfzaIhRB69YKvY1KgaUhL66omiQ=",
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": "5d3f30cfc81f9109850fa9043a19783cbbde68a5",
+			"revisionTime": "2018-02-23T01:09:33Z"
+		},
+		{
+			"checksumSHA1": "ZrBlc4nW5joRSLLRThHlxU+bWtg=",
+			"path": "github.com/gin-gonic/gin/json",
+			"revision": "5d3f30cfc81f9109850fa9043a19783cbbde68a5",
+			"revisionTime": "2018-02-23T01:09:33Z"
+		},
+		{
+			"checksumSHA1": "s4/K+U7H8lKxLAsq2cXDpCUiCv4=",
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": "5d3f30cfc81f9109850fa9043a19783cbbde68a5",
+			"revisionTime": "2018-02-23T01:09:33Z"
+		},
+		{
 			"checksumSHA1": "fTJ7w+U/xUncdC5XoVpczYQyQug=",
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "05f48f4eaf0e05663b562bab533cdd472238ce29",
@@ -105,10 +147,22 @@
 			"revisionTime": "2018-05-01T03:11:36Z"
 		},
 		{
+			"checksumSHA1": "kum8izZy1+pVfDiApW5hT2HoH1w=",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
+			"revisionTime": "2017-11-07T05:05:31Z"
+		},
+		{
 			"checksumSHA1": "a++hH5H53isY1CJ//kOr10H1Auk=",
 			"path": "github.com/rs/cors",
 			"revision": "eabcc6af4bbe5ad3a949d36450326a2b0b9894b8",
 			"revisionTime": "2017-08-01T07:32:01Z"
+		},
+		{
+			"checksumSHA1": "UZIcY3MiCGDy25pIy0QYOHU+Eo8=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "02537d3a3e32ef636a53519265d211bd208ca488",
+			"revisionTime": "2018-03-07T15:23:41Z"
 		},
 		{
 			"checksumSHA1": "/xCCru+7j0VcZUaZElhloIWYIjw=",
@@ -487,6 +541,18 @@
 			"path": "google.golang.org/grpc/transport",
 			"revision": "39a411827d3b79d942aaeafab095ecf8204f1b0c",
 			"revisionTime": "2018-06-09T00:54:26Z"
+		},
+		{
+			"checksumSHA1": "q190bL03wQok3wVwYmMub2XhOiU=",
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": "5f1438d3fca68893a817e4a66806cea46a9e4ebf",
+			"revisionTime": "2017-07-30T05:02:35Z"
+		},
+		{
+			"checksumSHA1": "ru3kzyBD3810H35DVvviSPPrBaM=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "287cf08546ab5e7e37d55a84f7ed3fd1db036de5",
+			"revisionTime": "2017-11-16T09:02:43Z"
 		}
 	],
 	"rootPath": "github.com/Dolmant/thincats"
