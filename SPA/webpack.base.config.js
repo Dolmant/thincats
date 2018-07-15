@@ -18,7 +18,15 @@ module.exports = {
                 use: "url-loader?limit=10000&mimetype=application/font-woff",
             },
             {
-                test: /\.(ttf|eot|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                test: /\.ttf(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: "url-loader?limit=10000&mimetype=application/font-ttf",
+            },
+            {
+                test: /\.eot(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: "url-loader?limit=10000&mimetype=application/font-eot",
+            },
+            {
+                test: /\.(gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 use: "file-loader",
             },
             {

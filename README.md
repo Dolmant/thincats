@@ -19,26 +19,21 @@ use https
 
 james:
 
-The hint of yellow and blue (within the summary page) looks good. Wouldn’t mind seeing these colour combos – in the same proportion - in the other tabs ‘resources’, ‘investor portal’ etc. i.e. outlines, heading etc.
-My understanding is that we no longer will use the ThinCats (animal) logo.
-The two ThinCats logos in the home page are clearly different. For congruency I would suggest the normal white background ‘ThinCats Australia’ and for the purpose of keeping the same entry effect (which I like), instead of it being ‘black’ have it start off as all white.
-Subheading: “Smart business”  - first time I’ve heard of this though I don’t mind it. But ‘Australia’ should be the default.
+reply with:
+I tried using the logo and keeping the intro animation with white, but it was very difficult to see. I experimented a bit and ended up going with the same font as the logo for the center page text to help make the difference less obvious
 
-Perhaps banner is the wrong word…currently where is says ‘smart business’. We could a have all the aforementioned words roll after on another. Not horizontally like a stock market banner, but vertically flicking between each word. So it would read:
-ThinCats – Australia
-ThinCats – Smart Business
-ThinCats – Marketplace
-ThinCats – Borrowing
-ThinCats – Investing
+last item:
+The hint of yellow and blue (within the summary page) looks good. Wouldn’t mind seeing these colour combos – in the same proportion - in the other tabs ‘resources’, ‘investor portal’ etc. i.e. outlines, heading etc.
 
 todo:
+homepage content - match to footer size, text stretching is too hard to read (like bootstrap container)
 resources page - download links!
 cloudfront caching?
 back button should trigger the back of the app as well
 parse hashlinks to go to the correct place
 faq links need to be working
 unscrew mobile view
-FAQ needs to be its own section
+FAQ needs to be its own section?
 concrete external link
 
 non critical for delivery:

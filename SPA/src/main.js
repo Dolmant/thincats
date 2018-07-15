@@ -4,13 +4,13 @@ import {hydrate} from "react-dom"
 import {render as RenderSnapShot} from "react-snapshot"
 import {MuiThemeProvider, createMuiTheme, createGenerateClassName} from "@material-ui/core/styles"
 import {Provider} from "mobx-react"
+import Store from "store"
+import {SheetsRegistry} from "react-jss/lib/jss"
+import JssProvider from "react-jss/lib/JssProvider"
 // Imports the global 'docReady'
 import "./util/docReady"
 import PageRouter from "./pages/pageRouter"
-import Store from "store"
 import "./main.less"
-import {SheetsRegistry} from "react-jss/lib/jss"
-import JssProvider from "react-jss/lib/JssProvider"
 
 declare var docReady;
 

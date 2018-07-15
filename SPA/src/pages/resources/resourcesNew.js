@@ -202,7 +202,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                     investorSelector
                     selectionChild={mobileButton}
                 />
-                <Grid container spacing="12">
+                <Grid container>
                     <Grid item xs={12} md={2}>
                         {responsiveDrawers()}
                     </Grid>
