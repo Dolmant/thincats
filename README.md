@@ -19,9 +19,6 @@ use https
 
 james:
 
-reply with:
-I tried using the logo and keeping the intro animation with white, but it was very difficult to see. I experimented a bit and ended up going with the same font as the logo for the center page text to help make the difference less obvious
-
 last item:
 The hint of yellow and blue (within the summary page) looks good. Wouldn’t mind seeing these colour combos – in the same proportion - in the other tabs ‘resources’, ‘investor portal’ etc. i.e. outlines, heading etc.
 

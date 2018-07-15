@@ -155,6 +155,6 @@ func Init() {
 	router.StaticFile("/resources", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"resources.html")
 	router.StaticFile("/", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
 
-	router.Run("127.0.0.1:8079")
+	router.Run("0.0.0.0:8079")
 	fmt.Println("serving")
 }
