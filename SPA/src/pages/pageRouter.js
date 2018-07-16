@@ -6,6 +6,7 @@ import React from "react"
 import Home from "pages/home/home"
 import Resources from "pages/resources/resourcesNew"
 import Footer from "components/generic/footer/footer"
+import LinearProgress from "@material-ui/core/LinearProgress";
 import type {StoreType} from "types"
 import {InjectedComponent} from "store"
 
@@ -18,14 +19,18 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class PageRouter extends InjectedComponent<Props, InjectedProps> {
-    // Remove the server-side injected CSS.
     componentDidMount() {
         const jssStyles = document.getElementById("jss-server-side")
         if (jssStyles && jssStyles.parentNode) {
             jssStyles.parentNode.removeChild(jssStyles)
         }
     }
+
     route() {
+        const {progressLoading} = this.props.store
+        const Header = progressLoading < 100 ? () => (
+            <LinearProgress className="progressBar" variant="determinate" value={progressLoading} />
+        ) : () => null
         // Route based on URL
         switch (true) {
         default:
@@ -39,6 +44,7 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 >
                     <div>
                         <div className="clipper" />
+                        <Header />
                         <Home />
                         <Footer />
                     </div>
@@ -54,6 +60,7 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
                 >
                     <div>
                         <div className="clipper" />
+                        <Header />
                         <Resources />
                         <Footer />
                     </div>
@@ -61,6 +68,7 @@ export default class PageRouter extends InjectedComponent<Props, InjectedProps> 
             )
         }
     }
+
     render() {
         return (
             <TransitionGroup>

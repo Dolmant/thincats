@@ -105,6 +105,9 @@
     font-size: 1rem;
     box-shadow: inset 0 51px 140px 3px rgba(0,0,0,.2);
     max-width: 100vw;
+    .containerized {
+        max-width: 960px;
+    }
 
     .tickerText {
         white-space: nowrap;
@@ -209,6 +212,10 @@
             .sellerText {
                 margin-top: 10em;
                 font-size: 1.2em;
+                p {
+                    display: inline-block;
+                    border-bottom: #2196f3 solid 2px;
+                }
             }
 
             .buttonContainer {
@@ -235,13 +242,12 @@
     
                 button {
                     font-size: 2em;
+                    border: none;
                     background-color: #ffcc00;
                     color: black;
                     padding: 1em;
                     margin-top: 2em;
                     font-weight: 500;
-                    border-width: 2px;
-                    border-color: #ffcc00;
     
                     display: inline-block;
                     position: relative;

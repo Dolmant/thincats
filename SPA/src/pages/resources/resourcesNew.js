@@ -91,6 +91,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 SubHeader(subHeaderKey, mainHeaderKey, subIndex)
             ))))
     }
+
     renderResourceContent = () => {
         const {mainHeader, subHeader} = this.state
 
@@ -148,9 +149,9 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
         // </Hidden>,
         const baseDrawer = () => ([
             <div>{this.props.store.investor ?
-                <h2 className="resourceTitle">{"Thincats Resources"}</h2>
+                <h1 className="resourceTitle">{"Thincats Resources"}</h1>
                 :
-                <h2 className="resourceTitle">{"Thincats Resources"}</h2>
+                <h1 className="resourceTitle">{"Thincats Resources"}</h1>
             }</div>,
             <List className="paddingTop1">
                 {this.renderResourceMenu()}

@@ -43,7 +43,9 @@ docReady(() => {
                 <Provider store={Store}>
                     <MuiThemeProvider theme={theme}>
                         <PageRouter />
-                        <a className="prerenderer" href="/resources.html">Invisible link for prerenderer</a>
+                        <a className="prerenderer" href="/resources.html">
+                            {"Invisible link for prerenderer"}
+                        </a>
                     </MuiThemeProvider>
                 </Provider>
             </JssProvider>
@@ -57,5 +59,11 @@ docReady(() => {
                 appElement,
                 appTarget)
         }
+        window.popstate = () => {
+            Store.replaceURL(window.location.pathname)
+        }
+        window.addEventListener("popstate", () => {
+            Store.replaceURL(window.location.pathname)
+        })
     }
 })

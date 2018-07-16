@@ -70,6 +70,7 @@ module.exports = {
         extractLess,
         new WebpackBundleSizeAnalyzerPlugin("./plain-report.txt"),
         new CopyWebpackPlugin([{from: "index.html", to: path.resolve(__dirname, "./dist")}]),
+        new CopyWebpackPlugin([{from: "manifest.webmanifest", to: path.resolve(__dirname, "./dist")}]),
         new CopyWebpackPlugin([{from: "index.html", toType: "file", to: path.resolve(__dirname, "./dist/resources.html")}]),
         new CleanWebpackPlugin(["dist"]),
     ],

@@ -61,11 +61,9 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
 
         const offset = 10
 
-        const offsetWidth = 20
-
-        const $text = document.querySelector("#innerText")
-        const textWidth = $text.clientWidth
-        const textHeight = $text.clientHeight
+        const $text = document.querySelector("#innerText") || {}
+        const textWidth = $text.clientWidth || 0
+        const textHeight = $text.clientHeight || 0
 
         let t = 0
         let r = w
@@ -76,19 +74,19 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
             TweenLite.set($black, {clip: `rect(${[0, w, h, 0].join()})`})
             if (window.tl) window.tl.stop()
             window.tl = new TimelineLite()
-            l = (w / 2) - (textWidth / 2) - (offset - offsetWidth)
+            l = (w / 2) - (textWidth / 2) - offset
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`}, 0.5)
             b = (h / 2.5) + offset // + (textHeight / 2) not required as bottom already offset by second line of text
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
-            r = (w / 2) + (textWidth / 2) + (offset + offsetWidth)
+            r = (w / 2) + (textWidth / 2) + (offset)
             window.tl.to($black, 0.25, {clip: `rect(${[t, r, b, l].join()})`})
             t = (h / 2.5) - (textHeight) - offset
             window.tl.to($black, 1.75, {clip: `rect(${[t, r, b, l].join()})`, ease: Elastic.easeOut})
             this.props.store.playOnce()
         } else {
-            l = (w / 2) - (textWidth / 2) - (offset - offsetWidth)
+            l = (w / 2) - (textWidth / 2) - offset
             b = (h / 2.5) + offset
-            r = (w / 2) + (textWidth / 2) + offset + offsetWidth
+            r = (w / 2) + (textWidth / 2) + offset
             t = (h / 2.5) - (textHeight) - offset
             $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
         }
@@ -149,11 +147,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
         const translateLeft = this.state.user === 2
 
         const defaultContent = "25%"
-        const investorContent = this.state.user === 2 || this.state.user === 1 ? "50%" : defaultContent
-        const borrowerContent = this.state.user === 1 || this.state.user === 2 ? "50%" : defaultContent
-        const defaultXS = this.state.user === 0 ? 6 : 0
-        const investorXS = this.state.user === 1 || this.state.user === 2 ? 12 : defaultXS
-        const borrowerXS = this.state.user === 1 || this.state.user === 2 ? 12 : defaultXS
+        const expandedContent = this.state.user > 0 ? "50%" : defaultContent
 
         const settings = {
             dots: false,
@@ -186,7 +180,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             <div className="slogan">
                                 <Slider {...settings}>
                                     <div className="tickerText">
-                                        {"Smart Business"}
+                                        {"Smart"}
                                     </div>
                                     <div className="tickerText">
                                         {"Australia"}
@@ -258,239 +252,247 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                     </div>
                 </Grid>
                 <Grid container direction="row" className={translateLeft ? "page3 translateLeft" : "page3"}>
-                    <Grid item xs={borrowerXS} style={{flexBasis: borrowerContent}} className="patternBackground">
-                        <Grid container className="padding2em" alignItems="center" direction="column">
-                            <Grid item xs={12}>
-                                <div className="light topIcon">
-                                    <SVGInline className="fillWhite light" svg={Light}></SVGInline>
-                                </div>
-                                <div className="page3Title">
-                                    {"Why "}
-                                    <p className="bold">
-                                        {"ThinCats"}
-                                    </p>
-                                    {" is right for "}
-                                    <p className="bold">
-                                        {"growing businesses"}
-                                    </p>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid className="page3Block " item xs={6}>
-                                        {/* Block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Shoot}></SVGInline>
+                    <Grid item style={{flexBasis: expandedContent}} className="patternBackground">
+                        <Grid container justify="center">
+                            <Grid className="containerized" item>
+                                <Grid container className="padding2em" alignItems="center" direction="column">
+                                    <Grid item xs={12}>
+                                        <div className="light topIcon">
+                                            <SVGInline className="fillWhite light" svg={Light}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">
-                                            {"Never miss an opportunity"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Get funding for stock, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}
+                                        <div className="page3Title">
+                                            {"Why "}
+                                            <p className="bold">
+                                                {"ThinCats"}
+                                            </p>
+                                            {" is right for "}
+                                            <p className="bold">
+                                                {"growing businesses"}
+                                            </p>
                                         </div>
                                     </Grid>
-                                    <Grid item className="page3Block " xs={6}>
-                                        {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Man}></SVGInline>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid className="page3Block " item xs={6}>
+                                                {/* Block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Shoot}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Never miss an opportunity"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Get funding for stock, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block " xs={6}>
+                                                {/* block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Man}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Real lenders, not institutions"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Loan applications are assessed by our community of hundred of investors based on business potential and cash flow performance."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid item className="page3Block " xs={6}>
+                                                {/* block */}
+                                                <div className="time">
+                                                    <SVGInline className="time" svg={Time}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Apply fast"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Completely online process where you'll know your eligibility within 48 hours."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block " xs={6}>
+                                                {/* block */}
+                                                <div className="lock">
+                                                    <SVGInline className="lock" svg={Lock}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Unrestricted usage"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Our loans are general purpose and finance for the long term so that you can spend on anything that will grow your business."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid item className="page3Block " xs={6}>
+                                                {/* block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Chart}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Build your business case"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Shortcut having to learn the nuances of cash flow finance by leaning on our dedicated support team to help you prepare your loan application."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block " xs={6}>
+                                                {/* block */}
+                                                <div className="medal">
+                                                    <SVGInline className="medal" svg={Medal}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Fair funding, guaranteed"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Our loans are 100% transparent with interest rates and borrowing fees that are fair and lower than any other alternative non-bank financier."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item className="endText" xs={12}>
+                                        <div className="">
+                                            {"If you are ready to fuel your growth, apply for a loan at"}
                                         </div>
-                                        <div className="page3Heading">
-                                            {"Real lenders, not institutions"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Loan applications are assessed by our community of hundred of investors based on business potential and cash flow performance."}
-                                        </div>
+                                        <a href="www.thincats.com.au">
+                                            {"www.thincats.com.au"}
+                                        </a>
+                                        <Button
+                                            variant="raised"
+                                            color="primary"
+                                            onClick={() => { this.props.store.navResources() }}
+                                        >
+                                            {"FAQ"}
+                                        </Button>
                                     </Grid>
                                 </Grid>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid item className="page3Block " xs={6}>
-                                        {/* block */}
-                                        <div className="time">
-                                            <SVGInline className="time" svg={Time}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Apply fast"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Completely online process where you'll know your eligibility within 48 hours."}
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page3Block " xs={6}>
-                                        {/* block */}
-                                        <div className="lock">
-                                            <SVGInline className="lock" svg={Lock}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Unrestricted usage"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Our loans are general purpose and finance for the long term so that you can spend on anything that will grow your business."}
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid item className="page3Block " xs={6}>
-                                        {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Chart}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Build your business case"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Shortcut having to learn the nuances of cash flow finance by leaning on our dedicated support team to help you prepare your loan application."}
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page3Block " xs={6}>
-                                        {/* block */}
-                                        <div className="medal">
-                                            <SVGInline className="medal" svg={Medal}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Fair funding, guaranteed"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Our loans are 100% transparent with interest rates and borrowing fees that are fair and lower than any other alternative non-bank financier."}
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item className="endText" xs={12}>
-                                <div className="">
-                                    {"If you are ready to fuel your growth, apply for a loan at"}
-                                </div>
-                                <a href="www.thincats.com.au">
-                                    {"www.thincats.com.au"}
-                                </a>
-                                <Button
-                                    variant="raised"
-                                    color="primary"
-                                    onClick={() => { this.props.store.navResources() }}
-                                >
-                                    {"FAQ"}
-                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={investorXS} style={{flexBasis: investorContent}} className="whiteBackground">
-                        <Grid container className="padding2em" alignItems="center" direction="column">
-                            <Grid item xs={12}>
-                                <div className="light fillBlack topIcon">
-                                    <SVGInline className="light fillBlack" svg={PeopleCash}></SVGInline>
-                                </div>
-                                <div className="page3Title">
-                                    {"Why "}
-                                    <p className="bold">
-                                        {"ThinCats"}
-                                    </p>
-                                    {" is right for "}
-                                    <p className="bold">
-                                        {"smart investors"}
-                                    </p>
-                                </div>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid className="page3Block" item xs={6}>
-                                        {/* Block */}
-                                        <div className="plant">
-                                            <SVGInline className="plant" svg={Plant}></SVGInline>
+                    <Grid item style={{flexBasis: expandedContent}} className="whiteBackground">
+                        <Grid container justify="center">
+                            <Grid className="containerized" item>
+                                <Grid container className="padding2em" alignItems="center" direction="column">
+                                    <Grid item xs={12}>
+                                        <div className="light fillBlack topIcon">
+                                            <SVGInline className="light fillBlack" svg={PeopleCash}></SVGInline>
                                         </div>
-                                        <div className="page3Heading">
-                                            {"Better than cash"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Your cash should be working hard for you. That's why we offer an average gross annual interest rate of 14%, with monthly repayments."}
+                                        <div className="page3Title">
+                                            {"Why "}
+                                            <p className="bold">
+                                                {"ThinCats"}
+                                            </p>
+                                            {" is right for "}
+                                            <p className="bold">
+                                                {"smart investors"}
+                                            </p>
                                         </div>
                                     </Grid>
-                                    <Grid item className="page3Block" xs={6}>
-                                        {/* block */}
-                                        <div className="wallet">
-                                            <SVGInline className="wallet" svg={Wallet}></SVGInline>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid className="page3Block" item xs={6}>
+                                                {/* Block */}
+                                                <div className="plant">
+                                                    <SVGInline className="plant" svg={Plant}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Better than cash"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Your cash should be working hard for you. That's why we offer an average gross annual interest rate of 14%, with monthly repayments."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block" xs={6}>
+                                                {/* block */}
+                                                <div className="wallet">
+                                                    <SVGInline className="wallet" svg={Wallet}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Low maintenance"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Our loan terms range from 2-5 years so you can maximise your returns while minimising the time spend watching your investments."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid item className="page3Block" xs={6}>
+                                                {/* block */}
+                                                <div className="magGlass">
+                                                    <SVGInline className="magGlass" svg={MagGlass}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Due diligence, done for you"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Our dedicated team of lending specialists assess each loan application using leading-edge technology matched with human intelligence, rather than algorithms that don't understand context."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block" xs={6}>
+                                                {/* block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Shield}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Downside defended"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"Every investment opportunity is backed by a registered charge over business assets and in most instances second mortgages over real property. We use a separate nominee company to make loans and hold client monies, so your funds are safe."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item xs={12} className="page3Row">
+                                        <Grid container className="" direction="row">
+                                            <Grid item className="page3Block" xs={6}>
+                                                {/* block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Bag}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Experience where it matters"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"We're a passionate team of ex-bankers and lending specialists."}
+                                                </div>
+                                            </Grid>
+                                            <Grid item className="page3Block" xs={6}>
+                                                {/* block */}
+                                                <div className="light">
+                                                    <SVGInline className="light" svg={Book}></SVGInline>
+                                                </div>
+                                                <div className="page3Heading">
+                                                    {"Know your investments"}
+                                                </div>
+                                                <div className="page3Content">
+                                                    {"We let you know who and what you're investing in. And with a single market view of all available loans you can choose where your money goes."}
+                                                </div>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item className="endText" xs={12}>
+                                        <div className="">
+                                            {"If you are ready to start making smart investments in good companies, register as an investor at"}
                                         </div>
-                                        <div className="page3Heading">
-                                            {"Low maintenance"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Our loan terms range from 2-5 years so you can maximise your returns while minimising the time spend watching your investments."}
-                                        </div>
+                                        <a href="/">
+                                            {"thincats.com.au/register"}
+                                        </a>
+                                        <Button
+                                            variant="raised"
+                                            color="primary"
+                                            onClick={() => { this.props.store.navResources() }}
+                                        >
+                                            {"FAQ"}
+                                        </Button>
                                     </Grid>
                                 </Grid>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid item className="page3Block" xs={6}>
-                                        {/* block */}
-                                        <div className="magGlass">
-                                            <SVGInline className="magGlass" svg={MagGlass}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Due diligence, done for you"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Our dedicated team of lending specialists assess each loan application using leading-edge technology matched with human intelligence, rather than algorithms that don't understand context."}
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page3Block" xs={6}>
-                                        {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Shield}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Downside defended"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"Every investment opportunity is backed by a registered charge over business assets and in most instances second mortgages over real property. We use a separate nominee company to make loans and hold client monies, so your funds are safe."}
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item xs={12} className="page3Row">
-                                <Grid container className="" direction="row">
-                                    <Grid item className="page3Block" xs={6}>
-                                        {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Bag}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Experience where it matters"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"We're a passionate team of ex-bankers and lending specialists."}
-                                        </div>
-                                    </Grid>
-                                    <Grid item className="page3Block" xs={6}>
-                                        {/* block */}
-                                        <div className="light">
-                                            <SVGInline className="light" svg={Book}></SVGInline>
-                                        </div>
-                                        <div className="page3Heading">
-                                            {"Know your investments"}
-                                        </div>
-                                        <div className="page3Content">
-                                            {"We let you know who and what you're investing in. And with a single market view of all available loans you can choose where your money goes."}
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                            <Grid item className="endText" xs={12}>
-                                <div className="">
-                                    {"If you are ready to start making smart investments in good companies, register as an investor at"}
-                                </div>
-                                <a href="/">
-                                    {"thincats.com.au/register"}
-                                </a>
-                                <Button
-                                    variant="raised"
-                                    color="primary"
-                                    onClick={() => { this.props.store.navResources() }}
-                                >
-                                    {"FAQ"}
-                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>
