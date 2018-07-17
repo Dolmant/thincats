@@ -14,10 +14,9 @@ use http2
 use https
 
 james:
-
-last item:
-The hint of yellow and blue (within the summary page) looks good. Wouldn’t mind seeing these colour combos – in the same proportion - in the other tabs ‘resources’, ‘investor portal’ etc. i.e. outlines, heading etc.
-remove clipping of text on homepage 
+The logos still look different, but it’s a lot close to matching then it previously was. Are you having to recreate it yourself, hence the minor differences? – if you require a black logo w/ white writing, I could recreate one in GIMP?
+Rolling banner looks great, but again the sub-heading  is different to the ‘Australia’ in the actual ‘ThinCats – Australia’ logo.
+FAQ button directs to the ‘how it works’ page. We don’t have a FAQ section for our borrowing side, so maybe the button should read ‘learn more’ and have it direct to its respective page in resources. And for consistency have the same button on the lending side.
 
 todo:
 resources page - download links!
