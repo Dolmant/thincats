@@ -14,6 +14,7 @@ use http2
 use https
 
 todo:
+fix weird drop (text drops on deployed version)
 resources page - download links!
 unscrew mobile view
 
