@@ -63,7 +63,7 @@ class Store {
             this.timer = 0
         }
         this.progressLoading = 0
-        setInterval(this.progress, 150)
+        this.timer = setInterval(this.progress, 150)
     }
 
     @action
