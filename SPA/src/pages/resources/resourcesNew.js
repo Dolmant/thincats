@@ -42,6 +42,17 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
         subHeaderViewed: [""],
     }
 
+    componentDidMount() {
+        window.scrollTo({
+            left: 0,
+            top: 0,
+            behavior: "smooth",
+        })
+        if (window.location.hash) {
+            this.setState({mainHeader: decodeURIComponent(window.location.hash.slice(1))})
+        }
+    }
+
     renderResourceMenu = () => {
         // build these components
         const MainHeader = (name, index, children) => (
@@ -102,57 +113,21 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </div>
         )
 
-        if (resourcesContent[mainHeader] && resourcesContent[mainHeader][subHeader]) {
-            return (
-                <HeaderWrap mainHead={mainHeader} subHead={subHeader}>
-                    {Object.keys(resourcesContent[mainHeader]).map(key => resourcesContent[mainHeader][key])}
-                </HeaderWrap>
-            )
-        }
-        const mainHeaderTemp = Object.keys(resourcesContent)[0]
+        const mainHeaderValidated = resourcesContent[mainHeader] ? mainHeader : Object.keys(resourcesContent)[0]
+        const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
+
         return (
-            <HeaderWrap mainHead={mainHeaderTemp} subHead={Object.keys(resourcesContent[mainHeaderTemp])[0]}>
-                {Object.keys(resourcesContent[mainHeaderTemp]).map(key => resourcesContent[mainHeaderTemp][key])}
+            <HeaderWrap mainHead={mainHeaderValidated} subHead={subHeaderValidated}>
+                {Object.keys(resourcesContent[mainHeaderValidated]).map(key => resourcesContent[mainHeaderValidated][key])}
             </HeaderWrap>
         )
     }
 
     render() {
-        // const borrowerClasses = classNames({
-        //     borrower: true,
-        //     selected: !this.props.store.investor,
-        // })
-
-        // const investorClasses = classNames({
-        //     investor: true,
-        //     selected: this.props.store.investor,
-        // })
-
-        // <Hidden mdUp>
-        //     <div className="switcherContainer">
-        //         <Switch
-        //             checked={this.props.store.investor}
-        //             className="switcher"
-        //             onChange={() => this.props.store.toggleInvestor()}
-        //             value="checkedA"
-        //             // color="primary"
-        //         />
-        //         <Grid container>
-        //             <Grid item xs={6}>
-        //                 <Paper className={borrowerClasses}>{"Borrower"}</Paper>
-        //             </Grid>
-        //             <Grid item xs={6}>
-        //                 <Paper className={investorClasses}>{"Investor"}</Paper>
-        //             </Grid>
-        //         </Grid>
-        //     </div>
-        // </Hidden>,
         const baseDrawer = () => ([
-            <div>{this.props.store.investor ?
+            <div>
                 <h1 className="resourceTitle">{"Thincats Resources"}</h1>
-                :
-                <h1 className="resourceTitle">{"Thincats Resources"}</h1>
-            }</div>,
+            </div>,
             <List className="paddingTop1">
                 {this.renderResourceMenu()}
             </List>

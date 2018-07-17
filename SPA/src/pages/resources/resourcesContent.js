@@ -8,8 +8,8 @@ export default {
     "How it works": {
         "Loan Application": (
             <div id="loan_application" className="subHeading">
-                <h2>Loan Application</h2>
-                <p>SMEs apply for loans up to $2m either directly via the TCA platform or through Sponsors/Introducers.</p>
+                <h2>{"Loan Application"}</h2>
+                <p>{"SMEs apply for loans up to $2m either directly via the TCA platform or through Sponsors/Introducers."}</p>
             </div>
         ),
         "Auction Listing": (
@@ -47,7 +47,7 @@ export default {
         "Overview": (
             <div id="overview" className="subHeading">
                 <h2>Overview</h2>
-                <p>ThinCats Australia helps companies raise loans ranging from <strong>$50k</strong> to <strong>$300k</strong>. Borrowers can apply for loans directly through ThinCats Australia or through our network of <a href="#sponsors-introducers" target="_blank" rel="noopener noreferrer">Sponsors and Introducers</a>.</p>
+                <p>ThinCats Australia helps companies raise loans ranging from <strong>$50k</strong> to <strong>$300k</strong>. Borrowers can apply for loans directly through ThinCats Australia or through our network of <a href="#sponsors-introducers">Sponsors and Introducers</a>.</p>
                 <p>Our Credit team reviews loan applications and supporting documentation, assesses the security on offer and helps the borrower to prepare an information pack to be presented to lenders on the platform. We answer questions from lenders during the loan auction and monitor the loan after it has been completed.</p>
                 <h2>What does the platform offer?</h2>
                 <p>The Platform allows business loans ranging from <strong>$50k</strong> to <strong>$300k</strong> repayable in fixed monthly instalments over periods ranging from 2 to 5 years at competitive rates. The amount of the fixed monthly repayments depends upon the amount borrowed, the rate of interest and the loan period.</p>
@@ -104,7 +104,8 @@ export default {
                 <h2>Who can be a member?</h2>
                 <p>Wholesale investors, including qualifying sophisticated investors, professional investors, high-net-worth investors and trustees of self-managed superannuation funds, can be members of the ThinCats Australia platform.</p>
                 <p>To be considered a ‘wholesale investor’ the Australian Corporations Act and Regulations requires an investor to have:<br />
-1) aggregate net assets of at least $2.5 million; OR 2) aggregate gross income for each of the last two financial years of at least $250,000 a year.</p>
+                    {"1) aggregate net assets of at least $2.5 million; OR 2) aggregate gross income for each of the last two financial years of at least $250,000 a year."}
+                </p>
                 <p>Overseas residents who meet the above criteria can also be members of the platform.</p>
                 <p><a title="Register" href="/" rel="noopener noreferrer" target="_blank">Register</a> and review the current loans on our platform.</p>
             </div>
@@ -166,7 +167,8 @@ export default {
                     3) Default – the earlier of any of the following:<br />
                     (i) a repayment is overdue 90+ days;<br />
                     (ii) the Company is in External Administration/Receiver Manager appointed;<br />
-                    (iii) Director/Guarantor is declared bankrupt.</p>
+                    (iii) Director/Guarantor is declared bankrupt.
+                    </p>
                     <p>The nature and extent of the delay in repayment will determine aspects such as reporting, default amount, recovery prospects and further actions.</p>
                     <p>Due to the small size of the ThinCats Australia loan portfolio, we currently do not publish loan default rates. For information on ThinCats UK loan default rates click <a href="/investors/statistics/" rel="noopener noreferrer" target="_blank">here</a>.</p>
                     <h3>What do you do to recover the funds?</h3>
@@ -321,7 +323,8 @@ export default {
                             <col width="70" />
                             <col width="80" />
                             <col width="81" />
-                            <col width="91" /></colgroup>
+                            <col width="91" />
+                        </colgroup>
                         <tbody>
                             <tr>
                                 <td className="xl544" style={{textAlign: "left"}} width="236" height="17">
@@ -331,7 +334,8 @@ export default {
                                             <col width="70" />
                                             <col width="80" />
                                             <col width="81" />
-                                            <col width="91" /></colgroup>
+                                            <col width="91" />
+                                        </colgroup>
                                         <tbody>
                                             <tr>
                                                 <td className="xl544" width="236" height="17"><strong>Business Type</strong></td>
@@ -445,7 +449,8 @@ export default {
                             <col width="70" />
                             <col width="56" />
                             <col width="36" />
-                            <col width="59" /></colgroup>
+                            <col width="59" />
+                        </colgroup>
                         <tbody>
                             <tr>
                                 <td className="xl541" width="200" height="16"><strong>Industry</strong></td>
@@ -604,7 +609,8 @@ export default {
                         </tbody>
                     </table>
                     <p>*:  All loans to date (except for 2 loans) are monthly principal &amp; interest repayment loans<br />
-                    **: Gross returns before fees, taxes and potential losses on loans</p>
+                    **: Gross returns before fees, taxes and potential losses on loans
+                    </p>
                     <p><span>Data as at 30 April 2018</span></p>
                 </div>
             </div>
@@ -668,7 +674,8 @@ export default {
                 <h2>General Questions</h2>
                 <p>If you have a general question please send an email to <a href="mailto:info@thincats.com.au">info@thincats.com.au</a>.</p>
                 <p>
-                To speak to a team member, please call <strong>1300 325 342</strong></p>
+                    To speak to a team member, please call <strong>1300 325 342</strong>
+                </p>
                 <p><strong>ThinCats Australia, Level 2, 222 Pitt Street, Sydney 2000</strong></p>
             </div>
         ),

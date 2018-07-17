@@ -10,6 +10,8 @@
         "window": true
     },
     "rules": {
+        "react/jsx-curly-brace-presence": ["off"],
+        "react/jsx-one-expression-per-line": ["off"],
         "flowtype/define-flow-type": 1,
         "flowtype/use-flow-type": 1,
         "class-methods-use-this": ["off"],

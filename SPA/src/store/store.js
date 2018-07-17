@@ -122,9 +122,16 @@ class Store {
     }
 
     @action
-    navFAQ = () => {
-        this.URL = "/faq"
-        window.history.pushState({}, "FAQ", this.URL)
+    navResourcesBorrower = () => {
+        this.URL = "/resources#About Borrowing"
+        window.history.pushState({}, "Resources", this.URL)
+        this.resetProgress()
+    }
+
+    @action
+    navResourcesLender = () => {
+        this.URL = "/resources#About Lending"
+        window.history.pushState({}, "Resources", this.URL)
         this.resetProgress()
     }
 }

@@ -172,8 +172,10 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         <div className="logo" />
                         <div id="text">
                             <div id="innerText">
-                                {"Thin"}
-                                <p className="bold">
+                                <span className="dandy">
+                                    {"Thin"}
+                                </span>
+                                <p className="cats">
                                     {"Cats"}
                                 </p>
                             </div>
@@ -365,9 +367,9 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         <Button
                                             variant="raised"
                                             color="primary"
-                                            onClick={() => { this.props.store.navResources() }}
+                                            onClick={() => { this.props.store.navResourcesBorrower() }}
                                         >
-                                            {"FAQ"}
+                                            {"Learn More"}
                                         </Button>
                                     </Grid>
                                 </Grid>
@@ -487,9 +489,9 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         <Button
                                             variant="raised"
                                             color="primary"
-                                            onClick={() => { this.props.store.navResources() }}
+                                            onClick={() => { this.props.store.navResourcesLender() }}
                                         >
-                                            {"FAQ"}
+                                            {"Learn More"}
                                         </Button>
                                     </Grid>
                                 </Grid>

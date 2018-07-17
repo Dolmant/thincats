@@ -13,17 +13,9 @@ text too small on mobile
 use http2
 use https
 
-james:
-The logos still look different, but it’s a lot close to matching then it previously was. Are you having to recreate it yourself, hence the minor differences? – if you require a black logo w/ white writing, I could recreate one in GIMP?
-Rolling banner looks great, but again the sub-heading  is different to the ‘Australia’ in the actual ‘ThinCats – Australia’ logo.
-FAQ button directs to the ‘how it works’ page. We don’t have a FAQ section for our borrowing side, so maybe the button should read ‘learn more’ and have it direct to its respective page in resources. And for consistency have the same button on the lending side.
-
 todo:
 resources page - download links!
-parse hashlinks to go to the correct place
-faq links need to be working
 unscrew mobile view
-FAQ needs to be its own section?
 
 non critical for delivery:
 cloudfront caching?
