@@ -14,7 +14,7 @@ module.exports = {
     entry: path.resolve(__dirname, "./src/main.js"),
     output: {
         filename: "bundled.[contenthash].js",
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "dist/static"),
     },
     module: {
         rules: [
@@ -81,18 +81,18 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin(["dist"]),
         extractLess,
         new WebpackBundleSizeAnalyzerPlugin("./plain-report.txt"),
         new HtmlWebpackPlugin({
             template: "src/templates/index-template.html",
-            filename: "index.html",
+            filename: "./../index.html",
         }),
         new HtmlWebpackPlugin({
             template: "src/templates/index-template.html",
-            filename: "resources.html",
+            filename: "./../resources.html",
         }),
         new CopyWebpackPlugin([{from: "manifest.webmanifest", to: path.resolve(__dirname, "./dist")}]),
-        new CleanWebpackPlugin(["dist"]),
     ],
     resolve: {
         extensions: [".js", ".less", "scss", ".svg"],
