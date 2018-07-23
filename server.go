@@ -150,7 +150,7 @@ func Init() {
 		})
 	})
 	router.GET("/posts", postsHandler(ctx, client))
-	router.StaticFS("/bundles", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"bundles"))
+	router.StaticFS("/", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"))
 	router.StaticFS("/assets", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"assets"))
 	router.StaticFile("/manifest.webmanifest", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"manifest.webmanifest")
 	router.StaticFile("/resources", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"resources.html")

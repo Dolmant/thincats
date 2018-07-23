@@ -1,13 +1,8 @@
 const merge = require("webpack-merge")
 const baseConfig = require("./webpack.base.config")
-const path = require("path")
 
 module.exports = merge(baseConfig, {
     devtool: "inline-source-map",
-    output: {
-        filename: "bundled.js",
-        path: path.resolve(__dirname, "dist/bundles"),
-    },
     devServer: {
         inline: true,
         port: "3001",

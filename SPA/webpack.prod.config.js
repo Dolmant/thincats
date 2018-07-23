@@ -1,13 +1,8 @@
 const merge = require("webpack-merge")
-const baseConfig = require("./webpack.base.config")
-const path = require("path")
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
+const baseConfig = require("./webpack.base.config")
 
 module.exports = merge(baseConfig, {
-    output: {
-        filename: "bundled.js",
-        path: path.resolve(__dirname, "dist/bundles"),
-    },
     mode: "production",
     optimization: {
         minimizer: [new UglifyJsPlugin({sourceMap: false})],
