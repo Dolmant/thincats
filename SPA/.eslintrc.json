@@ -10,6 +10,7 @@
         "window": true
     },
     "rules": {
+        "jsx-a11y/click-events-have-key-events": ["off"],
         "react/jsx-curly-brace-presence": ["off"],
         "react/jsx-one-expression-per-line": ["off"],
         "flowtype/define-flow-type": 1,
@@ -25,6 +26,7 @@
         "max-len": ["off"],
         "indent": ["error", 4],
         "react/prefer-stateless-function": ["off"],
+        "react/no-this-in-sfc": ["off"],
         "quote-props": ["off"],
         "semi": ["error", "never"],
         "no-mixed-spaces-and-tabs": ["error"],

@@ -53,11 +53,13 @@ docReady(() => {
         if (appTarget.hasChildNodes()) {
             hydrate(
                 appElement,
-                appTarget)
+                appTarget,
+            )
         } else {
             RenderSnapShot(
                 appElement,
-                appTarget)
+                appTarget,
+            )
         }
         window.popstate = () => {
             Store.replaceURL(window.location.pathname)

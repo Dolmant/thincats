@@ -60,7 +60,7 @@ class Store {
     resetProgress = () => {
         if (this.timer) {
             clearInterval(this.timer)
-            this.timer = 0
+            this.timer = null
         }
         this.progressLoading = 0
         this.timer = setInterval(this.progress, 150)

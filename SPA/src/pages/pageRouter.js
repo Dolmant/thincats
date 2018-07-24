@@ -6,7 +6,7 @@ import React from "react"
 import Home from "pages/home/home"
 import Resources from "pages/resources/resourcesNew"
 import Footer from "components/generic/footer/footer"
-import LinearProgress from "@material-ui/core/LinearProgress";
+import LinearProgress from "@material-ui/core/LinearProgress"
 import type {StoreType} from "types"
 import {InjectedComponent} from "store"
 

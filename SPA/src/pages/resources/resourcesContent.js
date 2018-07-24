@@ -3,7 +3,6 @@ import React from "react"
 
 // todo fix nav to load entire main page and auto tag the subheaders with an anchor
 // todo fix nav to work with variable content levels
-
 export default {
     "How it works": {
         "Loan Application": (

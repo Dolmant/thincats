@@ -12,10 +12,16 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
 import ListItem from "@material-ui/core/ListItem"
-import "./resources.less"
-import resourcesContent from "./resourcesContent"
 import type {StoreType} from "types"
 import {InjectedComponent} from "store"
+import "./resources.less"
+import resourcesContentImport from "./resourcesContent"
+
+type resourcesContentType = {
+    [string]: any,
+}
+
+const resourcesContent : resourcesContentType = resourcesContentImport
 
 type Props = {
 };
@@ -55,7 +61,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
 
     renderResourceMenu = () => {
         // build these components
-        const MainHeader = (name, index, children) => (
+        const MainHeader = (name: string, index: number, children: any) => (
             <ExpansionPanel className="noMargin">
                 <ExpansionPanelSummary>
                     <ListItem className="heading">
@@ -63,7 +69,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                             {`${name}`}
                         </div>
                     </ListItem>
-                </ExpansionPanelSummary >
+                </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <div>
                         {children}
@@ -72,7 +78,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </ExpansionPanel>
         )
         // Todo click should trigger navigation to the anchor
-        const SubHeader = (name, mainName, index) => (
+        const SubHeader = (name: string, mainName: string) => (
             <ListItem
                 className="subItem"
                 button
@@ -90,7 +96,7 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
                 }}
             >
                 <div>
-                    {`> ${name}` /* {`${index + 1}. ${name}`}*/}
+                    {`> ${name}` /* {`${index + 1}. ${name}`} */}
                 </div>
             </ListItem>
         )
@@ -98,15 +104,16 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
         return Object.entries(resourcesContent).map(([mainHeaderKey, mainHeaderValue], mainIndex) => MainHeader(
             mainHeaderKey,
             mainIndex,
-            Object.entries(mainHeaderValue).map(([subHeaderKey, content], subIndex) => (
-                SubHeader(subHeaderKey, mainHeaderKey, subIndex)
-            ))))
+            Object.entries(mainHeaderValue).map(([subHeaderKey]) => (
+                SubHeader(subHeaderKey, mainHeaderKey)
+            )),
+        ))
     }
 
     renderResourceContent = () => {
-        const {mainHeader, subHeader} = this.state
+        const {mainHeader} = this.state
 
-        const HeaderWrap = ({mainHead, subHead, children}) => (
+        const HeaderWrap = ({mainHead, children}) => (
             <div>
                 <h1>{mainHead}</h1>
                 {children}
@@ -114,10 +121,10 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
         )
 
         const mainHeaderValidated = resourcesContent[mainHeader] ? mainHeader : Object.keys(resourcesContent)[0]
-        const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
+        // const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
 
         return (
-            <HeaderWrap mainHead={mainHeaderValidated} subHead={subHeaderValidated}>
+            <HeaderWrap mainHead={mainHeaderValidated}>
                 {Object.keys(resourcesContent[mainHeaderValidated]).map(key => resourcesContent[mainHeaderValidated][key])}
             </HeaderWrap>
         )
@@ -130,45 +137,44 @@ export default class Resources extends InjectedComponent<Props, InjectedProps, S
             </div>,
             <List className="paddingTop1">
                 {this.renderResourceMenu()}
-            </List>
+            </List>,
         ])
 
-        const responsiveDrawers = () =>
-            ([
-                <Hidden mdUp>
-                    <Drawer
-                        variant="temporary"
-                        anchor="left"
-                        open={this.state.mobileOpen}
-                        onClose={() => this.setState({mobileOpen: false})}
-                        classes={{
-                            paper: "tempPaper",
-                        }}
-                        className="tempDrawer resourceNav"
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                    >
-                        {baseDrawer()}
-                    </Drawer>
-                </Hidden>,
-                <Hidden smDown implementation="css">
-                    <Drawer
-                        variant="permanent"
-                        open
-                        anchor="left"
-                        className="permDrawer resourceNav"
-                        classes={{
-                            paper: "permPaper",
-                        }}
-                    >
-                        {baseDrawer()}
-                    </Drawer>
-                </Hidden>
-            ])
+        const responsiveDrawers = () => ([
+            <Hidden mdUp>
+                <Drawer
+                    variant="temporary"
+                    anchor="left"
+                    open={this.state.mobileOpen}
+                    onClose={() => this.setState({mobileOpen: false})}
+                    classes={{
+                        paper: "tempPaper",
+                    }}
+                    className="tempDrawer resourceNav"
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                >
+                    {baseDrawer()}
+                </Drawer>
+            </Hidden>,
+            <Hidden smDown implementation="css">
+                <Drawer
+                    variant="permanent"
+                    open
+                    anchor="left"
+                    className="permDrawer resourceNav"
+                    classes={{
+                        paper: "permPaper",
+                    }}
+                >
+                    {baseDrawer()}
+                </Drawer>
+            </Hidden>,
+        ])
 
         const mobileButton = () => (
-            <Button onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})} variant="fab" color="primary" aria-label="add">
+            <Button onClick={() => this.setState(prevState => ({mobileOpen: !prevState.mobileOpen}))} variant="fab" color="primary" aria-label="add">
                 <Toc />
             </Button>
         )

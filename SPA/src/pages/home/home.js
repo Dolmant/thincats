@@ -116,32 +116,27 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
 
         const arrows = []
         for (let i = 0; i < 20; i += 1) {
-            let rand = randomNumbers[i][0]
-            arrows.push(
-                <div
-                    style={{
-                        left: `${(i * 5) - 2.5}vw`,
-                        maxHeight: `${50 + (0.5 * rand)}px`,
-                        animationDuration: `${7.5 + (0.025 * rand)}s`,
-                        animationIterationCount: "infinite",
-                    }}
-                    key={i}
-                    className="expandThickArrow leftArrow"
-                />
-            )
-            rand = randomNumbers[i][1]
-            arrows.push(
-                <div
-                    style={{
-                        left: `${i * 5}vw`,
-                        maxHeight: `${50 + (0.5 * rand)}px`,
-                        animationDuration: `${7.5 + (0.025 * rand)}s`,
-                        animationIterationCount: "infinite",
-                    }}
-                    key={i + 20}
-                    className="expandThickArrow rightArrow"
-                />
-            )
+            const [rand1, rand2] = randomNumbers[i]
+            arrows.push(<div
+                style={{
+                    left: `${(i * 5) - 2.5}vw`,
+                    maxHeight: `${50 + (0.5 * rand1)}px`,
+                    animationDuration: `${7.5 + (0.025 * rand1)}s`,
+                    animationIterationCount: "infinite",
+                }}
+                key={i}
+                className="expandThickArrow leftArrow"
+            />)
+            arrows.push(<div
+                style={{
+                    left: `${i * 5}vw`,
+                    maxHeight: `${50 + (0.5 * rand2)}px`,
+                    animationDuration: `${7.5 + (0.025 * rand2)}s`,
+                    animationIterationCount: "infinite",
+                }}
+                key={i + 20}
+                className="expandThickArrow rightArrow"
+            />)
         }
 
         const translateLeft = this.state.user === 2
