@@ -1,6 +1,6 @@
 [libs]
 [ignore]
-.*node_modules/fbjs.*
+.*node_modules/.*
 
 [options]
 module.name_mapper='.*\(.css\)' -> 'empty/object'
