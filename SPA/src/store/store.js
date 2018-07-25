@@ -18,7 +18,7 @@ export class InjectedComponent<Props, InjectedProps, State = void> extends React
 }
 
 class Store {
-    @observable timer = setInterval(this.progress, 150)
+    @observable timer = setInterval(this.progress, 75)
 
     @observable URL = URLGenerator()
 
