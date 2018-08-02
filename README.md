@@ -10,7 +10,7 @@ asia.gcr.io/firm-champion-204312/thincats
 docker tag 5f19d9e179e2 asia.gcr.io/firm-champion-204312/thincats:v1.1
 
 to deploy to pages:
-git subtree push --prefix dist origin gh-pages
+git subtree push --prefix spa/dist origin gh-pages
 
 text too small on mobile
 use http2
