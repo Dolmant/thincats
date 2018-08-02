@@ -2,15 +2,7 @@
 thincats-c1f1e998f5d9.json needs to be in this dir.
 
 deployment:
-docker build . --tag asia.gcr.io/firm-champion-204312/thincats:v1.1
-docker push asia.gcr.io/firm-champion-204312/thincats:v1.1
-gcloud beta compute instances update-container instance-1 --container-image asia.gcr.io/firm-champion-204312/thincats:v1.1
-
-asia.gcr.io/firm-champion-204312/thincats
-docker tag 5f19d9e179e2 asia.gcr.io/firm-champion-204312/thincats:v1.1
-
-to deploy to pages:
-git subtree push --prefix spa/dist origin gh-pages
+sh dockerBuild.sh {version}
 
 text too small on mobile
 use http2

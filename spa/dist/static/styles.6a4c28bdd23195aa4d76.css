@@ -542,6 +542,10 @@ a {
   display: inline-block;
   border-bottom: #2196f3 solid 2px;
 }
+.homeNew .page1 .seller .sellerText .amount-lent {
+  font-size: 3rem;
+  font-weight: 700;
+}
 .homeNew .page1 .seller .buttonContainer {
   -webkit-perspective: 700px;
   -moz-perspective: 700px;

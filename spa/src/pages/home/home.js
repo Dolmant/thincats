@@ -8,6 +8,7 @@ import Hidden from "@material-ui/core/Hidden"
 import Button from "@material-ui/core/Button"
 import MenuBar from "components/menuBar/menuBar"
 import Slider from "react-slick"
+import CountUp from 'react-countup';
 import "./home.less"
 import classNames from "util/classNames"
 import Light from "assets/icons/LightSymbol.svg"
@@ -199,6 +200,20 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         <Grid container justify="center" alignContent="center" className="seller">
                             <Hidden mdDown>
                                 <Grid className="sellerText" item xs={12}>
+                                    <div>
+                                        {"Funds to date:"}
+                                        <br />
+                                        <CountUp
+                                            separator=","
+                                            prefix="$"
+                                            duration={5}
+                                            start={0}
+                                            end={1160526}
+                                            className="amount-lent"
+                                        />
+                                    </div>
+                                    <br />
+                                    <br />
                                     <p>
                                         {"Business lending by good people."}
                                     </p>
