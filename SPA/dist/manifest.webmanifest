@@ -1,0 +1,9 @@
+{
+    "name": "ThinCatsAustralia",
+    "short_name": "ThinCats",
+    "start_url": "/",
+    "theme_color": "#ffcc00",
+    "display": "fullscreen",
+    "background_color": "#000",
+    "description": "ThinCats Australia provides an online market for secured business loans to Australian companies."
+}
