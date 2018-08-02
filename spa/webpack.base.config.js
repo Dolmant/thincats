@@ -93,6 +93,7 @@ module.exports = {
             filename: "./../resources.html",
         }),
         new CopyWebpackPlugin([{from: "manifest.webmanifest", to: path.resolve(__dirname, "./dist")}]),
+        new CopyWebpackPlugin([{from: "assets", to: path.resolve(__dirname, "./dist/assets")}]),
     ],
     resolve: {
         extensions: [".js", ".less", "scss", ".svg"],
