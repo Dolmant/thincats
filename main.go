@@ -1,7 +1,7 @@
 package main
 
-//go:generate sh -c "cd ./SPA && npm install"
-//go:generate sh -c "cd ./SPA && npm run build"
+//go:generate sh -c "cd ./spa && npm install"
+//go:generate sh -c "cd ./spa && npm run build"
 
 func main() {
 	Init()

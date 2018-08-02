@@ -150,14 +150,14 @@ func Init() {
 		})
 	})
 	router.GET("/posts", postsHandler(ctx, client))
-	router.StaticFS("/assets", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"assets"))
-	router.StaticFile("/manifest.webmanifest", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"manifest.webmanifest")
-	router.StaticFile("/resources", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"resources.html")
-	router.StaticFS("/static", http.Dir(exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"static"))
-	router.StaticFile("/", exPath+string(os.PathSeparator)+"SPA"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
+	router.StaticFS("/assets", http.Dir(exPath+string(os.PathSeparator)+"spa"+string(os.PathSeparator)+"assets"))
+	router.StaticFile("/manifest.webmanifest", exPath+string(os.PathSeparator)+"spa"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"manifest.webmanifest")
+	router.StaticFile("/resources", exPath+string(os.PathSeparator)+"spa"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"resources.html")
+	router.StaticFS("/static", http.Dir(exPath+string(os.PathSeparator)+"spa"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"static"))
+	router.StaticFile("/", exPath+string(os.PathSeparator)+"spa"+string(os.PathSeparator)+"dist"+string(os.PathSeparator)+"index.html")
 
 	router.NoRoute(func(c *gin.Context) {
-		c.File(exPath + string(os.PathSeparator) + "SPA" + string(os.PathSeparator) + "dist" + string(os.PathSeparator) + "index.html")
+		c.File(exPath + string(os.PathSeparator) + "spa" + string(os.PathSeparator) + "dist" + string(os.PathSeparator) + "index.html")
 	})
 
 	router.Run("0.0.0.0:8079")

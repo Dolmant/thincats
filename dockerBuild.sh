@@ -3,7 +3,7 @@
 # docker build --{arg[0]} .
 
 read -p "Version:" buildVersion
-cd SPA
+cd spa
 npm run buildProd
 cd ../
 docker build . --tag asia.gcr.io/firm-champion-204312/thincats:$buildVersion
