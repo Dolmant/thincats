@@ -8,7 +8,7 @@ import Hidden from "@material-ui/core/Hidden"
 import Button from "@material-ui/core/Button"
 import MenuBar from "components/menuBar/menuBar"
 import Slider from "react-slick"
-import CountUp from 'react-countup';
+import CountUp, {startAnimation} from "react-countup"
 import "./home.less"
 import classNames from "util/classNames"
 import Light from "assets/icons/LightSymbol.svg"
@@ -106,6 +106,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
 
     onScroll = () => {
         this.setState({scrolled: true})
+        startAnimation(this.myCountUp)
         window.removeEventListener("scroll", this.onScroll)
     }
 
@@ -200,20 +201,6 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                         <Grid container justify="center" alignContent="center" className="seller">
                             <Hidden mdDown>
                                 <Grid className="sellerText" item xs={12}>
-                                    <div>
-                                        {"Funds to date:"}
-                                        <br />
-                                        <CountUp
-                                            separator=","
-                                            prefix="$"
-                                            duration={5}
-                                            start={0}
-                                            end={1160526}
-                                            className="amount-lent"
-                                        />
-                                    </div>
-                                    <br />
-                                    <br />
                                     <p>
                                         {"Business lending by good people."}
                                     </p>
@@ -234,7 +221,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         }
                                     }}
                                 >
-                                    {"I am a BORROWER"}
+                                    {"Why borrow?"}
                                 </Button>
                             </Grid>
                             <Grid item className="buttonContainer" xs={6}>
@@ -252,7 +239,7 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         }
                                     }}
                                 >
-                                    {"I am an INVESTOR"}
+                                    {"Why invest?"}
                                 </Button>
                             </Grid>
                         </Grid>
@@ -262,6 +249,42 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                             <i className="fa fa-long-arrow-down"></i>
                         </div>
                     </div>
+                </Grid>
+                <Grid container justify="center" direction="row" className="ticker">
+                    <Grid item>
+                        <div className="banner">
+                            <br />
+                            <CountUp
+                                separator=","
+                                prefix="$"
+                                duration={5}
+                                start={0}
+                                end={1160526}
+                                className="amount-lent"
+                                ref={(countUp) => {
+                                    this.myCountUp = countUp
+                                }}
+                            />
+                            <br />
+                            {"funded so far!"}
+                            <br />
+                            <div className="applyButtons">
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                >
+                                    {"Borrow now!"}
+                                </Button>
+                                <Button
+                                    variant="raised"
+                                    color="primary"
+                                >
+                                    {"Invest now!"}
+                                </Button>
+                            </div>
+                            <br />
+                        </div>
+                    </Grid>
                 </Grid>
                 <Grid container direction="row" className={translateLeft ? "page3 translateLeft" : "page3"}>
                     <Grid item style={{flexBasis: expandedContent}} className="patternBackground">
