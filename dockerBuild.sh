@@ -12,3 +12,4 @@ gcloud beta compute instances update-container instance-1 --container-image asia
 git subtree split --prefix spa/dist -b gh-pages
 git push -f origin gh-pages:gh-pages
 git branch -D gh-pages
+# always have to redo the domain on gh-pages after these commands
