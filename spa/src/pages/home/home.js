@@ -394,8 +394,8 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         <div className="">
                                             {"If you are ready to fuel your growth, apply for a loan at"}
                                         </div>
-                                        <a href="www.thincats.com.au">
-                                            {"www.thincats.com.au"}
+                                        <a href="thin-cats.azurewebsites.net">
+                                            {"thin-cats.azurewebsites.net"}
                                         </a>
                                         <Button
                                             variant="raised"
@@ -516,8 +516,8 @@ export default class Home extends InjectedComponent<Props, InjectedProps, State>
                                         <div className="">
                                             {"If you are ready to start making smart investments in good companies, register as an investor at"}
                                         </div>
-                                        <a href="/">
-                                            {"thincats.com.au/register"}
+                                        <a href="https://thincat.blockbond.co/investor">
+                                            {"thincat.blockbond.co/investor"}
                                         </a>
                                         <Button
                                             variant="raised"
