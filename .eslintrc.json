@@ -1,0 +1,52 @@
+{
+  "plugins": ["react", "jasmine", "flowtype"],
+  "extends": ["airbnb", "plugin:jasmine/recommended"],
+  "parser": "babel-eslint",
+  "globals": {
+    "document": true,
+    "expect": true,
+    "describe": true,
+    "it": true,
+    "window": true
+  },
+  "rules": {
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "react/jsx-curly-brace-presence": ["off"],
+    "react/jsx-one-expression-per-line": ["off"],
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "class-methods-use-this": ["off"],
+    "import/first": ["off"],
+    "import/no-unresolved": ["off"],
+    "import/extensions": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "react/jsx-indent-props": ["off"],
+    "linebreak-style": [0, 0],
+    "max-len": ["off"],
+    "indent": ["off"],
+    "react/prefer-stateless-function": ["off"],
+    "react/no-this-in-sfc": ["off"],
+    "quote-props": ["off"],
+    "semi": ["error", "never"],
+    "no-mixed-spaces-and-tabs": ["error"],
+    "no-tabs": 2,
+    "arrow-parens": ["error", "never"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-indent": ["off"],
+    "react/prop-types": ["off"],
+    "quotes": ["error", "double"],
+    "jsx-a11y/href-no-hash": ["off"],
+    "no-underscore-dangle": ["off"],
+    "comma-dangle": ["error", "never"],
+    "operator-linebreak": ["off"],
+    "object-curly-spacing": ["error", "always"],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": false,
+        "html": false
+      }
+    ]
+  }
+}

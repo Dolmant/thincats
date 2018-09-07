@@ -1,0 +1,830 @@
+html {
+  font-size: 14px;
+  line-height: 1.4;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+input,
+textarea,
+button,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  html {
+    font-size: 10px !important;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+  html {
+    font-size: 12px !important;
+  }
+}
+/* Desktops and laptops ----------- */
+@media screen and (min-width: 1224px) and (max-width: 1824px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+/* Large screens ----------- */
+@media screen and (min-width: 1824px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+h2 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  border-bottom: 2px #2196f3 solid;
+}
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.italics {
+  font-style: italic;
+}
+body {
+  font-family: 'HelveticaNeue-Light';
+  border: none;
+  overflow-x: hidden;
+}
+button {
+  font-size: 1em;
+}
+.bold {
+  font-weight: 600;
+  display: inline;
+  vertical-align: top;
+}
+a {
+  color: #2196f3;
+}
+.prerenderer {
+  display: none;
+}
+/* HelveticaNeueLT-Light */
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url(bb361e7748abd463aaa94bd443b9f936.eot) format('embedded-opentype'), url(100491d09d328ccc57a7f1e6f9a34493.woff) format('woff'), url(27f9b380e10634757d7a9b593d7d4f33.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'aliquam';
+  src: url(2129471de55826c8b726fce48f28e112.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+.progressBar {
+  background-color: white !important;
+}
+.progressBar div {
+  background-color: #2196f3 !important;
+}
+.menu {
+  font-size: 1rem;
+  z-index: 1;
+}
+.menu .navRoot {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #ffcc00;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.menu .navRoot button {
+  max-width: 100vh !important;
+}
+.menu .navRoot .navActionLabel {
+  font-size: 1em;
+}
+.menu .navRoot .selectedLabel {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+}
+.menuOverlay {
+  position: absolute;
+  left: 35vw;
+  width: 30vw;
+  text-align: center;
+}
+.menuBar {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.menuBar .loginButtons {
+  align-self: center;
+}
+.menuBar .loginButtons button {
+  margin-right: 1em;
+}
+.menuBar .justifyBetween {
+  justify-content: space-between;
+}
+.menuBar .noBasis {
+  flex-basis: 0;
+}
+.menuBar .logoLeft {
+  background-image: url("/assets/thincats-450x153nocheetah.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10vh;
+  max-width: 25vw;
+  cursor: pointer;
+}
+.menuBar .borrower {
+  border-right: 1px solid black;
+}
+.menuBar .borrower,
+.menuBar .investor {
+  padding: 1em;
+  text-align: center;
+  font-weight: 500;
+}
+.menuBar .borrower.selected,
+.menuBar .investor.selected {
+  background-color: #ffcc00;
+}
+.menuBar .switcherContainer {
+  position: relative;
+}
+.menuBar .switcher {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.tempDrawer .borrower,
+.permDrawer .borrower {
+  border-right: 1px solid black;
+}
+.tempDrawer .borrower,
+.permDrawer .borrower,
+.tempDrawer .investor,
+.permDrawer .investor {
+  padding: 1em;
+  text-align: center;
+  font-weight: 500;
+}
+.tempDrawer .borrower.selected,
+.permDrawer .borrower.selected,
+.tempDrawer .investor.selected,
+.permDrawer .investor.selected {
+  background-color: #ffcc00;
+}
+.tempDrawer .switcherContainer,
+.permDrawer .switcherContainer {
+  position: relative;
+  margin-bottom: 1em;
+}
+.tempDrawer .switcher,
+.permDrawer .switcher {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.resources {
+  position: relative;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-size: 1rem;
+  box-shadow: inset 0 51px 140px 3px rgba(0, 0, 0, 0.2);
+}
+.resources .permDrawer .permPaper {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  background: #e5e6e8;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.resources .permDrawer .permPaper .paddingTop1 {
+  padding-top: 1px;
+}
+.resources .resourceTitle {
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+.resources .subHeading {
+  padding-bottom: 1em;
+}
+.resources .subHeading p {
+  margin-bottom: 1.3em;
+}
+.resources .noMargin {
+  margin: 0;
+}
+.resources .heading {
+  font-weight: 500;
+}
+.resources .subItem {
+  margin-left: 1em;
+}
+.resources .resourceContent {
+  padding: 1em 1em 1em 1em;
+  max-width: 980px;
+  margin: 0px auto;
+}
+.footer {
+  margin: 0px auto;
+  text-align: left;
+  font-size: 13px;
+  color: black;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #7C8283;
+}
+.footer .block {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.footer .block p {
+  margin: 10px 0;
+}
+@-webkit-keyframes bouncer {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1em;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+@keyframes bouncer {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 1em;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+@-webkit-keyframes pageflipEnter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes pageflipEnter {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@-webkit-keyframes pageflipLeave {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@keyframes pageflipLeave {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@-webkit-keyframes growOngoingLeft {
+  0% {
+    transform: translate(0px, 0px) skewX(45deg);
+  }
+  50% {
+    transform: translate(100px, 100px) skewX(45deg);
+  }
+  100% {
+    transform: translate(0px, 0px) skewX(45deg);
+  }
+}
+@keyframes growOngoingLeft {
+  0% {
+    transform: translate(0px, 0px) skewX(45deg);
+  }
+  50% {
+    transform: translate(100px, 100px) skewX(45deg);
+  }
+  100% {
+    transform: translate(0px, 0px) skewX(45deg);
+  }
+}
+@-webkit-keyframes growOngoingRight {
+  0% {
+    transform: translate(0px, 0px) skewX(-45deg);
+  }
+  50% {
+    transform: translate(-100px, 100px) skewX(-45deg);
+  }
+  100% {
+    transform: translate(0px, 0px) skewX(-45deg);
+  }
+}
+@keyframes growOngoingRight {
+  0% {
+    transform: translate(0px, 0px) skewX(-45deg);
+  }
+  50% {
+    transform: translate(-100px, 100px) skewX(-45deg);
+  }
+  100% {
+    transform: translate(0px, 0px) skewX(-45deg);
+  }
+}
+.dandy {
+  font-family: 'aliquam';
+  display: inline-block;
+}
+.homeNew {
+  font-size: 1rem;
+  box-shadow: inset 0 51px 140px 3px rgba(0, 0, 0, 0.2);
+  max-width: 100vw;
+}
+.homeNew .containerized {
+  max-width: 960px;
+}
+.homeNew .tickerText {
+  white-space: nowrap;
+  font-weight: bold;
+}
+.homeNew .hideIt {
+  visibility: hidden;
+}
+.homeNew .page1 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.homeNew .page1 .fancyBig {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.homeNew .page1 .homeMenu {
+  align-self: flex-start;
+}
+.homeNew .page1 #black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 1;
+}
+.homeNew .page1 #text {
+  position: absolute;
+  top: 40%;
+  -webkit-font-smoothing: subpixel-antialiased;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 200;
+  text-align: right;
+  z-index: 2;
+}
+.homeNew .page1 #text .cats {
+  display: inline-block;
+}
+.homeNew .page1 #text #innerText {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.homeNew .page1 .logo {
+  position: absolute;
+  display: none;
+  z-index: 0;
+  top: 40%;
+  left: 50%;
+  background-image: url("/assets/thincats-450x153cheetah.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 120px;
+  width: 120px;
+  transform: translateX(-100%) translateX(-140px) translateY(-50%);
+}
+.homeNew .page1 .buttonsContainer {
+  align-self: flex-start;
+}
+.homeNew .page1 .slogan {
+  font-size: 40px;
+  color: #000;
+  overflow: hidden;
+  z-index: -1;
+}
+.homeNew .page1 .findOutMore {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.homeNew .page1 .findOutMore .bounce-container {
+  margin-left: 10px;
+  display: inline-block;
+  -webkit-animation: bouncer 3s infinite;
+  animation: bouncer 3s infinite;
+  border-radius: 100%;
+  color: black;
+}
+.homeNew .page1 .findOutMore .bounce-container i {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.homeNew .page1 .seller {
+  color: black;
+  text-align: center;
+  margin-top: 1em;
+}
+.homeNew .page1 .seller .sellerText {
+  margin-top: 10em;
+  font-size: 1.2em;
+}
+.homeNew .page1 .seller .sellerText p {
+  display: inline-block;
+  border-bottom: #2196f3 solid 2px;
+}
+.homeNew .page1 .seller .buttonContainer {
+  -webkit-perspective: 700px;
+  -moz-perspective: 700px;
+  -ms-perspective: 700px;
+  perspective: 700px;
+}
+.homeNew .page1 .seller .buttonContainer button:hover {
+  top: -10px;
+  box-shadow: 0px 10px 10px rgba(165, 130, 15, 0.2);
+  -webkit-transform: rotateX(20deg);
+  -moz-transform: rotateX(20deg);
+  -ms-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+}
+.homeNew .page1 .seller .buttonContainer button:active {
+  top: 0px;
+  box-shadow: 0px 0px 0px rgba(15, 165, 60, 0);
+}
+.homeNew .page1 .seller .buttonContainer button {
+  font-size: 2em;
+  border: none;
+  background-color: #ffcc00;
+  color: black;
+  padding: 1em;
+  margin-top: 2em;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.homeNew .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.5;
+}
+.homeNew .page2 {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background-image: url("/assets/crowd-grey-dimmer.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeNew .page2 .flow {
+  width: 20vw;
+}
+.homeNew .page2 .page2-SubContainer {
+  height: 100%;
+  filter: none;
+}
+.homeNew .page2 .centered {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.homeNew .page2 .centered .light {
+  width: 3em;
+}
+.homeNew .page2 .centered .arrow {
+  width: 1em;
+}
+.homeNew .page2 .centered .peopleCash {
+  width: 4em;
+  margin-top: 1em;
+}
+.homeNew .page2 .centered .dualArrow {
+  height: 1.8em;
+  display: flex;
+}
+.homeNew .page2 .centered .peopleAlert {
+  width: 4em;
+  margin-top: 1em;
+}
+.homeNew .page2 .centered .reverseArrow {
+  transform: rotate(180deg);
+  width: 1em;
+}
+.homeNew .page2 .centered i {
+  color: white;
+  font-size: 3em;
+}
+.homeNew .page2 .centered .blueText {
+  color: #5783a9;
+  font-size: 2em;
+}
+.homeNew .page2 .page2TextContainer {
+  max-height: 50%;
+  border-top: solid white 1px;
+}
+.homeNew .page2 .page2TextContainer .page2Text {
+  padding: 1em;
+  font-size: 1em;
+}
+.homeNew .page2 .page2IconContainer {
+  max-height: 50%;
+}
+.homeNew .page2 .fancyBorder {
+  border-left: solid white 1px;
+}
+.homeNew .page3 {
+  width: 200vw;
+  background-color: white;
+  color: black;
+  transition: transform 1s ease-in-out;
+}
+.homeNew .page3.translateLeft {
+  transform: translateX(-100vw);
+}
+.homeNew .page3 .light {
+  width: 4em;
+}
+.homeNew .page3 .plant {
+  width: 3em;
+}
+.homeNew .page3 .wallet {
+  width: 4em;
+}
+.homeNew .page3 .lock {
+  width: 3.7em;
+}
+.homeNew .page3 .medal {
+  width: 3.5em;
+}
+.homeNew .page3 .magGlass {
+  width: 3.5em;
+}
+.homeNew .page3 .time {
+  width: 5em;
+}
+.homeNew .page3 .topIcon {
+  margin: auto;
+}
+.homeNew .page3 .page3Row {
+  width: 100%;
+}
+.homeNew .page3 .patternBackground {
+  -webkit-transition: flex-basis 1s ease-in-out;
+  -moz-transition: flex-basis 1s ease-in-out;
+  -o-transition: flex-basis 1s ease-in-out;
+  transition: flex-basis 1s ease-in-out;
+  background-image: url("/assets/CrissCrossPattern.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  color: white;
+}
+.homeNew .page3 .whiteBackground {
+  border-top: 1px solid #7C8283;
+  -webkit-transition: flex-basis 1s ease-in-out;
+  -moz-transition: flex-basis 1s ease-in-out;
+  -o-transition: flex-basis 1s ease-in-out;
+  transition: flex-basis 1s ease-in-out;
+}
+.homeNew .page3 .page3Title {
+  font-size: 1.4em;
+}
+.homeNew .page3 .page3Title b {
+  vertical-align: top;
+}
+.homeNew .page3 .page3Block {
+  padding: 1em;
+}
+.homeNew .page3 .page3Block .page3Heading {
+  font-weight: 500;
+  padding-bottom: 1em;
+}
+.homeNew .page3 .page3Block .page3Content {
+  padding-bottom: 1em;
+  font-weight: 200;
+}
+.homeNew .page3 .endText {
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.homeNew .page3 .endText button {
+  display: block;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4em;
+  padding: 1em 3em;
+}
+.homeNew .ticker {
+  background-color: white;
+  border-top: 1px solid #7C8283;
+}
+.homeNew .ticker .banner {
+  text-align: center;
+}
+.homeNew .ticker .banner .applyButtons button {
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.homeNew .ticker .banner .amount-lent {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.pageFlipper-enter {
+  display: none;
+}
+.pageFlipper-enter-done .clipper {
+  display: block;
+  -webkit-animation: pageflipEnter 0.3s forwards;
+  animation: pageflipEnter 0.3s forwards;
+}
+.pageFlipper-exit .clipper {
+  display: block;
+  -webkit-animation: pageflipLeave 0.2s forwards;
+  animation: pageflipLeave 0.2s forwards;
+}
+.clipper {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 10000;
+}
+.fillWhite {
+  fill: white;
+}
+.fillBlack {
+  fill: black;
+}
+.fillBlack g {
+  fill: black !important;
+}
+.expandThickArrow {
+  position: absolute;
+  animation-delay: 2s;
+  width: 0px;
+  bottom: 0;
+  height: 100px;
+  border-left: 5px solid black;
+  z-index: -1;
+}
+.expandThickArrow.leftArrow {
+  -webkit-animation: growOngoingLeft;
+  animation: growOngoingLeft;
+}
+.expandThickArrow.rightArrow {
+  -webkit-animation: growOngoingRight;
+  animation: growOngoingRight;
+}
+.thincatsCorner {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.thincatsCorner::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: black white;
+}
+.padding2em {
+  padding: 2em;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuZTJmODEyNzI3M2IwYTQzZWYzMzEuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
