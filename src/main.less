@@ -1,109 +1,193 @@
 html {
-    font-size: 14px;
-    line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-html, body, div, span, applet, object, input, textarea, button, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: middle;
+html,
+body,
+div,
+span,
+applet,
+object,
+input,
+textarea,
+button,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media screen and (min-width : 320px) and (max-width : 768px) {
-    html {
-        font-size: 10px !important;
-    }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px !important;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media screen and (min-width : 768px) and (max-width : 1224px) {
-    html {
-        font-size: 12px !important;
-    }
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+  html {
+    font-size: 16px !important;
+  }
 }
 
 /* Desktops and laptops ----------- */
-@media screen and (min-width : 1224px) and (max-width : 1824px) {
-    html {
-        font-size: 14px !important;
-    }
+@media screen and (min-width: 1224px) and (max-width: 1824px) {
+  html {
+    font-size: 18px !important;
+  }
 }
 
 /* Large screens ----------- */
-@media screen and (min-width : 1824px) {
-    html {
-        font-size: 16px !important;
-    }
+@media screen and (min-width: 1824px) {
+  html {
+    font-size: 18px !important;
+  }
 }
 
 h2 {
-    font-weight: normal;
-    margin-bottom: 10px;
-    border-bottom: 2px #2196f3 solid;
+  font-weight: normal;
+  margin-bottom: 10px;
+  border-bottom: 2px #2196f3 solid;
 }
 
 h1 {
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .italics {
-    font-style: italic;
+  font-style: italic;
 }
 
 body {
-    // font-family: 'Roboto', sans-serif;
-    font-family: 'HelveticaNeue-Light';
-    border: none;
-    overflow-x: hidden;
+  // font-family: 'Roboto', sans-serif;
+  // font-family: 'HelveticaNeue-Light';
+  font-family: "Raleway", sans-serif;
+  border: none;
+  overflow-x: hidden;
 }
 
 button {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 // Because <b> and font-weight: bold is TOO bold for roborto
 .bold {
-    font-weight: 600;
-    display: inline;
-    vertical-align: top;
+  font-weight: 600;
+  display: inline;
+  vertical-align: top;
 }
 
 a {
-    color: #2196f3;
+  color: #2196f3;
 }
 
 .prerenderer {
-    display: none;
+  display: none;
 }
 
-/* HelveticaNeueLT-Light */
+/* HelveticaNeue-Light */
 
 @font-face {
-	font-family:'HelveticaNeue-Light';
-	src: url('./../assets/HelveticaNeue-Light_gdi.eot?') format('embedded-opentype'),
-		url('./../assets/HelveticaNeue-Light_gdi.woff') format('woff'),
-		url('./../assets/HelveticaNeue-Light_gdi.ttf') format('truetype');
-		// url('./../assets/HelveticaNeue-Light_gdi.svg#HelveticaNeue-Light') format('svg');
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
+  font-family: "HelveticaNeue-Light";
+  src: url("./../assets/HelveticaNeue-Light_gdi.eot?")
+      format("embedded-opentype"),
+    url("./../assets/HelveticaNeue-Light_gdi.woff") format("woff"),
+    url("./../assets/HelveticaNeue-Light_gdi.ttf") format("truetype");
+  // url('./../assets/HelveticaNeue-Light_gdi.svg#HelveticaNeue-Light') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
 }
 
-
 @font-face {
-	font-family:'aliquam';
-	src: url('./../assets/aliquam.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-	font-stretch: normal;
+  font-family: "aliquam";
+  src: url("./../assets/aliquam.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
 }
 
 .progressBar {
-    background-color: white !important;
+  background-color: white !important;
 
-    div {
-        background-color: #2196f3 !important;
-    }
+  div {
+    background-color: #2196f3 !important;
+  }
 }

@@ -75,7 +75,7 @@ export default class Home extends InjectedComponent<
 > {
   state = {
     scrolled: false,
-    user: 0 // investor = 2 and borrower = 1
+    user: ((window.$ && $(window).width()) || window.innerWidth) > 500 ? 0 : 1 // investor = 2 and borrower = 1
   }
 
   clipRect = () => {
@@ -189,16 +189,11 @@ export default class Home extends InjectedComponent<
     return (
       <div className="homeNew">
         <div className="background" />
-        <Grid
-          container
-          className="page1"
-          justify="center"
-          alignItems="flex-end"
-        >
+        <Grid container className="page1" justify="center">
           <Grid className="homeMenu" item xs={12}>
-            <MenuBar investorSelector={false} selectionChild={() => null} />
+            <MenuBar investorSelector={false} />
           </Grid>
-          <Grid item xs={12}>
+          <Grid className="centerpiece" item xs={12}>
             {/*  */}
             {arrows}
             <div id="black" />
@@ -226,27 +221,30 @@ export default class Home extends InjectedComponent<
               alignContent="center"
               className="seller"
             >
-              <Hidden mdDown>
-                <Grid className="sellerText" item xs={12}>
-                  <p>{"Business lending by good people."}</p>
-                </Grid>
-              </Hidden>
+              {/* <Hidden mdDown> */}
+              <Grid className="sellerText" item xs={12}>
+                <p>{"Business lending by good people."}</p>
+              </Grid>
+              {/* </Hidden> */}
               <Grid item className="buttonContainer" xs={6}>
                 <Button
                   variant="raised"
                   color="primary"
                   onClick={() => {
-                    this.setState({ user: 1 })
-                    if (document.documentElement) {
-                      window.scrollTo({
-                        left: 0,
-                        top: document.documentElement.clientHeight,
-                        behavior: "smooth"
-                      })
+                    var win = window.open(
+                      "https://thin-cats.azurewebsites.net/",
+                      "_blank"
+                    )
+                    if (win) {
+                      //Browser has allowed it to be opened
+                      win.focus()
+                    } else {
+                      //Browser has blocked it
+                      alert("Please allow popups for this website")
                     }
                   }}
                 >
-                  {"Why borrow?"}
+                  {"borrow now >"}
                 </Button>
               </Grid>
               <Grid item className="buttonContainer" xs={6}>
@@ -254,17 +252,20 @@ export default class Home extends InjectedComponent<
                   variant="raised"
                   color="primary"
                   onClick={() => {
-                    this.setState({ user: 2 })
-                    if (document.documentElement) {
-                      window.scrollTo({
-                        left: 0,
-                        top: document.documentElement.clientHeight,
-                        behavior: "smooth"
-                      })
+                    var win = window.open(
+                      "https://thincat.blockbond.co/investor",
+                      "_blank"
+                    )
+                    if (win) {
+                      //Browser has allowed it to be opened
+                      win.focus()
+                    } else {
+                      //Browser has blocked it
+                      alert("Please allow popups for this website")
                     }
                   }}
                 >
-                  {"Why invest?"}
+                  {"invest now >"}
                 </Button>
               </Grid>
             </Grid>
@@ -291,14 +292,40 @@ export default class Home extends InjectedComponent<
                 }}
               />
               <br />
-              {"funded so far!"}
+              <div className="funded">{"funded so far!"}</div>
               <br />
               <div className="applyButtons">
-                <Button variant="raised" color="primary">
-                  {"Borrow now!"}
+                <Button
+                  variant="raised"
+                  color="primary"
+                  onClick={() => {
+                    this.setState({ user: 1 })
+                    if (document.documentElement) {
+                      window.scrollTo({
+                        left: 0,
+                        top: document.documentElement.clientHeight,
+                        behavior: "smooth"
+                      })
+                    }
+                  }}
+                >
+                  {"why borrow?"}
                 </Button>
-                <Button variant="raised" color="primary">
-                  {"Invest now!"}
+                <Button
+                  variant="raised"
+                  color="primary"
+                  onClick={() => {
+                    this.setState({ user: 2 })
+                    if (document.documentElement) {
+                      window.scrollTo({
+                        left: 0,
+                        top: document.documentElement.clientHeight,
+                        behavior: "smooth"
+                      })
+                    }
+                  }}
+                >
+                  {"why invest?"}
                 </Button>
               </div>
               <br />
@@ -336,9 +363,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid className="page3Block " item xs={6}>
+                      <Grid className="page3Block " item xs={12} md={6}>
                         {/* Block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Shoot} />
                         </div>
                         <div className="page3Heading">
@@ -350,9 +377,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block " xs={6}>
+                      <Grid item className="page3Block " xs={12} md={6}>
                         {/* block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Man} />
                         </div>
                         <div className="page3Heading">
@@ -368,9 +395,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid item className="page3Block " xs={6}>
+                      <Grid item className="page3Block " xs={12} md={6}>
                         {/* block */}
-                        <div className="time">
+                        <div className="time icon">
                           <SVGInline className="time" svg={Time} />
                         </div>
                         <div className="page3Heading">{"Apply fast"}</div>
@@ -380,9 +407,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block " xs={6}>
+                      <Grid item className="page3Block " xs={12} md={6}>
                         {/* block */}
-                        <div className="lock">
+                        <div className="lock icon">
                           <SVGInline className="lock" svg={Lock} />
                         </div>
                         <div className="page3Heading">
@@ -398,9 +425,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid item className="page3Block " xs={6}>
+                      <Grid item className="page3Block " xs={12} md={6}>
                         {/* block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Chart} />
                         </div>
                         <div className="page3Heading">
@@ -412,9 +439,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block " xs={6}>
+                      <Grid item className="page3Block " xs={12} md={6}>
                         {/* block */}
-                        <div className="medal">
+                        <div className="medal icon">
                           <SVGInline className="medal" svg={Medal} />
                         </div>
                         <div className="page3Heading">
@@ -477,9 +504,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid className="page3Block" item xs={6}>
+                      <Grid className="page3Block" item xs={12} md={6}>
                         {/* Block */}
-                        <div className="plant">
+                        <div className="plant icon">
                           <SVGInline className="plant" svg={Plant} />
                         </div>
                         <div className="page3Heading">{"Better than cash"}</div>
@@ -489,9 +516,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block" xs={6}>
+                      <Grid item className="page3Block" xs={12} md={6}>
                         {/* block */}
-                        <div className="wallet">
+                        <div className="wallet icon">
                           <SVGInline className="wallet" svg={Wallet} />
                         </div>
                         <div className="page3Heading">{"Low maintenance"}</div>
@@ -505,9 +532,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid item className="page3Block" xs={6}>
+                      <Grid item className="page3Block" xs={12} md={6}>
                         {/* block */}
-                        <div className="magGlass">
+                        <div className="magGlass icon">
                           <SVGInline className="magGlass" svg={MagGlass} />
                         </div>
                         <div className="page3Heading">
@@ -519,9 +546,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block" xs={6}>
+                      <Grid item className="page3Block" xs={12} md={6}>
                         {/* block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Shield} />
                         </div>
                         <div className="page3Heading">
@@ -537,9 +564,9 @@ export default class Home extends InjectedComponent<
                   </Grid>
                   <Grid item xs={12} className="page3Row">
                     <Grid container className="" direction="row">
-                      <Grid item className="page3Block" xs={6}>
+                      <Grid item className="page3Block" xs={12} md={6}>
                         {/* block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Bag} />
                         </div>
                         <div className="page3Heading">
@@ -551,9 +578,9 @@ export default class Home extends InjectedComponent<
                           }
                         </div>
                       </Grid>
-                      <Grid item className="page3Block" xs={6}>
+                      <Grid item className="page3Block" xs={12} md={6}>
                         {/* block */}
-                        <div className="light">
+                        <div className="light icon">
                           <SVGInline className="light" svg={Book} />
                         </div>
                         <div className="page3Heading">

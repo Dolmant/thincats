@@ -1,59 +1,60 @@
 // @flow
 import React from "react"
 import Menu from "components/menu/menu"
-import {observer, inject} from "mobx-react"
+import { observer, inject } from "mobx-react"
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
 import "./menuBar.less"
-import type {StoreType} from "types"
-import {InjectedComponent} from "store"
+import type { StoreType } from "types"
+import { InjectedComponent } from "store"
 
 type Props = {
-    investorSelector: boolean,
-    selectionChild: () => any, // null or jsx element
-};
-type State = {
-};
+  investorSelector: boolean
+}
+type State = {}
 type InjectedProps = {
-    store: StoreType,
-};
+  store: StoreType
+}
 
 @inject("store")
 @observer
-export default class MenuBar extends InjectedComponent<Props, InjectedProps, State> {
-    render() {
-        // const borrowerClasses = classNames({
-        //     borrower: true,
-        //     selected: !this.props.store.investor,
-        // })
+export default class MenuBar extends InjectedComponent<
+  Props,
+  InjectedProps,
+  State
+> {
+  render() {
+    // const borrowerClasses = classNames({
+    //     borrower: true,
+    //     selected: !this.props.store.investor,
+    // })
 
-        // const investorClasses = classNames({
-        //     investor: true,
-        //     selected: this.props.store.investor,
-        // })
+    // const investorClasses = classNames({
+    //     investor: true,
+    //     selected: this.props.store.investor,
+    // })
 
-        return (
-            <div className="menuBar">
-                <Grid container className="justifyBetween">
-                    <Grid item xs={3}>
-                        <Hidden smDown>
-                            <div onClick={() => this.props.store.navHome()} className="logoLeft" />
-                        </Hidden>
-                        <Hidden mdUp>
-                            {this.props.selectionChild()}
-                        </Hidden>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Grid container justify="center">
-                            <Menu />
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={3} className="switcherContainer">
-                    </Grid>
-                </Grid>
-            </div>
-        )
-    }
+    return (
+      <div className="menuBar">
+        <Grid container className="justifyBetween">
+          <Grid item xs={3}>
+            <Hidden smDown>
+              <div
+                onClick={() => this.props.store.navHome()}
+                className="logoLeft"
+              />
+            </Hidden>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <Grid container justify="center">
+              <Menu>{this.props.children}</Menu>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={4} className="switcherContainer" />
+        </Grid>
+      </div>
+    )
+  }
 }
 
 // {/* <Hidden smDown>
