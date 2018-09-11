@@ -22,8 +22,6 @@ type resourcesContentType = {
   [string]: any
 }
 
-const resourcesContent: resourcesContentType = resourcesContentImport
-
 type Props = {}
 type InjectedProps = {
   store: StoreType
@@ -65,7 +63,7 @@ export default class Resources extends InjectedComponent<
     }
   }
 
-  renderResourceMenu = () => {
+  renderResourceMenu = resourcesContent => {
     // build these components
     const MainHeader = (name: string, index: number, children: any) => (
       <ExpansionPanel className="noMargin">
@@ -79,7 +77,6 @@ export default class Resources extends InjectedComponent<
         </ExpansionPanelDetails>
       </ExpansionPanel>
     )
-    // Todo click should trigger navigation to the anchor
     const SubHeader = (name: string, mainName: string) => (
       <ListItem
         className="subItem"
@@ -102,7 +99,7 @@ export default class Resources extends InjectedComponent<
           )
         }}
       >
-        <div>{`> ${name}` /* {`${index + 1}. ${name}`} */}</div>
+        <div className="underlinedBlue">{`${name}` /* {`${index + 1}. ${name}`} */}</div>
       </ListItem>
     )
 
@@ -118,7 +115,7 @@ export default class Resources extends InjectedComponent<
     )
   }
 
-  renderResourceContent = () => {
+  renderResourceContent = resourcesContent => {
     const { mainHeader } = this.state
 
     const HeaderWrap = ({ mainHead, children }) => (
@@ -143,11 +140,14 @@ export default class Resources extends InjectedComponent<
   }
 
   render() {
+    const resourcesContent = resourcesContentImport(this.setState.bind(this))
     const baseDrawer = () => [
       <div>
         <h1 className="resourceTitle">{"Resources"}</h1>
       </div>,
-      <List className="paddingTop1">{this.renderResourceMenu()}</List>
+      <List className="paddingTop1">
+        {this.renderResourceMenu(resourcesContent)}
+      </List>
     ]
 
     const responsiveDrawers = () => [
@@ -212,7 +212,7 @@ export default class Resources extends InjectedComponent<
           </Grid>
           <Grid item xs={12} md={10}>
             <div className="resourceContent">
-              {this.renderResourceContent()}
+              {this.renderResourceContent(resourcesContent)}
             </div>
           </Grid>
         </Grid>

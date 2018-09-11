@@ -232,7 +232,7 @@ export default class Home extends InjectedComponent<
                   color="primary"
                   onClick={() => {
                     var win = window.open(
-                      "https://thin-cats.azurewebsites.net/",
+                      "https://thin-cats.azurewebsites.net/", //todo replace all of these links
                       "_blank"
                     )
                     if (win) {
@@ -462,7 +462,9 @@ export default class Home extends InjectedComponent<
                       }
                     </div>
                     <a href="thin-cats.azurewebsites.net">
-                      {"thin-cats.azurewebsites.net"}
+                      {
+                        "thin-cats.azurewebsites.net" /* Make sure you find and replace for all other links here */
+                      }
                     </a>
                     <Button
                       variant="raised"
@@ -493,7 +495,10 @@ export default class Home extends InjectedComponent<
                 >
                   <Grid item xs={12}>
                     <div className="peopleCash fillBlack topIcon">
-                      <SVGInline className="peopleCash fillBlack" svg={PeopleCash} />
+                      <SVGInline
+                        className="peopleCash fillBlack"
+                        svg={PeopleCash}
+                      />
                     </div>
                     <div className="page3Title">
                       {"Why "}
