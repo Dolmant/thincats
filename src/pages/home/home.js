@@ -492,8 +492,8 @@ export default class Home extends InjectedComponent<
                   direction="column"
                 >
                   <Grid item xs={12}>
-                    <div className="light fillBlack topIcon">
-                      <SVGInline className="light fillBlack" svg={PeopleCash} />
+                    <div className="peopleCash fillBlack topIcon">
+                      <SVGInline className="peopleCash fillBlack" svg={PeopleCash} />
                     </div>
                     <div className="page3Title">
                       {"Why "}

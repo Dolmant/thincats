@@ -713,6 +713,10 @@ a {
 .homeNew .page3 .light {
   width: 4em;
 }
+.homeNew .page3 .peopleCash {
+  width: 5em;
+  margin-bottom: 0.5em;
+}
 .homeNew .page3 .plant {
   width: 3em;
 }
@@ -732,7 +736,8 @@ a {
   width: 5em;
 }
 .homeNew .page3 .topIcon {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .homeNew .page3 .page3Row {
   width: 100%;
@@ -776,6 +781,12 @@ a {
 .homeNew .page3 .page3Block .page3Content {
   padding-bottom: 1em;
   font-weight: 200;
+}
+.homeNew .page3 .patternBackground .endText {
+  padding-top: 1.5em;
+}
+.homeNew .page3 .patternBackground .endText button {
+  margin-top: 2em;
 }
 .homeNew .page3 .endText {
   font-weight: 500;
