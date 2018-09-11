@@ -285,7 +285,7 @@ export default class Home extends InjectedComponent<
                 prefix="$"
                 duration={5}
                 start={0}
-                end={1160526}
+                end={12000000}
                 className="amount-lent"
                 ref={countUp => {
                   this.myCountUp = countUp
