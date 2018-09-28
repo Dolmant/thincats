@@ -945,6 +945,25 @@ const content = setState => ({
       </div>
     )
   },
+  "Using the online platform": {
+    Lenders: (
+      <div id="lenders" className="subHeading">
+        <h2>{"Quick Reference"}</h2>
+        <p>
+          {
+            "Once you are registered, use this handy quick reference guide to handle depositing/withdrawing money and bidding on a loan"
+          }
+        </p>
+        <a
+          href="/assets/Lender Quick Reference Sheet.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {"Lender quick reference"}
+        </a>
+      </div>
+    )
+  },
   "Key Statistics": {
     All: (
       <div id="key_statistics" className="subHeading">

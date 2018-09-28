@@ -45,12 +45,12 @@ export default class MenuBar extends InjectedComponent<
               />
             </Hidden>
           </Grid>
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <Grid container justify="center">
               <Menu>{this.props.children}</Menu>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={4} className="switcherContainer" />
+          <Grid item xs={12} md={3} className="switcherContainer" />
         </Grid>
       </div>
     )

@@ -1,41 +1,222 @@
 // @flow
 import React from "react"
+import { observer, inject } from "mobx-react"
+import Grid from "@material-ui/core/Grid"
+import List from "@material-ui/core/List"
+import Hidden from "@material-ui/core/Hidden"
+import Drawer from "@material-ui/core/Drawer"
+import Button from "@material-ui/core/Button"
+import Toc from "@material-ui/icons/Toc"
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
+import ExpansionPanel from "@material-ui/core/ExpansionPanel"
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
+import MenuBar from "components/menuBar/menuBar"
+import ListItem from "@material-ui/core/ListItem"
+import type { StoreType } from "types"
+import { InjectedComponent } from "store"
 import "./resources.less"
+import resourcesContentImport from "./resourcesContent"
 
-type Props = {
-};
+type resourcesContentType = {
+  [string]: any
+}
 
-export default class Resources extends React.Component<Props> {
-    render() {
-        return (
-            <div className="resources">
-                <section className="page-title clearfix">
-                    <h1>Resources</h1>
-                </section>
-                <section className="regular-page-content clearfix">
-                    <p><p className="bold">Lenders</p></p>
-                    <ul>
-                        <li><a href="/assets/TCA-Lender-Fact-Sheet-31March2018.pdf" target="_blank" rel="noopener noreferrer">Lender Fact Sheet</a></li>
-                        <li><a href="/assets/TCA-Membership-Agreement-May16.pdf" target="_blank" rel="noopener noreferrer">Membership Agreement</a></li>
-                        <li><a href="/assets/TCA-Member-Application-Form-April-2018.docx">Member Application Form</a></li>
-                        <li><a href="/assets/TCA-Accountant-Certificate-Template-May16.doc">Accountant’s Certificate Template</a></li>
-                        <li><a href="/assets/TCA-Process-for-Non-resident-Applicants-April-2018.pdf" target="_blank" rel="noopener noreferrer">Process for Non-resident Applicants</a></li>
-                        <li><a href="/assets/ThinCats-Lender-Guide-Dec16.pdf" target="_blank" rel="noopener noreferrer">Platform User Guide for Lenders</a></li>
-                        <li><a href="/assets/TCA-Loan-Repayment-Calculator-July-2016.xlsx">Lender Loan Repayment Calculator (Principal and Interest Loan)</a></li>
-                    </ul>
-                    <p><p className="bold">Borrowers</p></p>
-                    <ul>
-                        <li><a href="/assets/TCA-Borrower-Important-Information-April-2018.pdf" target="_blank" rel="noopener noreferrer">Borrower Important Information</a></li>
-                        <li><a href="/assets/Key-Guidelines-for-Borrowers-apr18.pdf" target="_blank" rel="noopener noreferrer">Key Guidelines for Borrowers</a></li>
-                        <li><a href="https://fs27.formsite.com/Thincats/form8/form_login.html" target="_blank" rel="noopener noreferrer">Loan Application Form</a></li>
-                        <li><a href="/assets/Privacy-Disclosure-Statement-and-Consent-July-2017.pdf" target="_blank" rel="noopener noreferrer">Privacy Disclosure Statement and Consent</a></li>
-                        <li><a href="/assets/Privacy-Fact-Sheet-29.pdf" target="_blank" rel="noopener noreferrer">Privacy fact sheet 29</a></li>
-                        <li><a href="/assets/Privacy-Fact-Sheet-40.pdf" target="_blank" rel="noopener noreferrer">Privacy fact sheet 40</a></li>
-                        <li><a href="/assets/ThinCats-Borrower-Loan-Calculator-PI-July-2016.xlsx">Borrower Loan Repayment Calculator (Principal and Interest Loan)</a></li>
-                    </ul>
-                    <p>&nbsp;</p>
-                </section>
-            </div>
-        )
+type Props = {}
+type InjectedProps = {
+  store: StoreType
+}
+
+type State = {
+  mobileOpen: boolean,
+  mainHeader: string,
+  subHeader: string,
+  mainHeaderViewed: Array<string>,
+  subHeaderViewed: Array<string>
+}
+
+@inject("store")
+@observer
+export default class Resources extends InjectedComponent<
+  Props,
+  InjectedProps,
+  State
+> {
+  state = {
+    mobileOpen: false,
+    mainHeader: "",
+    subHeader: "",
+    mainHeaderViewed: [""],
+    subHeaderViewed: [""]
+  }
+
+  componentDidMount() {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth"
+    })
+    if (window.location.hash) {
+      this.setState({
+        mainHeader: decodeURIComponent(window.location.hash.slice(1))
+      })
     }
+  }
+
+  renderResourceMenu = resourcesContent => {
+    // build these components
+    const MainHeader = (name: string, index: number, children: any) => (
+      <ExpansionPanel className="noMargin">
+        <ExpansionPanelSummary>
+          <ListItem className="heading">
+            <div>{`${name}`}</div>
+          </ListItem>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <div>{children}</div>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+    )
+    const SubHeader = (name: string, mainName: string) => (
+      <ListItem
+        className="subItem"
+        button
+        onClick={() => {
+          this.setState(
+            { mobileOpen: false, subHeader: name, mainHeader: mainName },
+            () => {
+              // this.props.store.pushAnchor(name.replace(new RegExp(" ", "g"), "_").toLowerCase())
+              const ele = document.querySelector(
+                `#${name.replace(new RegExp(" ", "g"), "_").toLowerCase()}`
+              )
+              if (ele) {
+                ele.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                })
+              }
+            }
+          )
+        }}
+      >
+        <div className="underlinedBlue">{`${name}` /* {`${index + 1}. ${name}`} */}</div>
+      </ListItem>
+    )
+
+    return Object.entries(resourcesContent).map(
+      ([mainHeaderKey, mainHeaderValue], mainIndex) =>
+        MainHeader(
+          mainHeaderKey,
+          mainIndex,
+          Object.entries(mainHeaderValue).map(([subHeaderKey]) =>
+            SubHeader(subHeaderKey, mainHeaderKey)
+          )
+        )
+    )
+  }
+
+  renderResourceContent = resourcesContent => {
+    const { mainHeader } = this.state
+
+    const HeaderWrap = ({ mainHead, children }) => (
+      <div>
+        <h1>{mainHead}</h1>
+        {children}
+      </div>
+    )
+
+    const mainHeaderValidated = resourcesContent[mainHeader]
+      ? mainHeader
+      : Object.keys(resourcesContent)[0]
+    // const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
+
+    return (
+      <HeaderWrap mainHead={mainHeaderValidated}>
+        {Object.keys(resourcesContent[mainHeaderValidated]).map(
+          key => resourcesContent[mainHeaderValidated][key]
+        )}
+      </HeaderWrap>
+    )
+  }
+
+  render() {
+    const resourcesContent = resourcesContentImport(this.setState.bind(this))
+    const baseDrawer = () => [
+      <div>
+        <h1 className="resourceTitle">{"Resources"}</h1>
+      </div>,
+      <List className="paddingTop1">
+        {this.renderResourceMenu(resourcesContent)}
+      </List>
+    ]
+
+    const responsiveDrawers = () => [
+      <Hidden mdUp>
+        <Drawer
+          variant="temporary"
+          anchor="left"
+          open={this.state.mobileOpen}
+          onClose={() => this.setState({ mobileOpen: false })}
+          classes={{
+            paper: "tempPaper"
+          }}
+          className="tempDrawer resourceNav"
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+            disableRestoreFocus: true
+          }}
+        >
+          {baseDrawer()}
+        </Drawer>
+      </Hidden>,
+      <Hidden smDown implementation="css">
+        <Drawer
+          variant="permanent"
+          open
+          anchor="left"
+          className="permDrawer resourceNav"
+          classes={{
+            paper: "permPaper"
+          }}
+        >
+          {baseDrawer()}
+        </Drawer>
+      </Hidden>
+    ]
+
+    return (
+      <div className="resources">
+        <MenuBar investorSelector>
+          <Hidden mdUp>
+            <BottomNavigationAction
+              // label={<Toc />}
+              style={{
+                padding: "0",
+                margin: "0",
+                minWidth: "30px"
+              }}
+              aria-label="add"
+              classes={{ label: "navActionLabel", selected: "selectedLabel" }}
+              icon={<Toc />}
+              onClick={() =>
+                this.setState(prevState => ({
+                  mobileOpen: !prevState.mobileOpen
+                }))
+              }
+            />
+          </Hidden>
+        </MenuBar>
+        <Grid container>
+          <Grid item xs={12} md={2}>
+            {responsiveDrawers()}
+          </Grid>
+          <Grid item xs={12} md={10}>
+            <div className="resourceContent">
+              {this.renderResourceContent(resourcesContent)}
+            </div>
+          </Grid>
+        </Grid>
+      </div>
+    )
+  }
 }
