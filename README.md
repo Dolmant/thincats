@@ -1,17 +1,9 @@
 # ThinCats rebuild
-thincats-c1f1e998f5d9.json needs to be in this dir.
-
 deployment:
 sh dockerBuild.sh {version}
 
-text too small on mobile
-use http2
-use https
-
 todo:
 fix weird drop (text drops on deployed version)
-resources page - download links!
-unscrew mobile view
 
 non critical for delivery:
 cloudfront caching?

@@ -19,8 +19,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist/static")
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: "url-loader?limit=10000&mimetype=application/font-woff"
       },
@@ -52,8 +51,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: extractLess.extract({
-          use: [
-            {
+          use: [{
               loader: "css-loader"
             },
             {
@@ -75,8 +73,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: extractLess.extract({
-          use: [
-            {
+          use: [{
               loader: "css-loader"
             },
             {
@@ -89,7 +86,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(["dist/static"]),
+    new CleanWebpackPlugin(["dist/"]),
     extractLess,
     new WebpackBundleSizeAnalyzerPlugin("./plain-report.txt"),
     new HtmlWebpackPlugin({
@@ -100,13 +98,17 @@ module.exports = {
       template: "src/templates/index-template.html",
       filename: "./../resources.html"
     }),
-    new ScriptExtHtmlWebpackPlugin({ defaultAttribute: "defer" }),
-    new CopyWebpackPlugin([
-      { from: "manifest.webmanifest", to: path.resolve(__dirname, "./dist") }
-    ]),
-    new CopyWebpackPlugin([
-      { from: "assets", to: path.resolve(__dirname, "./dist/assets") }
-    ])
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: "defer"
+    }),
+    new CopyWebpackPlugin([{
+      from: "manifest.webmanifest",
+      to: path.resolve(__dirname, "./dist")
+    }]),
+    new CopyWebpackPlugin([{
+      from: "assets",
+      to: path.resolve(__dirname, "./dist/assets")
+    }])
   ],
   resolve: {
     extensions: [".js", ".less", "scss", ".svg"],

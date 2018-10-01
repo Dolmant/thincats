@@ -19,9 +19,9 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class MenuBar extends InjectedComponent<
-  Props,
-  InjectedProps,
-  State
+Props,
+InjectedProps,
+State
 > {
   render() {
     // const borrowerClasses = classNames({
@@ -37,14 +37,14 @@ export default class MenuBar extends InjectedComponent<
     return (
       <div className="menuBar">
         <Grid container className="justifyBetween">
-          <Grid item xs={3}>
-            <Hidden smDown>
+          <Hidden mdDown>
+            <Grid item xs={0} md={3} className="marginTopRight">
               <div
                 onClick={() => this.props.store.navHome()}
                 className="logoLeft"
               />
-            </Hidden>
-          </Grid>
+            </Grid>
+          </Hidden>
           <Grid item xs={12} md={6}>
             <Grid container justify="center">
               <Menu>{this.props.children}</Menu>

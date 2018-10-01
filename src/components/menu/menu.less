@@ -13,7 +13,10 @@
 
     button {
       max-width: 100vh !important;
-      margin: 0 5px;
+      @media screen and (min-width: 500px) {
+        margin: 0 5px;
+      }
+      min-width: 0;
     }
     .navActionLabel {
       font-size: 1em;

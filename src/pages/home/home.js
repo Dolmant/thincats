@@ -69,13 +69,13 @@ const randomNumbers = [
 @inject("store")
 @observer
 export default class Home extends InjectedComponent<
-  Props,
-  InjectedProps,
-  State
+Props,
+InjectedProps,
+State
 > {
   state = {
     scrolled: false,
-    user: ((window.$ && $(window).width()) || window.innerWidth) > 500 ? 0 : 1 // investor = 2 and borrower = 1
+    user: 0 // investor = 2 and borrower = 1
   }
 
   clipRect = () => {
@@ -83,12 +83,15 @@ export default class Home extends InjectedComponent<
     const $black = $("#black").css("clip", "")
     const w = $(window).width()
     const h = $(window).height()
-
+    if (((window.$ && $(window).width()) || window.innerWidth) < 500) {
+      this.setState({ user: 1 })
+    }
     const offset = 10
 
+    const $textH = document.querySelector("#innerFirstText") || {}
     const $text = document.querySelector("#innerText") || {}
     const textWidth = $text.clientWidth || 0
-    const textHeight = $text.clientHeight || 0
+    const textHeight = $textH.clientHeight || 0
 
     let t = 0
     let r = w
@@ -101,7 +104,7 @@ export default class Home extends InjectedComponent<
       window.tl = new TimelineLite()
       l = w / 2 - textWidth / 2 - offset
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` }, 0.5)
-      b = h / 2.5 + offset // + (textHeight / 2) not required as bottom already offset by second line of text
+      b = h / 2.5 + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
       r = w / 2 + textWidth / 2 + offset
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
@@ -200,7 +203,7 @@ export default class Home extends InjectedComponent<
             <div className="logo" />
             <div id="text">
               <div id="innerText">
-                <span className="dandy">{"Thin"}</span>
+                <span className="dandy" id="innerFirstText">{"Thin"}</span>
                 <p className="cats">{"Cats"}</p>
               </div>
               <div className="slogan">
@@ -279,6 +282,8 @@ export default class Home extends InjectedComponent<
         <Grid container justify="center" direction="row" className="ticker">
           <Grid item>
             <div className="banner">
+              <br />
+              <div className="funded">{"Over"}</div>
               <br />
               <CountUp
                 separator=","
