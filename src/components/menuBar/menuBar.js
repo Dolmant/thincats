@@ -41,7 +41,7 @@ State
             <Grid item xs={0} md={3} className="marginTopRight">
               <div
                 onClick={() => this.props.store.navHome()}
-                className="logoLeft"
+                className={this.props.store.isHome ? "logoLeft none" : "logoLeft"}
               />
             </Grid>
           </Hidden>

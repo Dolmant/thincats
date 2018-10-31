@@ -89,9 +89,11 @@ State
     const offset = 10
 
     const $textH = document.querySelector("#innerFirstText") || {}
-    const $text = document.querySelector("#innerText") || {}
+    const $text = document.querySelector("#innerFirstText") || {}
     const textWidth = $text.clientWidth || 0
     const textHeight = $textH.clientHeight || 0
+
+    const position = $($text).offset()
 
     let t = 0
     let r = w
@@ -102,11 +104,13 @@ State
       TweenLite.set($black, { clip: `rect(${[0, w, h, 0].join()})` })
       if (window.tl) window.tl.stop()
       window.tl = new TimelineLite()
-      l = w / 2 - textWidth / 2 - offset
+      l = position.left - offset
+      // l = w / 2 - textWidth / 2 - offset
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` }, 0.5)
       b = h / 2.5 + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
-      r = w / 2 + textWidth / 2 + offset
+      // r = w / 2 + textWidth / 2 + offset
+      r = position.left + textWidth + 1
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
       t = h / 2.5 - textHeight - offset
       window.tl.to($black, 1.75, {
@@ -115,9 +119,9 @@ State
       })
       this.props.store.playOnce()
     } else {
-      l = w / 2 - textWidth / 2 - offset
+      l = position.left - offset
       b = h / 2.5 + offset
-      r = w / 2 + textWidth / 2 + offset
+      r = position.left + textWidth + 1
       t = h / 2.5 - textHeight - offset
       $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
     }
@@ -210,7 +214,7 @@ State
                 <Slider {...settings}>
                   <div className="tickerText">{"Smart"}</div>
                   <div className="tickerText">{"Australia"}</div>
-                  <div className="tickerText">{"Marketplace"}</div>
+                  <div className="tickerText">{"Market"}</div>
                   <div className="tickerText">{"Borrowing"}</div>
                   <div className="tickerText">{"Investing"}</div>
                 </Slider>
@@ -226,7 +230,69 @@ State
             >
               {/* <Hidden mdDown> */}
               <Grid className="sellerText" item xs={12}>
-                <p>{"Business lending by good people."}</p>
+                <p>{"Connecting growing businesses with sophisticated investors."}</p>
+              </Grid>
+              <Grid className="ticker" item xs={12}>
+                <div className="banner">
+                  <br />
+                  <div className="funded">{"Over"}</div>
+                  <br />
+                  <div className="static">
+                    <CountUp
+                      separator=""
+                      prefix=""
+                      duration={5}
+                      start={0}
+                      end={100}
+                      className="amount-lent"
+                      ref={countUp2 => {
+                        this.myCountUp2 = countUp2
+                      }}
+                    />
+                  </div>
+                  <div className="funded">{"loans"}</div>
+                  <br />
+                </div>
+                <div className="banner">
+                  <br />
+                  <div className="funded">{"Over"}</div>
+                  <br />
+                  <div className="static">
+                    <CountUp
+                      separator=","
+                      prefix="$"
+                      duration={5}
+                      start={0}
+                      end={12000000}
+                      className="amount-lent"
+                      ref={countUp => {
+                        this.myCountUp = countUp
+                      }}
+                    />
+                  </div>
+                  <div className="funded">{"funded so far!"}</div>
+                  <br />
+                </div>
+                <div className="banner">
+                  <br />
+                  <div className="funded">{"Over"}</div>
+                  <br />
+                  <div className="static">
+                    <CountUp
+                      separator=""
+                      prefix=""
+                      duration={5}
+                      start={0}
+                      end={150}
+                      className="amount-lent"
+                      ref={countUp3 => {
+                        this.myCountUp3 = countUp3
+                      }}
+                    />
+                  </div>
+                  <div className="funded">{"sophisticated investors"}</div>
+                  <br />
+                </div>
               </Grid>
               {/* </Hidden> */}
               <Grid item className="buttonContainer" xs={6}>
@@ -279,26 +345,55 @@ State
             </div>
           </div>
         </Grid>
-        <Grid container justify="center" direction="row" className="ticker">
+        <Grid container justify="center" direction="row" className="videos">
           <Grid item>
+            <br />
+            <div style={{ textAlign: "center" }}>
+              <p>{"Australia's first peer to peer business marketplace, business lending by good people."}</p>
+            </div>
             <div className="banner">
-              <br />
-              <div className="funded">{"Over"}</div>
-              <br />
-              <CountUp
-                separator=","
-                prefix="$"
-                duration={5}
-                start={0}
-                end={12000000}
-                className="amount-lent"
-                ref={countUp => {
-                  this.myCountUp = countUp
-                }}
-              />
-              <br />
-              <div className="funded">{"funded so far!"}</div>
-              <br />
+              <div
+                className="wistia_embed wistia_async_2nc5twt1mz popover=true popoverContent=link wistia_embed_initialized"
+                style={{ display: "inline" }}
+                id="wistia-2nc5twt1mz-1"
+              >
+                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
+                  <img src="/assets/explainer-video-320x172_p.png" alt="" />
+                  <figcaption>Peer-to-Business Lending explained</figcaption>
+                </div>
+              </div>
+              <div
+                className="wistia_embed wistia_async_w6o5m30ais popover=true popoverContent=link wistia_embed_initialized"
+                style={{ display: "inline" }}
+                id="wistia-w6o5m30ais-1"
+              >
+                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
+                  <img src="/assets/AK-play-icon.png" alt="" />
+                  <figcaption>ThinCats with Alan Kohler</figcaption>
+                </div>
+              </div>
+              <div
+                className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized"
+                style={{ display: "inline" }}
+                id="wistia-psiamvfuq6-1"
+              >
+                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
+                  <img src="/assets/video1g.png" alt="" />
+                  <figcaption>ThinCats at Wholesale Investor</figcaption>
+                </div>
+              </div>
+              <div
+                className="wistia_embed wistia_async_7yj84e44zs popover=true popoverContent=link wistia_embed_initialized"
+                style={{ display: "inline" }}
+                id="wistia-7yj84e44zs-1"
+              >
+                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
+                  <img src="/assets/Screen-Shot-2016-11-10-at-8.26.12-PM.png" alt="" />
+                  <figcaption>ThinCats on Sky News "Business Success"</figcaption>
+                </div>
+              </div>
+            </div>
+            <div className="banner">
               <div className="applyButtons">
                 <Button
                   variant="raised"
@@ -333,8 +428,8 @@ State
                   {"why invest?"}
                 </Button>
               </div>
-              <br />
             </div>
+            <br />
           </Grid>
         </Grid>
         <Grid
@@ -605,11 +700,19 @@ State
                     </Grid>
                   </Grid>
                   <Grid item className="endText" xs={12}>
-                    <div className="">
+                    <span className="">
                       {
-                        "If you are ready to start making smart investments in good companies, register as an investor at"
+                        "If you are a "
                       }
-                    </div>
+                    </span>
+                    <a href="https://www.moneysmart.gov.au/glossary/s/sophisticated-investor">
+                      {"sophisticated investor"}
+                    </a>
+                    <span className="">
+                      {
+                        " ready to start making smart investments in good companies, register at "
+                      }
+                    </span>
                     <a href="https://thincat.blockbond.co/investor">
                       {"thincat.blockbond.co/investor"}
                     </a>

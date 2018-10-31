@@ -466,16 +466,7 @@ const content = setState => ({
           </p>
           <p>
             Due to the small size of the ThinCats Australia loan portfolio, we
-            currently do not publish loan default rates. For information on
-            ThinCats UK loan default rates click{" "}
-            <a
-              href="https://www.thincats.com/investors/statistics"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              here
-            </a>
-            .
+            currently do not publish loan default rates.
           </p>
           <h3>What do you do to recover the funds?</h3>
           <p>
@@ -1842,14 +1833,6 @@ const content = setState => ({
           high-net-worth investors and trustees of self-managed superannuation
           funds) with established SME corporate borrowers to provide a serious
           alternative to bank lending.
-        </p>
-        <p>
-          ThinCats Australia benefits from a strong relationship with the
-          successful{" "}
-          <a href="www.thincats.com" rel="noopener noreferrer" target="_blank">
-            ThinCats UK
-          </a>{" "}
-          business which was founded in 2010.
         </p>
         <p>
           We offer a fixed income asset class which is relatively untapped by

@@ -4,6 +4,7 @@ sh dockerBuild.sh {version}
 
 todo:
 fix weird drop (text drops on deployed version)
+update tickers automatically based on the platform information
 
 non critical for delivery:
 cloudfront caching?

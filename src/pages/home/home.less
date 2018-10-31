@@ -127,15 +127,13 @@
   }
 }
 
-.dandy {
-  font-family: "aliquam";
-  display: inline-block;
-}
-
 .homeNew {
   .funded {
     border-bottom: #2196f3 solid 2px;
     display: inline;
+  }
+  .static {
+    min-width: 310px;
   }
   .centerpiece {
     height: calc(40vh + 4rem - 56px); //height of menu
@@ -184,22 +182,25 @@
       top: 40%;
       -webkit-font-smoothing: subpixel-antialiased;
       left: 50%;
-      transform: translate(-50%, -50%);
       color: white;
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 8rem;
+      line-height: 8rem;
+      transform: translateY(-50%);
       font-weight: 200;
       text-align: right;
       z-index: 2;
 
+      .dandy {
+        font-family: "aliquam";
+        display: inline-block;
+        position: absolute;
+        transform: translateX(-100%);
+      }
       .cats {
         // vertical-align: sub;
         font-family: "HelveticaNeue-Light";
         display: inline-block;
-      }
-      #innerText {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        color: #000;
       }
     }
     .logo {
@@ -280,7 +281,7 @@
         button:active {
           top: 0px;
           box-shadow: 0px 0px 0px rgba(15, 165, 60, 0);
-          // background: #ffcc00;
+          // background: #ffa400;
         }
 
         button {
@@ -294,11 +295,10 @@
           }
           white-space: nowrap;
           font-size: 2em;
-          border-radius: 40px;
-          background-color: #ffcc00;
+          background-color: #ffa400;
           color: black;
-          padding: 1em;
-          margin-top: 2em;
+          padding: 0.5em 1em;
+          margin-top: 1.75em;
           font-weight: 400;
           font-family: "HelveticaNeue-Light";
 
@@ -310,6 +310,8 @@
           -moz-transform: translateZ(0);
           -ms-transform: translateZ(0);
           transform: translateZ(0);
+
+          box-shadow: none;
 
           -webkit-transition: all 0.2s ease;
           -moz-transition: all 0.2s ease;
@@ -327,8 +329,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("/assets/ThincatsBackImageChopped.jpg");
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
     opacity: 0.5;
   }
 
@@ -511,11 +514,34 @@
       }
     }
   }
-  .ticker {
+  .videos {
     background-color: white;
     border-top: 1px solid #7c8283;
+    p {
+      font-size: 1.2em;
+      border-bottom: #2196f3 solid 2px;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
     .banner {
       text-align: center;
+      display: flex;
+      justify-content: space-around;
+      a {
+        text-decoration: none;
+        figcaption {
+          color: #3f74a1;
+        }
+      }
+      .wistia_embed {
+        margin: 0 10px;
+        cursor: pointer;
+        img {
+          width:320px;
+          height:180px;
+        }
+      }
+
       .applyButtons {
         button {
           margin: 1rem 1rem 0 1rem;
@@ -528,6 +554,35 @@
       .amount-lent {
         font-size: 3rem;
         font-weight: 700;
+        min-width:64px;
+      }
+    }
+  }
+  .ticker {
+    justify-content: space-evenly;
+    display: flex;
+    .banner {
+      text-align: center;
+      a {
+        text-decoration: none;
+        figcaption {
+          color: #3f74a1;
+        }
+      }
+
+      .applyButtons {
+        button {
+          margin: 1rem 1rem 0 1rem;
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          font-weight: 700;
+        }
+      }
+
+      .amount-lent {
+        font-size: 3rem;
+        font-weight: 700;
+        min-width:64px;
       }
     }
   }
