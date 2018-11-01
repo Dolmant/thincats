@@ -21,7 +21,7 @@ declare var docReady
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#ffa400",
+      main: "#ff7f00",
       light: "#ffff50",
       dark: "#c79c00"
       // dark: will be calculated from palette.primary.main,
@@ -30,7 +30,7 @@ const theme = createMuiTheme({
     secondary: {
       main: "#ffffff"
       // dark: will be calculated from palette.secondary.main,
-      // contrastText: "#ffa400",
+      // contrastText: "#ff7f00",
     }
     // error: will use the default color
   }

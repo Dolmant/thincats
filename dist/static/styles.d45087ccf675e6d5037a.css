@@ -177,10 +177,6 @@ a {
   font-size: 1rem;
   z-index: 1;
 }
-.menu .navRoot {
-  background-color: #ffa400;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
 .menu .navRoot button {
   flex-basis: auto;
   max-width: 100vh !important;
@@ -250,7 +246,7 @@ a {
 }
 .menuBar .borrower.selected,
 .menuBar .investor.selected {
-  background-color: #ffa400;
+  background-color: #ff7f00;
 }
 .menuBar .switcherContainer {
   position: relative;
@@ -277,7 +273,7 @@ a {
 .permDrawer .borrower.selected,
 .tempDrawer .investor.selected,
 .permDrawer .investor.selected {
-  background-color: #ffa400;
+  background-color: #ff7f00;
 }
 .tempDrawer .switcherContainer,
 .permDrawer .switcherContainer {
@@ -329,8 +325,8 @@ a {
   margin-left: 1em;
 }
 .resources .resourceContent {
-  padding: 1em 1em 1em 1em;
-  max-width: 980px;
+  padding: 1em 3em 1em 3em;
+  max-width: 1200px;
   margin: 0px auto;
 }
 .underlinedBlue {
@@ -465,11 +461,11 @@ a {
   min-width: 310px;
 }
 .homeNew .centerpiece {
-  height: calc(40vh + 4rem - 56px);
+  height: calc(40vh + 8rem - 56px);
 }
 @media screen and (min-width: 960px) {
   .homeNew .centerpiece {
-    height: calc(30vh + 4rem - 10px);
+    height: calc(30vh + 8rem - 10px);
   }
 }
 .homeNew .containerized {
@@ -549,6 +545,10 @@ a {
   color: #000;
   overflow: hidden;
   z-index: -1;
+  line-height: 4rem;
+}
+.homeNew .page1 .slogan .slick-list {
+  height: 4rem;
 }
 .homeNew .page1 .findOutMore {
   height: 10vh;
@@ -601,7 +601,7 @@ a {
 .homeNew .page1 .seller .buttonContainer button {
   white-space: nowrap;
   font-size: 2em;
-  background-color: #ffa400;
+  background-color: #ff7f00;
   color: black;
   padding: 0.5em 1em;
   margin-top: 1.75em;

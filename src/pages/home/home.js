@@ -26,6 +26,7 @@ import Medal from "assets/icons/SymbolMedal.svg"
 import Shield from "assets/icons/SymbolShield.svg"
 import Shoot from "assets/icons/SymbolShoot.svg"
 import SVGInline from "react-svg-inline"
+import MortgageCalculator from "../../components/calculator/MortgageCalculator";
 
 declare var $
 declare var TweenLite
@@ -107,12 +108,14 @@ State
       l = position.left - offset
       // l = w / 2 - textWidth / 2 - offset
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` }, 0.5)
-      b = h / 2.5 + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
+      b = position.top + textHeight + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
+      // b = h / 2.5 + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
       // r = w / 2 + textWidth / 2 + offset
       r = position.left + textWidth + 1
       window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
-      t = h / 2.5 - textHeight - offset
+      t = position.top - offset
+      // t = h / 2.5 - textHeight - offset
       window.tl.to($black, 1.75, {
         clip: `rect(${[t, r, b, l].join()})`,
         ease: Elastic.easeOut
@@ -120,9 +123,9 @@ State
       this.props.store.playOnce()
     } else {
       l = position.left - offset
-      b = h / 2.5 + offset
+      b = position.top + textHeight + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
       r = position.left + textWidth + 1
-      t = h / 2.5 - textHeight - offset
+      t = position.top - offset
       $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
     }
   }
@@ -151,33 +154,33 @@ State
     })
 
     const arrows = []
-    for (let i = 0; i < 20; i += 1) {
-      const [rand1, rand2] = randomNumbers[i]
-      arrows.push(
-        <div
-          style={{
-            left: `${i * 5 - 2.5}vw`,
-            maxHeight: `${50 + 0.5 * rand1}px`,
-            animationDuration: `${7.5 + 0.025 * rand1}s`,
-            animationIterationCount: "infinite"
-          }}
-          key={i}
-          className="expandThickArrow leftArrow"
-        />
-      )
-      arrows.push(
-        <div
-          style={{
-            left: `${i * 5}vw`,
-            maxHeight: `${50 + 0.5 * rand2}px`,
-            animationDuration: `${7.5 + 0.025 * rand2}s`,
-            animationIterationCount: "infinite"
-          }}
-          key={i + 20}
-          className="expandThickArrow rightArrow"
-        />
-      )
-    }
+    // for (let i = 0; i < 20; i += 1) {
+    //   const [rand1, rand2] = randomNumbers[i]
+    //   arrows.push(
+    //     <div
+    //       style={{
+    //         left: `${i * 5 - 2.5}vw`,
+    //         maxHeight: `${50 + 0.5 * rand1}px`,
+    //         animationDuration: `${7.5 + 0.025 * rand1}s`,
+    //         animationIterationCount: "infinite"
+    //       }}
+    //       key={i}
+    //       className="expandThickArrow leftArrow"
+    //     />
+    //   )
+    //   arrows.push(
+    //     <div
+    //       style={{
+    //         left: `${i * 5}vw`,
+    //         maxHeight: `${50 + 0.5 * rand2}px`,
+    //         animationDuration: `${7.5 + 0.025 * rand2}s`,
+    //         animationIterationCount: "infinite"
+    //       }}
+    //       key={i + 20}
+    //       className="expandThickArrow rightArrow"
+    //     />
+    //   )
+    // }
 
     const translateLeft = this.state.user === 2
 
@@ -235,6 +238,27 @@ State
               <Grid className="ticker" item xs={12}>
                 <div className="banner">
                   <br />
+                  <div className="funded">{"Borrow as low as"}</div>
+                  <br />
+                  <div className="static">
+                    <CountUp
+                      separator=""
+                      prefix=""
+                      suffix="%"
+                      duration={5}
+                      start={0}
+                      end={16}
+                      className="amount-lent"
+                      ref={countUp5 => {
+                        this.myCountUp5 = countUp5
+                      }}
+                    />
+                  </div>
+                  <div className="funded">{"per year"}</div>
+                  <br />
+                </div>
+                <div className="banner">
+                  <br />
                   <div className="funded">{"Over"}</div>
                   <br />
                   <div className="static">
@@ -263,7 +287,7 @@ State
                       prefix="$"
                       duration={5}
                       start={0}
-                      end={12000000}
+                      end={13400000}
                       className="amount-lent"
                       ref={countUp => {
                         this.myCountUp = countUp
@@ -291,6 +315,27 @@ State
                     />
                   </div>
                   <div className="funded">{"sophisticated investors"}</div>
+                  <br />
+                </div>
+                <div className="banner">
+                  <br />
+                  <div className="funded">{"Earn up to"}</div>
+                  <br />
+                  <div className="static">
+                    <CountUp
+                      separator=""
+                      prefix=""
+                      suffix="%"
+                      duration={5}
+                      start={0}
+                      end={15}
+                      className="amount-lent"
+                      ref={countUp4 => {
+                        this.myCountUp4 = countUp4
+                      }}
+                    />
+                  </div>
+                  <div className="funded">{"per year"}</div>
                   <br />
                 </div>
               </Grid>
@@ -729,6 +774,11 @@ State
                 </Grid>
               </Grid>
             </Grid>
+          </Grid>
+        </Grid>
+        <Grid container justify="center" direction="row" className="videos">
+          <Grid item>
+            <MortgageCalculator />
           </Grid>
         </Grid>
       </div>

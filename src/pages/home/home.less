@@ -136,9 +136,9 @@
     min-width: 310px;
   }
   .centerpiece {
-    height: calc(40vh + 4rem - 56px); //height of menu
+    height: calc(40vh + 8rem - 56px); //height of menu
     @media screen and (min-width: 960px) {
-      height: calc(30vh + 4rem - 10px); //height of logo
+      height: calc(30vh + 8rem - 10px); //height of logo
     }
   }
   font-size: 1rem;
@@ -225,6 +225,10 @@
       color: #000;
       overflow: hidden;
       z-index: -1;
+      line-height: 4rem;
+      .slick-list {
+        height: 4rem;
+      }
     }
     .findOutMore {
       height: 10vh;
@@ -281,7 +285,7 @@
         button:active {
           top: 0px;
           box-shadow: 0px 0px 0px rgba(15, 165, 60, 0);
-          // background: #ffa400;
+          // background: #ff7f00;
         }
 
         button {
@@ -295,7 +299,7 @@
           }
           white-space: nowrap;
           font-size: 2em;
-          background-color: #ffa400;
+          background-color: #ff7f00;
           color: black;
           padding: 0.5em 1em;
           margin-top: 1.75em;
