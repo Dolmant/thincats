@@ -28,11 +28,6 @@ import Shoot from "assets/icons/SymbolShoot.svg"
 import SVGInline from "react-svg-inline"
 import MortgageCalculator from "../../components/calculator/MortgageCalculator";
 
-declare var $
-declare var TweenLite
-declare var TimelineLite
-declare var Elastic
-
 type Props = {}
 
 type InjectedProps = {
@@ -44,29 +39,6 @@ type State = {
   user: number
 }
 
-const randomNumbers = [
-  [43, 5],
-  [0, 5],
-  [61, 15],
-  [31, 55],
-  [28, 18],
-  [78, 100],
-  [75, 6],
-  [6, 49],
-  [19, 9],
-  [81, 48],
-  [41, 24],
-  [21, 53],
-  [19, 16],
-  [91, 28],
-  [55, 2],
-  [75, 95],
-  [62, 48],
-  [21, 94],
-  [39, 10],
-  [4, 75]
-]
-
 @inject("store")
 @observer
 export default class Home extends InjectedComponent<
@@ -75,152 +47,34 @@ InjectedProps,
 State
 > {
   state = {
-    scrolled: false,
     user: 0 // investor = 2 and borrower = 1
   }
 
-  clipRect = () => {
-    // clip if not first time playing the animation
-    const $black = $("#black").css("clip", "")
-    const w = $(window).width()
-    const h = $(window).height()
-    if (((window.$ && $(window).width()) || window.innerWidth) < 500) {
-      this.setState({ user: 1 })
-    }
-    const offset = 10
-
-    const $textH = document.querySelector("#innerFirstText") || {}
-    const $text = document.querySelector("#innerFirstText") || {}
-    const textWidth = $text.clientWidth || 0
-    const textHeight = $textH.clientHeight || 0
-
-    const position = $($text).offset()
-
-    let t = 0
-    let r = w
-    let b = h
-    let l = 0
-
-    if (!this.props.store.loaded) {
-      TweenLite.set($black, { clip: `rect(${[0, w, h, 0].join()})` })
-      if (window.tl) window.tl.stop()
-      window.tl = new TimelineLite()
-      l = position.left - offset
-      // l = w / 2 - textWidth / 2 - offset
-      window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` }, 0.5)
-      b = position.top + textHeight + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
-      // b = h / 2.5 + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
-      window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
-      // r = w / 2 + textWidth / 2 + offset
-      r = position.left + textWidth + 1
-      window.tl.to($black, 0.25, { clip: `rect(${[t, r, b, l].join()})` })
-      t = position.top - offset
-      // t = h / 2.5 - textHeight - offset
-      window.tl.to($black, 1.75, {
-        clip: `rect(${[t, r, b, l].join()})`,
-        ease: Elastic.easeOut
-      })
-      this.props.store.playOnce()
-    } else {
-      l = position.left - offset
-      b = position.top + textHeight + offset // css top @ 40% means bottom starts in the right spot (the bottom aligns with 40%)
-      r = position.left + textWidth + 1
-      t = position.top - offset
-      $black.css("clip", () => `rect(${[t, r, b, l].join("px, ")}px)`)
-    }
-  }
-
-  componentDidMount() {
-    this.clipRect()
-    window.addEventListener("resize", this.clipRect)
-    window.addEventListener("scroll", this.onScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.clipRect)
-    window.removeEventListener("scroll", this.onScroll)
-  }
-
-  onScroll = () => {
-    this.setState({ scrolled: true })
-    startAnimation(this.myCountUp)
-    window.removeEventListener("scroll", this.onScroll)
-  }
+  // onScroll = () => {
+  // startAnimation(this.myCountUp)
+  //   window.removeEventListener("scroll", this.onScroll)
+  // }
 
   render() {
-    const findOutMoreClasses = classNames({
-      findOutMore: true,
-      hideIt: true
-    })
-
-    const arrows = []
-    // for (let i = 0; i < 20; i += 1) {
-    //   const [rand1, rand2] = randomNumbers[i]
-    //   arrows.push(
-    //     <div
-    //       style={{
-    //         left: `${i * 5 - 2.5}vw`,
-    //         maxHeight: `${50 + 0.5 * rand1}px`,
-    //         animationDuration: `${7.5 + 0.025 * rand1}s`,
-    //         animationIterationCount: "infinite"
-    //       }}
-    //       key={i}
-    //       className="expandThickArrow leftArrow"
-    //     />
-    //   )
-    //   arrows.push(
-    //     <div
-    //       style={{
-    //         left: `${i * 5}vw`,
-    //         maxHeight: `${50 + 0.5 * rand2}px`,
-    //         animationDuration: `${7.5 + 0.025 * rand2}s`,
-    //         animationIterationCount: "infinite"
-    //       }}
-    //       key={i + 20}
-    //       className="expandThickArrow rightArrow"
-    //     />
-    //   )
-    // }
-
     const translateLeft = this.state.user === 2
 
     const defaultContent = "25%"
     const expandedContent = this.state.user > 0 ? "50%" : defaultContent
 
-    const settings = {
-      dots: false,
-      vertical: true,
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true
-    }
-
     return (
       <div className="homeNew">
-        <div className="background" />
         <Grid container className="page1" justify="center">
           <Grid className="homeMenu" item xs={12}>
-            <MenuBar investorSelector={false} />
+            <MenuBar />
           </Grid>
           <Grid className="centerpiece" item xs={12}>
-            {/*  */}
-            {arrows}
-            <div id="black" />
-            <div className="logo" />
             <div id="text">
               <div id="innerText">
-                <span className="dandy" id="innerFirstText">{"Thin"}</span>
+                <span className="thin">{"Thin"}</span>
                 <p className="cats">{"Cats"}</p>
               </div>
               <div className="slogan">
-                <Slider {...settings}>
-                  <div className="tickerText">{"Smart"}</div>
-                  <div className="tickerText">{"Australia"}</div>
-                  <div className="tickerText">{"Market"}</div>
-                  <div className="tickerText">{"Borrowing"}</div>
-                  <div className="tickerText">{"Investing"}</div>
-                </Slider>
+                <p>{"Connecting growing businesses with sophisticated investors."}</p>
               </div>
             </div>
           </Grid>
@@ -231,32 +85,7 @@ State
               alignContent="center"
               className="seller"
             >
-              {/* <Hidden mdDown> */}
-              <Grid className="sellerText" item xs={12}>
-                <p>{"Connecting growing businesses with sophisticated investors."}</p>
-              </Grid>
               <Grid className="ticker" item xs={12}>
-                <div className="banner">
-                  <br />
-                  <div className="funded">{"Borrow as low as"}</div>
-                  <br />
-                  <div className="static">
-                    <CountUp
-                      separator=""
-                      prefix=""
-                      suffix="%"
-                      duration={5}
-                      start={0}
-                      end={16}
-                      className="amount-lent"
-                      ref={countUp5 => {
-                        this.myCountUp5 = countUp5
-                      }}
-                    />
-                  </div>
-                  <div className="funded">{"per year"}</div>
-                  <br />
-                </div>
                 <div className="banner">
                   <br />
                   <div className="funded">{"Over"}</div>
@@ -317,27 +146,6 @@ State
                   <div className="funded">{"sophisticated investors"}</div>
                   <br />
                 </div>
-                <div className="banner">
-                  <br />
-                  <div className="funded">{"Earn up to"}</div>
-                  <br />
-                  <div className="static">
-                    <CountUp
-                      separator=""
-                      prefix=""
-                      suffix="%"
-                      duration={5}
-                      start={0}
-                      end={15}
-                      className="amount-lent"
-                      ref={countUp4 => {
-                        this.myCountUp4 = countUp4
-                      }}
-                    />
-                  </div>
-                  <div className="funded">{"per year"}</div>
-                  <br />
-                </div>
               </Grid>
               {/* </Hidden> */}
               <Grid item className="buttonContainer" xs={6}>
@@ -346,7 +154,7 @@ State
                   color="primary"
                   onClick={() => {
                     var win = window.open(
-                      "https://thin-cats.azurewebsites.net/", //todo replace all of these links
+                      "https://fs27.formsite.com/Thincats/form8/form_login.html", //todo replace all of these links
                       "_blank"
                     )
                     if (win) {
@@ -367,7 +175,7 @@ State
                   color="primary"
                   onClick={() => {
                     var win = window.open(
-                      "https://thincat.blockbond.co/investor",
+                      "https://www.thincats.com.au/register/",
                       "_blank"
                     )
                     if (win) {
@@ -384,17 +192,11 @@ State
               </Grid>
             </Grid>
           </Grid>
-          <div className={findOutMoreClasses}>
-            <div className="bounce-container">
-              <i className="fa fa-long-arrow-down" />
-            </div>
-          </div>
         </Grid>
         <Grid container justify="center" direction="row" className="videos">
           <Grid item>
-            <br />
             <div style={{ textAlign: "center" }}>
-              <p>{"Australia's first peer to peer business marketplace, business lending by good people."}</p>
+              <p>{"How It Works"}</p>
             </div>
             <div className="banner">
               <div
@@ -403,38 +205,7 @@ State
                 id="wistia-2nc5twt1mz-1"
               >
                 <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
-                  <img src="/assets/explainer-video-320x172_p.png" alt="" />
-                  <figcaption>Peer-to-Business Lending explained</figcaption>
-                </div>
-              </div>
-              <div
-                className="wistia_embed wistia_async_w6o5m30ais popover=true popoverContent=link wistia_embed_initialized"
-                style={{ display: "inline" }}
-                id="wistia-w6o5m30ais-1"
-              >
-                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
-                  <img src="/assets/AK-play-icon.png" alt="" />
-                  <figcaption>ThinCats with Alan Kohler</figcaption>
-                </div>
-              </div>
-              <div
-                className="wistia_embed wistia_async_psiamvfuq6 popover=true popoverContent=link wistia_embed_initialized"
-                style={{ display: "inline" }}
-                id="wistia-psiamvfuq6-1"
-              >
-                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
-                  <img src="/assets/video1g.png" alt="" />
-                  <figcaption>ThinCats at Wholesale Investor</figcaption>
-                </div>
-              </div>
-              <div
-                className="wistia_embed wistia_async_7yj84e44zs popover=true popoverContent=link wistia_embed_initialized"
-                style={{ display: "inline" }}
-                id="wistia-7yj84e44zs-1"
-              >
-                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
-                  <img src="/assets/Screen-Shot-2016-11-10-at-8.26.12-PM.png" alt="" />
-                  <figcaption>ThinCats on Sky News "Business Success"</figcaption>
+                  <img src="/assets/videofront.png" alt="" />
                 </div>
               </div>
             </div>
@@ -445,10 +216,11 @@ State
                   color="primary"
                   onClick={() => {
                     this.setState({ user: 1 })
-                    if (document.documentElement) {
+                    const $page3 = document.querySelector("#page3") || {}
+                    if ($page3) {
                       window.scrollTo({
                         left: 0,
-                        top: document.documentElement.clientHeight,
+                        top: $page3.getBoundingClientRect().top + document.documentElement.scrollTop,
                         behavior: "smooth"
                       })
                     }
@@ -461,10 +233,11 @@ State
                   color="primary"
                   onClick={() => {
                     this.setState({ user: 2 })
-                    if (document.documentElement) {
+                    const $page3 = document.querySelector("#page3")
+                    if ($page3) {
                       window.scrollTo({
                         left: 0,
-                        top: document.documentElement.clientHeight,
+                        top: $page3.getBoundingClientRect().top + document.documentElement.scrollTop,
                         behavior: "smooth"
                       })
                     }
@@ -474,12 +247,12 @@ State
                 </Button>
               </div>
             </div>
-            <br />
           </Grid>
         </Grid>
         <Grid
           container
           direction="row"
+          id="page3"
           className={translateLeft ? "page3 translateLeft" : "page3"}
         >
           <Grid
@@ -608,7 +381,7 @@ State
                     </div>
                     <a href="thin-cats.azurewebsites.net">
                       {
-                        "thin-cats.azurewebsites.net" /* Make sure you find and replace for all other links here */
+                        "thin-cats.azurewebsites.net" /* todo Make sure you find and replace for all other links here */
                       }
                     </a>
                     <Button
@@ -758,8 +531,8 @@ State
                         " ready to start making smart investments in good companies, register at "
                       }
                     </span>
-                    <a href="https://thincat.blockbond.co/investor">
-                      {"thincat.blockbond.co/investor"}
+                    <a href="https://www.thincats.com.au/register/">
+                      {"https://www.thincats.com.au/register/"}
                     </a>
                     <Button
                       variant="raised"
@@ -776,150 +549,7 @@ State
             </Grid>
           </Grid>
         </Grid>
-        <Grid container justify="center" direction="row" className="videos">
-          <Grid item>
-            <MortgageCalculator />
-          </Grid>
-        </Grid>
       </div>
     )
   }
 }
-
-// <Grid container direction="row" wrap="nowrap" className="page2">
-// <Grid className="flow" item>
-//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//         <Grid item xs={8}>
-//             {/* Content*/}
-//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-//                 <Grid item className="page2IconContainer" xs={12}>
-//                     <div className="centered">
-//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-//                     </div>
-//                 </Grid>
-//                 <Grid item className="page2TextContainer" xs={12}>
-//                     <div className="page2Text">{"When a business needs funding to grow but can't find it through traditional sources..."}</div>
-//                 </Grid>
-//             </Grid>
-//         </Grid>
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//     </Grid>
-// </Grid>
-// <Grid className="flow" item>
-//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-//         <Grid item className="fancyBorder" xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//         <Grid item xs={8}>
-//             {/* Content*/}
-//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-//                 <Grid item className="page2IconContainer" xs={12}>
-//                     <div className="centered">
-//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-//                     </div>
-//                 </Grid>
-//                 <Grid item className="page2TextContainer" xs={12}>
-//                     <div className="page2Text">{"...they partner with ThinCats to submit their business case for funding."}</div>
-//                 </Grid>
-//             </Grid>
-//         </Grid>
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//     </Grid>
-// </Grid>
-// <Grid className="flow" item>
-//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-//         <Grid item className="fancyBorder" xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//         <Grid item xs={8}>
-//             {/* Content*/}
-//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-//                 <Grid item className="page2IconContainer" xs={12}>
-//                     <div className="centered">
-//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-//                         <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-//                         <SVGInline className="peopleAlert" svg={PeopleAlert}></SVGInline>
-//                     </div>
-//                 </Grid>
-//                 <Grid item className="page2TextContainer" xs={12}>
-//                     <div className="page2Text">{"Our credit team assesses each loan application thoroughly before sharing it with the ThinCats investor community."}</div>
-//                 </Grid>
-//             </Grid>
-//         </Grid>
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//     </Grid>
-// </Grid>
-// <Grid className="flow" item>
-//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-//         <Grid item className="fancyBorder" xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//         <Grid item xs={8}>
-//             {/* Content*/}
-//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-//                 <Grid item className="page2IconContainer" xs={12}>
-//                     <div className="centered">
-//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-//                         <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-//                         <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-//                         <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
-//                     </div>
-//                 </Grid>
-//                 <Grid item className="page2TextContainer" xs={12}>
-//                     <div className="page2Text">{"Investors choose the loans that interest them and then act collectively to finance loans of up to $2million..."}</div>
-//                 </Grid>
-//             </Grid>
-//         </Grid>
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//     </Grid>
-// </Grid>
-// <Grid className="flow" item>
-//     <Grid container className="page2-SubContainer" wrap="nowrap" direction="row">
-//         <Grid item className="fancyBorder" xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//         <Grid item xs={8}>
-//             {/* Content*/}
-//             <Grid container className="page2-SubContainer" wrap="nowrap" direction="column">
-//                 <Grid item className="page2IconContainer" xs={12}>
-//                     <div className="centered">
-//                         <SVGInline className="light fillWhite" svg={Light}></SVGInline>
-//                         <div className="dualArrow">
-//                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-//                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-//                         </div>
-//                         <div className="blueText">{"Thin"}<p className="bold">{"Cats"}</p></div>
-//                         <div className="dualArrow">
-//                             <SVGInline className="arrow fillWhite" svg={Arrow}></SVGInline>
-//                             <SVGInline className="reverseArrow fillWhite" svg={Arrow}></SVGInline>
-//                         </div>
-//                         <SVGInline className="peopleCash" svg={PeopleCash}></SVGInline>
-//                     </div>
-//                 </Grid>
-//                 <Grid item className="page2TextContainer" xs={12}>
-//                     <div className="page2Text">{"...helping Australian business grow and providing fair returns to investors."}<br />{"That's how we're connecting growing businesses with smart investors."}</div>
-//                 </Grid>
-//             </Grid>
-//         </Grid>
-//         <Grid item xs={2}>
-//             {/* Border*/}
-//         </Grid>
-//     </Grid>
-// </Grid>
-// </Grid>

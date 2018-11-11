@@ -18,8 +18,8 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class PageRouter extends InjectedComponent<
-  Props,
-  InjectedProps
+Props,
+InjectedProps
 > {
   componentDidMount() {
     const jssStyles = document.getElementById("jss-server-side")
@@ -30,52 +30,48 @@ export default class PageRouter extends InjectedComponent<
 
   route() {
     const { progressLoading } = this.props.store
-    const Header =
-      progressLoading < 100
-        ? () => (
-            <LinearProgress
-              className="progressBar"
-              variant="determinate"
-              value={progressLoading}
-            />
-          )
-        : () => null
-    // Route based on URL
-    switch (true) {
-      default:
-      case this.props.store.isHome:
-        return (
-          <CSSTransition
-            key={0}
-            timeout={500}
-            classNames="pageFlipper"
-            unmountOnExit
-          >
-            <div>
-              <div className="clipper" />
-              <Header />
-              <Home />
-              <Footer />
-            </div>
-          </CSSTransition>
-        )
-      case this.props.store.isResources:
-        return (
-          <CSSTransition
-            key={1}
-            timeout={500}
-            classNames="pageFlipper"
-            unmountOnExit
-          >
-            <div>
-              <div className="clipper" />
-              <Header />
-              <Resources />
-              <Footer />
-            </div>
-          </CSSTransition>
-        )
+    // const Header =
+    //   progressLoading < 100
+    //     ? () => (
+    //       <LinearProgress
+    //         className="progressBar"
+    //         variant="determinate"
+    //         value={progressLoading}
+    //       />
+    //     )
+    //     : () => null
+    if (!this.props.store.isHome) {
+      return (
+        <CSSTransition
+          key={1}
+          timeout={500}
+          classNames="pageFlipper"
+          unmountOnExit
+        >
+          <div>
+            {/* <div className="clipper" /> */}
+            {/* <Header /> */}
+            <Resources />
+            <Footer />
+          </div>
+        </CSSTransition>
+      )
     }
+    return (
+      <CSSTransition
+        key={0}
+        timeout={500}
+        classNames="pageFlipper"
+        unmountOnExit
+      >
+        <div>
+          {/* <div className="clipper" /> */}
+          {/* <Header /> */}
+          <Home />
+          <Footer />
+        </div>
+      </CSSTransition>
+    )
   }
 
   render() {

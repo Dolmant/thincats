@@ -10,8 +10,8 @@
     "start": "serve -c serve.json",
     "flow": "flow"
   },
-  "reactSnap": {
-    "source": "dist"
+  "reactSnapshot": {
+    "snapshotDelay": 300
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -53,6 +53,24 @@ docReady(() => {
             <a className="prerenderer" href="/resources.html">
               {"Invisible link for prerenderer"}
             </a>
+            <a className="prerenderer" href="/lending.html">
+              {"Invisible link for prerenderer"}
+            </a>
+            <a className="prerenderer" href="/borrowing.html">
+              {"Invisible link for prerenderer"}
+            </a>
+            <a className="prerenderer" href="/sponsors.html">
+              {"Invisible link for prerenderer"}
+            </a>
+            <a className="prerenderer" href="/about_us.html">
+              {"Invisible link for prerenderer"}
+            </a>
+            <a className="prerenderer" href="/how_it_works.html">
+              {"Invisible link for prerenderer"}
+            </a>
+            <a className="prerenderer" href="/resources.html">
+              {"Invisible link for prerenderer"}
+            </a>
           </MuiThemeProvider>
         </Provider>
       </JssProvider>

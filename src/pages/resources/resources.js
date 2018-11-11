@@ -8,11 +8,7 @@ import Drawer from "@material-ui/core/Drawer"
 import Button from "@material-ui/core/Button"
 import Toc from "@material-ui/icons/Toc"
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
-import ExpansionPanel from "@material-ui/core/ExpansionPanel"
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import MenuBar from "components/menuBar/menuBar"
-import ListItem from "@material-ui/core/ListItem"
 import type { StoreType } from "types"
 import { InjectedComponent } from "store"
 import "./resources.less"
@@ -28,26 +24,26 @@ type InjectedProps = {
 }
 
 type State = {
-  mobileOpen: boolean,
   mainHeader: string,
   subHeader: string,
   mainHeaderViewed: Array<string>,
   subHeaderViewed: Array<string>
 }
 
+const snake_to_caps = (title) => {
+  return title.split("_").map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(" ")
+}
+
 @inject("store")
 @observer
 export default class Resources extends InjectedComponent<
-  Props,
-  InjectedProps,
-  State
+Props,
+InjectedProps,
+State
 > {
   state = {
-    mobileOpen: false,
     mainHeader: "",
-    subHeader: "",
-    mainHeaderViewed: [""],
-    subHeaderViewed: [""]
+    subHeader: ""
   }
 
   componentDidMount() {
@@ -63,64 +59,12 @@ export default class Resources extends InjectedComponent<
     }
   }
 
-  renderResourceMenu = resourcesContent => {
-    // build these components
-    const MainHeader = (name: string, index: number, children: any) => (
-      <ExpansionPanel className="noMargin">
-        <ExpansionPanelSummary>
-          <ListItem className="heading">
-            <div>{`${name}`}</div>
-          </ListItem>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <div>{children}</div>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    )
-    const SubHeader = (name: string, mainName: string) => (
-      <ListItem
-        className="subItem"
-        button
-        onClick={() => {
-          this.setState(
-            { mobileOpen: false, subHeader: name, mainHeader: mainName },
-            () => {
-              // this.props.store.pushAnchor(name.replace(new RegExp(" ", "g"), "_").toLowerCase())
-              const ele = document.querySelector(
-                `#${name.replace(new RegExp(" ", "g"), "_").toLowerCase()}`
-              )
-              if (ele) {
-                ele.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start"
-                })
-              }
-            }
-          )
-        }}
-      >
-        <div className="underlinedBlue">{`${name}` /* {`${index + 1}. ${name}`} */}</div>
-      </ListItem>
-    )
-
-    return Object.entries(resourcesContent).map(
-      ([mainHeaderKey, mainHeaderValue], mainIndex) =>
-        MainHeader(
-          mainHeaderKey,
-          mainIndex,
-          Object.entries(mainHeaderValue).map(([subHeaderKey]) =>
-            SubHeader(subHeaderKey, mainHeaderKey)
-          )
-        )
-    )
-  }
-
   renderResourceContent = resourcesContent => {
-    const { mainHeader } = this.state
+    const { mainHeader, subHeader } = this.props.store
 
     const HeaderWrap = ({ mainHead, children }) => (
       <div>
-        <h1>{mainHead}</h1>
+        <h1>{snake_to_caps(mainHead)}</h1>
         {children}
       </div>
     )
@@ -128,89 +72,26 @@ export default class Resources extends InjectedComponent<
     const mainHeaderValidated = resourcesContent[mainHeader]
       ? mainHeader
       : Object.keys(resourcesContent)[0]
-    // const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
+    const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
 
     return (
       <HeaderWrap mainHead={mainHeaderValidated}>
-        {Object.keys(resourcesContent[mainHeaderValidated]).map(
-          key => resourcesContent[mainHeaderValidated][key]
-        )}
+        {resourcesContent[mainHeaderValidated][subHeaderValidated]}
       </HeaderWrap>
     )
   }
 
   render() {
-    const resourcesContent = resourcesContentImport(this.setState.bind(this))
-    const baseDrawer = () => [
-      <div>
-        <h1 className="resourceTitle">{"Resources"}</h1>
-      </div>,
-      <List className="paddingTop1">
-        {this.renderResourceMenu(resourcesContent)}
-      </List>
-    ]
-
-    const responsiveDrawers = () => [
-      <Hidden mdUp>
-        <Drawer
-          variant="temporary"
-          anchor="left"
-          open={this.state.mobileOpen}
-          onClose={() => this.setState({ mobileOpen: false })}
-          classes={{
-            paper: "tempPaper"
-          }}
-          className="tempDrawer resourceNav"
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-            disableRestoreFocus: true
-          }}
-        >
-          {baseDrawer()}
-        </Drawer>
-      </Hidden>,
-      <Hidden smDown implementation="css">
-        <Drawer
-          variant="permanent"
-          open
-          anchor="left"
-          className="permDrawer resourceNav"
-          classes={{
-            paper: "permPaper"
-          }}
-        >
-          {baseDrawer()}
-        </Drawer>
-      </Hidden>
-    ]
+    resourcesContentImport.bind(this);
+    const resourcesContent = resourcesContentImport(this.props.store)
 
     return (
       <div className="resources">
-        <MenuBar investorSelector>
-          <Hidden mdUp>
-            <BottomNavigationAction
-              // label={<Toc />}
-              style={{
-                padding: "0",
-                margin: "0",
-                minWidth: "30px"
-              }}
-              aria-label="add"
-              classes={{ label: "navActionLabel", selected: "selectedLabel" }}
-              icon={<Toc />}
-              onClick={() =>
-                this.setState(prevState => ({
-                  mobileOpen: !prevState.mobileOpen
-                }))
-              }
-            />
-          </Hidden>
-        </MenuBar>
+        <Grid className="homeMenu" item xs={12}>
+          <MenuBar />
+        </Grid>
         <Grid container>
-          <Grid item xs={12} md={2}>
-            {responsiveDrawers()}
-          </Grid>
-          <Grid item xs={12} md={10}>
+          <Grid item xs={12}>
             <div className="resourceContent">
               {this.renderResourceContent(resourcesContent)}
             </div>

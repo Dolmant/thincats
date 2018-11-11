@@ -5,18 +5,34 @@ import React from "react"
 configure({ enforceActions: "observed" })
 
 const URLGenerator = () => window.location.pathname
+const getHeader = () => {
+  const endpoint = window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1)
+  if (endpoint.lastIndexOf(".") > -1) {
+    return endpoint.split(".")[0]
+  }
+  if (endpoint.lastIndexOf("#") > -1) {
+    return endpoint.split(".")[0]
+  }
+  return endpoint
+}
 // window.history.replaceState({}, 'Home', '/');
 
 export class InjectedComponent<
   Props,
   InjectedProps,
   State = void
-> extends React.Component<Props, State> {
+  > extends React.Component<Props, State> {
   state: State
   props: Props & InjectedProps
 }
 
 class Store {
+  @observable
+  mainHeader = getHeader()
+
+  @observable
+  subHeader = getHeader()
+
   @observable
   timer = setInterval(this.progress, 75)
 
@@ -35,16 +51,6 @@ class Store {
   @computed
   get isHome(): boolean {
     return this.URL.startsWith("/home") || this.URL === "/"
-  }
-
-  @computed
-  get isResources(): boolean {
-    return this.URL.startsWith("/resources")
-  }
-
-  @computed
-  get isFAQ(): boolean {
-    return this.URL.startsWith("/faq")
   }
 
   @action
@@ -71,11 +77,6 @@ class Store {
     }
     this.progressLoading = 0
     this.timer = setInterval(this.progress, 150)
-  }
-
-  @action
-  toggleInvestor = () => {
-    this.investor = !this.investor
   }
 
   @action
@@ -122,22 +123,50 @@ class Store {
   }
 
   @action
+  navHowItWorks = () => {
+    this.mainHeader = "how_it_works"
+    this.subHeader = "how_it_works"
+    this.URL = "/how_it_works"
+    window.history.pushState({}, "How It Works", this.URL)
+    this.resetProgress()
+  }
+  @action
+  navLending = (subHeader) => {
+    this.mainHeader = "lending"
+    this.subHeader = subHeader
+    this.URL = "/lending"
+    window.history.pushState({}, "Lending", this.URL)
+    this.resetProgress()
+  }
+  @action
+  navBorrowing = (subHeader) => {
+    this.mainHeader = "borrowing"
+    this.subHeader = subHeader
+    this.URL = "/borrowing"
+    window.history.pushState({}, "Borrowing", this.URL)
+    this.resetProgress()
+  }
+  @action
+  navSponsors = () => {
+    this.mainHeader = "sponsors"
+    this.subHeader = "sponsors"
+    this.URL = "/sponsors"
+    window.history.pushState({}, "Sponsors", this.URL)
+    this.resetProgress()
+  }
+  @action
+  navAboutUs = (subHeader) => {
+    this.mainHeader = "about_us"
+    this.subHeader = subHeader
+    this.URL = "/about_us"
+    window.history.pushState({}, "AboutUs", this.URL)
+    this.resetProgress()
+  }
+  @action
   navResources = () => {
+    this.mainHeader = "resources"
+    this.subHeader = "resources"
     this.URL = "/resources"
-    window.history.pushState({}, "Resources", this.URL)
-    this.resetProgress()
-  }
-
-  @action
-  navResourcesBorrower = () => {
-    this.URL = "/resources#About Borrowing"
-    window.history.pushState({}, "Resources", this.URL)
-    this.resetProgress()
-  }
-
-  @action
-  navResourcesLender = () => {
-    this.URL = "/resources#About Lending"
     window.history.pushState({}, "Resources", this.URL)
     this.resetProgress()
   }
