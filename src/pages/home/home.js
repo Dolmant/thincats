@@ -205,7 +205,7 @@ State
                 id="wistia-2nc5twt1mz-1"
               >
                 <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
-                  <img src="/assets/videofront.png" alt="" />
+                  <img src="/assets/videoimage.png" alt="" />
                 </div>
               </div>
             </div>
