@@ -134,7 +134,7 @@ h1 {
   font-style: italic;
 }
 body {
-  font-family: 'HelveticaNeue-Light';
+  font-family: "HelveticaNeue-Light";
   border: none;
   overflow-x: hidden;
   margin: auto;
@@ -149,6 +149,7 @@ button {
 }
 a {
   color: #2196f3;
+  vertical-align: initial;
 }
 .prerenderer {
   display: none;
@@ -243,6 +244,9 @@ a {
 }
 .resources .subHeading p {
   margin-bottom: 1.3em;
+}
+.resources .subHeading ul {
+  margin-left: 1rem;
 }
 .resources .noMargin {
   margin: 0;
@@ -413,12 +417,15 @@ a {
 }
 .homeNew .page1 #text {
   font-weight: 200;
-  text-align: center;
+  align-items: center;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 .homeNew .page1 #text #innerText {
   font-size: 8rem;
   line-height: 8rem;
+  text-align: right;
 }
 .homeNew .page1 #text #innerText .thin {
   font-family: "aliquam";
@@ -427,6 +434,11 @@ a {
 .homeNew .page1 #text #innerText .cats {
   font-family: "HelveticaNeue-Light";
   display: inline-block;
+}
+.homeNew .page1 #text #innerText .sublogo {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-bottom: 10px;
 }
 .homeNew .page1 #text .slogan {
   font-size: 1.2em;
