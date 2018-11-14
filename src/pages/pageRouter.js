@@ -5,6 +5,7 @@ import TransitionGroup from "react-transition-group/TransitionGroup"
 import React from "react"
 import Home from "pages/home/home"
 import Resources from "pages/resources/resources"
+import PlatformWelcome from "pages/platformWelcome/platformWelcome"
 import Footer from "components/generic/footer/footer"
 import LinearProgress from "@material-ui/core/LinearProgress"
 import type { StoreType } from "types"
@@ -18,8 +19,8 @@ type InjectedProps = {
 @inject("store")
 @observer
 export default class PageRouter extends InjectedComponent<
-Props,
-InjectedProps
+  Props,
+  InjectedProps
 > {
   componentDidMount() {
     const jssStyles = document.getElementById("jss-server-side")
@@ -40,6 +41,23 @@ InjectedProps
     //       />
     //     )
     //     : () => null
+    if (this.props.store.isWelcome) {
+      return (
+        <CSSTransition
+          key={1}
+          timeout={500}
+          classNames="pageFlipper"
+          unmountOnExit
+        >
+          <div>
+            {/* <div className="clipper" /> */}
+            {/* <Header /> */}
+            <PlatformWelcome />
+            <Footer />
+          </div>
+        </CSSTransition>
+      )
+    }
     if (!this.props.store.isHome) {
       return (
         <CSSTransition

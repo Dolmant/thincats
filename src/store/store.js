@@ -6,7 +6,9 @@ configure({ enforceActions: "observed" })
 
 const URLGenerator = () => window.location.pathname
 const getHeader = () => {
-  const endpoint = window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1)
+  const endpoint = window.location.pathname.substr(
+    window.location.pathname.lastIndexOf("/") + 1
+  )
   if (endpoint.lastIndexOf(".") > -1) {
     return endpoint.split(".")[0]
   }
@@ -21,7 +23,7 @@ export class InjectedComponent<
   Props,
   InjectedProps,
   State = void
-  > extends React.Component<Props, State> {
+> extends React.Component<Props, State> {
   state: State
   props: Props & InjectedProps
 }
@@ -51,6 +53,10 @@ class Store {
   @computed
   get isHome(): boolean {
     return this.URL.startsWith("/home") || this.URL === "/"
+  }
+  @computed
+  get isWelcome(): boolean {
+    return this.URL.startsWith("/welcome")
   }
 
   @action
@@ -121,6 +127,12 @@ class Store {
     window.history.pushState({}, "Home", this.URL)
     this.resetProgress()
   }
+  @action
+  navWelcome = () => {
+    this.URL = "/welcome"
+    window.history.pushState({}, "Welcome", this.URL)
+    this.resetProgress()
+  }
 
   @action
   navHowItWorks = () => {
@@ -131,7 +143,7 @@ class Store {
     this.resetProgress()
   }
   @action
-  navLending = (subHeader) => {
+  navLending = subHeader => {
     this.mainHeader = "lending"
     this.subHeader = subHeader
     this.URL = "/lending"
@@ -139,7 +151,7 @@ class Store {
     this.resetProgress()
   }
   @action
-  navBorrowing = (subHeader) => {
+  navBorrowing = subHeader => {
     this.mainHeader = "borrowing"
     this.subHeader = subHeader
     this.URL = "/borrowing"
@@ -155,7 +167,7 @@ class Store {
     this.resetProgress()
   }
   @action
-  navAboutUs = (subHeader) => {
+  navAboutUs = subHeader => {
     this.mainHeader = "about_us"
     this.subHeader = subHeader
     this.URL = "/about_us"

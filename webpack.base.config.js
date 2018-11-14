@@ -19,7 +19,8 @@ module.exports = {
     path: path.resolve(__dirname, "dist/static")
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: "url-loader?limit=10000&mimetype=application/font-woff"
       },
@@ -51,7 +52,8 @@ module.exports = {
       {
         test: /\.less$/,
         use: extractLess.extract({
-          use: [{
+          use: [
+            {
               loader: "css-loader"
             },
             {
@@ -73,7 +75,8 @@ module.exports = {
       {
         test: /\.scss$/,
         use: extractLess.extract({
-          use: [{
+          use: [
+            {
               loader: "css-loader"
             },
             {
@@ -98,17 +101,41 @@ module.exports = {
       template: "src/templates/index-template.html",
       filename: "./../resources.html"
     }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/index-template.html",
+      filename: "./../lending.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/index-template.html",
+      filename: "./../borrowing.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/index-template.html",
+      filename: "./../sponsors.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/index-template.html",
+      filename: "./../about_us.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/templates/index-template.html",
+      filename: "./../how_it_works.html"
+    }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: "defer"
     }),
-    new CopyWebpackPlugin([{
-      from: "manifest.webmanifest",
-      to: path.resolve(__dirname, "./dist")
-    }]),
-    new CopyWebpackPlugin([{
-      from: "assets",
-      to: path.resolve(__dirname, "./dist/assets")
-    }])
+    new CopyWebpackPlugin([
+      {
+        from: "manifest.webmanifest",
+        to: path.resolve(__dirname, "./dist")
+      }
+    ]),
+    new CopyWebpackPlugin([
+      {
+        from: "assets",
+        to: path.resolve(__dirname, "./dist/assets")
+      }
+    ])
   ],
   resolve: {
     extensions: [".js", ".less", "scss", ".svg"],

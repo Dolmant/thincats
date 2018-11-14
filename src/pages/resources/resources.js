@@ -30,16 +30,19 @@ type State = {
   subHeaderViewed: Array<string>
 }
 
-const snake_to_caps = (title) => {
-  return title.split("_").map(item => item.charAt(0).toUpperCase() + item.slice(1)).join(" ")
+const snake_to_caps = title => {
+  return title
+    .split("_")
+    .map(item => item.charAt(0).toUpperCase() + item.slice(1))
+    .join(" ")
 }
 
 @inject("store")
 @observer
 export default class Resources extends InjectedComponent<
-Props,
-InjectedProps,
-State
+  Props,
+  InjectedProps,
+  State
 > {
   state = {
     mainHeader: "",
@@ -72,7 +75,11 @@ State
     const mainHeaderValidated = resourcesContent[mainHeader]
       ? mainHeader
       : Object.keys(resourcesContent)[0]
-    const subHeaderValidated = resourcesContent[mainHeaderValidated] && (resourcesContent[mainHeaderValidated][subHeader] ? subHeader : Object.keys(resourcesContent[mainHeaderValidated])[0])
+    const subHeaderValidated =
+      resourcesContent[mainHeaderValidated] &&
+      (resourcesContent[mainHeaderValidated][subHeader]
+        ? subHeader
+        : Object.keys(resourcesContent[mainHeaderValidated])[0])
 
     return (
       <HeaderWrap mainHead={mainHeaderValidated}>
@@ -82,8 +89,10 @@ State
   }
 
   render() {
-    resourcesContentImport.bind(this);
+    resourcesContentImport.bind(this)
     const resourcesContent = resourcesContentImport(this.props.store)
+    resourcesContent.lending.key_statistics =
+      resourcesContent.borrowing.key_statistics
 
     return (
       <div className="resources">

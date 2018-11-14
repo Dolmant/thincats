@@ -147,7 +147,7 @@ const content = store => ({
         </p>
         <h3>
           <a
-            href="https://fs27.formsite.com/Thincats/form8/form_login.html"
+            href="https://borrower.thincats.com.au"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -166,7 +166,7 @@ const content = store => ({
           <p>
             <span style={{ textDecoration: "underline" }}>Loans to date:</span>{" "}
             <strong>
-              <span>$11.2 million</span>*
+              <span>$13.4 million</span>*
             </strong>
           </p>
           <p>
@@ -174,7 +174,7 @@ const content = store => ({
               Average lenders per loan:
             </span>{" "}
             <span>
-              <strong>24</strong>
+              <strong>27</strong>
             </span>
           </p>
           <p>
@@ -182,7 +182,7 @@ const content = store => ({
               Average investment per loan:
             </span>{" "}
             <span>
-              <strong>$5,166</strong>
+              <strong>$5,010</strong>
             </span>
           </p>
           <p>
@@ -192,18 +192,18 @@ const content = store => ({
               </span>
             </span>{" "}
             <strong>
-              <span>14.8% p.a.</span>
+              <span>15% p.a.</span>
               **
             </strong>
           </p>
           <p>
             <span style={{ textDecoration: "underline" }}>
               <span style={{ color: "#000000", textDecoration: "underline" }}>
-                Average interest rate on loans FY18 to date:
+                Average interest rate on loans - last 12 months:
               </span>
             </span>{" "}
             <strong>
-              <span>15.6% p.a.</span>
+              <span>16% p.a.</span>
               **
             </strong>
           </p>
@@ -268,7 +268,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Restaurant
+                        Financial Services
                         </td>
                         <td
                           className="xl543"
@@ -279,10 +279,10 @@ const content = store => ({
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          125,000
+                          135,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
-                          16.0%
+                          15.0%
                         </td>
                         <td className="xl540" style={{ textAlign: "center" }}>
                           3 years
@@ -290,21 +290,21 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Wholesale – Fruit &amp; Vegetable
+                        Vehicle Technical Services
                         </td>
                         <td
                           className="xl543"
                           style={{ textAlign: "center" }}
                           width="70"
                         >
-                          NSW
+                          QLD
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          285,000
+                          52,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
-                          16.0%
+                          15.0%
                         </td>
                         <td className="xl540" style={{ textAlign: "center" }}>
                           3 years
@@ -312,7 +312,51 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Childcare Centre
+                        Cafe
+                        </td>
+                        <td
+                          className="xl543"
+                          style={{ textAlign: "center" }}
+                          width="70"
+                        >
+                          NT
+                        </td>
+                        <td className="xl538" style={{ textAlign: "right" }}>
+                          {" "}
+                          75,000
+                        </td>
+                        <td className="xl539" style={{ textAlign: "center" }}>
+                          17.0%
+                        </td>
+                        <td className="xl540" style={{ textAlign: "center" }}>
+                          3 years
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="xl537" width="236" height="17">
+                        Cleaning supplies
+                        </td>
+                        <td
+                          className="xl543"
+                          style={{ textAlign: "center" }}
+                          width="70"
+                        >
+                          VIC
+                        </td>
+                        <td className="xl538" style={{ textAlign: "right" }}>
+                          {" "}
+                          145,000
+                        </td>
+                        <td className="xl539" style={{ textAlign: "center" }}>
+                          18.0%
+                        </td>
+                        <td className="xl540" style={{ textAlign: "center" }}>
+                          3 months
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="xl537" width="236" height="17">
+                        Cleaning Services
                         </td>
                         <td
                           className="xl543"
@@ -323,10 +367,10 @@ const content = store => ({
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          255,000
+                          117,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
-                          15.5%
+                          18.0%
                         </td>
                         <td className="xl540" style={{ textAlign: "center" }}>
                           3 years
@@ -334,62 +378,62 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Regional Hotel
+                        Retail – Health
                         </td>
                         <td
                           className="xl543"
                           style={{ textAlign: "center" }}
                           width="70"
                         >
-                          VIC
+                          SA
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          275,000
+                          230,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
                           15.0%
                         </td>
                         <td className="xl540" style={{ textAlign: "center" }}>
-                          3 months
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Fast food restaurant
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          150,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          15.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
                           3 years
                         </td>
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Gym
+                          Food
                         </td>
                         <td
                           className="xl543"
                           style={{ textAlign: "center" }}
                           width="70"
                         >
-                          NSW
+                          WA
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          240,000
+                          250,000
+                        </td>
+                        <td className="xl539" style={{ textAlign: "center" }}>
+                          17.0%
+                        </td>
+                        <td className="xl540" style={{ textAlign: "center" }}>
+                          4 years
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="xl537" width="236" height="17">
+                        Cafe
+                        </td>
+                        <td
+                          className="xl543"
+                          style={{ textAlign: "center" }}
+                          width="70"
+                        >
+                          QLD
+                        </td>
+                        <td className="xl538" style={{ textAlign: "right" }}>
+                          {" "}
+                          235,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
                           16.0%
@@ -400,7 +444,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Retail – Flooring
+                        Retail – Vehicles
                         </td>
                         <td
                           className="xl543"
@@ -411,10 +455,10 @@ const content = store => ({
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          80,000
+                          90,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
-                          16.5%
+                          17.0%
                         </td>
                         <td className="xl540" style={{ textAlign: "center" }}>
                           3 years
@@ -422,18 +466,18 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                          Supermarket
+                        Super Food Manufacturer
                         </td>
                         <td
                           className="xl543"
                           style={{ textAlign: "center" }}
                           width="70"
                         >
-                          QLD
+                          SA
                         </td>
                         <td className="xl538" style={{ textAlign: "right" }}>
                           {" "}
-                          220,000
+                          200,000
                         </td>
                         <td className="xl539" style={{ textAlign: "center" }}>
                           15.0%
@@ -443,55 +487,11 @@ const content = store => ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="xl537" width="236" height="17">
-                          Financial Services
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          115,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Retail – Nail Spa
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          100,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          18.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          2.5 years
-                        </td>
-                      </tr>
-                      <tr>
                         <td className="xl537" width="236" height="17" />
                         <td className="xl543" width="70" />
                         <td className="xl538">
                           {" "}
-                          <span>1,845,000</span>
+                          <span>1,529,000</span>
                         </td>
                         <td className="xl539" />
                         <td className="xl540" />
@@ -607,11 +607,11 @@ const content = store => ({
                 </td>
                 <td className="xl543" align="right">
                   {" "}
-                  1,377
+                  1,862
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  12%
+                  14%
                 </td>
                 <td className="xl533" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -623,11 +623,11 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  385
+                  502
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  3%
+                  4%
                 </td>
               </tr>
               <tr>
@@ -652,11 +652,11 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  5,836
+                  5,951
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  52%
+                  44%
                 </td>
               </tr>
               <tr>
@@ -669,7 +669,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  6%
+                  5%
                 </td>
                 <td className="xl533" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -681,7 +681,7 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  195
+                  270
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
@@ -698,7 +698,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  3%
+                  2%
                 </td>
                 <td className="xl533" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -710,11 +710,11 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  2,327
+                  2,704
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  21%
+                  20%
                 </td>
               </tr>
               <tr>
@@ -727,7 +727,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  8%
+                  7%
                 </td>
                 <td className="xl533" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -739,11 +739,11 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  470
+                  1,285
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  4%
+                  10%
                 </td>
               </tr>
               <tr>
@@ -752,11 +752,11 @@ const content = store => ({
                 </td>
                 <td className="xl543" align="right">
                   {" "}
-                  410
+                  830
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  4%
+                  6%
                 </td>
                 <td className="xl533" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -768,7 +768,7 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  1,404
+                  1,684
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
@@ -797,11 +797,11 @@ const content = store => ({
                   align="right"
                 >
                   {" "}
-                  536
+                  1,016
                 </td>
                 <td className="xl543" style={{ textAlign: "center" }} />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  5%
+                  8%
                 </td>
               </tr>
               <tr>
@@ -814,7 +814,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  10%
+                  8%
                 </td>
                 <td className="xl534" style={{ textAlign: "center" }} />
                 <td className="xl542" style={{ textAlign: "center" }}>
@@ -825,7 +825,7 @@ const content = store => ({
                   style={{ textAlign: "right" }}
                   align="right"
                 >
-                  <span> 11,153</span>
+                  <span> 13,412</span>
                 </td>
                 <td className="xl546" style={{ textAlign: "center" }}>
                   <span> </span>
@@ -840,7 +840,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" align="right">
                   {" "}
-                  1,528
+                  1,848
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
@@ -858,11 +858,11 @@ const content = store => ({
                 </td>
                 <td className="xl543" align="right">
                   {" "}
-                  2,263
+                  2,902
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  20%
+                  22%
                 </td>
                 <td className="xl534" />
                 <td className="xl534" />
@@ -880,7 +880,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
-                  1%
+                  0%
                 </td>
                 <td className="xl534" />
                 <td className="xl534" />
@@ -894,7 +894,7 @@ const content = store => ({
                 </td>
                 <td className="xl543" align="right">
                   {" "}
-                  1,962
+                  2,357
                 </td>
                 <td className="xl543" />
                 <td className="xl544" style={{ textAlign: "center" }}>
@@ -911,7 +911,7 @@ const content = store => ({
                   <span>Total</span>
                 </td>
                 <td className="xl543" align="right">
-                  <span> 11,153</span>
+                  <span> 13,412</span>
                 </td>
                 <td className="xl543">
                   <span> </span>
@@ -934,7 +934,7 @@ const content = store => ({
             **: Gross returns before fees, taxes and potential losses on loans
           </p>
           <p>
-            <span>Data as at 30 April 2018</span>
+            <span>Data as at 31 August 2018</span>
           </p>
         </div>
       </div>
@@ -1042,7 +1042,7 @@ const content = store => ({
         <p>
           <a
             title="Register"
-            href="https://wwwthincats.com.au"
+            href="https://investor.thincats.com.au/investor"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1087,786 +1087,6 @@ const content = store => ({
         </p>
       </div>
     ],
-    "key_statistics": (
-      <div id="key_statistics" className="subHeading">
-        <div className="regular-page-content clearfix">
-          <p>ThinCats Australia facilitated its first loan in February 2015.</p>
-          <p>
-            <span style={{ textDecoration: "underline" }}>Loans to date:</span>{" "}
-            <strong>
-              <span>$11.2 million</span>*
-            </strong>
-          </p>
-          <p>
-            <span style={{ textDecoration: "underline" }}>
-              Average lenders per loan:
-            </span>{" "}
-            <span>
-              <strong>24</strong>
-            </span>
-          </p>
-          <p>
-            <span style={{ textDecoration: "underline" }}>
-              Average investment per loan:
-            </span>{" "}
-            <span>
-              <strong>$5,166</strong>
-            </span>
-          </p>
-          <p>
-            <span style={{ textDecoration: "underline" }}>
-              <span style={{ color: "#000000", textDecoration: "underline" }}>
-                Average interest rate on loans since inception:
-              </span>
-            </span>{" "}
-            <strong>
-              <span>14.8% p.a.</span>
-              **
-            </strong>
-          </p>
-          <p>
-            <span style={{ textDecoration: "underline" }}>
-              <span style={{ color: "#000000", textDecoration: "underline" }}>
-                Average interest rate on loans FY18 to date:
-              </span>
-            </span>{" "}
-            <strong>
-              <span>15.6% p.a.</span>
-              **
-            </strong>
-          </p>
-          <h2>Last 10 loans</h2>
-          <table border="0" width="558" cellSpacing="0" cellPadding="0">
-            <colgroup>
-              <col width="236" />
-              <col width="70" />
-              <col width="80" />
-              <col width="81" />
-              <col width="91" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <td
-                  className="xl544"
-                  style={{ textAlign: "left" }}
-                  width="236"
-                  height="17"
-                >
-                  <table border="0" width="558" cellSpacing="0" cellPadding="0">
-                    <colgroup>
-                      <col width="236" />
-                      <col width="70" />
-                      <col width="80" />
-                      <col width="81" />
-                      <col width="91" />
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <td className="xl544" width="236" height="17">
-                          <strong>Business Type</strong>
-                        </td>
-                        <td
-                          className="xl535"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          <strong>State</strong>
-                        </td>
-                        <td
-                          className="xl536"
-                          style={{ textAlign: "center" }}
-                          width="80"
-                        >
-                          <strong>$</strong>
-                        </td>
-                        <td
-                          className="xl535"
-                          style={{ textAlign: "center" }}
-                          width="81"
-                        >
-                          <strong>Rate</strong>
-                        </td>
-                        <td
-                          className="xl535"
-                          style={{ textAlign: "center" }}
-                          width="91"
-                        >
-                          <strong>Term</strong>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Restaurant
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          VIC
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          125,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Wholesale – Fruit &amp; Vegetable
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          285,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Childcare Centre
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          ACT
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          255,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          15.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Regional Hotel
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          VIC
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          275,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          15.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 months
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Fast food restaurant
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          150,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          15.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Gym
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          240,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Retail – Flooring
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          QLD
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          80,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Supermarket
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          QLD
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          220,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          15.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Financial Services
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          115,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          16.5%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          3 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17">
-                          Retail – Nail Spa
-                        </td>
-                        <td
-                          className="xl543"
-                          style={{ textAlign: "center" }}
-                          width="70"
-                        >
-                          NSW
-                        </td>
-                        <td className="xl538" style={{ textAlign: "right" }}>
-                          {" "}
-                          100,000
-                        </td>
-                        <td className="xl539" style={{ textAlign: "center" }}>
-                          18.0%
-                        </td>
-                        <td className="xl540" style={{ textAlign: "center" }}>
-                          2.5 years
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="xl537" width="236" height="17" />
-                        <td className="xl543" width="70" />
-                        <td className="xl538">
-                          {" "}
-                          <span>1,845,000</span>
-                        </td>
-                        <td className="xl539" />
-                        <td className="xl540" />
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-                <td
-                  className="xl535"
-                  style={{ textAlign: "center" }}
-                  width="70"
-                />
-                <td
-                  className="xl536"
-                  style={{ textAlign: "right" }}
-                  width="80"
-                />
-                <td
-                  className="xl535"
-                  style={{ textAlign: "right" }}
-                  width="81"
-                />
-                <td
-                  className="xl535"
-                  style={{ textAlign: "right" }}
-                  width="91"
-                />
-              </tr>
-              <tr>
-                <td
-                  className="xl537"
-                  style={{ textAlign: "right" }}
-                  width="236"
-                  height="17"
-                />
-                <td
-                  className="xl545"
-                  style={{ textAlign: "right" }}
-                  width="70"
-                />
-                <td className="xl541" style={{ textAlign: "right" }} />
-                <td className="xl539" style={{ textAlign: "right" }} />
-                <td className="xl540" style={{ textAlign: "right" }} />
-              </tr>
-            </tbody>
-          </table>
-          <h2>Loans by Industry and Location</h2>
-          <table border="0" width="594" cellSpacing="0" cellPadding="0">
-            <colgroup>
-              <col width="156" />
-              <col width="57" />
-              <col width="41" />
-              <col width="63" />
-              <col width="56" />
-              <col width="70" />
-              <col width="56" />
-              <col width="36" />
-              <col width="59" />
-            </colgroup>
-            <tbody>
-              <tr>
-                <td className="xl541" width="200" height="16">
-                  <strong>Industry</strong>
-                </td>
-                <td className="xl541" style={{ textAlign: "right" }} width="75">
-                  <strong>$’000</strong>
-                </td>
-                <td className="xl541" width="41">
-                  <strong> </strong>
-                </td>
-                <td
-                  className="xl541"
-                  style={{ textAlign: "center" }}
-                  width="63"
-                >
-                  <strong>%</strong>
-                </td>
-                <td
-                  className="xl533"
-                  style={{ textAlign: "center" }}
-                  width="56"
-                >
-                  <strong> </strong>
-                </td>
-                <td
-                  className="xl539"
-                  style={{ textAlign: "center" }}
-                  width="70"
-                >
-                  <strong>State</strong>
-                </td>
-                <td className="xl540" style={{ textAlign: "right" }} width="56">
-                  <strong>$’000</strong>
-                </td>
-                <td
-                  className="xl540"
-                  style={{ textAlign: "center" }}
-                  width="36"
-                >
-                  <strong> </strong>
-                </td>
-                <td
-                  className="xl540"
-                  style={{ textAlign: "center" }}
-                  width="59"
-                >
-                  <strong> %</strong>
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Accommodation &amp; Food
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  1,377
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  12%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  ACT
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  385
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  3%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Agriculture
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  165
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  1%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  NSW
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  5,836
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  52%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Building &amp; Construction
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  710
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  6%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  NT
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  195
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  2%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Education &amp; Training
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  280
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  3%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  QLD
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  2,327
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  21%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Health
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  928
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  8%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  SA
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  470
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  4%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Manufacturing
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  410
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  4%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  VIC
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  1,404
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  13%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Media
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  385
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  3%
-                </td>
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  WA
-                </td>
-                <td
-                  className="xl543"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  {" "}
-                  536
-                </td>
-                <td className="xl543" style={{ textAlign: "center" }} />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  5%
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Renewable Energy
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  1,095
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  10%
-                </td>
-                <td className="xl534" style={{ textAlign: "center" }} />
-                <td className="xl542" style={{ textAlign: "center" }}>
-                  <span>Total</span>
-                </td>
-                <td
-                  className="xl546"
-                  style={{ textAlign: "right" }}
-                  align="right"
-                >
-                  <span> 11,153</span>
-                </td>
-                <td className="xl546" style={{ textAlign: "center" }}>
-                  <span> </span>
-                </td>
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  <span>100%</span>
-                </td>
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Retail
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  1,528
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  14%
-                </td>
-                <td className="xl534" style={{ textAlign: "center" }} />
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl533" style={{ textAlign: "center" }} />
-                <td className="xl533" style={{ textAlign: "center" }} />
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Services
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  2,263
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  20%
-                </td>
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl533" />
-                <td className="xl533" />
-                <td className="xl533" />
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Transport
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  50
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  1%
-                </td>
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  Wholesale
-                </td>
-                <td className="xl543" align="right">
-                  {" "}
-                  1,962
-                </td>
-                <td className="xl543" />
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  18%
-                </td>
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-              </tr>
-              <tr>
-                <td className="xl545" height="16">
-                  <span>Total</span>
-                </td>
-                <td className="xl543" align="right">
-                  <span> 11,153</span>
-                </td>
-                <td className="xl543">
-                  <span> </span>
-                </td>
-                <td className="xl544" style={{ textAlign: "center" }}>
-                  <span>100%</span>
-                </td>
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-                <td className="xl534" />
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            *: All loans to date (except for 2 loans) are monthly principal
-            &amp; interest repayment loans
-            <br />
-            **: Gross returns before fees, taxes and potential losses on loans
-          </p>
-          <p>
-            <span>Data as at 30 April 2018</span>
-          </p>
-        </div>
-      </div>
-    ),
     "lending_faq": [
       <div id="lending_faq" className="subHeading">
         <h2>Lending FAQ</h2>
@@ -2786,9 +2006,7 @@ const content = store => ({
     resources: (
       <div id="documents" className="subHeading">
         <h2>Resources</h2>
-        <p>
-          <p className="bold">Lenders</p>
-        </p>
+        <p className="bold">Lenders</p>
         <ul>
           <li>
             <a
@@ -2844,9 +2062,7 @@ const content = store => ({
         </ul>
         <br />
         <br />
-        <p>
           <p className="bold">Borrowers</p>
-        </p>
         <ul>
           <li>
             <a
@@ -2868,7 +2084,7 @@ const content = store => ({
           </li>
           <li>
             <a
-              href="https://fs27.formsite.com/Thincats/form8/form_login.html"
+              href="https://borrower.thincats.com.au"
               target="_blank"
               rel="noopener noreferrer"
             >

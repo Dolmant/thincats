@@ -26,7 +26,9 @@ import Medal from "assets/icons/SymbolMedal.svg"
 import Shield from "assets/icons/SymbolShield.svg"
 import Shoot from "assets/icons/SymbolShoot.svg"
 import SVGInline from "react-svg-inline"
-import MortgageCalculator from "../../components/calculator/MortgageCalculator";
+import MortgageCalculator from "../../components/calculator/MortgageCalculator"
+
+const INVESTOR_RETURNS = 16
 
 type Props = {}
 
@@ -42,18 +44,13 @@ type State = {
 @inject("store")
 @observer
 export default class Home extends InjectedComponent<
-Props,
-InjectedProps,
-State
+  Props,
+  InjectedProps,
+  State
 > {
   state = {
-    user: 0 // investor = 2 and borrower = 1
+    user: 0
   }
-
-  // onScroll = () => {
-  // startAnimation(this.myCountUp)
-  //   window.removeEventListener("scroll", this.onScroll)
-  // }
 
   render() {
     const translateLeft = this.state.user === 2
@@ -70,11 +67,18 @@ State
           <Grid className="centerpiece" item xs={12}>
             <div id="text">
               <div id="innerText">
-                <span className="thin">{"Thin"}</span>
-                <p className="cats">{"Cats"}</p>
+                <div>
+                  <span className="thin">{"Thin"}</span>
+                  <p className="cats">{"Cats"}</p>
+                </div>
+                <div className="sublogo">{"Australia"}</div>
               </div>
               <div className="slogan">
-                <p>{"Connecting growing businesses with sophisticated investors."}</p>
+                <p>
+                  {
+                    "Connecting growing businesses with sophisticated investors."
+                  }
+                </p>
               </div>
             </div>
           </Grid>
@@ -95,6 +99,7 @@ State
                       separator=""
                       prefix=""
                       duration={5}
+                      delay={2}
                       start={0}
                       end={100}
                       className="amount-lent"
@@ -114,6 +119,7 @@ State
                     <CountUp
                       separator=","
                       prefix="$"
+                      delay={1}
                       duration={5}
                       start={0}
                       end={13400000}
@@ -135,6 +141,7 @@ State
                       separator=""
                       prefix=""
                       duration={5}
+                      delay={2}
                       start={0}
                       end={150}
                       className="amount-lent"
@@ -154,7 +161,7 @@ State
                   color="primary"
                   onClick={() => {
                     var win = window.open(
-                      "https://fs27.formsite.com/Thincats/form8/form_login.html", //todo replace all of these links
+                      "https://borrower.thincats.com.au",
                       "_blank"
                     )
                     if (win) {
@@ -174,17 +181,7 @@ State
                   variant="raised"
                   color="primary"
                   onClick={() => {
-                    var win = window.open(
-                      "https://www.thincats.com.au/register/",
-                      "_blank"
-                    )
-                    if (win) {
-                      //Browser has allowed it to be opened
-                      win.focus()
-                    } else {
-                      //Browser has blocked it
-                      alert("Please allow popups for this website")
-                    }
+                    this.props.store.navWelcome()
                   }}
                 >
                   {"invest now >"}
@@ -204,7 +201,11 @@ State
                 style={{ display: "inline" }}
                 id="wistia-2nc5twt1mz-1"
               >
-                <div id="wistia_32.thumb_container" className="wistia_click_to_play" style={{ position: "relative", display: "inline" }}>
+                <div
+                  id="wistia_32.thumb_container"
+                  className="wistia_click_to_play"
+                  style={{ position: "relative", display: "inline" }}
+                >
                   <img src="/assets/videoimage.png" alt="" />
                 </div>
               </div>
@@ -220,7 +221,9 @@ State
                     if ($page3) {
                       window.scrollTo({
                         left: 0,
-                        top: $page3.getBoundingClientRect().top + document.documentElement.scrollTop,
+                        top:
+                          $page3.getBoundingClientRect().top +
+                          document.documentElement.scrollTop,
                         behavior: "smooth"
                       })
                     }
@@ -237,7 +240,9 @@ State
                     if ($page3) {
                       window.scrollTo({
                         left: 0,
-                        top: $page3.getBoundingClientRect().top + document.documentElement.scrollTop,
+                        top:
+                          $page3.getBoundingClientRect().top +
+                          document.documentElement.scrollTop,
                         behavior: "smooth"
                       })
                     }
@@ -375,13 +380,11 @@ State
                   </Grid>
                   <Grid item className="endText" xs={12}>
                     <div className="">
-                      {
-                        "If you are ready to fuel your growth, apply for a loan at"
-                      }
+                      {"If you are ready to fuel your growth"}
                     </div>
-                    <a href="thin-cats.azurewebsites.net">
+                    <a href="https://borrower.thincats.com.au">
                       {
-                        "thin-cats.azurewebsites.net" /* todo Make sure you find and replace for all other links here */
+                        "apply for a loan" /* todo Make sure you find and replace for all other links here */
                       }
                     </a>
                     <Button
@@ -434,9 +437,7 @@ State
                         </div>
                         <div className="page3Heading">{"Better than cash"}</div>
                         <div className="page3Content">
-                          {
-                            "Your cash should be working hard for you. That's why we offer an average gross annual interest rate of 14%, with monthly repayments."
-                          }
+                          {`Your cash should be working hard for you. That's why we offer an average gross annual interest rate of ${INVESTOR_RETURNS}%, with monthly repayments.`}
                         </div>
                       </Grid>
                       <Grid item className="page3Block" xs={12} md={6}>
@@ -518,21 +519,17 @@ State
                     </Grid>
                   </Grid>
                   <Grid item className="endText" xs={12}>
-                    <span className="">
-                      {
-                        "If you are a "
-                      }
-                    </span>
+                    <span className="">{"If you are a "}</span>
                     <a href="https://www.moneysmart.gov.au/glossary/s/sophisticated-investor">
                       {"sophisticated investor"}
                     </a>
                     <span className="">
                       {
-                        " ready to start making smart investments in good companies, register at "
+                        " ready to start making smart investments in good companies, "
                       }
                     </span>
-                    <a href="https://www.thincats.com.au/register/">
-                      {"https://www.thincats.com.au/register/"}
+                    <a href="https://investor.thincats.com.au/investor">
+                      {"register here"}
                     </a>
                     <Button
                       variant="raised"

@@ -141,7 +141,6 @@
     min-width: 310px;
   }
   .centerpiece {
-
   }
 
   .containerized {
@@ -161,19 +160,22 @@
     min-height: 100vh;
     width: 100%;
     max-width: 1200px;
-    margin:auto;
+    margin: auto;
     .homeMenu {
       align-self: flex-start;
     }
 
     #text {
       font-weight: 200;
-      text-align: center;
+      align-items: center;
       z-index: 2;
-      
+      display: flex;
+      flex-direction: column;
+
       #innerText {
         font-size: 8rem;
         line-height: 8rem;
+        text-align: right;
         .thin {
           font-family: "aliquam";
           display: inline-block;
@@ -181,6 +183,11 @@
         .cats {
           font-family: "HelveticaNeue-Light";
           display: inline-block;
+        }
+        .sublogo {
+          font-size: 2rem;
+          line-height: 2rem;
+          margin-bottom: 10px;
         }
       }
       .slogan {
@@ -367,7 +374,7 @@
     font-size: 4rem;
     padding: 2rem 0;
     max-width: 1200px;
-    margin:auto;
+    margin: auto;
     .banner {
       text-align: center;
       display: flex;
@@ -382,8 +389,8 @@
         margin: 0 10px;
         cursor: pointer;
         img {
-          width:640px;
-          height:360px;
+          width: 640px;
+          height: 360px;
         }
       }
 
@@ -399,7 +406,7 @@
       .amount-lent {
         font-size: 3rem;
         font-weight: 700;
-        min-width:64px;
+        min-width: 64px;
       }
     }
   }
@@ -430,7 +437,7 @@
       .amount-lent {
         font-size: 3rem;
         font-weight: 700;
-        min-width:64px;
+        min-width: 64px;
       }
     }
   }
