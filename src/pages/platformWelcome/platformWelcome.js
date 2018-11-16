@@ -57,7 +57,7 @@ export default class PlatformWelcome extends InjectedComponent<
                   <div style={{ fontSize: "2rem", textAlign: "center" }}>
                     {/* <a
                       style={{ fontSize: "2rem", textAlign: "center" }}
-                      href="https://investor.thincats.com.au/investor"
+                      href="https://investor.thincats.com.au"
                     >
                       {"Log in here"}
                     </a> */}
@@ -66,7 +66,7 @@ export default class PlatformWelcome extends InjectedComponent<
                       color="primary"
                       onClick={() => {
                         var win = window.open(
-                          "https://investor.thincats.com.au/investor/",
+                          "https://investor.thincats.com.au/",
                           "_blank"
                         )
                         if (win) {
