@@ -161,7 +161,7 @@ export default class Home extends InjectedComponent<
                   color="primary"
                   onClick={() => {
                     var win = window.open(
-                      "https://borrower.thincats.com.au",
+                      "https://borrower.thincats.com.au/create-user",
                       "_blank"
                     )
                     if (win) {
@@ -382,7 +382,7 @@ export default class Home extends InjectedComponent<
                     <div className="">
                       {"If you are ready to fuel your growth"}
                     </div>
-                    <a href="https://borrower.thincats.com.au">
+                    <a href="https://borrower.thincats.com.au/create-user">
                       {
                         "apply for a loan" /* todo Make sure you find and replace for all other links here */
                       }

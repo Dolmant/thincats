@@ -124,7 +124,7 @@ export default class MenuBar extends InjectedComponent<
           </MenuItem>
           <MenuItem
             onClick={() => {
-              window.location = "https://borrower.thincats.com.au"
+              window.location = "https://borrower.thincats.com.au/create-user"
             }}
           >
             Apply for a loan
@@ -282,7 +282,7 @@ export default class MenuBar extends InjectedComponent<
             </ListItem>
             <ListItem
               onClick={() => {
-                window.location = "https://borrower.thincats.com.au"
+                window.location = "https://borrower.thincats.com.au/create-user"
               }}
               className="heading"
             >
@@ -465,7 +465,7 @@ export default class MenuBar extends InjectedComponent<
             root: "last"
           }}
           onClick={() => {
-            this.props.store.navWelcome()
+            window.location = "https://borrower.thincats.com.au/"
           }}
         />
       </BottomNavigation>

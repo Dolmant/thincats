@@ -2084,7 +2084,7 @@ const content = store => ({
           </li>
           <li>
             <a
-              href="https://borrower.thincats.com.au"
+              href="https://borrower.thincats.com.au/create-user"
               target="_blank"
               rel="noopener noreferrer"
             >
