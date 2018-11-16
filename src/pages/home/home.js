@@ -383,9 +383,7 @@ export default class Home extends InjectedComponent<
                       {"If you are ready to fuel your growth"}
                     </div>
                     <a href="https://borrower.thincats.com.au/create-user">
-                      {
-                        "apply for a loan" /* todo Make sure you find and replace for all other links here */
-                      }
+                      {"apply for a loan"}
                     </a>
                     <Button
                       variant="raised"
