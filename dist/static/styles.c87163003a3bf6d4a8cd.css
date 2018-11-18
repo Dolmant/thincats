@@ -584,20 +584,18 @@ a {
   padding-bottom: 1em;
   font-weight: 200;
 }
-.homeNew .page3 .patternBackground .endText {
-  padding-top: 1.5em;
-}
 .homeNew .page3 .patternBackground .endText button {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 .homeNew .page3 .endText {
+  padding-top: 1.5em;
   font-weight: 500;
   text-align: center;
   padding-bottom: 1em;
 }
 .homeNew .page3 .endText button {
+  margin-top: 2em;
   display: block;
-  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.4em;
