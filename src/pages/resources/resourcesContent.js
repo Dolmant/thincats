@@ -268,7 +268,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Financial Services
+                          Financial Services
                         </td>
                         <td
                           className="xl543"
@@ -290,7 +290,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Vehicle Technical Services
+                          Vehicle Technical Services
                         </td>
                         <td
                           className="xl543"
@@ -312,7 +312,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Cafe
+                          Cafe
                         </td>
                         <td
                           className="xl543"
@@ -334,7 +334,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Cleaning supplies
+                          Cleaning supplies
                         </td>
                         <td
                           className="xl543"
@@ -356,7 +356,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Cleaning Services
+                          Cleaning Services
                         </td>
                         <td
                           className="xl543"
@@ -378,7 +378,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Retail – Health
+                          Retail – Health
                         </td>
                         <td
                           className="xl543"
@@ -422,7 +422,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Cafe
+                          Cafe
                         </td>
                         <td
                           className="xl543"
@@ -444,7 +444,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Retail – Vehicles
+                          Retail – Vehicles
                         </td>
                         <td
                           className="xl543"
@@ -466,7 +466,7 @@ const content = store => ({
                       </tr>
                       <tr>
                         <td className="xl537" width="236" height="17">
-                        Super Food Manufacturer
+                          Super Food Manufacturer
                         </td>
                         <td
                           className="xl543"
@@ -2047,7 +2047,7 @@ const content = store => ({
           </li>
           <li>
             <a
-              href="/assets/ThinCats-Lender-Guide-Dec16.pdf"
+              href="/assets/Lender-guide-v2.docx"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -2062,7 +2062,7 @@ const content = store => ({
         </ul>
         <br />
         <br />
-          <p className="bold">Borrowers</p>
+        <p className="bold">Borrowers</p>
         <ul>
           <li>
             <a

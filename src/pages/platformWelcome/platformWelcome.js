@@ -23,9 +23,9 @@ type State = {}
 @inject("store")
 @observer
 export default class PlatformWelcome extends InjectedComponent<
-  Props,
-  InjectedProps,
-  State
+Props,
+InjectedProps,
+State
 > {
   state = {}
 
@@ -47,7 +47,7 @@ export default class PlatformWelcome extends InjectedComponent<
                     }
                   </p>
                   <a
-                    href="/assets/ThinCats-Lender-Guide-Dec16.pdf"
+                    href="/assets/Lender-guide-v2.docx"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
