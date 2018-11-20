@@ -44,9 +44,9 @@ type State = {
 @inject("store")
 @observer
 export default class Home extends InjectedComponent<
-  Props,
-  InjectedProps,
-  State
+Props,
+InjectedProps,
+State
 > {
   state = {
     user: 0
@@ -389,7 +389,7 @@ export default class Home extends InjectedComponent<
                       variant="raised"
                       color="primary"
                       onClick={() => {
-                        this.props.store.navResourcesBorrower()
+                        this.props.store.navBorrowing()
                       }}
                     >
                       {"Learn More"}
@@ -533,7 +533,7 @@ export default class Home extends InjectedComponent<
                       variant="raised"
                       color="primary"
                       onClick={() => {
-                        this.props.store.navResourcesLender()
+                        this.props.store.navLending()
                       }}
                     >
                       {"Learn More"}

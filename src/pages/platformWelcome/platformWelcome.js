@@ -28,7 +28,13 @@ InjectedProps,
 State
 > {
   state = {}
-
+  componentDidMount() {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth"
+    })
+  }
   render() {
     return (
       <div className="resources">
