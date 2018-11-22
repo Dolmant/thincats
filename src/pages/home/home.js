@@ -196,7 +196,8 @@ State
               <p>{"How It Works"}</p>
             </div>
             <div className="banner">
-              <div
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/SYdtV_UxeUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              {/* <div
                 className="wistia_embed wistia_async_2nc5twt1mz popover=true popoverContent=link wistia_embed_initialized"
                 style={{ display: "inline" }}
                 id="wistia-2nc5twt1mz-1"
@@ -208,7 +209,7 @@ State
                 >
                   <img src="/assets/videoimage.png" alt="" />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="banner">
               <div className="applyButtons">
@@ -273,7 +274,7 @@ State
                   alignItems="center"
                   direction="column"
                 >
-                  <Grid item xs={12}>
+                  <Grid className="title100" item xs={12}>
                     <div className="light topIcon">
                       <SVGInline className="fillWhite light" svg={Light} />
                     </div>
@@ -296,7 +297,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "Get funding for stock, equipment, business acquisitions or your next growth opporunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."
+                            "Get funding for stock, equipment or your next growth opportunity, with loans from $50,000 to $2million and repayment terms of 2-5 years."
                           }
                         </div>
                       </Grid>
@@ -412,7 +413,7 @@ State
                   alignItems="center"
                   direction="column"
                 >
-                  <Grid item xs={12}>
+                  <Grid className="title100" item xs={12}>
                     <div className="peopleCash fillBlack topIcon">
                       <SVGInline
                         className="peopleCash fillBlack"
@@ -464,7 +465,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "Our dedicated team of lending specialists assess each loan application using leading-edge technology matched with human intelligence, rather than algorithms that don't understand context."
+                            "Our dedicated team of lending specialists assess each loan application using leading-edge technology matched with human intelligence."
                           }
                         </div>
                       </Grid>
@@ -478,7 +479,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "Every investment opportunity is backed by a registered charge over business assets and in most instances second mortgages over real property. We use a separate nominee company to make loans and hold client monies, so your funds are safe."
+                            "Every investment opportunity is backed by a registered charge over business assets and in most instances second mortgages over real property."
                           }
                         </div>
                       </Grid>
@@ -517,15 +518,17 @@ State
                     </Grid>
                   </Grid>
                   <Grid item className="endText" xs={12}>
-                    <span className="">{"If you are a "}</span>
-                    <a href="https://www.moneysmart.gov.au/glossary/s/sophisticated-investor">
-                      {"sophisticated investor"}
-                    </a>
-                    <span className="">
-                      {
-                        " ready to start making smart investments in good companies, "
-                      }
-                    </span>
+                    <div>
+                      <span className="">{"If you are a "}</span>
+                      <a href="https://www.moneysmart.gov.au/glossary/s/sophisticated-investor">
+                        {"sophisticated investor"}
+                      </a>
+                      <span className="">
+                        {
+                          " ready to start making smart investments in good companies, "
+                        }
+                      </span>
+                    </div>
                     <a href="https://investor.thincats.com.au/investor">
                       {"register here"}
                     </a>

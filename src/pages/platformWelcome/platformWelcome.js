@@ -53,7 +53,7 @@ State
                     }
                   </p>
                   <a
-                    href="/assets/Lender-guide-v2.docx"
+                    href="/assets/LenderGuide.docx"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
