@@ -44,9 +44,9 @@ type State = {
 @inject("store")
 @observer
 export default class Home extends InjectedComponent<
-Props,
-InjectedProps,
-State
+  Props,
+  InjectedProps,
+  State
 > {
   state = {
     user: 0
@@ -196,7 +196,14 @@ State
               <p>{"How It Works"}</p>
             </div>
             <div className="banner">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/SYdtV_UxeUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/SYdtV_UxeUo"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
               {/* <div
                 className="wistia_embed wistia_async_2nc5twt1mz popover=true popoverContent=link wistia_embed_initialized"
                 style={{ display: "inline" }}
@@ -311,7 +318,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "Loan applications are assessed by our community of hundred of investors based on business potential and cash flow performance."
+                            "Loan applications are assessed by our experienced credit team and then viewed by our community of hundred of investors based on business potential and cash flow performance."
                           }
                         </div>
                       </Grid>
@@ -359,7 +366,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "Shortcut having to learn the nuances of cash flow finance by leaning on our dedicated support team to help you prepare your loan application."
+                            "No need to understand or learn the nuances of cash flow finance by leaning on our experienced and dedicated support team to help you prepare your loan application."
                           }
                         </div>
                       </Grid>
@@ -436,7 +443,7 @@ State
                         </div>
                         <div className="page3Heading">{"Better than cash"}</div>
                         <div className="page3Content">
-                          {`Your cash should be working hard for you. That's why we offer an average gross annual interest rate of ${INVESTOR_RETURNS}%, with monthly repayments.`}
+                          {`Your cash should be working hard for you. That's why our loans return an average gross annual interest rate of ${INVESTOR_RETURNS}%, with monthly repayments.`}
                         </div>
                       </Grid>
                       <Grid item className="page3Block" xs={12} md={6}>
@@ -447,7 +454,7 @@ State
                         <div className="page3Heading">{"Low maintenance"}</div>
                         <div className="page3Content">
                           {
-                            "Our loan terms range from 2-5 years so you can maximise your returns while minimising the time spend watching your investments."
+                            "Our loan terms range from 2-5 years so you can maximise your returns while minimising the time spent watching your investments."
                           }
                         </div>
                       </Grid>
@@ -497,7 +504,7 @@ State
                         </div>
                         <div className="page3Content">
                           {
-                            "We're a passionate team of ex-bankers and lending specialists."
+                            "We're a passionate team of senior ex-bankers and lending specialists."
                           }
                         </div>
                       </Grid>

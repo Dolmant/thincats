@@ -2047,7 +2047,7 @@ const content = store => ({
           </li>
           <li>
             <a
-              href="/assets/LenderGuide.docx"
+              href="/assets/LenderGuide.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
